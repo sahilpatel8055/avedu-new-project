@@ -1,0 +1,200 @@
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Star, Users, GraduationCap, ExternalLink } from "lucide-react";
+import universityPlaceholder from "@/assets/university-placeholder.jpg";
+
+interface University {
+  id: string;
+  name: string;
+  location: string;
+  rating: number;
+  students: string;
+  ugPrograms: number;
+  pgPrograms: number;
+  fees: string;
+  approvals: string[];
+  image?: string;
+}
+
+const universities: University[] = [
+  {
+    id: "1",
+    name: "Amity University Online",
+    location: "Noida, UP",
+    rating: 4.5,
+    students: "50K+",
+    ugPrograms: 25,
+    pgPrograms: 30,
+    fees: "₹45,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "2", 
+    name: "NMIMS Distance Learning",
+    location: "Mumbai, MH",
+    rating: 4.7,
+    students: "75K+",
+    ugPrograms: 15,
+    pgPrograms: 22,
+    fees: "₹60,000/year",
+    approvals: ["UGC", "AICTE", "NBA"],
+  },
+  {
+    id: "3",
+    name: "Manipal University Online",
+    location: "Manipal, KA", 
+    rating: 4.6,
+    students: "40K+",
+    ugPrograms: 18,
+    pgPrograms: 25,
+    fees: "₹55,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A++"],
+  },
+  {
+    id: "4",
+    name: "LPU Distance Education",
+    location: "Phagwara, PB",
+    rating: 4.3,
+    students: "60K+",
+    ugPrograms: 35,
+    pgPrograms: 28,
+    fees: "₹35,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "5",
+    name: "Sikkim Manipal University",
+    location: "Gangtok, SK",
+    rating: 4.4,
+    students: "45K+", 
+    ugPrograms: 20,
+    pgPrograms: 18,
+    fees: "₹40,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "6",
+    name: "Jain University Online",
+    location: "Bangalore, KA",
+    rating: 4.5,
+    students: "35K+",
+    ugPrograms: 22,
+    pgPrograms: 24,
+    fees: "₹50,000/year", 
+    approvals: ["UGC", "AICTE", "NAAC A++"],
+  }
+];
+
+const UniversityCard = ({ university }: { university: University }) => {
+  return (
+    <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group">
+      <CardHeader className="pb-3">
+        <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-3">
+          <img 
+            src={university.image || universityPlaceholder}
+            alt={university.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg leading-tight">{university.name}</h3>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <MapPin className="h-4 w-4" />
+            {university.location}
+          </div>
+        </div>
+      </CardHeader>
+
+      <CardContent className="pb-3 space-y-4">
+        {/* Rating & Students */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 fill-accent text-accent" />
+            <span className="font-medium">{university.rating}</span>
+          </div>
+          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+            <Users className="h-4 w-4" />
+            {university.students}
+          </div>
+        </div>
+
+        {/* Programs */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="text-center p-2 bg-primary-light rounded-lg">
+            <div className="font-semibold text-primary">{university.ugPrograms}</div>
+            <div className="text-xs text-muted-foreground">UG Courses</div>
+          </div>
+          <div className="text-center p-2 bg-accent-light rounded-lg">
+            <div className="font-semibold text-accent">{university.pgPrograms}</div>
+            <div className="text-xs text-muted-foreground">PG Courses</div>
+          </div>
+        </div>
+
+        {/* Fees */}
+        <div className="text-center p-3 bg-success-light rounded-lg">
+          <div className="font-semibold text-success">{university.fees}</div>
+          <div className="text-xs text-muted-foreground">Starting Fees</div>
+        </div>
+
+        {/* Approvals */}
+        <div className="flex flex-wrap gap-1">
+          {university.approvals.map((approval) => (
+            <Badge key={approval} variant="secondary" className="text-xs">
+              {approval}
+            </Badge>
+          ))}
+        </div>
+      </CardContent>
+
+      <CardFooter className="pt-0 space-y-3">
+        <div className="grid grid-cols-2 gap-2 w-full">
+          <Button variant="outline" size="sm" className="gap-1">
+            <GraduationCap className="h-4 w-4" />
+            View Courses
+          </Button>
+          <Button size="sm" className="gap-1">
+            <ExternalLink className="h-4 w-4" />
+            Apply Now
+          </Button>
+        </div>
+      </CardFooter>
+    </Card>
+  );
+};
+
+const UniversityGrid = () => {
+  return (
+    <section className="py-16 bg-background" id="universities">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <Badge className="bg-primary-light text-primary mb-4">
+            Top Partner Universities
+          </Badge>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            Explore Over 100+ Universities
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Choose from India's top universities offering UGC-approved online degrees. 
+            All universities are carefully selected and verified by our experts.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {universities.map((university) => (
+            <UniversityCard key={university.id} university={university} />
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button size="lg" variant="outline" className="gap-2">
+            View All Universities
+            <ExternalLink className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default UniversityGrid;
