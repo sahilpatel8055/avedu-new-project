@@ -60,23 +60,23 @@ const process = [
 
 const CounsellingSection = () => {
   return (
-    <section className="py-16 bg-background" id="counselling">
+    <section className="py-8 sm:py-12 lg:py-16 bg-background" id="counselling">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <Badge className="bg-success-light text-success mb-4">
             100% Free Counselling
           </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             <strong>Expert Career Counselling for Your Success</strong>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
             Don't navigate your educational journey alone. Our certified counsellors help you 
             make informed decisions about your future with personalized guidance.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12 lg:mb-16">
           {/* Benefits */}
           <div className="space-y-8">
             <div>
@@ -106,15 +106,15 @@ const CounsellingSection = () => {
               </p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="font-bold text-success text-2xl">98%</div>
+                  <div className="font-bold text-primary text-2xl">98%</div>
                   <div className="text-sm">Success Rate</div>
                 </div>
                 <div>
-                  <div className="font-bold text-success text-2xl">50K+</div>
+                  <div className="font-bold text-primary text-2xl">50K+</div>
                   <div className="text-sm">Students Guided</div>
                 </div>
                 <div>
-                  <div className="font-bold text-success text-2xl">100+</div>
+                  <div className="font-bold text-primary text-2xl">100+</div>
                   <div className="text-sm">Universities</div>
                 </div>
               </div>

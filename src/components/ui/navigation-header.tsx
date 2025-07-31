@@ -10,16 +10,16 @@ const NavigationHeader = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 sm:h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <img 
               src={aveduLogo} 
               alt="AVEDU Logo" 
-              className="w-12 h-12 object-contain"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
             />
             <div className="hidden sm:block">
-              <div className="text-xl font-bold text-primary">AVEDU</div>
+              <div className="text-lg sm:text-xl font-bold text-primary">AVEDU</div>
               <div className="text-xs text-muted-foreground">Your Education Partner</div>
             </div>
           </div>

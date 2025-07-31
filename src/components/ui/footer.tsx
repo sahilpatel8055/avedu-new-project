@@ -14,8 +14,8 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-card border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="bg-gradient-primary rounded-lg p-2 text-white font-bold text-xl w-fit">

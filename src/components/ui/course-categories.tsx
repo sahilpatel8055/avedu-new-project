@@ -87,12 +87,12 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
   return (
     <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group cursor-pointer relative">
       {category.trending && (
-        <Badge className="absolute -top-2 -right-2 bg-accent text-accent-foreground z-10">
+        <Badge className="absolute -top-2 -right-2 bg-primary text-primary-foreground z-10">
           Trending
         </Badge>
       )}
       
-      <CardContent className="p-6 text-center space-y-4">
+      <CardContent className="p-4 sm:p-6 text-center space-y-3 sm:space-y-4">
         <div className="bg-primary-light p-4 rounded-full w-fit mx-auto group-hover:scale-110 transition-transform duration-300">
           <div className="text-primary">
             {category.icon}
@@ -101,7 +101,7 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
         
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{category.title}</h3>
-          <p className="text-accent font-medium">{category.programs}+ Programs</p>
+          <p className="text-primary font-medium">{category.programs}+ Programs</p>
         </div>
         
         <div className="space-y-2">
@@ -125,22 +125,22 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
 
 const CourseCategories = () => {
   return (
-    <section className="py-16 bg-gradient-subtle" id="programs">
+    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-subtle" id="programs">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-accent-light text-accent mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <Badge className="bg-primary-light text-primary mb-4">
             <strong>Program Categories</strong>
           </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             <strong>Find Your Perfect Online Course</strong>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore diverse academic programs across multiple disciplines. 
             From traditional degrees to emerging fields, find what matches your career goals.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {categories.map((category) => (
             <CategoryCard key={category.id} category={category} />
           ))}

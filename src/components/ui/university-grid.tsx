@@ -89,28 +89,28 @@ const universities: University[] = [
 const UniversityCard = ({ university }: { university: University }) => {
   return (
     <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group">
-      <CardHeader className="pb-3">
-        <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-3">
+      <CardHeader className="pb-2 sm:pb-3">
+        <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-2 sm:mb-3">
           <img 
             src={university.image || universityPlaceholder}
             alt={university.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg leading-tight">{university.name}</h3>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <MapPin className="h-4 w-4" />
+        <div className="space-y-1 sm:space-y-2">
+          <h3 className="font-semibold text-base sm:text-lg leading-tight">{university.name}</h3>
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+            <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
             {university.location}
           </div>
         </div>
       </CardHeader>
 
-      <CardContent className="pb-3 space-y-4">
+      <CardContent className="pb-2 sm:pb-3 space-y-3 sm:space-y-4">
         {/* Rating & Students */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 fill-accent text-accent" />
+            <Star className="h-4 w-4 fill-primary text-primary" />
             <span className="font-medium">{university.rating}</span>
           </div>
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
@@ -125,8 +125,8 @@ const UniversityCard = ({ university }: { university: University }) => {
             <div className="font-semibold text-primary">{university.ugPrograms}</div>
             <div className="text-xs text-muted-foreground">UG Courses</div>
           </div>
-          <div className="text-center p-2 bg-accent-light rounded-lg">
-            <div className="font-semibold text-accent">{university.pgPrograms}</div>
+          <div className="text-center p-2 bg-primary-light rounded-lg">
+            <div className="font-semibold text-primary">{university.pgPrograms}</div>
             <div className="text-xs text-muted-foreground">PG Courses</div>
           </div>
         </div>
@@ -165,22 +165,22 @@ const UniversityCard = ({ university }: { university: University }) => {
 
 const UniversityGrid = () => {
   return (
-    <section className="py-16 bg-background" id="universities">
+    <section className="py-8 sm:py-12 lg:py-16 bg-background" id="universities">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <Badge className="bg-primary-light text-primary mb-4">
             <strong>Top Partner Universities</strong>
           </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             <strong>Explore Over 100+ Universities</strong>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Choose from India's top universities offering UGC-approved online degrees. 
             All universities are carefully selected and verified by our experts.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {universities.map((university) => (
             <UniversityCard key={university.id} university={university} />
           ))}
