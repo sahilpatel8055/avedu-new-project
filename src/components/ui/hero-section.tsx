@@ -12,13 +12,13 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge className="bg-accent-light text-accent font-semibold animate-fade-in-up">
-                #1 Educational Counselling Platform
+              <Badge className="bg-primary-light text-primary font-semibold animate-fade-in-up">
+                <strong>#1 Educational Counselling Platform</strong>
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight animate-slide-in-left">
                 Find Your Perfect
                 <span className="bg-gradient-hero bg-clip-text text-transparent block">
-                  Online Degree
+                  Online Course
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg animate-fade-in-up" style={{animationDelay: '0.3s'}}>
@@ -30,7 +30,7 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="flex items-center justify-center gap-1 text-accent text-2xl font-bold">
+                <div className="flex items-center justify-center gap-1 text-primary text-2xl font-bold">
                   <Users className="h-6 w-6" />
                   50K+
                 </div>
@@ -44,7 +44,7 @@ const HeroSection = () => {
                 <p className="text-sm text-muted-foreground">Universities</p>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center gap-1 text-accent text-2xl font-bold">
+                <div className="flex items-center justify-center gap-1 text-primary text-2xl font-bold">
                   <Star className="h-6 w-6 fill-current" />
                   4.8/5
                 </div>
@@ -54,11 +54,20 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 gap-2 shadow-primary">
+              <Button 
+                size="lg" 
+                className="bg-gradient-primary hover:opacity-90 gap-2 shadow-primary"
+                onClick={() => document.getElementById('counselling')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Get Free Counselling
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="gap-2"
+                onClick={() => document.getElementById('universities')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Award className="h-5 w-5" />
                 Explore Universities
               </Button>

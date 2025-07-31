@@ -68,7 +68,7 @@ const CounsellingSection = () => {
             100% Free Counselling
           </Badge>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Expert Career Counselling for Your Success
+            <strong>Expert Career Counselling for Your Success</strong>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Don't navigate your educational journey alone. Our certified counsellors help you 

@@ -26,10 +26,16 @@ const NavigationHeader = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <button className="btn-3d px-6 py-2 rounded-lg text-sm font-semibold transition-all">
+            <button 
+              className="btn-3d px-6 py-2 rounded-lg text-sm font-semibold transition-all"
+              onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Explore Programs
             </button>
-            <button className="btn-3d px-6 py-2 rounded-lg text-sm font-semibold transition-all">
+            <button 
+              className="btn-3d px-6 py-2 rounded-lg text-sm font-semibold transition-all"
+              onClick={() => document.getElementById('universities')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Top Universities
             </button>
             <a href="#counselling" className="text-foreground hover:text-primary transition-colors font-medium">
