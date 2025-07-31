@@ -21,12 +21,14 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-3d': 'var(--gradient-3d)'
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',
 				'hover': 'var(--shadow-hover)',
-				'primary': 'var(--shadow-primary)'
+				'primary': 'var(--shadow-primary)',
+				'3d': 'var(--shadow-3d)'
 			},
 			colors: {
 				border: 'hsl(var(--border))',

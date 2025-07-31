@@ -18,10 +18,10 @@ All colors MUST be HSL. Professional education-focused design.
     --primary-light: 210 100% 95%;   /* Light blue backgrounds */
     --primary-dark: 210 100% 35%;    /* Dark blue for depth */
     
-    /* Educational Orange Accent */
-    --accent: 25 100% 50%;           /* Orange for highlights */
+    /* Dark Purple Accent */
+    --accent: 260 100% 35%;          /* Dark purple for highlights */
     --accent-foreground: 0 0% 100%;
-    --accent-light: 25 100% 95%;     /* Light orange backgrounds */
+    --accent-light: 260 100% 95%;    /* Light purple backgrounds */
     
     /* Success Green for approvals */
     --success: 142 76% 36%;
@@ -54,13 +54,15 @@ All colors MUST be HSL. Professional education-focused design.
     
     /* Gradients for hero sections */
     --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(25 100% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(260 100% 35%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-3d: linear-gradient(145deg, hsl(280 100% 60%), hsl(320 100% 65%));
     
     /* Shadows */
     --shadow-card: 0 4px 12px hsl(210 100% 50% / 0.1);
     --shadow-hover: 0 8px 24px hsl(210 100% 50% / 0.15);
     --shadow-primary: 0 4px 12px hsl(210 100% 50% / 0.3);
+    --shadow-3d: 0 8px 32px hsl(280 100% 60% / 0.3), 0 0 20px hsl(320 100% 65% / 0.2);
 
     --radius: 0.5rem;
 
@@ -144,5 +146,54 @@ All colors MUST be HSL. Professional education-focused design.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .btn-3d {
+    background: var(--gradient-3d);
+    border: none;
+    box-shadow: var(--shadow-3d);
+    transform: perspective(1000px) rotateX(10deg);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: white;
+    font-weight: 600;
+  }
+
+  .btn-3d:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+    box-shadow: 0 12px 40px hsl(280 100% 60% / 0.4), 0 0 30px hsl(320 100% 65% / 0.3);
+  }
+
+  .btn-3d:active {
+    transform: perspective(1000px) rotateX(5deg) translateY(-2px);
   }
 }

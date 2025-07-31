@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, GraduationCap, Award, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-education.jpg";
+import Slideshow from "@/components/ui/slideshow";
 
 const HeroSection = () => {
   return (
@@ -12,16 +12,16 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge className="bg-accent-light text-accent font-semibold">
+              <Badge className="bg-accent-light text-accent font-semibold animate-fade-in-up">
                 #1 Educational Counselling Platform
               </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight animate-slide-in-left">
                 Find Your Perfect
                 <span className="bg-gradient-hero bg-clip-text text-transparent block">
                   Online Degree
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-lg">
+              <p className="text-xl text-muted-foreground max-w-lg animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 Get expert counselling and choose from 100+ universities across India. 
                 Find the best UG & PG programs that fit your budget and career goals.
               </p>
@@ -69,15 +69,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Slideshow */}
           <div className="relative">
-            <Card className="overflow-hidden shadow-hover">
-              <img 
-                src={heroImage} 
-                alt="Students learning online with AVEDU"
-                className="w-full h-auto object-cover"
-              />
-            </Card>
+            <Slideshow />
             
             {/* Floating Stats Card */}
             <Card className="absolute -bottom-6 -left-6 p-4 shadow-card bg-card/95 backdrop-blur">
