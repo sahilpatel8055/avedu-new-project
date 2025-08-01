@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import slideshowGraduation from '@/assets/slideshow-graduation.jpg';
 import slideshowCourses from '@/assets/slideshow-courses.jpg';
 import slideshowUniversities from '@/assets/slideshow-universities.jpg';
-import slideshowStudents from '@/assets/slideshow-students.jpg';
 
 const images = [
-  { src: slideshowCourses, alt: 'Top Online Degree Courses' },
-  { src: slideshowUniversities, alt: 'Partner Universities' },
-  { src: slideshowStudents, alt: 'Students Learning Online' }
+  { src: slideshowGraduation, alt: 'Happy Graduation Celebration' },
+  { src: slideshowCourses, alt: 'Top 10 Online Degree Courses' },
+  { src: slideshowUniversities, alt: 'Top Partner Universities' }
 ];
 
 const Slideshow = () => {
