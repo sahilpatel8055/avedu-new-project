@@ -17,50 +17,60 @@ interface University {
   image?: string;
 }
 
+import { Link } from "react-router-dom";
+import ignouLogo from "@/assets/ignou-logo.png";
+import manipalLogo from "@/assets/manipal-logo.png";
+import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
+import vguLogo from "@/assets/vgu-logo.png";
+
 const universities: University[] = [
   {
-    id: "1",
-    name: "Amity University Online",
-    location: "Noida, UP",
-    rating: 4.5,
-    students: "50K+",
-    ugPrograms: 25,
-    pgPrograms: 30,
-    fees: "₹45,000/year",
-    approvals: ["UGC", "AICTE", "NAAC A+"],
-  },
-  {
-    id: "2", 
-    name: "NMIMS Distance Learning",
-    location: "Mumbai, MH",
-    rating: 4.7,
-    students: "75K+",
-    ugPrograms: 15,
-    pgPrograms: 22,
-    fees: "₹60,000/year",
-    approvals: ["UGC", "AICTE", "NBA"],
-  },
-  {
-    id: "3",
-    name: "Manipal University Online",
-    location: "Manipal, KA", 
-    rating: 4.6,
-    students: "40K+",
-    ugPrograms: 18,
-    pgPrograms: 25,
-    fees: "₹55,000/year",
+    id: "ignou",
+    name: "IGNOU",
+    location: "New Delhi, India",
+    rating: 4.8,
+    students: "4M+",
+    ugPrograms: 120,
+    pgPrograms: 150,
+    fees: "₹7,200+/year",
     approvals: ["UGC", "AICTE", "NAAC A++"],
+    image: ignouLogo,
   },
   {
-    id: "4",
-    name: "LPU Distance Education",
-    location: "Phagwara, PB",
-    rating: 4.3,
-    students: "60K+",
-    ugPrograms: 35,
-    pgPrograms: 28,
-    fees: "₹35,000/year",
-    approvals: ["UGC", "AICTE", "NAAC A"],
+    id: "manipal", 
+    name: "Manipal University Online",
+    location: "Jaipur, India",
+    rating: 4.6,
+    students: "50K+",
+    ugPrograms: 8,
+    pgPrograms: 12,
+    fees: "₹75,000+/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+    image: manipalLogo,
+  },
+  {
+    id: "uttaranchal",
+    name: "Uttaranchal University Online",
+    location: "Dehradun, India", 
+    rating: 4.5,
+    students: "25K+",
+    ugPrograms: 15,
+    pgPrograms: 18,
+    fees: "₹45,000+/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+    image: uttaranchalLogo,
+  },
+  {
+    id: "vgu",
+    name: "Vivekananda Global University",
+    location: "Jaipur, India",
+    rating: 4.4,
+    students: "15K+", 
+    ugPrograms: 12,
+    pgPrograms: 15,
+    fees: "₹40,000+/year",
+    approvals: ["UGC", "AICTE", "AIU"],
+    image: vguLogo,
   },
   {
     id: "5",
@@ -153,10 +163,12 @@ const UniversityCard = ({ university }: { university: University }) => {
             <GraduationCap className="h-4 w-4" />
             View Courses
           </Button>
-          <Button size="sm" className="gap-1">
-            <ExternalLink className="h-4 w-4" />
-            Apply Now
-          </Button>
+          <Link to={`/university/${university.id}`}>
+            <Button size="sm" className="gap-1 w-full">
+              <ExternalLink className="h-4 w-4" />
+              Apply Now
+            </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>
