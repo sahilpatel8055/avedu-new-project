@@ -22,6 +22,7 @@ import ignouLogo from "@/assets/ignou-logo.png";
 import manipalLogo from "@/assets/manipal-logo.png";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
+import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
 
 const universities: University[] = [
   {
@@ -191,6 +192,9 @@ const UniversityGrid = () => {
             All universities are carefully selected and verified by our experts.
           </p>
         </div>
+
+        {/* University Logos Marquee */}
+        <UniversityLogosMarquee />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {universities.map((university) => (

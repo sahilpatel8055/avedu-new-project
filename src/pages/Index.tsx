@@ -4,7 +4,6 @@ import CourseCategories from "@/components/ui/course-categories";
 import UniversityGrid from "@/components/ui/university-grid";
 import CounsellingSection from "@/components/ui/counselling-section";
 import Footer from "@/components/ui/footer";
-import Slideshow from "@/components/ui/slideshow";
 import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
@@ -13,13 +12,8 @@ const Index = () => {
       <NavigationHeader />
       <HeroSection />
       
-      {/* Slideshow Section - Full Width */}
-      <section className="bg-background">
-        <Slideshow />
-      </section>
-      
       {/* Course Categories Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-6 md:py-10 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="bg-blue-100 text-blue-800 mb-4">
