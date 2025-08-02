@@ -13,11 +13,9 @@ const Index = () => {
       <NavigationHeader />
       <HeroSection />
       
-      {/* Slideshow Section */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto">
-          <Slideshow />
-        </div>
+      {/* Slideshow Section - Full Width */}
+      <section className="bg-background">
+        <Slideshow />
       </section>
       
       {/* Course Categories Section */}

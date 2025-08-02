@@ -159,16 +159,16 @@ const UniversityCard = ({ university }: { university: University }) => {
 
       <CardFooter className="pt-0 space-y-3">
         <div className="grid grid-cols-2 gap-2 w-full">
-          <Button variant="outline" size="sm" className="gap-1">
-            <GraduationCap className="h-4 w-4" />
-            View Courses
-          </Button>
           <Link to={`/university/${university.id}`}>
-            <Button size="sm" className="gap-1 w-full">
-              <ExternalLink className="h-4 w-4" />
+            <Button variant="outline" size="sm" className="gap-1 w-full">
+              <GraduationCap className="h-4 w-4" />
               View Courses
             </Button>
           </Link>
+          <Button size="sm" className="gap-1 w-full">
+            <ExternalLink className="h-4 w-4" />
+            Apply Now
+          </Button>
         </div>
       </CardFooter>
     </Card>

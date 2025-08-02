@@ -23,9 +23,9 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4">
-      <Card className="overflow-hidden shadow-hover relative">
-        <div className="relative w-full h-48 md:h-64">
+    <div className="w-full">
+      <div className="overflow-hidden relative">
+        <div className="relative w-full h-64 md:h-80 lg:h-96">
         {images.map((image, index) => (
           <img
             key={index}
@@ -45,7 +45,7 @@ const Slideshow = () => {
           <button
             key={index}
             className={cn(
-              "w-2 h-2 rounded-full transition-colors",
+              "w-3 h-3 rounded-full transition-colors",
               index === currentIndex 
                 ? "bg-white" 
                 : "bg-white/50"
@@ -54,7 +54,7 @@ const Slideshow = () => {
           />
         ))}
         </div>
-      </Card>
+      </div>
     </div>
   );
 };
