@@ -2,15 +2,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  Briefcase, 
-  Calculator, 
-  Computer, 
-  Heart, 
+  Palette, 
   Scale, 
-  GraduationCap,
+  BookOpen,
   TrendingUp,
   Globe
 } from "lucide-react";
+import mbaIcon from "@/assets/icons/mba-icon.png";
+import techIcon from "@/assets/icons/tech-icon.png";
+import bbaIcon from "@/assets/icons/bba-icon.png";
+import financeIcon from "@/assets/icons/finance-icon.png";
+import healthcareIcon from "@/assets/icons/healthcare-icon.png";
 
 interface CourseCategory {
   id: string;
@@ -25,7 +27,7 @@ const categories: CourseCategory[] = [
   {
     id: "mba",
     title: "MBA & Management",
-    icon: <Briefcase className="h-8 w-8" />,
+    icon: <img src={mbaIcon} alt="MBA" className="h-8 w-8" />,
     programs: 45,
     popularCourses: ["MBA", "PGDM", "Executive MBA"],
     trending: true,
@@ -33,24 +35,34 @@ const categories: CourseCategory[] = [
   {
     id: "btech",
     title: "Engineering & Technology", 
-    icon: <Computer className="h-8 w-8" />,
+    icon: <img src={techIcon} alt="Technology" className="h-8 w-8" />,
     programs: 38,
-    popularCourses: ["B.Tech", "M.Tech", "Diploma"],
+    popularCourses: ["B.Tech", "M.Tech", "BCA", "MCA"],
+    trending: true,
+  },
+  {
+    id: "bba",
+    title: "BBA",
+    icon: <img src={bbaIcon} alt="BBA" className="h-8 w-8" />,
+    programs: 22,
+    popularCourses: ["BBA", "BBA Hons"],
+    trending: false,
   },
   {
     id: "bcom",
     title: "Commerce & Finance",
-    icon: <Calculator className="h-8 w-8" />,
+    icon: <img src={financeIcon} alt="Finance" className="h-8 w-8" />,
     programs: 32,
-    popularCourses: ["B.Com", "M.Com", "CA Foundation"],
+    popularCourses: ["B.Com", "M.Com", "BCOM", "MCOM"],
     trending: true,
   },
   {
     id: "healthcare",
     title: "Healthcare & Medicine",
-    icon: <Heart className="h-8 w-8" />,
+    icon: <img src={healthcareIcon} alt="Healthcare" className="h-8 w-8" />,
     programs: 25,
     popularCourses: ["B.Sc Nursing", "BPT", "Health Admin"],
+    trending: false,
   },
   {
     id: "law",
@@ -58,13 +70,15 @@ const categories: CourseCategory[] = [
     icon: <Scale className="h-8 w-8" />,
     programs: 18,
     popularCourses: ["LLB", "LLM", "BA LLB"],
+    trending: false,
   },
   {
     id: "ba",
     title: "Arts & Humanities",
-    icon: <GraduationCap className="h-8 w-8" />,
+    icon: <Palette className="h-8 w-8" />,
     programs: 42,
     popularCourses: ["BA", "MA", "B.Ed"],
+    trending: false,
   },
   {
     id: "data-science",
@@ -74,34 +88,27 @@ const categories: CourseCategory[] = [
     popularCourses: ["Data Science", "AI/ML", "Analytics"],
     trending: true,
   },
-  {
-    id: "international",
-    title: "International Programs",
-    icon: <Globe className="h-8 w-8" />,
-    programs: 15,
-    popularCourses: ["Global MBA", "Intl. Business", "Foreign Languages"],
-  },
 ];
 
 const CategoryCard = ({ category }: { category: CourseCategory }) => {
   return (
     <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group cursor-pointer relative">
       {category.trending && (
-        <Badge className="absolute -top-2 -right-2 bg-primary text-primary-foreground z-10">
+        <Badge className="absolute -top-2 -right-2 bg-blue-600 text-white z-10">
           Trending
         </Badge>
       )}
       
       <CardContent className="p-4 sm:p-6 text-center space-y-3 sm:space-y-4">
         <div className="bg-primary-light p-4 rounded-full w-fit mx-auto group-hover:scale-110 transition-transform duration-300">
-          <div className="text-primary">
+          <div className="text-blue-600">
             {category.icon}
           </div>
         </div>
         
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{category.title}</h3>
-          <p className="text-primary font-medium">{category.programs}+ Programs</p>
+          <p className="text-blue-600 font-medium">{category.programs}+ Programs</p>
         </div>
         
         <div className="space-y-2">
@@ -115,7 +122,7 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
           </div>
         </div>
         
-        <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+        <Button variant="ghost" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
           Explore Programs
         </Button>
       </CardContent>
@@ -125,34 +132,11 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
 
 const CourseCategories = () => {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-subtle" id="programs">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8 sm:mb-12">
-          <Badge className="bg-primary-light text-primary mb-4">
-            <strong>Program Categories</strong>
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-            <strong>Find Your Perfect Online Course</strong>
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore diverse academic programs across multiple disciplines. 
-            From traditional degrees to emerging fields, find what matches your career goals.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
-        </div>
-
-        <div className="text-center">
-          <Button size="lg" className="bg-gradient-primary hover:opacity-90">
-            View All Programs
-          </Button>
-        </div>
-      </div>
-    </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+      {categories.map((category) => (
+        <CategoryCard key={category.id} category={category} />
+      ))}
+    </div>
   );
 };
 

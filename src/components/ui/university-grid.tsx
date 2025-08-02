@@ -166,7 +166,7 @@ const UniversityCard = ({ university }: { university: University }) => {
           <Link to={`/university/${university.id}`}>
             <Button size="sm" className="gap-1 w-full">
               <ExternalLink className="h-4 w-4" />
-              Apply Now
+              View Courses
             </Button>
           </Link>
         </div>

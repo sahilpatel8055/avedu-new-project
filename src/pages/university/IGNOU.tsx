@@ -42,7 +42,7 @@ const IGNOU = () => {
       <NavigationHeader />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16 mt-16">
+      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-1 text-center lg:text-left">

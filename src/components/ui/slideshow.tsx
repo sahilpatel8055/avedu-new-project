@@ -23,8 +23,9 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <Card className="overflow-hidden shadow-hover relative">
-      <div className="relative w-full h-64 md:h-80">
+    <div className="w-full max-w-4xl mx-auto px-4">
+      <Card className="overflow-hidden shadow-hover relative">
+        <div className="relative w-full h-48 md:h-64">
         {images.map((image, index) => (
           <img
             key={index}
@@ -52,8 +53,9 @@ const Slideshow = () => {
             onClick={() => setCurrentIndex(index)}
           />
         ))}
-      </div>
-    </Card>
+        </div>
+      </Card>
+    </div>
   );
 };
 
