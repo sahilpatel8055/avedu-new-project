@@ -532,9 +532,38 @@ const OnlineCommerce = () => {
           </div>
         </div>
       </section>
+      
+      {/* Popular Commerce Specializations - Moved Here */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-lavender-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Popular Commerce Specializations
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Specialize in areas that match your career aspirations in finance
+              and commerce
+            </p>
+          </div>
 
-      {/* NEW SECTION: Syllabus */}
-      <section className="py-16 bg-gradient-to-br from-pink-50 to-purple-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {specializations.map((spec, index) => (
+              <Card
+                key={index}
+                className="p-4 hover:shadow-md transition-shadow bg-white border border-gray-200/60"
+              >
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-[#0052CC]" />
+                  <span className="font-medium">{spec}</span>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: Syllabus - Moved Here */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -618,8 +647,8 @@ const OnlineCommerce = () => {
         </div>
       </section>
 
-      {/* NEW SECTION: Skills Obtained */}
-      <section className="py-16 bg-white">
+      {/* NEW SECTION: Skills Obtained - Moved Here */}
+      <section className="py-16 bg-gradient-to-br from-pink-50 to-purple-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -668,8 +697,8 @@ const OnlineCommerce = () => {
         </div>
       </section>
 
-      {/* NEW SECTION: Career Scope & Top Recruiters */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-lavender-100">
+      {/* NEW SECTION: Career Scope & Top Recruiters - Moved Here */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -732,8 +761,8 @@ const OnlineCommerce = () => {
         </div>
       </section>
 
-      {/* NEW SECTION: Our Students Are Working At */}
-      <section className="py-16 bg-white">
+      {/* Our Students Are Working At */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-lavender-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -749,35 +778,6 @@ const OnlineCommerce = () => {
               alt="Our Hiring Partners"
               className="mx-auto w-full max-w-6xl rounded-lg shadow-md"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Specializations */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-lavender-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Popular Commerce Specializations
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Specialize in areas that match your career aspirations in finance
-              and commerce
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {specializations.map((spec, index) => (
-              <Card
-                key={index}
-                className="p-4 hover:shadow-md transition-shadow bg-white border border-gray-200/60"
-              >
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#0052CC]" />
-                  <span className="font-medium">{spec}</span>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
