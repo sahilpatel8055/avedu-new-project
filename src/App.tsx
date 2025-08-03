@@ -51,8 +51,8 @@ const App = () => (
           <Route path="/courses/bba" element={<OnlineBBA />} />
           <Route path="/courses/commerce" element={<OnlineCommerce />} />
           <Route path="/courses/arts" element={<OnlineArts />} />
-          {/* The new dynamic route for the IGNOU courses */}
-          <Route path="/course/:courseId" element={<CoursePage />} />
+          {/* The new dynamic route, now correctly pointing to /courses/:courseId */}
+          <Route path="/courses/:courseId" element={<CoursePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
