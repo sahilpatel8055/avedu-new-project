@@ -182,10 +182,10 @@ const UniversityGrid = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <Badge className="bg-primary-light text-primary mb-4">
-            <strong>Top Partner Universities</strong>
+            <strong>Top Universities</strong>
           </Badge>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-            <strong>Explore Over 100+ Universities</strong>
+            <strong>Explore Over 100+ Universities in India</strong>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Choose from India's top universities offering UGC-approved online degrees. 
