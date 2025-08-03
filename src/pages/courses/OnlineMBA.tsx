@@ -118,6 +118,7 @@ const OnlineMBA = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
 
+      {/* Hero */}
       <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -129,87 +130,58 @@ const OnlineMBA = () => {
               Advance your career with an Online MBA from India's top universities. Get industry-relevant curriculum, expert faculty, and flexible learning options.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge className="bg-[#0052CC] text-white text-base px-4 py-2">
-                <Award className="h-4 w-4 mr-2" />
-                UGC Approved
-              </Badge>
-              <Badge className="bg-[#0052CC] text-white text-base px-4 py-2">
-                <TrendingUp className="h-4 w-4 mr-2" />
-                High ROI Career
-              </Badge>
-              <Badge className="bg-[#0052CC] text-white text-base px-4 py-2">
-                <Building className="h-4 w-4 mr-2" />
-                Top Recruiters
-              </Badge>
+              <Badge className="bg-[#0052CC] text-white text-base px-4 py-2"><Award className="h-4 w-4 mr-2" />UGC Approved</Badge>
+              <Badge className="bg-[#0052CC] text-white text-base px-4 py-2"><TrendingUp className="h-4 w-4 mr-2" />High ROI Career</Badge>
+              <Badge className="bg-[#0052CC] text-white text-base px-4 py-2"><Building className="h-4 w-4 mr-2" />Top Recruiters</Badge>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-[#0052CC] hover:bg-[#003d99]">
-                <Phone className="h-5 w-5 mr-2" />
-                Get Free Counselling
-              </Button>
-              <Button size="lg" variant="outline">
-                <BookOpen className="h-5 w-5 mr-2" />
-                Download Brochure
-              </Button>
+              <Button size="lg" className="bg-[#0052CC] hover:bg-[#003d99]"><Phone className="h-5 w-5 mr-2" />Get Free Counselling</Button>
+              <Button size="lg" variant="outline"><BookOpen className="h-5 w-5 mr-2" />Download Brochure</Button>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Stats */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#0052CC] mb-2">50+</div>
-              <div className="text-gray-600">Universities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#0052CC] mb-2">200+</div>
-              <div className="text-gray-600">Specializations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#0052CC] mb-2">2 Years</div>
-              <div className="text-gray-600">Duration</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#0052CC] mb-2">100%</div>
-              <div className="text-gray-600">Online</div>
-            </div>
+            <div className="text-center"><div className="text-3xl font-bold text-[#0052CC] mb-2">50+</div><div className="text-gray-600">Universities</div></div>
+            <div className="text-center"><div className="text-3xl font-bold text-[#0052CC] mb-2">200+</div><div className="text-gray-600">Specializations</div></div>
+            <div className="text-center"><div className="text-3xl font-bold text-[#0052CC] mb-2">2 Years</div><div className="text-gray-600">Duration</div></div>
+            <div className="text-center"><div className="text-3xl font-bold text-[#0052CC] mb-2">100%</div><div className="text-gray-600">Online</div></div>
           </div>
         </div>
       </section>
 
+      {/* Top Universities */}
       <section className="py-16 bg-gradient-to-br from-purple-50 to-lavender-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Top Universities for Online MBA</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose from India's leading universities offering UGC-approved Online MBA programs
-            </p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Choose from India's leading universities offering UGC-approved Online MBA programs</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {topUniversities.map((university, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow bg-white border border-gray-200/60">
                 <CardHeader className="text-center pb-3">
                   <img src={university.logo} alt={university.name} className="h-16 w-16 object-contain mx-auto mb-3" />
-                  <h3 className="font-bold text-lg leading-tight">{university.name}</h3>
+                  <h3 className="font-bold text-lg">{university.name}</h3>
                   <div className="flex items-center justify-center gap-1 mt-2">
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <span className="font-medium">{university.rating}</span>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="text-center">
+                <CardContent className="space-y-3 text-center">
+                  <div>
                     <div className="font-bold text-[#0052CC] text-lg">{university.fees}</div>
                     <div className="text-sm text-gray-600">Annual Fees</div>
                   </div>
-                  <div className="text-center">
+                  <div>
                     <div className="font-medium">{university.duration}</div>
                     <div className="text-sm text-gray-600">Program Duration</div>
                   </div>
-                  <div className="text-center">
-                    <Badge variant="secondary" className="text-xs">{university.accreditation}</Badge>
-                  </div>
+                  <Badge variant="secondary" className="text-xs">{university.accreditation}</Badge>
                   <Button className="w-full bg-[#0052CC] hover:bg-[#003d99]">View Details</Button>
                 </CardContent>
               </Card>
@@ -218,13 +190,12 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Specializations */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Popular MBA Specializations</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose from a wide range of specializations to match your career goals
-            </p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Choose from a wide range of specializations to match your career goals</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {specializations.map((spec, index) => (
@@ -239,48 +210,80 @@ const OnlineMBA = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Subjects & Syllabus — NEW DESIGN */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Online MBA?</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience world-class management education with flexibility and convenience
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {keyFeatures.map((feature, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow bg-white border border-gray-200/60">
-                <CheckCircle className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
-                <h3 className="font-bold mb-2">{feature}</h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Online MBA Course Subjects/Syllabus</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {["Semester I", "Semester II", "Semester III", "Semester IV"].map((semester, i) => (
+              <Card key={i}>
+                <CardHeader><h3 className="font-bold text-xl text-[#0052CC]">{semester}</h3></CardHeader>
+                <CardContent>
+                  {i === 0 && (
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>Entrepreneurial Practice</li>
+                      <li>Business Communication (VAC)</li>
+                      <li>Managerial Economics</li>
+                      <li>Financial Accounting</li>
+                      <li>Data Visualisation (Excel/Tableau)</li>
+                      <li>Organizational Behaviour</li>
+                      <li>Marketing Management</li>
+                    </ul>
+                  )}
+                  {i === 1 && (
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>Business Research Methods (R/Python)</li>
+                      <li>Operation Management</li>
+                      <li>Human Resource Management</li>
+                      <li>Management Accounting</li>
+                      <li>Financial Management</li>
+                      <li>Legal Aspects of Business</li>
+                      <li>Business Communication (VAC)</li>
+                    </ul>
+                  )}
+                  {i === 2 || i === 3 ? (
+                    <>
+                      <h4 className="font-semibold mb-2">Core Subjects:</h4>
+                      <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                        {i === 2 ? <><li>Strategic Management</li><li>Term Paper</li></> : <><li>International Business Management</li><li>Project</li></>}
+                      </ul>
+                      <h4 className="font-semibold mb-2">Electives/Specializations:</h4>
+                      <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                        {[
+                          "Digital Marketing", "Finance", "Marketing", "Human Resources", "Analytics & DS", "BFSI", "FinTech",
+                          "Operations Management", "International Business", "Information System Management", "Project Management",
+                          "Supply Chain Management", "Retail Management"
+                        ].map((subj, i) => <li key={i}>{subj}</li>)}
+                      </ul>
+                    </>
+                  ) : null}
+                </CardContent>
               </Card>
+            ))}
+          </div>
+
+          <h3 className="text-2xl font-bold text-center text-[#0052CC] mb-6">Skills Obtained in Online MBA Course</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-gray-700 text-sm">
+            {[
+              "Strategic thinking", "Communication", "Entrepreneurship", "Networking", "Time management", "Leadership",
+              "Interpersonal communication", "Self-management", "Problem-solving", "Marketing", "Decision-making",
+              "Analytical skills", "Finance skills", "Operations management", "Analysis", "Skills management",
+              "Self-discipline", "Teamwork", "Technical skills", "Global perspective", "Flexibility"
+            ].map((skill, i) => (
+              <div key={i} className="bg-gray-100 px-4 py-2 rounded shadow-sm">{skill}</div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Subjects & Syllabus</h2>
-          <div className="max-w-3xl mx-auto space-y-4">
-            <p className="text-gray-600">The Online MBA is a two-year (4‑semester) program covering:</p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>
-                <strong>Semester I & II (Core):</strong> Management Concepts & Organizational Behavior, Managerial Economics, Marketing Management, Financial Accounting, Business Statistics & Analytics, Information Systems, Strategic Management, HRM Essentials, Business Communication, Business Law, Decision Science.
-              </li>
-              <li>
-                <strong>Semester III & IV (Advanced & Project):</strong> Supply Chain & Operations Strategy, International Business & Finance, Export‑Import Procedures, Logistics & Ethics, Research Methodology, Capstone Project.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
+      {/* Career Scope */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Career Scope & Top Recruiters</h2>
-          <div className="max-w-3xl mx-auto space-y-4 text-gray-700">
+          <div className="max-w-3xl mx-auto space-y-4 text-gray-700 text-center">
             <p>Graduates with an Online MBA can pursue roles such as Business Manager, Marketing Manager, HR Manager, Financial Analyst, Consultant, Operations Manager, Project Manager, and more.</p>
-            <p>Many companies actively recruit MBA graduates from diverse industries including consulting, finance, FMCG, technology, and logistics. Common recruiters include Amazon, Deloitte, EY, KPMG, Wipro, TCS, Microsoft, and more.</p>
+            <p>Many companies actively recruit MBA graduates from diverse industries including consulting, finance, FMCG, technology, and logistics.</p>
           </div>
           <div className="mt-8">
             <img src={hiringPartnersImg} alt="Our Students Work At" className="mx-auto w-full max-w-6xl rounded-lg shadow-md" />
@@ -288,44 +291,32 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* FAQs */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Get answers to common questions about Online MBA programs
-            </p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Get answers to common questions about Online MBA programs</p>
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <Card key={index} className="border border-gray-200/60">
-                <CardHeader>
-                  <h3 className="font-bold text-lg">{faq.question}</h3>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </CardContent>
+                <CardHeader><h3 className="font-bold text-lg">{faq.question}</h3></CardHeader>
+                <CardContent><p className="text-gray-600">{faq.answer}</p></CardContent>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Final CTA */}
       <section className="py-16 bg-gradient-to-br from-[#0052CC] to-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Advance Your Career?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals who have transformed their careers with Online MBA
-          </p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">Join thousands of professionals who have transformed their careers with Online MBA</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-[#0052CC] hover:bg-gray-100">
-              <Phone className="h-5 w-5 mr-2" />
-              Get Free Counselling
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#0052CC]">
-              <Calendar className="h-5 w-5 mr-2" />
-              Book a Demo
-            </Button>
+            <Button size="lg" className="bg-white text-[#0052CC] hover:bg-gray-100"><Phone className="h-5 w-5 mr-2" />Get Free Counselling</Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#0052CC]"><Calendar className="h-5 w-5 mr-2" />Book a Demo</Button>
           </div>
         </div>
       </section>
