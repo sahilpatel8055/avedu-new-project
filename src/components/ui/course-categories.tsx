@@ -4,10 +4,9 @@ import { Button } from "@/components/ui/button";
 import { 
   Palette, 
   Scale, 
-  BookOpen,
-  TrendingUp,
-  Globe
+  TrendingUp 
 } from "lucide-react";
+
 import mbaIcon from "@/assets/icons/mba-icon.png";
 import techIcon from "@/assets/icons/tech-icon.png";
 import bbaIcon from "@/assets/icons/bba-icon.png";
@@ -17,7 +16,7 @@ import healthcareIcon from "@/assets/icons/healthcare-icon.png";
 interface CourseCategory {
   id: string;
   title: string;
-  icon: React.ReactNode;
+  icon: string | React.ReactNode;
   programs: number;
   popularCourses: string[];
   trending?: boolean;
@@ -27,7 +26,7 @@ const categories: CourseCategory[] = [
   {
     id: "mba",
     title: "MBA & Management",
-    icon: <img src={mbaIcon} alt="MBA" className="h-8 w-8" />,
+    icon: mbaIcon,
     programs: 45,
     popularCourses: ["MBA", "PGDM", "Executive MBA"],
     trending: true,
@@ -35,7 +34,7 @@ const categories: CourseCategory[] = [
   {
     id: "btech",
     title: "Engineering & Technology", 
-    icon: <img src={techIcon} alt="Technology" className="h-8 w-8" />,
+    icon: techIcon,
     programs: 38,
     popularCourses: ["B.Tech", "M.Tech", "BCA", "MCA"],
     trending: true,
@@ -43,7 +42,7 @@ const categories: CourseCategory[] = [
   {
     id: "bba",
     title: "BBA",
-    icon: <img src={bbaIcon} alt="BBA" className="h-8 w-8" />,
+    icon: bbaIcon,
     programs: 22,
     popularCourses: ["BBA", "BBA Hons"],
     trending: false,
@@ -51,7 +50,7 @@ const categories: CourseCategory[] = [
   {
     id: "bcom",
     title: "Commerce & Finance",
-    icon: <img src={financeIcon} alt="Finance" className="h-8 w-8" />,
+    icon: financeIcon,
     programs: 32,
     popularCourses: ["B.Com", "M.Com", "BCOM", "MCOM"],
     trending: true,
@@ -59,7 +58,7 @@ const categories: CourseCategory[] = [
   {
     id: "healthcare",
     title: "Healthcare & Medicine",
-    icon: <img src={healthcareIcon} alt="Healthcare" className="h-8 w-8" />,
+    icon: healthcareIcon,
     programs: 25,
     popularCourses: ["B.Sc Nursing", "BPT", "Health Admin"],
     trending: false,
@@ -98,19 +97,21 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
           Trending
         </Badge>
       )}
-      
+
       <CardContent className="p-4 sm:p-6 text-center space-y-3 sm:space-y-4">
-        <div className="bg-primary-light p-4 rounded-full w-fit mx-auto group-hover:scale-110 transition-transform duration-300">
-          <div className="text-blue-600">
-            {category.icon}
-          </div>
+        <div className="w-16 h-16 rounded-full bg-primary-light mx-auto flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300">
+          {typeof category.icon === "string" ? (
+            <img src={category.icon} alt={category.title} className="w-full h-full object-cover" />
+          ) : (
+            <div className="text-blue-600 w-8 h-8">{category.icon}</div>
+          )}
         </div>
-        
+
         <div className="space-y-2">
           <h3 className="font-bold text-lg">{category.title}</h3>
           <p className="text-[#0052CC] font-bold">{category.programs}+ Programs</p>
         </div>
-        
+
         <div className="space-y-2">
           <p className="text-sm font-medium text-muted-foreground">Popular Courses:</p>
           <div className="flex flex-wrap gap-1 justify-center">
@@ -121,7 +122,7 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
             ))}
           </div>
         </div>
-        
+
         <Button 
           variant="ghost" 
           className="w-full group-hover:bg-[#0052CC] group-hover:text-white transition-colors"
