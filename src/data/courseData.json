@@ -118,6 +118,47 @@
       { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
     ]
   },
+  "online-bcom": {
+    "id": "online-bcom",
+    "name": "Online B.Com",
+    "fees": "₹24,000",
+    "duration": "3 Years",
+    "eligibility": "12th pass with Commerce or equivalent",
+    "headline": "A undergraduate degree in commerce for a career in finance, accounting, and business.",
+    "description": "Get an Online B.Com from IGNOU - a versatile degree for aspiring finance and commerce professionals.",
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" },
+      { "name": "Information Technology Management", "description": "Bridge technology and business with IT strategy and systems management" },
+      { "name": "International Business", "description": "Understand global markets, trade policies, and cross-cultural management" },
+      { "name": "Retail Management", "description": "Optimize business processes, supply chain, and quality management" },
+      { "name": "Business Analytics", "description": "Optimize business Stratigies, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
+  },
   "online-mca": {
     "id": "online-mca",
     "name": "Online MCA",
@@ -206,6 +247,84 @@
       { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
       { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
       { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
+  },
+  "online-ba": {
+    "id": "online-ba",
+    "name": "Online BA",
+    "fees": "₹21,000",
+    "duration": "3 Years",
+    "eligibility": "12th pass from a recognized board",
+    "headline": "A bachelor's degree in arts, humanities, and social sciences.",
+    "description": "IGNOU's Online BA program offers a flexible way to pursue higher education in various disciplines.",
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
+  },
+  "online-bcom": {
+    "id": "online-bcom",
+    "name": "Online B.Com",
+    "fees": "₹24,000",
+    "duration": "3 Years",
+    "eligibility": "12th pass with Commerce or equivalent",
+    "headline": "A undergraduate degree in commerce for a career in finance, accounting, and business.",
+    "description": "Get an Online B.Com from IGNOU - a versatile degree for aspiring finance and commerce professionals.",
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" },
+      { "name": "Information Technology Management", "description": "Bridge technology and business with IT strategy and systems management" },
+      { "name": "International Business", "description": "Understand global markets, trade policies, and cross-cultural management" },
+      { "name": "Retail Management", "description": "Optimize business processes, supply chain, and quality management" },
+      { "name": "Business Analytics", "description": "Optimize business Stratigies, and quality management" }
     ],
     "highlights": [
       { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
