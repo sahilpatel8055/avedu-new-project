@@ -6,6 +6,7 @@ import {
   MapPin,
   Users,
   GraduationCap,
+  Award, // RE-ADDED: This was missing and caused the error
   DollarSign,
   BookOpen,
   Clock,
@@ -167,7 +168,6 @@ const IGNOU = () => {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    {/* Replaced Award icon with dynamic image */}
                     <img src={approval.icon} alt={`${approval.name} Icon`} className="w-12 h-12 object-contain" />
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
