@@ -23,12 +23,13 @@ import {
   Lightbulb,
   MessageSquare,
   Search,
+  ClipboardList,
 } from "lucide-react";
 import manipalLogo from "@/assets/manipal-logo.png";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
 import ignouLogo from "@/assets/ignou-logo.png";
-import hiringPartnersImg from "@/assets/hiring-partners.png"; // NEW IMPORT
+import hiringPartnersImg from "@/assets/hiring-partners.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
@@ -157,7 +158,6 @@ const OnlineArts = () => {
     },
   ];
 
-  // NEW DATA ADDED
   const baSyllabus = [
     {
       title: "Year 1",
@@ -275,7 +275,6 @@ const OnlineArts = () => {
     "EdTech Companies",
     "Publishing Houses",
   ];
-  // END OF NEW DATA
 
   return (
     <div className="min-h-screen bg-background">
@@ -622,7 +621,7 @@ const OnlineArts = () => {
         </div>
       </section>
 
-      {/* NEW SECTION: Career Scope & Top Recruiters (REPLACES original Career Opportunities) */}
+      {/* NEW SECTION: Career Scope & Top Recruiters */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -630,7 +629,8 @@ const OnlineArts = () => {
               Career Scope & Top Recruiters
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover diverse career paths in government, media, and social sectors.
+              Discover diverse career paths in government, media, and social
+              sectors.
             </p>
           </div>
           <Card className="hover:shadow-lg transition-shadow border border-gray-200/60">
@@ -695,7 +695,7 @@ const OnlineArts = () => {
         </div>
       </section>
 
-      {/* Key Features - This section now follows the new sections */}
+      {/* Key Features */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
