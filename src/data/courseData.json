@@ -1,409 +1,122 @@
 {
   "online-mba": {
-    "name": "Online Master of Business Administration",
-    "headline": "Ignou Distance MBA Program 2025 | Apply Now",
-    "description": "The MBA is an AICTE-recognized postgraduate program offered to applicants from India as well as Non-Resident Indians (NRIs) in the English language. IGNOU’s objective behind offering the MBA program is to enhance the skills of fresh graduates and working professionals who wish to pursue a career in business and management.",
-    "fees": "INR 64,000",
+    "id": "online-mba",
+    "name": "Online MBA",
+    "fees": "₹62,000",
     "duration": "2 Years",
-    "eligibility": "Graduation in any discipline with 50% (45% for reserved categories)",
+    "eligibility": "Bachelor's degree with 50% marks",
+    "headline": "UGC-approved comprehensive postgraduate management degree.",
+    "description": "Apply for IGNOU MBA Admission 2025. Get your Online MBA from IGNOU - a UGC-approved comprehensive postgraduate management degree with best IGNOU Online MBA Fee Structure.",
+    "degreeImage": "src/assets/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
     "keyFeatures": [
-      "UGC and NAAC Accreditation",
-      "Core and Elective Subjects",
-      "Counseling Sessions",
-      "Online and Offline Resources"
-    ],
-    "curriculum": [
-      {
-        "semester": "Semester I",
-        "subjects": [
-          "Management functions and organizational processes",
-          "Human Resource Management",
-          "Business laws",
-          "International Business Management"
-        ]
-      },
-      {
-        "semester": "Semester II",
-        "subjects": [
-          "Advanced Strategic Management",
-          "Business Ethics and CSR",
-          "Financial Management",
-          "Research Methodology for Management Decisions"
-        ]
-      },
-      {
-        "semester": "Semester III",
-        "subjects": [
-          "Operations Management",
-          "Marketing Management",
-          "Management Information Systems",
-          "Corporate Communication"
-        ]
-      },
-      {
-        "semester": "Semester IV",
-        "subjects": [
-          "Financial Analysis & Reporting",
-          "Business Intelligence & Data Analytics",
-          "Project Work",
-          "Elective Subjects"
-        ]
-      }
-    ],
-    "faculty": [
-      {
-        "name": "facutly",
-        "title": "Professor",
-        "bio": ""
-      }
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
     ],
     "admissionProcess": [
-      "Clear OPEN-MAT entrance exam (mandatory from 2025)",
-      "Fill the counseling form for guidance from our counselor",
-      "Submit required documents",
-      "Enrollment and Fee Payment"
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
     ]
   },
   "online-bca": {
-    "name": "Online Bachelor of Computer Applications",
-    "headline": "IGNOU Online BCA Admission 2025",
-    "description": "Admissions for January 2025 are now open at Indira Gandhi National Open University. Interested students can apply until the specified deadline following IGNOU’s guidelines. IGNOU offers admissions twice a year, in January and July.",
-    "fees": "₹36,000",
+    "id": "online-bca",
+    "name": "Online BCA",
+    "fees": "₹45,000",
     "duration": "3 Years",
-    "eligibility": "10+2 or equivalent from a recognized board. Basic English language skills are also recommended.",
-    "keyFeatures": [
-      "Top Distance Learning University in India",
-      "Approved by University Grants Commission (UGC)",
-      "Approved by All India Council of Technical Education (AICTE)",
-      "Affordable Fee",
-      "Online and Offline Study Resources"
+    "eligibility": "12th pass with Maths/Commerce with Maths",
+    "headline": "A professional IT degree for a career in software development and technology.",
+    "description": "Apply for IGNOU BCA Admission 2025. Get your Online BCA from IGNOU - a UGC-approved degree with a focus on modern IT skills.",
+    "degreeImage": "src/assets/ignou-degree.png",
+    "specialisations": [
+      { "name": "Data Science", "description": "Fundamentals of data analysis and machine learning." },
+      { "name": "Cyber Security", "description": "Learn to protect digital information and systems." },
+      { "name": "Cloud Computing", "description": "Skills in cloud infrastructure and services." }
     ],
-    "curriculum": [
-      {
-        "semester": "Semester I",
-        "subjects": [
-          "Computer Fundamentals",
-          "Programming in C",
-          "Mathematics",
-          "Digital Logic"
-        ]
-      },
-      {
-        "semester": "Semester II",
-        "subjects": [
-          "Data Structures",
-          "Object-Oriented Programming",
-          "Discrete Mathematics",
-          "System Analysis and Design"
-        ]
-      },
-      {
-        "semester": "Semester III",
-        "subjects": [
-          "Database Management Systems",
-          "Computer Networks",
-          "Operating Systems",
-          "Web Technologies"
-        ]
-      },
-      {
-        "semester": "Semester IV",
-        "subjects": [
-          "Software Engineering",
-          "E-Commerce",
-          "Introduction to AI",
-          "Python Programming"
-        ]
-      },
-      {
-        "semester": "Semester V",
-        "subjects": [
-          "Data Science",
-          "Cyber Security",
-          "Advanced Java",
-          "Mobile Application Development"
-        ]
-      },
-      {
-        "semester": "Semester VI",
-        "subjects": [
-          "Project Work",
-          "Software Testing",
-          "Cloud Computing",
-          "Elective Subjects"
-        ]
-      }
+    "highlights": [
+      { "title": "Practical Learning", "description": "Hands-on projects and lab work.", "icon": "BookOpen" },
+      { "title": "Industry-Relevant", "description": "Syllabus updated for current tech trends.", "icon": "TrendingUp" },
+      { "title": "Career Opportunities", "description": "Jobs in IT, software, and data fields.", "icon": "Award" }
     ],
-    "faculty": [],
-    "admissionProcess": [
-      "Fill the counseling form for guidance from our expert counselor"
-    ],
-    "courseDetails": [
-      {
-        "title": "Assignments",
-        "description": "Students have one BCA course assignment to finish before their final exam. The university has set a deadline for this. To avoid any issues, students need to submit their assignment to the nearest study center before the deadline."
-      },
-      {
-        "title": "Examination at the Conclusion of the Term",
-        "description": "The University holds a term-end exam for the Online BCA course twice a year, in June and December. Students who want to take the exam need to fill out an exam form and pay a fee."
-      },
-      {
-        "title": "Online Study Resources",
-        "description": "IGNOU also offers students online resources in various formats. The university has created software that allows students to access and download their books anytime. Through this app, students can also watch recorded lectures."
-      },
-      {
-        "title": "Assessment",
-        "description": "The IGNOU Online BCA examination consists of two parts: assignments (30% of the final grade) and semester exams (70% of the final grade). To pass the course, students must score at least 40% on the final exam."
-      }
-    ]
-  },
-  "online-mca": {
-    "name": "Online Master of Computer Applications",
-    "headline": "IGNOU Online MCA- Master's in Computer Application",
-    "description": "The institution also offers online 2-year courses for MCA-Masters in Computer Application under distance-learning programs. This is very useful for a working person since it offers many learning advantages over the traditional distance-learning mode. Additionally, it’s a very good option for those with basic computer knowledge, looking to upgrade their skills.",
-    "fees": "₹48,000",
-    "duration": "2 Years",
-    "eligibility": "Candidates generally need a BCA, a Bachelor's degree in Computer Science Engineering, or an equivalent degree. A Bachelor's degree in B.Sc., B.Com., or B.A. with Mathematics can also be considered.",
-    "keyFeatures": [
-      "Top Distance Learning University in India",
-      "Approved by University Grants Commission (UGC)",
-      "Approved by All India Council of Technical Education (AICTE)",
-      "Affordable Fee"
-    ],
-    "curriculum": [
-      {
-        "semester": "Semester I",
-        "subjects": [
-          "Advanced Data Structures & Algorithms",
-          "Software Engineering",
-          "Database Management Systems",
-          "Operating Systems",
-          "Mathematical Foundations for Computer Applications"
-        ]
-      },
-      {
-        "semester": "Semester II",
-        "subjects": [
-          "Java Programming",
-          "Web Technologies",
-          "Cloud Computing",
-          "AI & Machine Learning",
-          "Computer Networks"
-        ]
-      },
-      {
-        "semester": "Semester III",
-        "subjects": [
-          "Python Programming for Data Science",
-          "Cyber Security",
-          "Mobile Computing",
-          "Design & Analysis of Algorithms",
-          "Distributed Systems"
-        ]
-      },
-      {
-        "semester": "Semester IV",
-        "subjects": [
-          "Big Data Analytics",
-          "Internet of Things (IoT)",
-          "Advanced Software Project Management",
-          "Elective Specialization"
-        ]
-      }
-    ],
-    "faculty": [],
-    "admissionProcess": [
-      "Fill the counseling form for guidance from our expert counselor"
-    ]
-  },
-  "online-bcom": {
-    "name": "Online Bachelor of Commerce",
-    "headline": "IGNOU Online BCom Course 2025",
-    "description": "The institution also offers a Bachelor of Commerce (B.Com) program, aimed at those interested in financial management in business. The online B.Com program can be completed in a minimum of three years and a maximum of six years. IGNOU opens admissions twice a year, in January and July.",
-    "fees": "₹8,100",
-    "duration": "3 Years",
-    "eligibility": "10+2 with Mathematics",
-    "keyFeatures": [
-      "Top Distance Learning University in India",
-      "Approved by University Grants Commission (UGC)",
-      "Approved by All India Council of Technical Education (AICTE)",
-      "Affordable Fee"
-    ],
-    "curriculum": [
-      {
-        "semester": "Year 1",
-        "subjects": [
-          "Financial Accounting",
-          "Business Laws",
-          "Business Management",
-          "Economics for Business",
-          "Computer Applications in Business"
-        ]
-      },
-      {
-        "semester": "Year 2",
-        "subjects": [
-          "Corporate Accounting",
-          "Cost & Management Accounting",
-          "Income Tax Laws",
-          "Auditing & Corporate Governance",
-          "Banking & Insurance"
-        ]
-      },
-      {
-        "semester": "Year 3",
-        "subjects": [
-          "Financial Management",
-          "Goods & Services Tax (GST)",
-          "E-Commerce & Digital Marketing",
-          "International Business",
-          "Project Work"
-        ]
-      }
-    ],
-    "faculty": [],
-    "admissionProcess": [
-      "Fill the counseling form for guidance from our expert counselor"
-    ]
-  },
-  "online-mcom": {
-    "name": "Online Master of Commerce",
-    "headline": "IGNOU Online MCom - Master of Commerce",
-    "description": "The Online MCom from IGNOU is a 3 year course which consist of subjects like accounting, finance, fintech and many more which help students to gain knowledge about finance and acquire skills to get a job in MNC. This program include with accounting and finance domains and gives the students a deep knowledge about the course. There are various Career opportunities available after completing this program you will find jobs in MNCs and organizations dealing with finance.",
-    "fees": "₹21,000",
-    "duration": "2 Years",
-    "eligibility": "Bachelor's degree in Commerce, or a related field.",
-    "keyFeatures": [
-      "Top Distance Learning University in India",
-      "Approved by University Grants Commission (UGC)",
-      "Approved by All India Council of Technical Education (AICTE)",
-      "Affordable Fee"
-    ],
-    "curriculum": [
-      {
-        "year": "Year 1",
-        "subjects": [
-          "Advanced Financial Accounting",
-          "Corporate Financial Management",
-          "Advanced Cost Accounting",
-          "Managerial Economics",
-          "Strategic Management"
-        ]
-      },
-      {
-        "year": "Year 2",
-        "subjects": [
-          "International Financial Management",
-          "Business Environment",
-          "E-Commerce & Digital Marketing",
-          "Specialization Electives (e.g., Finance, Taxation)",
-          "Research Project"
-        ]
-      }
-    ],
-    "faculty": [],
-    "admissionProcess": [
-      "Fill the counseling form for guidance from our expert counselor"
-    ]
-  },
-  "online-ba": {
-    "name": "Online Bachelor of Arts",
-    "headline": "IGNOU Online BA Course 2025",
-    "description": "IGNOU online BA course is ideal for individuals who wish to pursue undergraduate schooling but need help to go through the competition in college admission. This BA online program developed exclusively for professionals at work allows students to achieve a bachelor of arts degree without an interruption in employment.",
-    "fees": "₹7,200",
-    "duration": "3 Years",
-    "eligibility": "Candidates must have passed their 10+2 (or equivalent) from a recognized board. There is no age restriction for IGNOU BA admissions.",
-    "keyFeatures": [
-      "Top Distance Learning University in India",
-      "Approved by University Grants Commission (UGC)",
-      "Approved by All India Council of Technical Education (AICTE)",
-      "Affordable Fee"
-    ],
-    "curriculum": [
-      {
-        "semester": "Year 1",
-        "subjects": [
-          "English Literature",
-          "Introduction to Sociology",
-          "Political Theory",
-          "History of India",
-          "Psychology Basics"
-        ]
-      },
-      {
-        "semester": "Year 2",
-        "subjects": [
-          "Public Administration",
-          "Indian Economy",
-          "Social Psychology",
-          "Contemporary India",
-          "Research Methods"
-        ]
-      },
-      {
-        "semester": "Year 3",
-        "subjects": [
-          "Indian Constitution",
-          "International Relations",
-          "Developmental Economics",
-          "Project Work",
-          "Elective Subjects"
-        ]
-      }
-    ],
-    "faculty": [],
-    "admissionProcess": [
-      "Fill the counseling form for guidance from our expert counselor"
-    ]
+    "keyFeatures": [],
+    "admissionProcess": [],
+    "curriculum": []
   },
   "online-bba": {
-    "name": "Online Bachelor of Business Administration",
-    "headline": "IGNOU Online BBA - Bachelor of Business Administration 2025",
-    "description": "BBA, or Bachelor of Business Administration, is a degree offered by universities to give students a strong understanding of various management areas in the business world. Among the popular BBA programs is the one offered by IGNOU, which allows students to focus on retail or service management.",
-    "fees": "₹27,200",
+    "id": "online-bba",
+    "name": "Online BBA",
+    "fees": "₹50,000",
     "duration": "3 Years",
-    "eligibility": "Candidates need to have passed their 10+2 or equivalent examination from a recognized board. There is no upper age limit to apply.",
-    "keyFeatures": [
-      "Top Distance Learning University in India",
-      "Approved by University Grants Commission (UGC)",
-      "Approved by All India Council of Technical Education (AICTE)",
-      "Affordable Fee"
-    ],
-    "curriculum": [
-      {
-        "year": "Year 1",
-        "subjects": [
-          "Principles of Management",
-          "Financial Accounting",
-          "Business Law",
-          "Business Statistics",
-          "Microeconomics"
-        ]
-      },
-      {
-        "year": "Year 2",
-        "subjects": [
-          "Organizational Behavior",
-          "Marketing Management",
-          "Human Resource Management",
-          "Production & Operations Management",
-          "Management Accounting"
-        ]
-      },
-      {
-        "year": "Year 3",
-        "subjects": [
-          "Financial Management",
-          "International Business",
-          "Strategic Management",
-          "Entrepreneurship",
-          "Project Work & Viva Voce"
-        ]
-      }
-    ],
-    "faculty": [],
-    "admissionProcess": [
-      "Fill the counseling form for guidance from our expert counselor"
-    ]
+    "eligibility": "12th pass from a recognized board",
+    "headline": "An undergraduate business degree to build a strong management foundation.",
+    "description": "Get your Online BBA from IGNOU - a versatile degree for aspiring managers and entrepreneurs.",
+    "degreeImage": "src/assets/ignou-degree.png",
+    "specialisations": [],
+    "highlights": [],
+    "keyFeatures": [],
+    "admissionProcess": [],
+    "curriculum": []
+  },
+  "online-mca": {
+    "id": "online-mca",
+    "name": "Online MCA",
+    "fees": "₹60,000",
+    "duration": "2 Years",
+    "eligibility": "BCA/B.Sc. in CS/IT or equivalent",
+    "headline": "Advance your career in software development and advanced computing.",
+    "description": "Pursue an Online MCA from IGNOU to gain expertise in a wide range of computer applications.",
+    "degreeImage": "src/assets/ignou-degree.png",
+    "specialisations": [],
+    "highlights": [],
+    "keyFeatures": [],
+    "admissionProcess": [],
+    "curriculum": []
+  },
+  "online-mcom": {
+    "id": "online-mcom",
+    "name": "Online M.Com",
+    "fees": "₹30,000",
+    "duration": "2 Years",
+    "eligibility": "Bachelor's degree in Commerce or equivalent",
+    "headline": "A master's degree in commerce for a career in finance, accounting, and business.",
+    "description": "Get an Online M.Com from IGNOU - a deep dive into advanced financial concepts and management.",
+    "degreeImage": "src/assets/ignou-degree.png",
+    "specialisations": [],
+    "highlights": [],
+    "keyFeatures": [],
+    "admissionProcess": [],
+    "curriculum": []
+  },
+  "online-ma": {
+    "id": "online-ma",
+    "name": "Online MA",
+    "fees": "₹25,000",
+    "duration": "2 Years",
+    "eligibility": "Bachelor's degree from a recognized university",
+    "headline": "Specialized master's degree in arts, humanities, and social sciences.",
+    "description": "IGNOU's Online MA program offers a flexible way to pursue higher education in various disciplines.",
+    "degreeImage": "src/assets/ignou-degree.png",
+    "specialisations": [],
+    "highlights": [],
+    "keyFeatures": [],
+    "admissionProcess": [],
+    "curriculum": []
   }
 }
