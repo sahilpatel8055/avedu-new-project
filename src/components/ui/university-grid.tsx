@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Users, GraduationCap, ExternalLink } from "lucide-react";
 import universityPlaceholder from "@/assets/university-placeholder.jpg";
+import { Link } from "react-router-dom";
+import ignouLogo from "@/assets/ignou-logo.png";
+import manipalLogo from "@/assets/manipal-logo.png";
+import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
+import vguLogo from "@/assets/vgu-logo.png";
 
 interface University {
   id: string;
@@ -16,13 +21,6 @@ interface University {
   approvals: string[];
   image?: string;
 }
-
-import { Link } from "react-router-dom";
-import ignouLogo from "@/assets/ignou-logo.png";
-import manipalLogo from "@/assets/manipal-logo.png";
-import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
-import vguLogo from "@/assets/vgu-logo.png";
-import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
 
 const universities: University[] = [
   {
@@ -99,17 +97,17 @@ const universities: University[] = [
 
 const UniversityCard = ({ university }: { university: University }) => {
   return (
-    <Card className="h-full border border-gray-300 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group rounded-xl bg-white">
+    <Card className="h-full border border-gray-300 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group rounded-xl bg-[#f5f3ff]">
       <CardHeader className="pb-2 sm:pb-3">
         <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-2 sm:mb-3">
           <img 
             src={university.image || universityPlaceholder}
             alt={university.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="space-y-1 sm:space-y-2">
-          <h3 className="font-bold text-base sm:text-lg leading-tight">{university.name}</h3>
+          <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900">{university.name}</h3>
           <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
             <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
             {university.location}
@@ -130,18 +128,18 @@ const UniversityCard = ({ university }: { university: University }) => {
         </div>
 
         <div className="grid grid-cols-2 gap-3">
-          <div className="text-center p-2 bg-primary-light rounded-lg">
-            <div className="font-semibold text-primary">{university.ugPrograms}</div>
+          <div className="text-center p-2 bg-indigo-100 rounded-lg">
+            <div className="font-semibold text-indigo-700">{university.ugPrograms}</div>
             <div className="text-xs text-muted-foreground">UG Courses</div>
           </div>
-          <div className="text-center p-2 bg-primary-light rounded-lg">
-            <div className="font-semibold text-primary">{university.pgPrograms}</div>
+          <div className="text-center p-2 bg-indigo-100 rounded-lg">
+            <div className="font-semibold text-indigo-700">{university.pgPrograms}</div>
             <div className="text-xs text-muted-foreground">PG Courses</div>
           </div>
         </div>
 
-        <div className="text-center p-3 bg-success-light rounded-lg">
-          <div className="font-semibold text-success">{university.fees}</div>
+        <div className="text-center p-3 bg-green-100 rounded-lg">
+          <div className="font-semibold text-green-700">{university.fees}</div>
           <div className="text-xs text-muted-foreground">Starting Fees</div>
         </div>
 
@@ -180,7 +178,7 @@ const UniversityGrid = () => {
           <Badge className="bg-primary-light text-primary mb-4">
             <strong>Top Universities</strong>
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
             <strong>Explore Over 100+ Universities in India</strong>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
