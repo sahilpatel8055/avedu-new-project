@@ -110,34 +110,6 @@ const OnlineTech = () => {
     "Career Placement Support",
   ];
 
-  const faqs = [
-    {
-      question: "Are Online BCA/MCA degrees valid for jobs?",
-      answer:
-        "Yes, Online BCA/MCA from UGC-recognized universities are valid and accepted by employers in IT industry and for higher studies.",
-    },
-    {
-      question: "What programming languages are covered?",
-      answer:
-        "Courses cover popular languages like Java, Python, C++, JavaScript, PHP, and emerging technologies like AI/ML frameworks.",
-    },
-    {
-      question: "Do I get hands-on coding experience in online programs?",
-      answer:
-        "Yes, programs include virtual labs, coding assignments, live programming sessions, and industry projects for practical experience.",
-    },
-    {
-      question: "What are the career opportunities after BCA/MCA?",
-      answer:
-        "Graduates can work as Software Developer, Web Developer, System Analyst, Database Administrator, IT Consultant, and many more tech roles.",
-    },
-    {
-      question: "Is work experience required for MCA admission?",
-      answer:
-        "Work experience is not mandatory for MCA admission. However, having some exposure to programming concepts is beneficial.",
-    },
-  ];
-
   const bcaSyllabus = [
     {
       title: "Semester 1",
@@ -548,7 +520,7 @@ const OnlineTech = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-16 bg-gradient-to-br from-pink-50 to-purple-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
