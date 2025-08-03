@@ -107,8 +107,8 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
         </div>
         
         <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{category.title}</h3>
-          <p className="text-blue-600 font-medium">{category.programs}+ Programs</p>
+          <h3 className="font-bold text-lg">{category.title}</h3>
+          <p className="text-[#0052CC] font-bold">{category.programs}+ Programs</p>
         </div>
         
         <div className="space-y-2">

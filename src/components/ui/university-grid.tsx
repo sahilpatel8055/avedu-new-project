@@ -99,7 +99,7 @@ const universities: University[] = [
 
 const UniversityCard = ({ university }: { university: University }) => {
   return (
-    <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group">
+    <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group border border-gray-200/60">
       <CardHeader className="pb-2 sm:pb-3">
         <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-2 sm:mb-3">
           <img 
@@ -109,7 +109,7 @@ const UniversityCard = ({ university }: { university: University }) => {
           />
         </div>
         <div className="space-y-1 sm:space-y-2">
-          <h3 className="font-semibold text-base sm:text-lg leading-tight">{university.name}</h3>
+          <h3 className="font-bold text-base sm:text-lg leading-tight">{university.name}</h3>
           <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
             <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
             {university.location}
@@ -178,7 +178,7 @@ const UniversityCard = ({ university }: { university: University }) => {
 
 const UniversityGrid = () => {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-background" id="universities">
+    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-purple-50 to-lavender-100 border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <Badge className="bg-primary-light text-primary mb-4">
@@ -193,10 +193,7 @@ const UniversityGrid = () => {
           </p>
         </div>
 
-        {/* University Logos Marquee */}
-        <UniversityLogosMarquee />
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {universities.map((university) => (
             <UniversityCard key={university.id} university={university} />
           ))}
