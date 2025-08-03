@@ -38,7 +38,7 @@ const universities: University[] = [
     image: ignouLogo,
   },
   {
-    id: "manipal", 
+    id: "manipal",
     name: "Manipal University Online",
     location: "Jaipur, India",
     rating: 4.6,
@@ -52,7 +52,7 @@ const universities: University[] = [
   {
     id: "uttaranchal",
     name: "Uttaranchal University Online",
-    location: "Dehradun, India", 
+    location: "Dehradun, India",
     rating: 4.5,
     students: "25K+",
     ugPrograms: 15,
@@ -66,7 +66,7 @@ const universities: University[] = [
     name: "Vivekananda Global University",
     location: "Jaipur, India",
     rating: 4.4,
-    students: "15K+", 
+    students: "15K+",
     ugPrograms: 12,
     pgPrograms: 15,
     fees: "₹40,000+/year",
@@ -78,7 +78,7 @@ const universities: University[] = [
     name: "Sikkim Manipal University",
     location: "Gangtok, SK",
     rating: 4.4,
-    students: "45K+", 
+    students: "45K+",
     ugPrograms: 20,
     pgPrograms: 18,
     fees: "₹40,000/year",
@@ -92,14 +92,14 @@ const universities: University[] = [
     students: "35K+",
     ugPrograms: 22,
     pgPrograms: 24,
-    fees: "₹50,000/year", 
+    fees: "₹50,000/year",
     approvals: ["UGC", "AICTE", "NAAC A++"],
-  }
+  },
 ];
 
 const UniversityCard = ({ university }: { university: University }) => {
   return (
-    <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group border border-gray-200/60">
+    <Card className="h-full border border-gray-300 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group rounded-xl bg-white">
       <CardHeader className="pb-2 sm:pb-3">
         <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-2 sm:mb-3">
           <img 
@@ -118,7 +118,6 @@ const UniversityCard = ({ university }: { university: University }) => {
       </CardHeader>
 
       <CardContent className="pb-2 sm:pb-3 space-y-3 sm:space-y-4">
-        {/* Rating & Students */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
             <Star className="h-4 w-4 fill-primary text-primary" />
@@ -130,7 +129,6 @@ const UniversityCard = ({ university }: { university: University }) => {
           </div>
         </div>
 
-        {/* Programs */}
         <div className="grid grid-cols-2 gap-3">
           <div className="text-center p-2 bg-primary-light rounded-lg">
             <div className="font-semibold text-primary">{university.ugPrograms}</div>
@@ -142,13 +140,11 @@ const UniversityCard = ({ university }: { university: University }) => {
           </div>
         </div>
 
-        {/* Fees */}
         <div className="text-center p-3 bg-success-light rounded-lg">
           <div className="font-semibold text-success">{university.fees}</div>
           <div className="text-xs text-muted-foreground">Starting Fees</div>
         </div>
 
-        {/* Approvals */}
         <div className="flex flex-wrap gap-1">
           {university.approvals.map((approval) => (
             <Badge key={approval} variant="secondary" className="text-xs">
