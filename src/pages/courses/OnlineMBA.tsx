@@ -106,7 +106,13 @@ const specializations = [
   "Business Analytics",
   "Healthcare Management",
   "Banking & Financial Services",
-  "Supply Chain Management",
+  "Supply Chain Management"
+  "Production and Operations Management"
+  "Retail Management"
+  "Data Science"
+  "Entrepreneurship and Leadership Managements"
+  "Insurance Management"
+  "Inernational finance (ACCA)",
 ];
 
 const keyFeatures = [
