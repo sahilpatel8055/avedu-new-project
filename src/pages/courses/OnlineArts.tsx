@@ -3,12 +3,12 @@ import Footer from "@/components/ui/footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  GraduationCap, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
+import {
+  GraduationCap,
+  Clock,
+  Users,
+  Star,
+  CheckCircle,
   MapPin,
   Phone,
   Calendar,
@@ -19,14 +19,22 @@ import {
   Building,
   Palette,
   Globe,
-  Users2
+  Users2,
+  Lightbulb,
+  MessageSquare,
+  Search,
 } from "lucide-react";
 import manipalLogo from "@/assets/manipal-logo.png";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
 import ignouLogo from "@/assets/ignou-logo.png";
+import hiringPartnersImg from "@/assets/hiring-partners.png"; // NEW IMPORT
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
 
 const OnlineArts = () => {
+  const [activeTab, setActiveTab] = useState("ba");
+
   const topUniversities = [
     {
       name: "Manipal University Online",
@@ -34,7 +42,7 @@ const OnlineArts = () => {
       rating: 4.6,
       fees: "₹40,000+/year",
       duration: "3 Years",
-      accreditation: "UGC, AICTE, NAAC A+"
+      accreditation: "UGC, AICTE, NAAC A+",
     },
     {
       name: "Uttaranchal University",
@@ -42,7 +50,7 @@ const OnlineArts = () => {
       rating: 4.5,
       fees: "₹25,000+/year",
       duration: "3 Years",
-      accreditation: "UGC, AICTE, NAAC A+"
+      accreditation: "UGC, AICTE, NAAC A+",
     },
     {
       name: "Vivekananda Global University",
@@ -50,7 +58,7 @@ const OnlineArts = () => {
       rating: 4.4,
       fees: "₹22,000+/year",
       duration: "3 Years",
-      accreditation: "UGC, AICTE, AIU"
+      accreditation: "UGC, AICTE, AIU",
     },
     {
       name: "IGNOU",
@@ -58,8 +66,8 @@ const OnlineArts = () => {
       rating: 4.8,
       fees: "₹12,000/year",
       duration: "3 Years",
-      accreditation: "UGC, AICTE, NAAC A++"
-    }
+      accreditation: "UGC, AICTE, NAAC A++",
+    },
   ];
 
   const programs = [
@@ -67,21 +75,37 @@ const OnlineArts = () => {
       title: "Bachelor of Arts (BA)",
       duration: "3 Years",
       fees: "₹15,000 - ₹45,000/year",
-      description: "Comprehensive liberal arts program covering humanities, social sciences, and diverse academic disciplines",
-      specializations: ["English Literature", "Psychology", "Political Science", "History", "Sociology", "Economics"]
+      description:
+        "Comprehensive liberal arts program covering humanities, social sciences, and diverse academic disciplines",
+      specializations: [
+        "English Literature",
+        "Psychology",
+        "Political Science",
+        "History",
+        "Sociology",
+        "Economics",
+      ],
     },
     {
       title: "Master of Arts (MA)",
       duration: "2 Years",
       fees: "₹20,000 - ₹50,000/year",
-      description: "Advanced arts program for specialized knowledge and research in humanities and social sciences",
-      specializations: ["English Literature", "Psychology", "Political Science", "History", "Public Administration", "Social Work"]
-    }
+      description:
+        "Advanced arts program for specialized knowledge and research in humanities and social sciences",
+      specializations: [
+        "English Literature",
+        "Psychology",
+        "Political Science",
+        "History",
+        "Public Administration",
+        "Social Work",
+      ],
+    },
   ];
 
   const specializations = [
     "English Literature",
-    "Psychology", 
+    "Psychology",
     "Political Science",
     "History",
     "Sociology",
@@ -91,7 +115,7 @@ const OnlineArts = () => {
     "Social Work",
     "Journalism & Mass Communication",
     "Fine Arts",
-    "Languages & Linguistics"
+    "Languages & Linguistics",
   ];
 
   const keyFeatures = [
@@ -102,51 +126,161 @@ const OnlineArts = () => {
     "Digital Library Access",
     "Assignment & Project Support",
     "Career Counselling",
-    "Industry Exposure Programs"
-  ];
-
-  const careerOpportunities = [
-    "Civil Services (IAS/IPS)",
-    "Teaching & Education",
-    "Journalism & Media",
-    "Content Writing",
-    "Social Work",
-    "Human Resources",
-    "Public Administration", 
-    "Research & Analysis",
-    "NGO & Development Sector",
-    "Corporate Communications",
-    "Psychology Counselor",
-    "Cultural Affairs"
+    "Industry Exposure Programs",
   ];
 
   const faqs = [
     {
       question: "Is Online BA/MA degree valid for government jobs?",
-      answer: "Yes, Online BA/MA from UGC-recognized universities is valid for all government jobs, civil services, teaching positions, and further studies like MA, PhD."
+      answer:
+        "Yes, Online BA/MA from UGC-recognized universities is valid for all government jobs, civil services, teaching positions, and further studies like MA, PhD.",
     },
     {
       question: "What is the eligibility criteria for Online BA?",
-      answer: "Students must have completed 12th grade from any stream (Arts, Commerce, Science) with minimum 50% marks from a recognized board."
+      answer:
+        "Students must have completed 12th grade from any stream (Arts, Commerce, Science) with minimum 50% marks from a recognized board.",
     },
     {
       question: "Can I pursue B.Ed after Online BA?",
-      answer: "Yes, Online BA graduates are eligible for B.Ed admission in all universities. Many students pursue teaching careers after BA + B.Ed combination."
+      answer:
+        "Yes, Online BA graduates are eligible for B.Ed admission in all universities. Many students pursue teaching careers after BA + B.Ed combination.",
     },
     {
       question: "What are the research opportunities in Arts programs?",
-      answer: "Programs include research methodology, dissertation projects, and opportunities to pursue M.Phil/PhD. Students can specialize in their areas of interest."
+      answer:
+        "Programs include research methodology, dissertation projects, and opportunities to pursue M.Phil/PhD. Students can specialize in their areas of interest.",
     },
     {
       question: "How are Online Arts programs conducted?",
-      answer: "Programs include live interactive sessions, recorded lectures, digital study materials, virtual library access, and regular assessments through online platforms."
-    }
+      answer:
+        "Programs include live interactive sessions, recorded lectures, digital study materials, virtual library access, and regular assessments through online platforms.",
+    },
   ];
+
+  // NEW DATA ADDED
+  const baSyllabus = [
+    {
+      title: "Year 1",
+      subjects: [
+        "English Literature",
+        "Introduction to Sociology",
+        "Political Theory",
+        "History of India",
+        "Psychology Basics",
+      ],
+    },
+    {
+      title: "Year 2",
+      subjects: [
+        "Public Administration",
+        "Indian Economy",
+        "Social Psychology",
+        "Contemporary India",
+        "Research Methods",
+      ],
+    },
+    {
+      title: "Year 3",
+      subjects: [
+        "Indian Constitution",
+        "International Relations",
+        "Developmental Economics",
+        "Project Work",
+        "Elective Subjects",
+      ],
+    },
+  ];
+
+  const maSyllabus = [
+    {
+      title: "Year 1",
+      subjects: [
+        "Advanced Political Theory",
+        "Research Methodology",
+        "Public Policy Analysis",
+        "Indian Government & Politics",
+        "Elective Specialization",
+      ],
+    },
+    {
+      title: "Year 2",
+      subjects: [
+        "Human Rights",
+        "International Relations",
+        "Comparative Public Administration",
+        "Dissertation/Thesis",
+        "Advanced Specialization",
+      ],
+    },
+  ];
+
+  const skillsObtained = [
+    {
+      skill: "Critical Thinking",
+      icon: "Lightbulb",
+      description:
+        "Ability to analyze information objectively and make reasoned judgments.",
+    },
+    {
+      skill: "Communication Skills",
+      icon: "MessageSquare",
+      description:
+        "Developing strong verbal and written communication for various contexts.",
+    },
+    {
+      skill: "Research & Analysis",
+      icon: "Search",
+      description:
+        "Skills to conduct in-depth research and analyze complex data and information.",
+    },
+    {
+      skill: "Problem Solving",
+      icon: "ClipboardList",
+      description:
+        "Identifying and solving complex social and organizational problems.",
+    },
+    {
+      skill: "Empathy & Social Awareness",
+      icon: "Users2",
+      description:
+        "Understanding societal issues and the perspectives of different groups.",
+    },
+    {
+      skill: "Public Speaking",
+      icon: "Palette",
+      description:
+        "Confidence and ability to present ideas clearly and persuasively.",
+    },
+  ];
+
+  const careerScope = {
+    roles: [
+      { role: "Civil Services (IAS/IPS)", salary: "₹5 - 10 LPA" },
+      { role: "Content Writer/Editor", salary: "₹4 - 7 LPA" },
+      { role: "Journalist", salary: "₹4 - 8 LPA" },
+      { role: "Teacher/Professor", salary: "₹6 - 12 LPA" },
+      { role: "Social Worker", salary: "₹3 - 6 LPA" },
+      { role: "Public Relations Officer", salary: "₹5 - 9 LPA" },
+    ],
+  };
+
+  const topRecruiters = [
+    "The Hindu",
+    "Times of India",
+    "Tata Trusts",
+    "Teach for India",
+    "NGOs",
+    "United Nations",
+    "Government Sector",
+    "EdTech Companies",
+    "Publishing Houses",
+  ];
+  // END OF NEW DATA
 
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
-      
+
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
@@ -158,8 +292,10 @@ const OnlineArts = () => {
               Online Arts & Humanities Programs
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-              Explore the world of humanities and social sciences with Online BA and MA programs from India's top universities. 
-              Develop critical thinking, research skills, and comprehensive knowledge across diverse disciplines.
+              Explore the world of humanities and social sciences with Online BA
+              and MA programs from India's top universities. Develop critical
+              thinking, research skills, and comprehensive knowledge across
+              diverse disciplines.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Badge className="bg-[#0052CC] text-white text-base px-4 py-2">
@@ -221,20 +357,26 @@ const OnlineArts = () => {
               Top Universities for Arts & Humanities
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose from India's leading universities offering UGC-approved online arts programs
+              Choose from India's leading universities offering UGC-approved
+              online arts programs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {topUniversities.map((university, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-white border border-gray-200/60">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow bg-white border border-gray-200/60"
+              >
                 <CardHeader className="text-center pb-3">
-                  <img 
-                    src={university.logo} 
+                  <img
+                    src={university.logo}
                     alt={university.name}
                     className="h-16 w-16 object-contain mx-auto mb-3"
                   />
-                  <h3 className="font-bold text-lg leading-tight">{university.name}</h3>
+                  <h3 className="font-bold text-lg leading-tight">
+                    {university.name}
+                  </h3>
                   <div className="flex items-center justify-center gap-1 mt-2">
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <span className="font-medium">{university.rating}</span>
@@ -242,12 +384,16 @@ const OnlineArts = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="text-center">
-                    <div className="font-bold text-[#0052CC] text-lg">{university.fees}</div>
+                    <div className="font-bold text-[#0052CC] text-lg">
+                      {university.fees}
+                    </div>
                     <div className="text-sm text-gray-600">Annual Fees</div>
                   </div>
                   <div className="text-center">
                     <div className="font-medium">{university.duration}</div>
-                    <div className="text-sm text-gray-600">Program Duration</div>
+                    <div className="text-sm text-gray-600">
+                      Program Duration
+                    </div>
                   </div>
                   <div className="text-center">
                     <Badge variant="secondary" className="text-xs">
@@ -272,13 +418,17 @@ const OnlineArts = () => {
               Popular Arts & Humanities Programs
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive programs designed for diverse career paths in humanities and social sciences
+              Comprehensive programs designed for diverse career paths in
+              humanities and social sciences
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {programs.map((program, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow border border-gray-200/60">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow border border-gray-200/60"
+              >
                 <CardHeader>
                   <h3 className="font-bold text-xl mb-2">{program.title}</h3>
                   <div className="flex flex-wrap gap-4 text-sm text-gray-600">
@@ -295,7 +445,9 @@ const OnlineArts = () => {
                 <CardContent>
                   <p className="text-gray-600 mb-4">{program.description}</p>
                   <div className="mb-4">
-                    <h4 className="font-medium mb-2">Popular Specializations:</h4>
+                    <h4 className="font-medium mb-2">
+                      Popular Specializations:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {program.specializations.map((spec, idx) => (
                         <Badge key={idx} variant="secondary" className="text-xs">
@@ -325,10 +477,13 @@ const OnlineArts = () => {
               Explore diverse fields of study in humanities and social sciences
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {specializations.map((spec, index) => (
-              <Card key={index} className="p-4 hover:shadow-md transition-shadow bg-white border border-gray-200/60">
+              <Card
+                key={index}
+                className="p-4 hover:shadow-md transition-shadow bg-white border border-gray-200/60"
+              >
                 <div className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-[#0052CC]" />
                   <span className="font-medium">{spec}</span>
@@ -339,46 +494,226 @@ const OnlineArts = () => {
         </div>
       </section>
 
-      {/* Career Opportunities */}
+      {/* NEW SECTION: Syllabus */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Career Opportunities in Arts & Humanities
+              Arts & Humanities Syllabus
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover diverse career paths in government, education, media, and social sectors
+              Explore the curriculum for both Bachelor's (BA) and Master's (MA)
+              Arts programs.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {careerOpportunities.map((career, index) => (
-              <Card key={index} className="p-4 hover:shadow-md transition-shadow border border-gray-200/60">
-                <div className="flex items-center gap-3">
-                  <Palette className="h-5 w-5 text-[#0052CC]" />
-                  <span className="font-medium">{career}</span>
+          <div className="flex justify-center mb-8">
+            <Tabs
+              defaultValue="ba"
+              onValueChange={setActiveTab}
+              className="w-full lg:w-3/4"
+            >
+              <TabsList className="grid w-full grid-cols-2 md:w-3/4 lg:w-1/2 mx-auto">
+                <TabsTrigger value="ba" className="text-lg">
+                  BA Syllabus
+                </TabsTrigger>
+                <TabsTrigger value="ma" className="text-lg">
+                  MA Syllabus
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="ba" className="mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {baSyllabus.map((year, index) => (
+                    <Card
+                      key={index}
+                      className="hover:shadow-md transition-shadow"
+                    >
+                      <CardHeader className="bg-gray-100 border-b">
+                        <h3 className="font-bold text-lg">{year.title}</h3>
+                      </CardHeader>
+                      <CardContent className="pt-4">
+                        <ul className="list-none space-y-2">
+                          {year.subjects.map((subject, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-center text-gray-700"
+                            >
+                              <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                              {subject}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
+              </TabsContent>
+              <TabsContent value="ma" className="mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {maSyllabus.map((year, index) => (
+                    <Card
+                      key={index}
+                      className="hover:shadow-md transition-shadow"
+                    >
+                      <CardHeader className="bg-gray-100 border-b">
+                        <h3 className="font-bold text-lg">{year.title}</h3>
+                      </CardHeader>
+                      <CardContent className="pt-4">
+                        <ul className="list-none space-y-2">
+                          {year.subjects.map((subject, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-center text-gray-700"
+                            >
+                              <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                              {subject}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: Skills Obtained */}
+      <section className="py-16 bg-gradient-to-br from-pink-50 to-purple-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Skills Obtained in Arts & Humanities
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Acquire valuable skills for both professional and personal growth.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillsObtained.map((item, index) => (
+              <Card
+                key={index}
+                className="p-6 text-center hover:shadow-lg transition-shadow bg-white border border-gray-200/60"
+              >
+                {item.icon === "Lightbulb" && (
+                  <Lightbulb className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
+                )}
+                {item.icon === "MessageSquare" && (
+                  <MessageSquare className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
+                )}
+                {item.icon === "Search" && (
+                  <Search className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
+                )}
+                {item.icon === "ClipboardList" && (
+                  <ClipboardList className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
+                )}
+                {item.icon === "Users2" && (
+                  <Users2 className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
+                )}
+                {item.icon === "Palette" && (
+                  <Palette className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
+                )}
+                <h3 className="font-bold mb-2">{item.skill}</h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* NEW SECTION: Career Scope & Top Recruiters (REPLACES original Career Opportunities) */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Career Scope & Top Recruiters
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover diverse career paths in government, media, and social sectors.
+            </p>
+          </div>
+          <Card className="hover:shadow-lg transition-shadow border border-gray-200/60">
+            <CardHeader>
+              <h3 className="font-bold text-xl mb-2">
+                <Building className="h-6 w-6 inline-block mr-2 text-[#0052CC]" />
+                Career Opportunities in Arts & Humanities
+              </h3>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {careerScope.roles.map((career, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between items-center bg-gray-50 p-4 rounded-md"
+                  >
+                    <h4 className="font-medium">{career.role}</h4>
+                    <Badge variant="secondary" className="text-sm">
+                      {career.salary}
+                    </Badge>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="mt-8 text-center">
+            <h3 className="font-bold text-2xl mb-4">Top Recruiters</h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {topRecruiters.map((recruiter, index) => (
+                <Badge
+                  key={index}
+                  variant="secondary"
+                  className="text-base px-4 py-2"
+                >
+                  {recruiter}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: Our Students Are Working At */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-lavender-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Students Are Working At
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our graduates are employed by leading companies across the globe.
+            </p>
+          </div>
+          <div className="mt-8">
+            <img
+              src={hiringPartnersImg}
+              alt="Our Hiring Partners"
+              className="mx-auto w-full max-w-6xl rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features - This section now follows the new sections */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose Online Arts & Humanities?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Develop critical thinking and research skills with flexible online learning
+              Develop critical thinking and research skills with flexible online
+              learning
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyFeatures.map((feature, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow bg-white border border-gray-200/60">
+              <Card
+                key={index}
+                className="p-6 text-center hover:shadow-lg transition-shadow bg-white border border-gray-200/60"
+              >
                 <CheckCircle className="h-8 w-8 text-[#0052CC] mx-auto mb-3" />
                 <h3 className="font-bold mb-2">{feature}</h3>
               </Card>
@@ -388,17 +723,18 @@ const OnlineArts = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Get answers to common questions about Online Arts & Humanities programs
+              Get answers to common questions about Online Arts & Humanities
+              programs
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <Card key={index} className="border border-gray-200/60">
@@ -421,14 +757,22 @@ const OnlineArts = () => {
             Ready to Explore Arts & Humanities?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Discover your passion and build a meaningful career in humanities and social sciences
+            Discover your passion and build a meaningful career in humanities
+            and social sciences
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-[#0052CC] hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-white text-[#0052CC] hover:bg-gray-100"
+            >
               <Phone className="h-5 w-5 mr-2" />
               Get Free Counselling
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#0052CC]">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-[#0052CC]"
+            >
               <Calendar className="h-5 w-5 mr-2" />
               Book a Demo
             </Button>
