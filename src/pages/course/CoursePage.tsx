@@ -18,25 +18,9 @@ const iconMap = {
   Star: Star
 };
 
-// Helper function to resolve dynamic image paths from src/assets
-const getImageUrl = (path: string) => {
-  // Use new URL() to get the correct path for Vite to bundle
-  return new URL(path, import.meta.url).href;
-};
-
 const CoursePage = () => {
   const { courseId } = useParams();
   const course = courseId ? courseData[courseId] : null;
-  const [degreeImageSrc, setDegreeImageSrc] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (course && course.degreeImage) {
-      // Use the helper function to get the correct path
-      setDegreeImageSrc(getImageUrl(course.degreeImage));
-    } else {
-      setDegreeImageSrc(null);
-    }
-  }, [course]);
 
   if (!course) {
     return (
@@ -101,7 +85,7 @@ const CoursePage = () => {
       </section>
 
       {/* Sample Degree Section */}
-      {degreeImageSrc && (
+      {course.degreeImage && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -112,7 +96,7 @@ const CoursePage = () => {
             <div className="flex justify-center">
               <div className="max-w-md w-full">
                 <img 
-                  src={degreeImageSrc} 
+                  src={course.degreeImage} 
                   alt="IGNOU Sample Degree Certificate" 
                   className="w-full h-auto rounded-lg shadow-2xl border-4 border-blue-100"
                 />
