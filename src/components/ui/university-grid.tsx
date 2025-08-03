@@ -97,7 +97,7 @@ const universities: University[] = [
 
 const UniversityCard = ({ university }: { university: University }) => {
   return (
-    <Card className="h-full border border-gray-300 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group rounded-xl bg-[#f5f3ff]">
+    <Card className="h-full rounded-xl bg-[#f5f3ff] border border-gray-200 shadow-[inset_0_1px_3px_rgba(255,255,255,0.6),_0_2px_6px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 group">
       <CardHeader className="pb-2 sm:pb-3">
         <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-2 sm:mb-3">
           <img 
@@ -172,7 +172,7 @@ const UniversityCard = ({ university }: { university: University }) => {
 
 const UniversityGrid = () => {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-purple-50 to-lavender-100 border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
+    <section className="py-8 sm:py-12 lg:py-16 bg-white border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <Badge className="bg-primary-light text-primary mb-4">
