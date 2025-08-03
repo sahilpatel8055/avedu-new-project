@@ -14,7 +14,7 @@ const Index = () => {
       <HeroSection />
       
       {/* University Logos Marquee Section */}
-      <section className="py-8 bg-background border-b">
+      <section className="py-8 bg-white border-b">
         <UniversityLogosMarquee />
       </section>
       

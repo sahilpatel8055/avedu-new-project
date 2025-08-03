@@ -122,7 +122,23 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
           </div>
         </div>
         
-        <Button variant="ghost" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
+        <Button 
+          variant="ghost" 
+          className="w-full group-hover:bg-[#0052CC] group-hover:text-white transition-colors"
+          onClick={() => {
+            const routeMap: { [key: string]: string } = {
+              'mba': '/courses/mba',
+              'btech': '/courses/engineering', 
+              'bba': '/courses/bba',
+              'bcom': '/courses/commerce',
+              'ba': '/courses/arts'
+            };
+            const route = routeMap[category.id];
+            if (route) {
+              window.location.href = route;
+            }
+          }}
+        >
           Explore Programs
         </Button>
       </CardContent>

@@ -11,6 +11,11 @@ import IGNOU from "./pages/university/IGNOU";
 import Manipal from "./pages/university/Manipal";
 import Uttaranchal from "./pages/university/Uttaranchal";
 import VGU from "./pages/university/VGU";
+import OnlineMBA from "./pages/courses/OnlineMBA";
+import OnlineTech from "./pages/courses/OnlineTech";
+import OnlineBBA from "./pages/courses/OnlineBBA";
+import OnlineCommerce from "./pages/courses/OnlineCommerce";
+import OnlineArts from "./pages/courses/OnlineArts";
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
@@ -38,7 +43,11 @@ const App = () => (
           <Route path="/university/manipal" element={<Manipal />} />
           <Route path="/university/uttaranchal" element={<Uttaranchal />} />
           <Route path="/university/vgu" element={<VGU />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/courses/mba" element={<OnlineMBA />} />
+          <Route path="/courses/engineering" element={<OnlineTech />} />
+          <Route path="/courses/bba" element={<OnlineBBA />} />
+          <Route path="/courses/commerce" element={<OnlineCommerce />} />
+          <Route path="/courses/arts" element={<OnlineArts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
