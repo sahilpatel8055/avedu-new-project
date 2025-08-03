@@ -1,6 +1,5 @@
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -8,17 +7,8 @@ import {
   Clock,
   Users,
   Star,
-  CheckCircle,
-  MapPin,
-  Phone,
-  Calendar,
-  DollarSign,
-  BookOpen,
-  Award,
-  TrendingUp,
-  Building
+  CheckCircle
 } from "lucide-react";
-import mbaIcon from "@/assets/icons/mba-icon.png";
 import manipalLogo from "@/assets/manipal-logo.png";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
@@ -94,6 +84,7 @@ const OnlineMBA = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
 
+      {/* Hero Section */}
       <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Online MBA Programs</h1>
@@ -106,6 +97,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
@@ -127,6 +119,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Top Universities */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">Top Universities</h2>
@@ -141,6 +134,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Popular Specializations */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Popular Specializations</h2>
@@ -152,6 +146,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Key Features */}
       <section className="py-12 bg-gradient-to-r from-blue-100 to-indigo-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">Key Features</h2>
@@ -165,6 +160,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Subjects & Syllabus */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">Subjects & Syllabus</h2>
@@ -176,6 +172,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Career Scope */}
       <section className="py-16 bg-gradient-to-br from-indigo-50 to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">Career Scope After Online MBA</h2>
@@ -200,6 +197,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Our Students Work At */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Our Students Work At</h2>
@@ -211,6 +209,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* FAQs */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl font-bold text-center mb-6">FAQs</h2>
@@ -223,6 +222,7 @@ const OnlineMBA = () => {
         </div>
       </section>
 
+      {/* Final CTA */}
       <section className="py-12 bg-blue-600 text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Ready to Enroll?</h2>
