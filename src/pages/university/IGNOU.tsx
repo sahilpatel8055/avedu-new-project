@@ -1,10 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock } from "lucide-react";
+import {
+  Star,
+  MapPin,
+  Users,
+  GraduationCap,
+  Award,
+  DollarSign,
+  BookOpen,
+  Clock,
+  Check, // NEW: Added this icon for the new section
+} from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import ignouLogo from "@/assets/ignou-logo.png";
+import ignouDegreeImg from "@/assets/ignou-degree.png"; // NEW: Import for the degree image
 
 const IGNOU = () => {
   const courses = [
@@ -26,7 +37,7 @@ const IGNOU = () => {
     "Virtual classes and interactive sessions",
     "International collaborations with overseas institutions",
     "E-IGNOU Library access",
-    "Gyandhara Audio Counseling Services"
+    "Gyandhara Audio Counseling Services",
   ];
 
   const approvals = [
@@ -34,13 +45,13 @@ const IGNOU = () => {
     { name: "AIU", description: "Association of Indian Universities" },
     { name: "NIRF", description: "Rank 1 in Open University Category" },
     { name: "NAAC A++", description: "National Assessment and Accreditation Council" },
-    { name: "WES", description: "World Education Services" }
+    { name: "WES", description: "World Education Services" },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">
         <div className="container mx-auto px-4">
@@ -53,7 +64,7 @@ const IGNOU = () => {
                   <p className="text-lg text-muted-foreground">Indira Gandhi National Open University</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                 <div className="flex items-center gap-1 bg-primary/10 px-3 py-2 rounded-full">
                   <Star className="w-5 h-5 fill-primary text-primary" />
@@ -64,7 +75,7 @@ const IGNOU = () => {
                   Rank #1 NIRF Open University
                 </Badge>
               </div>
-              
+
               <div className="flex items-center justify-center lg:justify-start gap-6 mb-8 text-sm">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-4 h-4 text-primary" />
@@ -79,7 +90,7 @@ const IGNOU = () => {
                   <span>270+ Programs</span>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Apply Now
@@ -89,7 +100,7 @@ const IGNOU = () => {
                 </Button>
               </div>
             </div>
-            
+
             <div className="flex-1 lg:max-w-md">
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20">
                 <CardHeader className="pb-4">
@@ -197,6 +208,54 @@ const IGNOU = () => {
         </div>
       </section>
 
+      {/* Sample Degree Section - NEW */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left side: Description */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
+              <p className="text-lg text-muted-foreground mb-6 max-w-prose">
+                The degrees offered by IGNOU are fully valid and recognized by various government bodies, making them suitable for all career opportunities.
+              </p>
+              <ul className="space-y-4 text-left mx-auto md:mx-0 max-w-sm">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">UGC-DEB Recognized & AICTE Approved</p>
+                    <p className="text-sm text-muted-foreground">Fully valid for government, private, and overseas jobs or higher studies.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">Includes Marksheet & Digital Verification</p>
+                    <p className="text-sm text-muted-foreground">Comes with transcript, and supports online QR-code-based verification.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">Signed & Officially Stamped</p>
+                    <p className="text-sm text-muted-foreground">Authenticated by the Registrar/Vice Chancellor with university seal.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            {/* Right side: Image */}
+            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
+              <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
+                <img
+                  src={ignouDegreeImg}
+                  alt="Sample IGNOU Degree"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -217,7 +276,7 @@ const IGNOU = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Educational Journey?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join millions of students who have chosen IGNOU for quality online education. 
+            Join millions of students who have chosen IGNOU for quality online education.
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
