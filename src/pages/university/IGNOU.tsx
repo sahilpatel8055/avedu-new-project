@@ -6,16 +6,23 @@ import {
   MapPin,
   Users,
   GraduationCap,
-  Award,
   DollarSign,
   BookOpen,
   Clock,
-  Check, // NEW: Added this icon for the new section
+  Check,
 } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import ignouLogo from "@/assets/ignou-logo.png";
-import ignouDegreeImg from "@/assets/ignou-degree.png"; // NEW: Import for the degree image
+import ignouDegreeImg from "@/assets/ignou-degree.png";
+
+// NEW: Importing all the accreditation icons
+import ugcIcon from "@/assets/icons/ugc-icon.png";
+import aicteIcon from "@/assets/icons/aicte-icon.png";
+import wesIcon from "@/assets/icons/wes-icon.png";
+import naacIcon from "@/assets/icons/naac-icon.png";
+import nirfIcon from "@/assets/icons/nirf-icon.png";
+import aiuIcon from "@/assets/icons/aiu-icon.png";
 
 const IGNOU = () => {
   const courses = [
@@ -41,11 +48,12 @@ const IGNOU = () => {
   ];
 
   const approvals = [
-    { name: "UGC-DEB", description: "University Grants Commission - Distance Education Bureau" },
-    { name: "AIU", description: "Association of Indian Universities" },
-    { name: "NIRF", description: "Rank 1 in Open University Category" },
-    { name: "NAAC A++", description: "National Assessment and Accreditation Council" },
-    { name: "WES", description: "World Education Services" },
+    { name: "UGC-DEB", description: "University Grants Commission - Distance Education Bureau", icon: ugcIcon },
+    { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
+    { name: "WES", description: "World Education Services", icon: wesIcon },
+    { name: "AIU", description: "Association of Indian Universities", icon: aiuIcon },
+    { name: "NAAC A++", description: "National Assessment and Accreditation Council", icon: naacIcon },
+    { name: "NIRF", description: "Rank 1 in Open University Category", icon: nirfIcon },
   ];
 
   return (
@@ -159,7 +167,8 @@ const IGNOU = () => {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    <Award className="w-12 h-12 text-primary" />
+                    {/* Replaced Award icon with dynamic image */}
+                    <img src={approval.icon} alt={`${approval.name} Icon`} className="w-12 h-12 object-contain" />
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
                 </CardHeader>
