@@ -4,9 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, GraduationCap, Clock, IndianRupee, Users, Award, BookOpen, TrendingUp, Star } from "lucide-react";
-import NavigationHeader from "@/components/ui/navigation-header"; // Corrected import path
-import Footer from "@/components/ui/footer"; // Corrected import path
-import CounsellingSection from "@/components/ui/counselling-section"; // Corrected import path
+import NavigationHeader from "@/components/ui/navigation-header";
+import Footer from "@/components/ui/footer";
+import CounsellingSection from "@/components/ui/counselling-section";
 import courseData from "../../data/courseData.json";
 
 // Mapping of icon names to components for dynamic rendering
@@ -18,9 +18,25 @@ const iconMap = {
   Star: Star
 };
 
+// Helper function to resolve dynamic image paths from src/assets
+const getImageUrl = (path: string) => {
+  // Use new URL() to get the correct path for Vite to bundle
+  return new URL(path, import.meta.url).href;
+};
+
 const CoursePage = () => {
   const { courseId } = useParams();
   const course = courseId ? courseData[courseId] : null;
+  const [degreeImageSrc, setDegreeImageSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (course && course.degreeImage) {
+      // Use the helper function to get the correct path
+      setDegreeImageSrc(getImageUrl(course.degreeImage));
+    } else {
+      setDegreeImageSrc(null);
+    }
+  }, [course]);
 
   if (!course) {
     return (
@@ -32,8 +48,7 @@ const CoursePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Assuming a Header component exists */}
-      {/* <NavigationHeader /> */}
+      <NavigationHeader />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 py-16 text-white">
@@ -86,7 +101,7 @@ const CoursePage = () => {
       </section>
 
       {/* Sample Degree Section */}
-      {course.degreeImage && (
+      {degreeImageSrc && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -97,7 +112,7 @@ const CoursePage = () => {
             <div className="flex justify-center">
               <div className="max-w-md w-full">
                 <img 
-                  src={course.degreeImage} 
+                  src={degreeImageSrc} 
                   alt="IGNOU Sample Degree Certificate" 
                   className="w-full h-auto rounded-lg shadow-2xl border-4 border-blue-100"
                 />
@@ -249,8 +264,7 @@ const CoursePage = () => {
         </div>
       </section>
 
-      {/* Assuming a Footer component exists */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
