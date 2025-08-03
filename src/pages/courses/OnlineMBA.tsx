@@ -1,14 +1,14 @@
+// onlinemba.tsx
+import React from "react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { 
-  GraduationCap, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
+import {
+  GraduationCap,
+  Clock,
+  Users,
+  Star,
+  CheckCircle,
   MapPin,
   Phone,
   Calendar,
@@ -16,7 +16,7 @@ import {
   BookOpen,
   Award,
   TrendingUp,
-  Building
+  Building,
 } from "lucide-react";
 import mbaIcon from "@/assets/icons/mba-icon.png";
 import manipalLogo from "@/assets/manipal-logo.png";
@@ -26,186 +26,131 @@ import ignouLogo from "@/assets/ignou-logo.png";
 import hiringPartnersImg from "@/assets/hiring-partners.png";
 
 const OnlineMBA = () => {
-  const topUniversities = [
-    {
-      name: "Manipal University Online",
-      logo: manipalLogo,
-      rating: 4.6,
-      fees: "₹75,000+/year",
-      duration: "2 Years",
-      accreditation: "UGC, AICTE, NAAC A+"
-    },
-    {
-      name: "Uttaranchal University",
-      logo: uttaranchalLogo,
-      rating: 4.5,
-      fees: "₹45,000+/year",
-      duration: "2 Years",
-      accreditation: "UGC, AICTE, NAAC A+"
-    },
-    {
-      name: "Vivekananda Global University",
-      logo: vguLogo,
-      rating: 4.4,
-      fees: "₹40,000+/year",
-      duration: "2 Years",
-      accreditation: "UGC, AICTE, AIU"
-    },
-    {
-      name: "IGNOU",
-      logo: ignouLogo,
-      rating: 4.8,
-      fees: "₹31,500/year",
-      duration: "2 Years",
-      accreditation: "UGC, AICTE, NAAC A++"
-    }
-  ];
-
-  const specializations = [
-    "Finance Management",
-    "Marketing Management", 
-    "Human Resource Management",
-    "Operations Management",
-    "International Business",
-    "Digital Marketing",
-    "Business Analytics",
-    "Healthcare Management",
-    "Banking & Financial Services",
-    "Supply Chain Management"
-  ];
-
-  const keyFeatures = [
-    "100% Online Learning",
-    "Industry-Relevant Curriculum",
-    "Expert Faculty",
-    "Flexible Study Schedule",
-    "Live Interactive Sessions",
-    "Case Study Methodology",
-    "Industry Projects",
-    "Career Support Services"
-  ];
-
-  const syllabus = [
-    "Principles of Management",
-    "Marketing Management",
-    "Financial Accounting",
-    "Business Economics",
-    "Operations Management",
-    "Organizational Behaviour",
-    "Strategic Management",
-    "Human Resource Management"
-  ];
-
-  const careers = [
-    "Business Manager",
-    "Marketing Manager",
-    "HR Manager",
-    "Financial Analyst",
-    "Operations Manager",
-    "Product Manager"
-  ];
-
-  const recruiters = [
-    "TCS", "Accenture", "Amazon", "HDFC Bank", "Cognizant", "Infosys"
-  ];
-
-  const faqs = [
-    {
-      question: "Is Online MBA valid and recognized?",
-      answer: "Yes, Online MBA from UGC-recognized universities holds the same value as regular MBA. It is accepted by employers and for further studies."
-    },
-    {
-      question: "What is the eligibility criteria for Online MBA?",
-      answer: "Bachelor's degree in any discipline with minimum 50% marks from a recognized university. Some universities may require work experience."
-    },
-    {
-      question: "How is Online MBA different from Distance MBA?",
-      answer: "Online MBA uses digital platforms for live classes, interactive sessions, and virtual labs, while Distance MBA relies more on self-study materials."
-    },
-    {
-      question: "What are the career opportunities after Online MBA?",
-      answer: "Graduates can pursue roles like Business Manager, Marketing Manager, HR Manager, Financial Analyst, Consultant, and Senior Management positions."
-    },
-    {
-      question: "Is work experience mandatory for Online MBA?",
-      answer: "Work experience is not mandatory for most Online MBA programs, but some executive MBA programs may require 2-3 years of experience."
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <main className="text-gray-800">
       <NavigationHeader />
 
-      {/* Existing sections here (Hero, Stats, Top Universities, Specializations, Features, etc.) */}
+      {/* Hero Section */}
+      <section className="bg-blue-900 text-white py-20 px-4 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Online MBA Program</h1>
+        <p className="text-lg md:text-xl max-w-2xl mx-auto">
+          Advance your career with a flexible, industry-aligned Online MBA degree.
+        </p>
+      </section>
 
-      {/* New Section - MBA Subjects & Syllabus */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">MBA Subjects & Syllabus</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Gain insights into business, management, and leadership with a comprehensive MBA curriculum
-            </p>
+      {/* Key Features */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h3 className="text-xl font-semibold mb-2">UGC-Approved</h3>
+            <p>Recognized by UGC and AICTE, globally accepted degree.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {syllabus.map((subject, index) => (
-              <Card key={index} className="p-4 border border-gray-200/60">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#0052CC]" />
-                  <span className="font-medium">{subject}</span>
-                </div>
-              </Card>
-            ))}
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Flexible Learning</h3>
+            <p>Attend live + recorded classes from anywhere.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Career Support</h3>
+            <p>Resume building, mock interviews, job assistance.</p>
           </div>
         </div>
       </section>
 
-      {/* New Section - Career Scope */}
+      {/* Subjects & Syllabus Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Subjects & Syllabus</h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-gray-600">The Online MBA is a two-year (4‑semester) program covering:</p>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li><strong>Semester I & II (Core):</strong> Management Concepts & Organizational Behavior, Managerial Economics, Marketing Management, Financial Accounting, Business Statistics & Analytics, Information Systems, Strategic Management, HRM Essentials, Business Communication, Business Law, Decision Science.</li>
+              <li><strong>Semester III & IV (Advanced & Project):</strong> Supply Chain & Operations Strategy, International Business & Finance, Export‑Import Procedures, Logistics & Ethics, Research Methodology, Capstone Project.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Career Scope Section */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Career Opportunities After Online MBA</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Online MBA opens up diverse career paths in business, management, and leadership
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Career Scope & Top Recruiters</h2>
+          <div className="max-w-3xl mx-auto space-y-4 text-gray-700">
+            <p>
+              Graduates with an Online MBA can pursue roles such as Business Manager, Marketing Manager, HR Manager, Financial Analyst, Consultant, Operations Manager, Project Manager, and more.
+            </p>
+            <p>
+              Many companies actively recruit MBA graduates from diverse industries including consulting, finance, FMCG, technology, and logistics. Common recruiters include Amazon, Deloitte, EY, KPMG, Wipro, TCS, Microsoft, and more.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {careers.map((career, index) => (
-              <Card key={index} className="p-6 text-center border border-gray-200/60">
-                <h3 className="font-medium text-lg">{career}</h3>
-              </Card>
-            ))}
+          <div className="mt-8">
+            <img
+              src={hiringPartnersImg}
+              alt="Our Students Work At"
+              className="mx-auto w-full max-w-6xl rounded-lg shadow-md"
+            />
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl font-semibold mb-4">Top Recruiters</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {recruiters.map((company, index) => (
-                <Badge key={index} className="text-base px-4 py-2 bg-white border border-gray-300 text-gray-700">
-                  {company}
-                </Badge>
-              ))}
+      {/* Our Students Work At */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Students Work At</h2>
+          <img
+            src={hiringPartnersImg}
+            alt="Hiring Partners"
+            className="mx-auto w-full max-w-5xl rounded-md shadow"
+          />
+        </div>
+      </section>
+
+      {/* Top Universities */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">Top Universities Offering Online MBA</h2>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            <img src={manipalLogo} alt="Manipal University" className="h-16 md:h-20" />
+            <img src={uttaranchalLogo} alt="Uttaranchal University" className="h-16 md:h-20" />
+            <img src={vguLogo} alt="VGU University" className="h-16 md:h-20" />
+            <img src={ignouLogo} alt="IGNOU" className="h-16 md:h-20" />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-lg">Q: Is an online MBA degree valid for jobs?</h3>
+              <p className="text-gray-700">Yes, UGC-approved online MBA degrees are valid for government and private sector jobs.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">Q: What is the duration of an online MBA?</h3>
+              <p className="text-gray-700">The duration is typically 2 years, divided into 4 semesters.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">Q: Can I pursue this while working?</h3>
+              <p className="text-gray-700">Yes, the flexible mode allows you to balance work and study.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* New Section - Our Students Work At */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Students Work At</h2>
-          <img 
-            src={hiringPartnersImg} 
-            alt="Our Hiring Partners" 
-            className="mx-auto max-w-full h-auto object-contain"
-          />
-        </div>
+      {/* Call-to-Action */}
+      <section className="py-16 bg-blue-900 text-white text-center px-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Start Your MBA Journey Today</h2>
+        <p className="mb-6 max-w-2xl mx-auto">
+          Get access to expert faculty, dedicated support, and top career opportunities. Apply now and take the next step in your career.
+        </p>
+        <Button className="bg-white text-blue-900 hover:bg-gray-200 text-lg px-6 py-3 rounded-full font-semibold">
+          Apply Now
+        </Button>
       </section>
 
-      {/* Continue rest of the original sections including FAQ and CTA */}
       <Footer />
-    </div>
+    </main>
   );
 };
 
