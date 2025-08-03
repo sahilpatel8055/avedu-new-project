@@ -7,7 +7,7 @@
     "eligibility": "Bachelor's degree with 50% marks",
     "headline": "UGC-approved comprehensive postgraduate management degree.",
     "description": "Apply for IGNOU MBA Admission 2025. Get your Online MBA from IGNOU - a UGC-approved comprehensive postgraduate management degree with best IGNOU Online MBA Fee Structure.",
-    "degreeImage": "src/assets/ignou-degree.png",
+    "degreeImage": "/ignou-degree.png",
     "specialisations": [
       { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
       { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
@@ -44,20 +44,34 @@
     "eligibility": "12th pass with Maths/Commerce with Maths",
     "headline": "A professional IT degree for a career in software development and technology.",
     "description": "Apply for IGNOU BCA Admission 2025. Get your Online BCA from IGNOU - a UGC-approved degree with a focus on modern IT skills.",
-    "degreeImage": "src/assets/ignou-degree.png",
+    "degreeImage": "/ignou-degree.png",
     "specialisations": [
-      { "name": "Data Science", "description": "Fundamentals of data analysis and machine learning." },
-      { "name": "Cyber Security", "description": "Learn to protect digital information and systems." },
-      { "name": "Cloud Computing", "description": "Skills in cloud infrastructure and services." }
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
     ],
     "highlights": [
-      { "title": "Practical Learning", "description": "Hands-on projects and lab work.", "icon": "BookOpen" },
-      { "title": "Industry-Relevant", "description": "Syllabus updated for current tech trends.", "icon": "TrendingUp" },
-      { "title": "Career Opportunities", "description": "Jobs in IT, software, and data fields.", "icon": "Award" }
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
     ],
-    "keyFeatures": [],
-    "admissionProcess": [],
-    "curriculum": []
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
   },
   "online-bba": {
     "id": "online-bba",
@@ -67,12 +81,34 @@
     "eligibility": "12th pass from a recognized board",
     "headline": "An undergraduate business degree to build a strong management foundation.",
     "description": "Get your Online BBA from IGNOU - a versatile degree for aspiring managers and entrepreneurs.",
-    "degreeImage": "src/assets/ignou-degree.png",
-    "specialisations": [],
-    "highlights": [],
-    "keyFeatures": [],
-    "admissionProcess": [],
-    "curriculum": []
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
   },
   "online-mca": {
     "id": "online-mca",
@@ -82,12 +118,34 @@
     "eligibility": "BCA/B.Sc. in CS/IT or equivalent",
     "headline": "Advance your career in software development and advanced computing.",
     "description": "Pursue an Online MCA from IGNOU to gain expertise in a wide range of computer applications.",
-    "degreeImage": "src/assets/ignou-degree.png",
-    "specialisations": [],
-    "highlights": [],
-    "keyFeatures": [],
-    "admissionProcess": [],
-    "curriculum": []
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
   },
   "online-mcom": {
     "id": "online-mcom",
@@ -97,12 +155,34 @@
     "eligibility": "Bachelor's degree in Commerce or equivalent",
     "headline": "A master's degree in commerce for a career in finance, accounting, and business.",
     "description": "Get an Online M.Com from IGNOU - a deep dive into advanced financial concepts and management.",
-    "degreeImage": "src/assets/ignou-degree.png",
-    "specialisations": [],
-    "highlights": [],
-    "keyFeatures": [],
-    "admissionProcess": [],
-    "curriculum": []
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
   },
   "online-ma": {
     "id": "online-ma",
@@ -112,11 +192,33 @@
     "eligibility": "Bachelor's degree from a recognized university",
     "headline": "Specialized master's degree in arts, humanities, and social sciences.",
     "description": "IGNOU's Online MA program offers a flexible way to pursue higher education in various disciplines.",
-    "degreeImage": "src/assets/ignou-degree.png",
-    "specialisations": [],
-    "highlights": [],
-    "keyFeatures": [],
-    "admissionProcess": [],
-    "curriculum": []
+    "degreeImage": "/ignou-degree.png",
+    "specialisations": [
+      { "name": "Human Resource Management", "description": "Focus on talent acquisition, employee development, and organizational behavior" },
+      { "name": "Marketing Management", "description": "Learn digital marketing, brand management, and consumer behavior strategies" },
+      { "name": "Financial Management", "description": "Master financial planning, investment analysis, and corporate finance" },
+      { "name": "Operations Management", "description": "Optimize business processes, supply chain, and quality management" }
+    ],
+    "highlights": [
+      { "title": "Comprehensive Curriculum", "description": "Cover all aspects of business management and leadership", "icon": "BookOpen" },
+      { "title": "Flexible Learning", "description": "Study at your own pace with distance learning mode", "icon": "Users" },
+      { "title": "Career Growth", "description": "Boost your career prospects and earning potential", "icon": "TrendingUp" },
+      { "title": "Industry Recognition", "description": "Degree recognized by UGC and accepted by employers", "icon": "Award" }
+    ],
+    "keyFeatures": [
+      { "title": "NAAC A+ Accredited", "description": "Highest quality education standards maintained", "icon": "Award" },
+      { "title": "40+ Lakh Alumni", "description": "Largest network of professionals across industries", "icon": "Users" },
+      { "title": "Self-Paced Learning", "description": "Study materials designed for working professionals", "icon": "BookOpen" }
+    ],
+    "admissionProcess": [
+      "Step 1: Fill out the application form online",
+      "Step 2: Upload all required documents",
+      "Step 3: Pay the application fee and submit",
+      "Step 4: Receive your admission confirmation"
+    ],
+    "curriculum": [
+      { "semester": "Semester 1", "subjects": ["Subject A", "Subject B", "Subject C"] },
+      { "semester": "Semester 2", "subjects": ["Subject D", "Subject E", "Subject F"] }
+    ]
   }
 }
