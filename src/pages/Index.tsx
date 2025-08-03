@@ -12,14 +12,19 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
       <HeroSection />
-      
-      {/* University Logos Marquee Section */}
+
+      {/* University Logos Marquee Section (Moved to Top Below Hero) */}
       <section className="py-8 bg-white border-b">
-        <UniversityLogosMarquee />
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6">
+            Compare & Apply from 100+ Top Universities in India
+          </h2>
+          <UniversityLogosMarquee />
+        </div>
       </section>
-      
-      {/* Course Categories Section */}
-      <section className="py-6 md:py-10 bg-gradient-to-br from-blue-50 to-indigo-100 border border-gray-200/50 rounded-lg mx-4 my-8">
+
+      {/* Course Categories Section with Thin Border */}
+      <section className="py-6 md:py-10 bg-white border border-gray-200 rounded-lg mx-4 my-8">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="bg-blue-100 text-blue-800 mb-4">
@@ -35,7 +40,7 @@ const Index = () => {
           <CourseCategories />
         </div>
       </section>
-      
+
       <UniversityGrid />
       <CounsellingSection />
       <Footer />
