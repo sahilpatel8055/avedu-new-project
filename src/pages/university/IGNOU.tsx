@@ -6,7 +6,7 @@ import {
   MapPin,
   Users,
   GraduationCap,
-  Award, // RE-ADDED: This was missing and caused the error
+  Award,
   DollarSign,
   BookOpen,
   Clock,
@@ -17,6 +17,10 @@ import Footer from "@/components/ui/footer";
 import ignouLogo from "@/assets/ignou-logo.png";
 import ignouDegreeImg from "@/assets/ignou-degree.png";
 
+// Import course data and Link component
+import { Link } from 'react-router-dom';
+import courseData from '../../data/courseData.json';
+
 // NEW: Importing all the accreditation icons
 import ugcIcon from "@/assets/icons/ugc-icon.png";
 import aicteIcon from "@/assets/icons/aicte-icon.png";
@@ -26,16 +30,8 @@ import nirfIcon from "@/assets/icons/nirf-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 
 const IGNOU = () => {
-  const courses = [
-    { name: "Online MBA", fees: "₹56,000", duration: "2 Years", specializations: 67 },
-    { name: "Online BCA", fees: "₹36,000", duration: "3 Years", specializations: 16 },
-    { name: "Online MCA", fees: "₹48,000", duration: "2 Years", specializations: 13 },
-    { name: "Online B.Com", fees: "₹24,000", duration: "3 Years", specializations: 10 },
-    { name: "Online M.Com", fees: "₹18,000", duration: "2 Years", specializations: 7 },
-    { name: "Online BA", fees: "₹12,000", duration: "3 Years", specializations: 13 },
-    { name: "Online MA", fees: "₹12,000", duration: "2 Years", specializations: 19 },
-    { name: "Online BBA", fees: "₹27,000", duration: "3 Years", specializations: 29 },
-  ];
+  // We will now use the courseData object directly for rendering
+  // const courses = [...] is no longer needed
 
   const features = [
     "42 different online courses available",
@@ -186,8 +182,8 @@ const IGNOU = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {courses.map((course, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+            {Object.entries(courseData).map(([courseId, course]) => (
+              <Card key={courseId} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
                     <BookOpen className="w-12 h-12 text-primary" />
@@ -205,11 +201,14 @@ const IGNOU = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Award className="w-4 h-4 text-primary" />
-                    <span>{course.specializations} Specializations</span>
+                    {/* Note: Specializations are not in courseData.json, so this is a placeholder */}
+                    <span>?? Specializations</span>
                   </div>
-                  <Button className="w-full mt-4" variant="outline">
-                    View Details
-                  </Button>
+                  <Link to={`/courses/${courseId}`}>
+                    <Button className="w-full mt-4" variant="outline">
+                      View Details
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -217,7 +216,7 @@ const IGNOU = () => {
         </div>
       </section>
 
-      {/* Sample Degree Section - NEW */}
+      {/* Sample Degree Section */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
