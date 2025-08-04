@@ -1,10 +1,19 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock } from "lucide-react";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react"; // Added Check icon
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
+
+// Import the new icons for approvals (assuming these paths exist as they did for Manipal)
+import ugcIcon from "@/assets/icons/ugc-icon.png";
+import aicteIcon from "@/assets/icons/aicte-icon.png";
+import naacIcon from "@/assets/icons/naac-icon.png"; // Assuming NAAC icon is available
+
+// Import the degree image
+import uuDegree from "@/assets/uu-degree.jpg"; // Correct path for Uttaranchal degree
 
 const Uttaranchal = () => {
   const courses = [
@@ -29,13 +38,14 @@ const Uttaranchal = () => {
     "Alumni network across industries"
   ];
 
+  // Updated approvals array with icon paths (using generic Award from lucide-react for those without specific image imports)
   const approvals = [
-    { name: "UGC", description: "University Grants Commission Approved" },
-    { name: "AICTE", description: "All India Council for Technical Education" },
-    { name: "AIU", description: "Association of Indian Universities" },
-    { name: "NAAC A+", description: "National Assessment and Accreditation Council" },
-    { name: "BCI", description: "Bar Council of India" },
-    { name: "PCI", description: "Pharmacy Council of India" }
+    { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
+    { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
+    { name: "AIU", description: "Association of Indian Universities", icon: null }, // Using null to indicate generic icon
+    { name: "NAAC A+", description: "National Assessment and Accreditation Council", icon: naacIcon },
+    { name: "BCI", description: "Bar Council of India", icon: null }, // Using null to indicate generic icon
+    { name: "PCI", description: "Pharmacy Council of India", icon: null } // Using null to indicate generic icon
   ];
 
   return (
@@ -149,7 +159,11 @@ const Uttaranchal = () => {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    <Award className="w-12 h-12 text-primary" />
+                    {approval.icon ? (
+                      <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
+                    ) : (
+                      <Award className="w-24 h-24 text-primary" /> // Generic icon if no specific image path
+                    )}
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
                 </CardHeader>
@@ -158,6 +172,54 @@ const Uttaranchal = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sample Degree Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left side: Description */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
+              <p className="text-lg text-muted-foreground mb-6 max-w-prose">
+                The degrees offered by Uttaranchal University Online are valid and recognized by various government bodies, making them suitable for all career opportunities.
+              </p>
+              <ul className="space-y-4 text-left mx-auto md:mx-0 max-w-sm">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">UGC-DEB & AICTE Approved</p>
+                    <p className="text-sm text-muted-foreground">The degrees are fully valid for government, private, and overseas jobs or higher studies.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">Digital Verification</p>
+                    <p className="text-sm text-muted-foreground">Supports online QR-code-based verification for authenticity.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">Officially Stamped</p>
+                    <p className="text-sm text-muted-foreground">Authenticated with the official university seal.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            {/* Right side: Image */}
+            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
+              <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
+                <img
+                  src={uuDegree}
+                  alt="Uttaranchal University Sample Degree"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
