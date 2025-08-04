@@ -1,0 +1,165 @@
+{
+  "courses": [
+    {
+      "id": "online-mba",
+      "name": "Online MBA",
+      "level": "pg",
+      "university": "Vivekananda Global University",
+      "fees": "₹1,50,000",
+      "duration": "2 Years",
+      "specializationsCount": 8,
+      "rating": 4.3,
+      "reviews": 510,
+      "feesBreakdown": {
+        "fullFees": "INR 1,50,000",
+        "perSemester": "INR 37,500",
+        "emi": "INR 6,375/Month"
+      },
+      "curriculum": [],
+      "specializations": [
+        "marketing",
+        "human resource management",
+        "financial management",
+        "healthcare management",
+        "agri business",
+        "operations management",
+        "international business management",
+        "information & technology management"
+      ]
+    },
+    {
+      "id": "online-mca",
+      "name": "Online MCA",
+      "level": "pg",
+      "university": "Vivekananda Global University",
+      "fees": "₹1,32,000",
+      "duration": "2 Years",
+      "specializationsCount": 0,
+      "rating": 4.4,
+      "reviews": 320,
+      "feesBreakdown": {
+        "fullFees": "INR 1,32,000",
+        "perSemester": "INR 22,000",
+        "emi": "INR 5,500/Month"
+      },
+      "curriculum": [],
+      "specializations": []
+    },
+    {
+      "id": "online-ma",
+      "name": "Online MA",
+      "level": "pg",
+      "university": "Vivekananda Global University",
+      "fees": "₹72,000",
+      "duration": "2 Years",
+      "specializationsCount": 2,
+      "rating": 4.0,
+      "reviews": 210,
+      "feesBreakdown": {
+        "fullFees": "INR 72,000",
+        "perSemester": "INR 12,000",
+        "emi": "INR 3,000/Month"
+      },
+      "curriculum": [],
+      "specializations": [
+        "english",
+        "journalism & mass communication"
+      ]
+    },
+    {
+      "id": "online-msc",
+      "name": "Online MSc",
+      "level": "pg",
+      "university": "Vivekananda Global University",
+      "fees": "₹72,000",
+      "duration": "2 Years",
+      "specializationsCount": 1,
+      "rating": 4.1,
+      "reviews": 180,
+      "feesBreakdown": {
+        "fullFees": "INR 72,000",
+        "perSemester": "INR 18,000",
+        "emi": "INR 3,000/Month"
+      },
+      "curriculum": [],
+      "specializations": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "online-bca",
+      "name": "Online BCA",
+      "level": "ug",
+      "university": "Vivekananda Global University",
+      "fees": "₹1,32,000",
+      "duration": "3 Years",
+      "specializationsCount": 5,
+      "rating": 4.1,
+      "reviews": 380,
+      "feesBreakdown": {
+        "fullFees": "INR 1,32,000",
+        "perSemester": "INR 22,000",
+        "emi": "INR 5,500/Month"
+      },
+      "curriculum": [],
+      "specializations": [
+        "general",
+        "artificial intelligence",
+        "data science",
+        "cloud technology",
+        "blockchain technology",
+        "UI&UX"
+      ]
+    },
+    {
+      "id": "online-bba",
+      "name": "Online BBA",
+      "level": "ug",
+      "university": "Vivekananda Global University",
+      "fees": "₹1,50,000",
+      "duration": "3 Years",
+      "specializationsCount": 4,
+      "rating": 4.2,
+      "reviews": 450,
+      "feesBreakdown": {
+        "fullFees": "INR 1,50,000",
+        "perSemester": "INR 37,500",
+        "emi": "INR 6,250/Month"
+      },
+      "curriculum": [],
+      "specializations": [
+        "general",
+        "digital marketing",
+        "fintech",
+        "retail managment"
+      ]
+    },
+    {
+      "id": "online-ba",
+      "name": "Online BA",
+      "level": "ug",
+      "university": "Vivekananda Global University",
+      "fees": "₹72,000",
+      "duration": "3 Years",
+      "specializationsCount": 8,
+      "rating": 4.1,
+      "reviews": 350,
+      "feesBreakdown": {
+        "fullFees": "INR 72,000",
+        "perSemester": "INR 18,000",
+        "emi": "INR 3,000/Month"
+      },
+      "curriculum": [],
+      "specializations": [
+        "economics",
+        "english",
+        "political science",
+        "psychology",
+        "history",
+        "computer applications",
+        "public policy & development",
+        "international relations"
+      ]
+    }
+  ]
+}
