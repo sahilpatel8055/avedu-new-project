@@ -124,9 +124,9 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
         </div>
 
         <Button 
-          // Removed variant="ghost" to make it blue by default
+          variant="ghost" 
           size="sm"
-          className="w-full text-xs sm:text-sm py-1.5 sm:py-2"
+          className="w-full group-hover:bg-[#0052CC] group-hover:text-white transition-colors text-xs sm:text-sm py-1.5 sm:py-2"
           onClick={() => {
             const routeMap: { [key: string]: string } = {
               'mba': '/courses/mba',
