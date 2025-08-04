@@ -1,265 +1,711 @@
 {
-  "manipal-online-mba": {
-    "name": "Online MBA",
-    "heading": "Manipal University Online MBA Program",
-    "description": "The online Master of Business Administration (MBA) from Manipal University Online is a comprehensive program designed to equip working professionals and fresh graduates with advanced management skills. It offers a flexible learning environment with a strong curriculum that includes case studies, live projects, and expert-led sessions. The program is recognized by UGC-DEB and AICTE, ensuring its value and validity across industries.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Digital Marketing", "icon": "fa6-solid:chart-line" },
-      { "name": "Marketing", "icon": "fa6-solid:bullhorn" },
-      { "name": "Analytics and Data Science", "icon": "fa6-solid:chart-pie" },
-      { "name": "IT & FinTech", "icon": "fa6-solid:microchip" },
-      { "name": "Finance", "icon": "fa6-solid:dollar-sign" },
-      { "name": "Human Resource Management", "icon": "fa6-solid:users" },
-      { "name": "BFSI", "icon": "fa6-solid:building-columns" },
-      { "name": "Operations Management", "icon": "fa6-solid:gear" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": [
-          "Entrepreneurial Practice",
-          "Business Communication (WAC)",
-          "Managerial Economics",
-          "Financial Accounting",
-          "Data Visualisation (Excel/Tableau)",
-          "Organizational Behaviour",
-          "Marketing Management"
-        ],
-        "sem2": [
-          "Business Research Methods (R/Python)",
-          "Operation Management",
-          "Human Resource Management",
-          "Management Accounting",
-          "Financial Management",
-          "Legal Aspects of Business",
-          "Business Communication (WAC)"
-        ]
+  "courses": [
+    {
+      "id": "manipal-online-mba",
+      "name": "Online MBA",
+      "level": "pg",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.5,
+      "reviews": 12345,
+      "fees": "INR 1,75,000",
+      "duration": "2 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB and AICTE approved",
+        "Multiple specializations to choose from",
+        "Flexible online learning environment",
+        "Strong industry-relevant curriculum"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "Bachelor's Degree",
+        "marks": "50% marks in graduation",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year2": {
-        "sem3": ["Strategic Management", "Research Methodology", "Elective Specialization 1", "Elective Specialization 2"],
-        "sem4": ["Project Work", "Elective Specialization 3", "Elective Specialization 4", "Business Ethics"]
-      }
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Entrepreneurial Practice",
+            "Business Communication (WAC)",
+            "Managerial Economics",
+            "Financial Accounting",
+            "Data Visualisation (Excel/Tableau)",
+            "Organizational Behaviour",
+            "Marketing Management",
+            "Business Research Methods (R/Python)",
+            "Operation Management",
+            "Human Resource Management",
+            "Management Accounting",
+            "Financial Management",
+            "Legal Aspects of Business"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Strategic Management",
+            "Research Methodology",
+            "Elective Specialization 1",
+            "Elective Specialization 2",
+            "Project Work",
+            "Elective Specialization 3",
+            "Elective Specialization 4",
+            "Business Ethics"
+          ]
+        }
+      ],
+      "specializations": [
+        "Digital Marketing",
+        "Marketing",
+        "Analytics and Data Science",
+        "IT & FinTech",
+        "Finance",
+        "Human Resource Management",
+        "BFSI",
+        "Operations Management"
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Ramesh Sharma",
+          "designation": "Professor of Finance",
+          "experience": "15+ years of experience"
+        },
+        {
+          "name": "Dr. Priya Singh",
+          "designation": "Associate Professor of Marketing",
+          "experience": "10+ years of experience"
+        }
+      ],
+      "campusPhotos": []
     },
-    "fees": {
-      "fullFees": "INR 1,75,000",
-      "perSemester": "INR 43,750",
-      "emiOptions": "INR 7,292"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-mca": {
-    "name": "Online MCA",
-    "heading": "Manipal University Online MCA Program",
-    "description": "The online Master of Computer Applications (MCA) program at Manipal University Online is a comprehensive two-year postgraduate degree for students looking to advance their skills in computer science. The curriculum is designed to provide a strong foundation in modern software development, data science, and IT management. The program is UGC-DEB and AICTE approved.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Data Science", "icon": "fa6-solid:database" },
-      { "name": "Cloud Computing", "icon": "fa6-solid:cloud" },
-      { "name": "Cyber Security", "icon": "fa6-solid:shield-halved" },
-      { "name": "Artificial Intelligence", "icon": "fa6-solid:robot" },
-      { "name": "Full Stack Development", "icon": "fa6-solid:code" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Advanced Data Structures", "Database Management Systems", "Software Engineering", "Computer Networks"],
-        "sem2": ["Operating Systems", "Cloud Computing", "Machine Learning", "Object-Oriented Analysis and Design"]
+    {
+      "id": "manipal-online-mca",
+      "name": "Online MCA",
+      "level": "pg",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.4,
+      "reviews": 9876,
+      "fees": "INR 1,58,000",
+      "duration": "2 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB and AICTE approved",
+        "Specializations in trending tech fields",
+        "Practical, industry-focused curriculum",
+        "Strong foundation in software development"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "Bachelor's Degree",
+        "marks": "50% marks in graduation",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year2": {
-        "sem3": ["Web Technologies", "Cyber Security", "Data Science & Analytics", "Elective 1"],
-        "sem4": ["Project Work", "Elective 2", "Elective 3", "Research Seminar"]
-      }
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Advanced Data Structures",
+            "Database Management Systems",
+            "Software Engineering",
+            "Computer Networks",
+            "Operating Systems",
+            "Cloud Computing",
+            "Machine Learning",
+            "Object-Oriented Analysis and Design"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Web Technologies",
+            "Cyber Security",
+            "Data Science & Analytics",
+            "Elective 1",
+            "Project Work",
+            "Elective 2",
+            "Elective 3",
+            "Research Seminar"
+          ]
+        }
+      ],
+      "specializations": [
+        "Data Science",
+        "Cloud Computing",
+        "Cyber Security",
+        "Artificial Intelligence",
+        "Full Stack Development"
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Ankit Gupta",
+          "designation": "Professor of Computer Science",
+          "experience": "18+ years of experience"
+        },
+        {
+          "name": "Prof. Seema Nair",
+          "designation": "Head of Department, IT",
+          "experience": "12+ years of experience"
+        }
+      ],
+      "campusPhotos": []
     },
-    "fees": {
-      "fullFees": "INR 1,58,000",
-      "perSemester": "INR 39,500",
-      "emiOptions": "INR 6,583"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-mcom": {
-    "name": "Online M.Com",
-    "heading": "Manipal University Online M.Com Program",
-    "description": "The online Master of Commerce (M.Com) program at Manipal University Online is a two-year postgraduate program designed to provide an in-depth understanding of commerce, accounting, finance, and taxation. The curriculum focuses on advanced theoretical and practical knowledge to prepare students for leadership roles in the corporate world. It is a UGC-DEB approved program.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Financial Accounting", "icon": "fa6-solid:file-invoice-dollar" },
-      { "name": "Business Finance", "icon": "fa6-solid:chart-line" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Advanced Financial Management", "Corporate Law", "Managerial Economics", "Strategic Management"],
-        "sem2": ["Advanced Cost Accounting", "International Business", "E-Commerce", "Research Methodology"]
+    {
+      "id": "manipal-online-mcom",
+      "name": "Online M.Com",
+      "level": "pg",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.3,
+      "reviews": 5678,
+      "fees": "INR 1,08,000",
+      "duration": "2 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB and AICTE approved",
+        "In-depth knowledge of commerce and finance",
+        "Prepares for leadership roles",
+        "Industry-relevant curriculum"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "Bachelor's Degree",
+        "marks": "50% marks in graduation",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year2": {
-        "sem3": ["Direct Taxes", "Goods & Service Tax", "Auditing & Corporate Governance", "Elective 1"],
-        "sem4": ["Project Work", "Elective 2", "Viva Voce"]
-      }
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Advanced Financial Management",
+            "Corporate Law",
+            "Managerial Economics",
+            "Strategic Management",
+            "Advanced Cost Accounting",
+            "International Business",
+            "E-Commerce",
+            "Research Methodology"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Direct Taxes",
+            "Goods & Service Tax",
+            "Auditing & Corporate Governance",
+            "Elective 1",
+            "Project Work",
+            "Elective 2",
+            "Viva Voce"
+          ]
+        }
+      ],
+      "specializations": ["Financial Accounting", "Business Finance"],
+      "faculty": [
+        {
+          "name": "Dr. S. K. Mitra",
+          "designation": "Professor of Commerce",
+          "experience": "20+ years of experience"
+        },
+        {
+          "name": "Prof. Neha Jaiswal",
+          "designation": "Associate Professor of Finance",
+          "experience": "14+ years of experience"
+        }
+      ],
+      "campusPhotos": []
     },
-    "fees": {
-      "fullFees": "INR 1,08,000",
-      "perSemester": "INR 27,000",
-      "emiOptions": "INR 4,500"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-ma": {
-    "name": "Online MA",
-    "heading": "Manipal University Online MA Program",
-    "description": "The online Master of Arts (MA) in Journalism and Mass Communication program at Manipal University Online is a two-year postgraduate degree designed to equip students with skills in media, communication, and journalism. The curriculum combines theoretical knowledge with practical skills, preparing students for careers in media, public relations, and advertising. It is a UGC-DEB approved program.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Journalism", "icon": "fa6-solid:microphone" },
-      { "name": "Public Relations", "icon": "fa6-solid:users" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Communication Theories", "Journalism Fundamentals", "Media Ethics", "Digital Media"],
-        "sem2": ["Public Relations", "Advertising", "Media Laws", "Communication Research"]
+    {
+      "id": "manipal-online-ma",
+      "name": "Online MA",
+      "level": "pg",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.6,
+      "reviews": 3210,
+      "fees": "INR 1,40,000",
+      "duration": "2 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB approved",
+        "Practical and theoretical media knowledge",
+        "Prepares for careers in journalism and PR",
+        "Flexible online curriculum"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "Bachelor's Degree",
+        "marks": "50% marks in graduation",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year2": {
-        "sem3": ["Global Media", "Film Studies", "Elective 1", "Elective 2"],
-        "sem4": ["Dissertation", "Internship", "Viva Voce"]
-      }
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Communication Theories",
+            "Journalism Fundamentals",
+            "Media Ethics",
+            "Digital Media",
+            "Public Relations",
+            "Advertising",
+            "Media Laws",
+            "Communication Research"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Global Media",
+            "Film Studies",
+            "Elective 1",
+            "Elective 2",
+            "Dissertation",
+            "Internship",
+            "Viva Voce"
+          ]
+        }
+      ],
+      "specializations": ["Journalism", "Public Relations"],
+      "faculty": [
+        {
+          "name": "Dr. Shweta Rao",
+          "designation": "Professor of Media Studies",
+          "experience": "16+ years of experience"
+        },
+        {
+          "name": "Prof. Amit Verma",
+          "designation": "Associate Professor of Journalism",
+          "experience": "11+ years of experience"
+        }
+      ],
+      "campusPhotos": []
     },
-    "fees": {
-      "fullFees": "INR 1,40,000",
-      "perSemester": "INR 35,000",
-      "emiOptions": "INR 5,833"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-bba": {
-    "name": "Online BBA",
-    "heading": "Manipal University Online BBA Program",
-    "description": "The online Bachelor of Business Administration (BBA) at Manipal University Online is a three-year undergraduate program designed to build foundational business knowledge and skills. It covers essential management concepts, finance, marketing, and human resources, preparing students for entry-level positions and further postgraduate studies. The program is UGC-DEB and AICTE approved.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Marketing", "icon": "fa6-solid:bullhorn" },
-      { "name": "Finance", "icon": "fa6-solid:dollar-sign" },
-      { "name": "HRM", "icon": "fa6-solid:users" },
-      { "name": "Operations", "icon": "fa6-solid:gear" },
-      { "name": "Business Analytics", "icon": "fa6-solid:chart-pie" },
-      { "name": "IT & Systems", "icon": "fa6-solid:microchip" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Principles of Management", "Business Economics", "Financial Accounting", "Business Law"],
-        "sem2": ["Organizational Behavior", "Marketing Management", "Business Statistics", "HR Management"]
+    {
+      "id": "manipal-online-bba",
+      "name": "Online BBA",
+      "level": "ug",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.7,
+      "reviews": 15432,
+      "fees": "INR 1,35,000",
+      "duration": "3 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB and AICTE approved",
+        "Builds foundational business skills",
+        "Prepares for entry-level roles",
+        "Flexible learning environment"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "10+2",
+        "marks": "45% marks in 12th grade",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year2": {
-        "sem3": ["Corporate Finance", "Business Communication", "Operations Management", "Elective 1"],
-        "sem4": ["Business Research Methods", "Entrepreneurship", "International Business", "Elective 2"]
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Financial Accounting",
+            "Business Law",
+            "Organizational Behavior",
+            "Marketing Management",
+            "Business Statistics",
+            "HR Management"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Corporate Finance",
+            "Business Communication",
+            "Operations Management",
+            "Elective 1",
+            "Business Research Methods",
+            "Entrepreneurship",
+            "International Business",
+            "Elective 2"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Strategic Management",
+            "Project Management",
+            "Elective 3",
+            "Elective 4",
+            "Project Report",
+            "Comprehensive Viva Voce",
+            "Elective 5",
+            "Elective 6"
+          ]
+        }
+      ],
+      "specializations": [
+        "Marketing",
+        "Finance",
+        "HRM",
+        "Operations",
+        "Business Analytics",
+        "IT & Systems"
+      ],
+      "faculty": [
+        {
+          "name": "Dr. Mohan Sunder",
+          "designation": "Professor of Business",
+          "experience": "19+ years of experience"
+        },
+        {
+          "name": "Prof. Kavita Reddy",
+          "designation": "Associate Professor of Marketing",
+          "experience": "10+ years of experience"
+        }
+      ],
+      "campusPhotos": []
+    },
+    {
+      "id": "manipal-online-bca",
+      "name": "Online BCA",
+      "level": "ug",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.6,
+      "reviews": 11223,
+      "fees": "INR 1,35,000",
+      "duration": "3 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB and AICTE approved",
+        "Industry-relevant curriculum",
+        "Foundational knowledge in IT and programming",
+        "Prepares for IT careers"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "10+2",
+        "marks": "45% marks in 12th grade",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year3": {
-        "sem5": ["Strategic Management", "Project Management", "Elective 3", "Elective 4"],
-        "sem6": ["Project Report", "Comprehensive Viva Voce", "Elective 5", "Elective 6"]
-      }
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Fundamentals of IT",
+            "Programming in C",
+            "Digital Logic",
+            "Mathematics for BCA",
+            "Data Structures",
+            "Object Oriented Programming using C++",
+            "Operating Systems",
+            "Discrete Mathematics"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Database Management Systems",
+            "Web Programming",
+            "Computer Networks",
+            "Java Programming",
+            "Software Engineering",
+            "Python Programming",
+            "Elective 1",
+            "Mobile Application Development"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Elective 2",
+            "Elective 3",
+            "Project Work",
+            "Computer Graphics",
+            "Final Project & Internship"
+          ]
+        }
+      ],
+      "specializations": [
+        "Data Science",
+        "Cloud Computing",
+        "Cyber Security",
+        "Artificial Intelligence",
+        "Full Stack Development"
+      ],
+      "faculty": [
+        {
+          "name": "Prof. S. Karthik",
+          "designation": "Professor of Computer Applications",
+          "experience": "17+ years of experience"
+        },
+        {
+          "name": "Dr. Meena Das",
+          "designation": "Associate Professor of IT",
+          "experience": "10+ years of experience"
+        }
+      ],
+      "campusPhotos": []
     },
-    "fees": {
-      "fullFees": "INR 1,35,000",
-      "perSemester": "INR 22,500",
-      "emiOptions": "INR 1,875"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-bca": {
-    "name": "Online BCA",
-    "heading": "Manipal University Online BCA Program",
-    "description": "The Online Bachelor of Computer Applications (BCA) program at Manipal University Online offers a strong foundation in computer applications and programming. The curriculum is designed to be industry-relevant, covering topics from fundamental programming to advanced database management and web development. This program is ideal for students looking to start a career in the IT sector with the flexibility of online learning.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Data Science", "icon": "fa6-solid:database" },
-      { "name": "Cloud Computing", "icon": "fa6-solid:cloud" },
-      { "name": "Cyber Security", "icon": "fa6-solid:shield-halved" },
-      { "name": "Artificial Intelligence", "icon": "fa6-solid:robot" },
-      { "name": "Full Stack Development", "icon": "fa6-solid:code" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Fundamentals of IT", "Programming in C", "Digital Logic", "Mathematics for BCA"],
-        "sem2": ["Data Structures", "Object Oriented Programming using C++", "Operating Systems", "Discrete Mathematics"]
+    {
+      "id": "manipal-online-ba",
+      "name": "Online BA",
+      "level": "ug",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.2,
+      "reviews": 7654,
+      "fees": "INR 75,000",
+      "duration": "3 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB approved",
+        "Foundational knowledge in media and journalism",
+        "Prepares for careers in media and PR",
+        "Flexible learning environment"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "10+2",
+        "marks": "45% marks in 12th grade",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year2": {
-        "sem3": ["Database Management Systems", "Web Programming", "Computer Networks", "Java Programming"],
-        "sem4": ["Software Engineering", "Python Programming", "Elective 1", "Mobile Application Development"]
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Introduction to Communication",
+            "Fundamentals of Journalism",
+            "Media Ethics",
+            "English Language",
+            "Introduction to Public Relations",
+            "Advertising Principles",
+            "Media and Society",
+            "Digital Media Basics"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Reporting and Editing",
+            "Creative Writing",
+            "Corporate Communication",
+            "Elective 1",
+            "Photo Journalism",
+            "Broadcast Media",
+            "Web Media",
+            "Elective 2"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Research Methods",
+            "Media Law",
+            "Development Communication",
+            "Elective 3",
+            "Project Work",
+            "Internship",
+            "Viva Voce"
+          ]
+        }
+      ],
+      "specializations": ["Journalism", "Public Relations"],
+      "faculty": [
+        {
+          "name": "Dr. Preeti Sharma",
+          "designation": "Professor of Media Studies",
+          "experience": "18+ years of experience"
+        },
+        {
+          "name": "Prof. Rahul Das",
+          "designation": "Associate Professor of Journalism",
+          "experience": "11+ years of experience"
+        }
+      ],
+      "campusPhotos": []
+    },
+    {
+      "id": "manipal-online-bcom",
+      "name": "Online B.Com",
+      "level": "ug",
+      "university": "Manipal University",
+      "universityId": "manipal",
+      "rating": 4.3,
+      "reviews": 8901,
+      "fees": "INR 99,000",
+      "duration": "3 Years",
+      "placementAssistance": true,
+      "learningMode": "Online",
+      "features": [
+        "UGC-DEB and AICTE approved",
+        "Solid foundation in accounting and finance",
+        "Prepares for professional careers",
+        "Industry-relevant curriculum"
+      ],
+      "approvals": [
+        {
+          "name": "UGC-DEB",
+          "description": "University Grants Commission - Distance Education Bureau"
+        },
+        {
+          "name": "AICTE",
+          "description": "All India Council for Technical Education"
+        },
+        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
+        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
+      ],
+      "eligibility": {
+        "qualification": "10+2",
+        "marks": "45% marks in 12th grade",
+        "entranceExam": "Not required",
+        "workExperience": "Not mandatory"
       },
-      "year3": {
-        "sem5": ["Elective 2", "Elective 3", "Project Work", "Computer Graphics"],
-        "sem6": ["Final Project & Internship"]
-      }
-    },
-    "fees": {
-      "fullFees": "INR 1,35,000",
-      "perSemester": "INR 22,500",
-      "emiOptions": "INR 1,875"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-ba": {
-    "name": "Online BA",
-    "heading": "Manipal University Online BA Program",
-    "description": "The online Bachelor of Arts (BA) in Journalism and Mass Communication at Manipal University Online is a three-year undergraduate program that provides a foundational understanding of media, communication, and journalism. The curriculum focuses on building communication skills, critical thinking, and media literacy to prepare students for various careers in the media industry. It is a UGC-DEB approved program.",
-    "approvals": ["UGC-DEB", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Journalism", "icon": "fa6-solid:microphone" },
-      { "name": "Public Relations", "icon": "fa6-solid:users" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Introduction to Communication", "Fundamentals of Journalism", "Media Ethics", "English Language"],
-        "sem2": ["Introduction to Public Relations", "Advertising Principles", "Media and Society", "Digital Media Basics"]
-      },
-      "year2": {
-        "sem3": ["Reporting and Editing", "Creative Writing", "Corporate Communication", "Elective 1"],
-        "sem4": ["Photo Journalism", "Broadcast Media", "Web Media", "Elective 2"]
-      },
-      "year3": {
-        "sem5": ["Research Methods", "Media Law", "Development Communication", "Elective 3"],
-        "sem6": ["Project Work", "Internship", "Viva Voce"]
-      }
-    },
-    "fees": {
-      "fullFees": "INR 75,000",
-      "perSemester": "INR 12,500",
-      "emiOptions": "INR 1,042"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  },
-  "manipal-online-bcom": {
-    "name": "Online B.Com",
-    "heading": "Manipal University Online B.Com Program",
-    "description": "The online Bachelor of Commerce (B.Com) from Manipal University Online is a three-year undergraduate program that provides a solid foundation in accounting, finance, and business management. The curriculum is designed to prepare students for professional careers in commerce and accounting or for further postgraduate studies. It is a UGC-DEB and AICTE approved program.",
-    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
-    "specializations": [
-      { "name": "Accounts & Finance", "icon": "fa6-solid:file-invoice-dollar" }
-    ],
-    "curriculum": {
-      "year1": {
-        "sem1": ["Financial Accounting", "Business Organization", "Business Economics", "Business Law"],
-        "sem2": ["Corporate Accounting", "Cost Accounting", "Business Mathematics", "E-Commerce"]
-      },
-      "year2": {
-        "sem3": ["Income Tax", "Auditing", "Banking and Insurance", "Elective 1"],
-        "sem4": ["Goods & Services Tax", "Company Law", "Entrepreneurship", "Elective 2"]
-      },
-      "year3": {
-        "sem5": ["Management Accounting", "Financial Markets", "Marketing Management", "Elective 3"],
-        "sem6": ["Project Report", "Viva Voce", "Business Ethics", "Elective 4"]
-      }
-    },
-    "fees": {
-      "fullFees": "INR 99,000",
-      "perSemester": "INR 16,500",
-      "emiOptions": "INR 1,375"
-    },
-    "hiringPartnersImage": "/assets/hiring-partners.png",
-    "programBenefitsImage": "/assets/program-benifits.jpg"
-  }
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Financial Accounting",
+            "Business Organization",
+            "Business Economics",
+            "Business Law",
+            "Corporate Accounting",
+            "Cost Accounting",
+            "Business Mathematics",
+            "E-Commerce"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Income Tax",
+            "Auditing",
+            "Banking and Insurance",
+            "Elective 1",
+            "Goods & Services Tax",
+            "Company Law",
+            "Entrepreneurship",
+            "Elective 2"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Management Accounting",
+            "Financial Markets",
+            "Marketing Management",
+            "Elective 3",
+            "Project Report",
+            "Viva Voce",
+            "Business Ethics",
+            "Elective 4"
+          ]
+        }
+      ],
+      "specializations": ["Accounts & Finance"],
+      "faculty": [
+        {
+          "name": "Prof. Sameer Kumar",
+          "designation": "Professor of Finance",
+          "experience": "22+ years of experience"
+        },
+        {
+          "name": "Dr. Aarti Sharma",
+          "designation": "Associate Professor of Accounting",
+          "experience": "15+ years of experience"
+        }
+      ],
+      "campusPhotos": []
+    }
+  ]
 }
