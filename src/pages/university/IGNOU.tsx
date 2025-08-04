@@ -176,47 +176,8 @@ const IGNOU = () => {
           </div>
         </div>
       </section>
-
-      {/* Courses Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {Object.entries(courseData).map(([courseId, course]) => (
-              <Card key={courseId} className="hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg text-center">{course.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <DollarSign className="w-4 h-4 text-primary" />
-                    <span className="font-semibold">{course.fees}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-primary" />
-                    {/* Note: Specializations are not in courseData.json, so this is a placeholder */}
-                    <span>?? Specializations</span>
-                  </div>
-                  <Link to={`/courses/${courseId}`}>
-                    <Button className="w-full mt-4" variant="outline">
-                      View Details
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sample Degree Section */}
+      
+      {/* Sample Degree Section (Moved) */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
@@ -260,6 +221,44 @@ const IGNOU = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {Object.entries(courseData).map(([courseId, course]) => (
+              <Card key={courseId} className="hover:shadow-lg transition-shadow">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-center mb-4">
+                    <BookOpen className="w-12 h-12 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg text-center">{course.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="w-4 h-4 text-primary" />
+                    <span className="font-semibold">{course.fees}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span>{course.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Award className="w-4 h-4 text-primary" />
+                    <span>?? Specializations</span>
+                  </div>
+                  <Link to={`/courses/${courseId}`}>
+                    <Button className="w-full mt-4" variant="outline">
+                      View Details
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
