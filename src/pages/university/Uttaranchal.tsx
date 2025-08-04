@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import Link here
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,15 +20,13 @@ import pciIcon from "@/assets/icons/pci-icon.jpg";
 import uuDegree from "@/assets/uu-degree.jpg";
 
 const Uttaranchal = () => {
+  // Use the course data that matches the JSON file.
   const courses = [
-    { name: "Online MBA", fees: "₹1,80,000", duration: "2 Years", specializations: 12 },
-    { name: "Online BBA", fees: "₹1,20,000", duration: "3 Years", specializations: 8 },
-    { name: "Online MCA", fees: "₹1,50,000", duration: "2 Years", specializations: 4 },
-    { name: "Online BCA", fees: "₹1,08,000", duration: "3 Years", specializations: 6 },
-    { name: "Online M.Com", fees: "₹60,000", duration: "2 Years", specializations: 3 },
-    { name: "Online B.Com", fees: "₹45,000", duration: "3 Years", specializations: 4 },
-    { name: "Online MA", fees: "₹50,000", duration: "2 Years", specializations: 5 },
-    { name: "Online BA", fees: "₹45,000", duration: "3 Years", specializations: 3 },
+    { name: "Online MBA", id: "online-mba", fees: "₹1,80,000", duration: "2 Years", specializations: 12 },
+    { name: "Online BBA", id: "online-bba", fees: "₹1,20,000", duration: "3 Years", specializations: 8 },
+    { name: "Online MCA", id: "online-mca", fees: "₹1,50,000", duration: "2 Years", specializations: 4 },
+    { name: "Online BCA", id: "online-bca", fees: "₹1,08,000", duration: "3 Years", specializations: 6 },
+    { name: "Online BA", id: "online-ba", fees: "₹45,000", duration: "3 Years", specializations: 3 }
   ];
 
   const features = [
@@ -41,7 +40,6 @@ const Uttaranchal = () => {
     "Alumni network across industries"
   ];
 
-  // Updated approvals array with all specific icon paths
   const approvals = [
     { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
@@ -90,7 +88,7 @@ const Uttaranchal = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <GraduationCap className="w-4 h-4 text-primary" />
-                  <span>33+ Programs</span>
+                  <span>5 Programs</span>
                 </div>
               </div>
               
@@ -249,9 +247,12 @@ const Uttaranchal = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  <Button className="w-full mt-4" variant="outline">
-                    View Details
-                  </Button>
+                  {/* The change is here: Use Link to navigate to the new course page */}
+                  <Link to={`/university/uttaranchal/${course.id}`}>
+                    <Button className="w-full mt-4" variant="outline">
+                      View Details
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
