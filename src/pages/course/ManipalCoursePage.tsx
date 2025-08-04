@@ -6,7 +6,17 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 import manipalCourseData from "../../data/manipalCourseData.json";
-import { Check, Star, Award, Clock, Users, GraduationCap, Building2, CheckCircle } from "lucide-react";
+import {
+  Check,
+  Star,
+  Award,
+  Clock,
+  Users,
+  GraduationCap,
+  Building2,
+  CheckCircle,
+  DollarSign,
+} from "lucide-react";
 
 // Import all approval icons
 import ugcIcon from "@/assets/icons/ugc-icon.png";
@@ -15,11 +25,6 @@ import nirfIcon from "@/assets/icons/nirf-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
 import qsIcon from "@/assets/icons/qs-icon.png";
 import nbaIcon from "@/assets/icons/nba-icon.png";
-
-// Import course approval icons
-import upgradIcon from "@/assets/icons/upgrad-logo.png";
-import edxIcon from "@/assets/icons/edx-logo.png";
-import courseraIcon from "@/assets/icons/coursera-logo.png";
 
 interface Course {
   id: string;
@@ -203,7 +208,11 @@ const ManipalCoursePage = () => {
                         >
                           {approval.icon && (
                             <img
-                              src={approvalIcons[approval.name as keyof typeof approvalIcons] || approval.icon}
+                              src={
+                                approvalIcons[
+                                  approval.name as keyof typeof approvalIcons
+                                ] || approval.icon
+                              }
                               alt={`${approval.name} Icon`}
                               className="w-10 h-10 object-contain"
                             />
@@ -226,7 +235,9 @@ const ManipalCoursePage = () => {
             <TabsContent value="eligibility" className="mt-8">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl">Eligibility Criteria</CardTitle>
+                  <CardTitle className="text-xl">
+                    Eligibility Criteria
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex items-start gap-3 p-4 bg-muted rounded-lg">
@@ -284,7 +295,10 @@ const ManipalCoursePage = () => {
                         </h3>
                         <ul className="space-y-2 text-muted-foreground">
                           {year.subjects.map((subject, subjectIndex) => (
-                            <li key={subjectIndex} className="flex items-start gap-2">
+                            <li
+                              key={subjectIndex}
+                              className="flex items-start gap-2"
+                            >
                               <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                               <span>{subject}</span>
                             </li>
@@ -370,23 +384,6 @@ const ManipalCoursePage = () => {
                         preparation.
                       </p>
                     </div>
-                  </div>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                    <img
-                      src={upgradIcon}
-                      alt="UpGrad"
-                      className="w-full h-auto object-contain"
-                    />
-                    <img
-                      src={edxIcon}
-                      alt="EdX"
-                      className="w-full h-auto object-contain"
-                    />
-                    <img
-                      src={courseraIcon}
-                      alt="Coursera"
-                      className="w-full h-auto object-contain"
-                    />
                   </div>
                 </CardContent>
               </Card>
