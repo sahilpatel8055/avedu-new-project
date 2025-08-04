@@ -154,7 +154,7 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
       </CardContent>
 
       <CardFooter className="pt-0">
-        <div className="grid grid-cols-2 gap-1 sm:gap-1.5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1.5 w-full">
           <Link to={`/university/${university.id}`}>
             <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto">
               <GraduationCap className="h-2.5 w-2.5 sm:h-3 w-3" />
@@ -192,7 +192,6 @@ const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => 
           </p>
         </div>
 
-        {/* The grid layout for the cards */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
           {universities.map((university) => (
             <UniversityCard key={university.id} university={university} onOpenCounseling={onOpenCounseling} />
