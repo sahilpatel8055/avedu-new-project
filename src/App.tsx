@@ -16,10 +16,12 @@ import OnlineTech from "./pages/courses/OnlineTech";
 import OnlineBBA from "./pages/courses/OnlineBBA";
 import OnlineCommerce from "./pages/courses/OnlineCommerce";
 import OnlineArts from "./pages/courses/OnlineArts";
-// NEW dynamic course page
+// NEW dynamic course page (general)
 import CoursePage from "./pages/course/CoursePage";
 // NEW Manipal dynamic course page
 import ManipalCoursePage from "./pages/course/ManipalCoursePage";
+// NEW Uttaranchal dynamic course page
+import UttaranchalCoursePage from "./pages/course/UttaranchalCoursePage"; // Added import
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
@@ -57,6 +59,8 @@ const App = () => (
           <Route path="/courses/:courseId" element={<CoursePage />} />
           {/* The new route for Manipal's specific course pages */}
           <Route path="/university/manipal/courses/:courseId" element={<ManipalCoursePage />} />
+          {/* The new route for Uttaranchal's specific course pages */}
+          <Route path="/university/uttaranchal/:courseId" element={<UttaranchalCoursePage />} /> {/* Added route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
