@@ -74,30 +74,30 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-3xl max-h-[75vh] p-0 bg-white mx-2 sm:mx-4 my-4 overflow-hidden">
-        <div className="grid lg:grid-cols-2 h-full max-h-[75vh]">
+      <DialogContent className="max-w-3xl max-h-[65vh] p-0 bg-white mx-2 sm:mx-4 my-4 overflow-hidden">
+        <div className="grid lg:grid-cols-2 h-full max-h-[65vh]">
           {/* Left Side - Form */}
-          <div className="p-3 sm:p-4 lg:p-4 overflow-y-auto">
-            <DialogHeader className="mb-3 sm:mb-4">
+          <div className="p-2 sm:p-3 lg:p-3 overflow-y-auto">
+            <DialogHeader className="mb-2 sm:mb-3">
               <div className="flex items-center justify-between mb-2">
-                <h2 className="text-lg sm:text-xl font-bold text-blue-600">
+                <h2 className="text-base sm:text-lg font-bold text-blue-600">
                   Get 100% free counseling session
                 </h2>
                 <Button 
                   variant="ghost" 
                   size="icon" 
                   onClick={() => onOpenChange(false)}
-                  className="h-8 w-8"
+                  className="h-7 w-7"
                 >
                   <X className="h-4 w-4" />
                 </Button>
               </div>
             </DialogHeader>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+            <form onSubmit={handleSubmit} className="space-y-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
                 <div>
-                  <Label htmlFor="fullName" className="text-sm font-bold text-gray-700">
+                  <Label htmlFor="fullName" className="text-xs font-bold text-gray-700">
                     Full Name *
                   </Label>
                   <Input
@@ -107,15 +107,15 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                     onChange={(e) => handleInputChange("fullName", e.target.value)}
                     placeholder="Enter your full name"
                     required
-                    className="mt-1"
+                    className="mt-1 h-8"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="contactNumber" className="text-sm font-bold text-gray-700">
+                  <Label htmlFor="contactNumber" className="text-xs font-bold text-gray-700">
                     Mobile Number *
                   </Label>
                   <div className="relative mt-1">
-                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-sm text-gray-600">
+                    <div className="absolute left-2 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-600">
                       🇮🇳 +91
                     </div>
                     <Input
@@ -125,14 +125,14 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                       onChange={(e) => handleInputChange("contactNumber", e.target.value)}
                       placeholder="Enter your mobile number"
                       required
-                      className="pl-16"
+                      className="pl-14 h-8"
                     />
                   </div>
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-sm font-bold text-gray-700">
+                <Label htmlFor="email" className="text-xs font-bold text-gray-700">
                   Email *
                 </Label>
                 <Input
@@ -142,17 +142,17 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   placeholder="Enter your email address"
                   required
-                  className="mt-1"
+                  className="mt-1 h-8"
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
                 <div>
-                  <Label htmlFor="state" className="text-sm font-bold text-gray-700">
+                  <Label htmlFor="state" className="text-xs font-bold text-gray-700">
                     State *
                   </Label>
                   <Select onValueChange={(value) => handleInputChange("state", value)}>
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1 h-8 text-xs">
                       <SelectValue placeholder="Select your state" />
                     </SelectTrigger>
                     <SelectContent>
@@ -165,7 +165,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                   </Select>
                 </div>
                 <div>
-                  <Label htmlFor="city" className="text-sm font-bold text-gray-700">
+                  <Label htmlFor="city" className="text-xs font-bold text-gray-700">
                     City *
                   </Label>
                   <Input
@@ -175,17 +175,17 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                     onChange={(e) => handleInputChange("city", e.target.value)}
                     placeholder="Enter your city"
                     required
-                    className="mt-1"
+                    className="mt-1 h-8"
                   />
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="course" className="text-sm font-bold text-gray-700">
+                <Label htmlFor="course" className="text-xs font-bold text-gray-700">
                   Course Interested In *
                 </Label>
                 <Select onValueChange={(value) => handleInputChange("course", value)}>
-                  <SelectTrigger className="mt-1">
+                  <SelectTrigger className="mt-1 h-8 text-xs">
                     <SelectValue placeholder="Select course" />
                   </SelectTrigger>
                   <SelectContent>
@@ -204,7 +204,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                   checked={formData.consent}
                   onCheckedChange={(checked) => handleInputChange("consent", checked as boolean)}
                 />
-                <Label htmlFor="consent" className="text-sm text-gray-600 leading-relaxed">
+                <Label htmlFor="consent" className="text-xs text-gray-600 leading-relaxed">
                   I agree to receive communications at the mobile number provided, even if registered under DND & 
                   accept our{" "}
                   <button 
@@ -225,12 +225,12 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                 </Label>
               </div>
 
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 sm:py-3">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 sm:py-2 text-sm">
                 Find Best University in 2 Mins
               </Button>
             </form>
 
-            <div className="mt-3 sm:mt-4 text-center">
+            <div className="mt-2 sm:mt-3 text-center">
               <p className="text-xs text-gray-500">
                 🔒 Your personal information is secure with us
               </p>
@@ -238,49 +238,49 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
           </div>
 
           {/* Right Side - Image & Benefits */}
-          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-3 lg:p-4 relative overflow-hidden">
+          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-2 lg:p-3 relative overflow-hidden">
             <div className="relative flex-1 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/4e819542-d4de-47e5-a745-52662caced1a.png"
                 alt="Graduate student"
-                className="w-48 h-48 xl:w-56 xl:h-56 object-cover rounded-lg shadow-lg"
+                className="w-40 h-40 xl:w-48 xl:h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
 
             {/* Content below image */}
-            <div className="mt-2 xl:mt-3 text-center">
-              <div className="bg-blue-100 text-blue-800 px-2 xl:px-3 py-1 rounded-full text-xs xl:text-sm font-medium mb-1 xl:mb-2 inline-block">
+            <div className="mt-2 text-center">
+              <div className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs font-medium mb-1 inline-block">
                 🎯 Compare & Apply from 100+ Online Universities
               </div>
-              <h3 className="text-sm xl:text-lg font-bold text-gray-900 mb-1 xl:mb-2">
+              <h3 className="text-sm font-bold text-gray-900 mb-1">
                 Get Free Counseling & Find Your Perfect Course
               </h3>
               
               {/* Key Benefits */}
-              <div className="space-y-1.5 xl:space-y-2 text-left">
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Star className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
-                  <span className="text-xs xl:text-sm">100+ Universities</span>
+              <div className="space-y-1 text-left">
+                <div className="flex items-center gap-1.5 text-gray-700">
+                  <Star className="h-3 w-3 text-blue-600" />
+                  <span className="text-xs">100+ Universities</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Users className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
-                  <span className="text-xs xl:text-sm">30X comparison factors</span>
+                <div className="flex items-center gap-1.5 text-gray-700">
+                  <Users className="h-3 w-3 text-blue-600" />
+                  <span className="text-xs">30X comparison factors</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <GraduationCap className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
-                  <span className="text-xs xl:text-sm">Free expert consultation</span>
+                <div className="flex items-center gap-1.5 text-gray-700">
+                  <GraduationCap className="h-3 w-3 text-blue-600" />
+                  <span className="text-xs">Free expert consultation</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Award className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
-                  <span className="text-xs xl:text-sm">Quick Loan facility</span>
+                <div className="flex items-center gap-1.5 text-gray-700">
+                  <Award className="h-3 w-3 text-blue-600" />
+                  <span className="text-xs">Quick Loan facility</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Clock className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
-                  <span className="text-xs xl:text-sm">Celebrating 1 lac admissions</span>
+                <div className="flex items-center gap-1.5 text-gray-700">
+                  <Clock className="h-3 w-3 text-blue-600" />
+                  <span className="text-xs">Celebrating 1 lac admissions</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Phone className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
-                  <span className="text-xs xl:text-sm">Post Admission Support</span>
+                <div className="flex items-center gap-1.5 text-gray-700">
+                  <Phone className="h-3 w-3 text-blue-600" />
+                  <span className="text-xs">Post Admission Support</span>
                 </div>
               </div>
             </div>
