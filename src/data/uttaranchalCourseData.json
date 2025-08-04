@@ -1,0 +1,277 @@
+{
+  "courses": [
+    {
+      "id": "online-mba",
+      "name": "Online MBA",
+      "level": "pg",
+      "university": "Uttaranchal University",
+      "fees": "₹1,80,000",
+      "duration": "2 Years",
+      "specializationsCount": 12,
+      "rating": 4.5,
+      "reviews": 703,
+      "feesBreakdown": {
+        "fullFees": "INR 1,80,000",
+        "perSemester": "INR 45,000",
+        "emi": "INR 7,500/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Management Principles & Practices",
+            "Organizational Behavior",
+            "Managerial Economics",
+            "Financial Accounting",
+            "Marketing Management",
+            "Human Resource Management",
+            "Business Statistics",
+            "Operations Management"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Strategic Management",
+            "Business Ethics & Corporate Governance",
+            "Research Methodology",
+            "Elective Specialization 1",
+            "Elective Specialization 2",
+            "Project Work"
+          ]
+        }
+      ],
+      "specializations": [
+        "Marketing Management",
+        "Financial Management",
+        "Human Resource Management",
+        "Operations Management",
+        "Business Analytics",
+        "Digital Marketing",
+        "Supply Chain Management",
+        "International Business",
+        "IT Management",
+        "Healthcare Management",
+        "Retail Management",
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "id": "online-bba",
+      "name": "Online BBA",
+      "level": "ug",
+      "university": "Uttaranchal University",
+      "fees": "₹1,20,000",
+      "duration": "3 Years",
+      "specializationsCount": 8,
+      "rating": 4.4,
+      "reviews": 650,
+      "feesBreakdown": {
+        "fullFees": "INR 1,20,000",
+        "perSemester": "INR 20,000",
+        "emi": "INR 1,667/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Financial Accounting",
+            "Business Law",
+            "Organizational Behavior",
+            "Marketing Management"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Corporate Finance",
+            "Human Resource Management",
+            "Operations Research",
+            "Business Communication",
+            "Entrepreneurship Development",
+            "Elective 1"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Strategic Management",
+            "International Business",
+            "Project Management",
+            "Elective 2",
+            "Project Work"
+          ]
+        }
+      ],
+      "specializations": [
+        "Marketing",
+        "Finance",
+        "Human Resource",
+        "Operations",
+        "Retail",
+        "Logistics",
+        "Digital Business",
+        "International Business"
+      ]
+    },
+    {
+      "id": "online-mca",
+      "name": "Online MCA",
+      "level": "pg",
+      "university": "Uttaranchal University",
+      "fees": "₹1,50,000",
+      "duration": "2 Years",
+      "specializationsCount": 4,
+      "rating": 4.6,
+      "reviews": 420,
+      "feesBreakdown": {
+        "fullFees": "INR 1,50,000",
+        "perSemester": "INR 37,500",
+        "emi": "INR 6,250/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Advanced Data Structures",
+            "Database Management Systems",
+            "Software Engineering",
+            "Computer Networks",
+            "Operating Systems",
+            "Object Oriented Programming"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Web Technologies",
+            "Cloud Computing",
+            "Machine Learning",
+            "Cyber Security",
+            "Project Work"
+          ]
+        }
+      ],
+      "specializations": [
+        "Data Science",
+        "Cloud Computing",
+        "Cyber Security",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "online-bca",
+      "name": "Online BCA",
+      "level": "ug",
+      "university": "Uttaranchal University",
+      "fees": "₹1,08,000",
+      "duration": "3 Years",
+      "specializationsCount": 6,
+      "rating": 4.3,
+      "reviews": 580,
+      "feesBreakdown": {
+        "fullFees": "INR 1,08,000",
+        "perSemester": "INR 18,000",
+        "emi": "INR 1,500/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Fundamentals of IT",
+            "Programming in C",
+            "Digital Electronics",
+            "Mathematics",
+            "Data Structures",
+            "Object Oriented Programming using C++"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Database Management Systems",
+            "Web Development",
+            "Operating Systems",
+            "Java Programming",
+            "Software Engineering",
+            "Python Programming"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Computer Networks",
+            "Mobile Application Development",
+            "Cloud Computing",
+            "Cyber Security",
+            "Project Work"
+          ]
+        }
+      ],
+      "specializations": [
+        "Web Development",
+        "Mobile App Development",
+        "Cloud Technology",
+        "Cyber Security",
+        "Data Analytics",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "online-ba",
+      "name": "Online BA",
+      "level": "ug",
+      "university": "Uttaranchal University",
+      "fees": "₹45,000",
+      "duration": "3 Years",
+      "specializationsCount": 3,
+      "rating": 4.1,
+      "reviews": 350,
+      "feesBreakdown": {
+        "fullFees": "INR 45,000",
+        "perSemester": "INR 7,500",
+        "emi": "INR 625/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Introduction to Communication",
+            "Fundamentals of Journalism",
+            "Media & Society",
+            "English Language",
+            "Introduction to Public Relations",
+            "Advertising Principles"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Reporting & Editing",
+            "Digital Media Basics",
+            "Corporate Communication",
+            "Media Laws",
+            "Creative Writing",
+            "Communication Research"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Development Communication",
+            "Global Media",
+            "Project Work",
+            "Internship"
+          ]
+        }
+      ],
+      "specializations": [
+        "Journalism",
+        "Mass Communication",
+        "Public Relations"
+      ]
+    }
+  ]
+}
