@@ -1,1 +1,265 @@
-{}
+{
+  "manipal-online-mba": {
+    "name": "Online MBA",
+    "heading": "Manipal University Online MBA Program",
+    "description": "The online Master of Business Administration (MBA) from Manipal University Online is a comprehensive program designed to equip working professionals and fresh graduates with advanced management skills. It offers a flexible learning environment with a strong curriculum that includes case studies, live projects, and expert-led sessions. The program is recognized by UGC-DEB and AICTE, ensuring its value and validity across industries.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Digital Marketing", "icon": "fa6-solid:chart-line" },
+      { "name": "Marketing", "icon": "fa6-solid:bullhorn" },
+      { "name": "Analytics and Data Science", "icon": "fa6-solid:chart-pie" },
+      { "name": "IT & FinTech", "icon": "fa6-solid:microchip" },
+      { "name": "Finance", "icon": "fa6-solid:dollar-sign" },
+      { "name": "Human Resource Management", "icon": "fa6-solid:users" },
+      { "name": "BFSI", "icon": "fa6-solid:building-columns" },
+      { "name": "Operations Management", "icon": "fa6-solid:gear" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": [
+          "Entrepreneurial Practice",
+          "Business Communication (WAC)",
+          "Managerial Economics",
+          "Financial Accounting",
+          "Data Visualisation (Excel/Tableau)",
+          "Organizational Behaviour",
+          "Marketing Management"
+        ],
+        "sem2": [
+          "Business Research Methods (R/Python)",
+          "Operation Management",
+          "Human Resource Management",
+          "Management Accounting",
+          "Financial Management",
+          "Legal Aspects of Business",
+          "Business Communication (WAC)"
+        ]
+      },
+      "year2": {
+        "sem3": ["Strategic Management", "Research Methodology", "Elective Specialization 1", "Elective Specialization 2"],
+        "sem4": ["Project Work", "Elective Specialization 3", "Elective Specialization 4", "Business Ethics"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 1,75,000",
+      "perSemester": "INR 43,750",
+      "emiOptions": "INR 7,292"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-mca": {
+    "name": "Online MCA",
+    "heading": "Manipal University Online MCA Program",
+    "description": "The online Master of Computer Applications (MCA) program at Manipal University Online is a comprehensive two-year postgraduate degree for students looking to advance their skills in computer science. The curriculum is designed to provide a strong foundation in modern software development, data science, and IT management. The program is UGC-DEB and AICTE approved.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Data Science", "icon": "fa6-solid:database" },
+      { "name": "Cloud Computing", "icon": "fa6-solid:cloud" },
+      { "name": "Cyber Security", "icon": "fa6-solid:shield-halved" },
+      { "name": "Artificial Intelligence", "icon": "fa6-solid:robot" },
+      { "name": "Full Stack Development", "icon": "fa6-solid:code" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Advanced Data Structures", "Database Management Systems", "Software Engineering", "Computer Networks"],
+        "sem2": ["Operating Systems", "Cloud Computing", "Machine Learning", "Object-Oriented Analysis and Design"]
+      },
+      "year2": {
+        "sem3": ["Web Technologies", "Cyber Security", "Data Science & Analytics", "Elective 1"],
+        "sem4": ["Project Work", "Elective 2", "Elective 3", "Research Seminar"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 1,58,000",
+      "perSemester": "INR 39,500",
+      "emiOptions": "INR 6,583"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-mcom": {
+    "name": "Online M.Com",
+    "heading": "Manipal University Online M.Com Program",
+    "description": "The online Master of Commerce (M.Com) program at Manipal University Online is a two-year postgraduate program designed to provide an in-depth understanding of commerce, accounting, finance, and taxation. The curriculum focuses on advanced theoretical and practical knowledge to prepare students for leadership roles in the corporate world. It is a UGC-DEB approved program.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Financial Accounting", "icon": "fa6-solid:file-invoice-dollar" },
+      { "name": "Business Finance", "icon": "fa6-solid:chart-line" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Advanced Financial Management", "Corporate Law", "Managerial Economics", "Strategic Management"],
+        "sem2": ["Advanced Cost Accounting", "International Business", "E-Commerce", "Research Methodology"]
+      },
+      "year2": {
+        "sem3": ["Direct Taxes", "Goods & Service Tax", "Auditing & Corporate Governance", "Elective 1"],
+        "sem4": ["Project Work", "Elective 2", "Viva Voce"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 1,08,000",
+      "perSemester": "INR 27,000",
+      "emiOptions": "INR 4,500"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-ma": {
+    "name": "Online MA",
+    "heading": "Manipal University Online MA Program",
+    "description": "The online Master of Arts (MA) in Journalism and Mass Communication program at Manipal University Online is a two-year postgraduate degree designed to equip students with skills in media, communication, and journalism. The curriculum combines theoretical knowledge with practical skills, preparing students for careers in media, public relations, and advertising. It is a UGC-DEB approved program.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Journalism", "icon": "fa6-solid:microphone" },
+      { "name": "Public Relations", "icon": "fa6-solid:users" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Communication Theories", "Journalism Fundamentals", "Media Ethics", "Digital Media"],
+        "sem2": ["Public Relations", "Advertising", "Media Laws", "Communication Research"]
+      },
+      "year2": {
+        "sem3": ["Global Media", "Film Studies", "Elective 1", "Elective 2"],
+        "sem4": ["Dissertation", "Internship", "Viva Voce"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 1,40,000",
+      "perSemester": "INR 35,000",
+      "emiOptions": "INR 5,833"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-bba": {
+    "name": "Online BBA",
+    "heading": "Manipal University Online BBA Program",
+    "description": "The online Bachelor of Business Administration (BBA) at Manipal University Online is a three-year undergraduate program designed to build foundational business knowledge and skills. It covers essential management concepts, finance, marketing, and human resources, preparing students for entry-level positions and further postgraduate studies. The program is UGC-DEB and AICTE approved.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Marketing", "icon": "fa6-solid:bullhorn" },
+      { "name": "Finance", "icon": "fa6-solid:dollar-sign" },
+      { "name": "HRM", "icon": "fa6-solid:users" },
+      { "name": "Operations", "icon": "fa6-solid:gear" },
+      { "name": "Business Analytics", "icon": "fa6-solid:chart-pie" },
+      { "name": "IT & Systems", "icon": "fa6-solid:microchip" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Principles of Management", "Business Economics", "Financial Accounting", "Business Law"],
+        "sem2": ["Organizational Behavior", "Marketing Management", "Business Statistics", "HR Management"]
+      },
+      "year2": {
+        "sem3": ["Corporate Finance", "Business Communication", "Operations Management", "Elective 1"],
+        "sem4": ["Business Research Methods", "Entrepreneurship", "International Business", "Elective 2"]
+      },
+      "year3": {
+        "sem5": ["Strategic Management", "Project Management", "Elective 3", "Elective 4"],
+        "sem6": ["Project Report", "Comprehensive Viva Voce", "Elective 5", "Elective 6"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 1,35,000",
+      "perSemester": "INR 22,500",
+      "emiOptions": "INR 1,875"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-bca": {
+    "name": "Online BCA",
+    "heading": "Manipal University Online BCA Program",
+    "description": "The Online Bachelor of Computer Applications (BCA) program at Manipal University Online offers a strong foundation in computer applications and programming. The curriculum is designed to be industry-relevant, covering topics from fundamental programming to advanced database management and web development. This program is ideal for students looking to start a career in the IT sector with the flexibility of online learning.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Data Science", "icon": "fa6-solid:database" },
+      { "name": "Cloud Computing", "icon": "fa6-solid:cloud" },
+      { "name": "Cyber Security", "icon": "fa6-solid:shield-halved" },
+      { "name": "Artificial Intelligence", "icon": "fa6-solid:robot" },
+      { "name": "Full Stack Development", "icon": "fa6-solid:code" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Fundamentals of IT", "Programming in C", "Digital Logic", "Mathematics for BCA"],
+        "sem2": ["Data Structures", "Object Oriented Programming using C++", "Operating Systems", "Discrete Mathematics"]
+      },
+      "year2": {
+        "sem3": ["Database Management Systems", "Web Programming", "Computer Networks", "Java Programming"],
+        "sem4": ["Software Engineering", "Python Programming", "Elective 1", "Mobile Application Development"]
+      },
+      "year3": {
+        "sem5": ["Elective 2", "Elective 3", "Project Work", "Computer Graphics"],
+        "sem6": ["Final Project & Internship"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 1,35,000",
+      "perSemester": "INR 22,500",
+      "emiOptions": "INR 1,875"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-ba": {
+    "name": "Online BA",
+    "heading": "Manipal University Online BA Program",
+    "description": "The online Bachelor of Arts (BA) in Journalism and Mass Communication at Manipal University Online is a three-year undergraduate program that provides a foundational understanding of media, communication, and journalism. The curriculum focuses on building communication skills, critical thinking, and media literacy to prepare students for various careers in the media industry. It is a UGC-DEB approved program.",
+    "approvals": ["UGC-DEB", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Journalism", "icon": "fa6-solid:microphone" },
+      { "name": "Public Relations", "icon": "fa6-solid:users" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Introduction to Communication", "Fundamentals of Journalism", "Media Ethics", "English Language"],
+        "sem2": ["Introduction to Public Relations", "Advertising Principles", "Media and Society", "Digital Media Basics"]
+      },
+      "year2": {
+        "sem3": ["Reporting and Editing", "Creative Writing", "Corporate Communication", "Elective 1"],
+        "sem4": ["Photo Journalism", "Broadcast Media", "Web Media", "Elective 2"]
+      },
+      "year3": {
+        "sem5": ["Research Methods", "Media Law", "Development Communication", "Elective 3"],
+        "sem6": ["Project Work", "Internship", "Viva Voce"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 75,000",
+      "perSemester": "INR 12,500",
+      "emiOptions": "INR 1,042"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  },
+  "manipal-online-bcom": {
+    "name": "Online B.Com",
+    "heading": "Manipal University Online B.Com Program",
+    "description": "The online Bachelor of Commerce (B.Com) from Manipal University Online is a three-year undergraduate program that provides a solid foundation in accounting, finance, and business management. The curriculum is designed to prepare students for professional careers in commerce and accounting or for further postgraduate studies. It is a UGC-DEB and AICTE approved program.",
+    "approvals": ["UGC-DEB", "AICTE", "NAAC A+", "NIRF"],
+    "specializations": [
+      { "name": "Accounts & Finance", "icon": "fa6-solid:file-invoice-dollar" }
+    ],
+    "curriculum": {
+      "year1": {
+        "sem1": ["Financial Accounting", "Business Organization", "Business Economics", "Business Law"],
+        "sem2": ["Corporate Accounting", "Cost Accounting", "Business Mathematics", "E-Commerce"]
+      },
+      "year2": {
+        "sem3": ["Income Tax", "Auditing", "Banking and Insurance", "Elective 1"],
+        "sem4": ["Goods & Services Tax", "Company Law", "Entrepreneurship", "Elective 2"]
+      },
+      "year3": {
+        "sem5": ["Management Accounting", "Financial Markets", "Marketing Management", "Elective 3"],
+        "sem6": ["Project Report", "Viva Voce", "Business Ethics", "Elective 4"]
+      }
+    },
+    "fees": {
+      "fullFees": "INR 99,000",
+      "perSemester": "INR 16,500",
+      "emiOptions": "INR 1,375"
+    },
+    "hiringPartnersImage": "/assets/hiring-partners.png",
+    "programBenefitsImage": "/assets/program-benifits.jpg"
+  }
+}
