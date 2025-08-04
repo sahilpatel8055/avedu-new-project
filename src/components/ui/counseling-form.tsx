@@ -74,17 +74,20 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[85vh] p-0 bg-white mx-4 my-8">
-        <div className="grid lg:grid-cols-2 h-full">
+      <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-white mx-2 sm:mx-4 my-4 sm:my-8 overflow-hidden">
+        <div className="grid lg:grid-cols-2 h-full max-h-[90vh]">
           {/* Left Side - Form */}
-          <div className="p-4 lg:p-6 overflow-y-auto">
-            <DialogHeader className="mb-4">
+          <div className="p-3 sm:p-4 lg:p-6 overflow-y-auto">
+            <DialogHeader className="mb-3 sm:mb-4">
               <div className="flex items-center justify-between mb-2">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+                  Get 100% Counseling Session
+                </h2>
                 <Button 
                   variant="ghost" 
                   size="icon" 
                   onClick={() => onOpenChange(false)}
-                  className="h-8 w-8 ml-auto"
+                  className="h-8 w-8"
                 >
                   <X className="h-4 w-4" />
                 </Button>
@@ -92,9 +95,9 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
             </DialogHeader>
 
             <form onSubmit={handleSubmit} className="space-y-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <Label htmlFor="fullName" className="text-sm font-medium text-gray-700">
+                  <Label htmlFor="fullName" className="text-sm font-bold text-gray-700">
                     Full Name *
                   </Label>
                   <Input
@@ -108,23 +111,28 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                   />
                 </div>
                 <div>
-                  <Label htmlFor="contactNumber" className="text-sm font-medium text-gray-700">
+                  <Label htmlFor="contactNumber" className="text-sm font-bold text-gray-700">
                     Mobile Number *
                   </Label>
-                  <Input
-                    id="contactNumber"
-                    type="tel"
-                    value={formData.contactNumber}
-                    onChange={(e) => handleInputChange("contactNumber", e.target.value)}
-                    placeholder="Enter your mobile number"
-                    required
-                    className="mt-1"
-                  />
+                  <div className="relative mt-1">
+                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-sm text-gray-600">
+                      🇮🇳 +91
+                    </div>
+                    <Input
+                      id="contactNumber"
+                      type="tel"
+                      value={formData.contactNumber}
+                      onChange={(e) => handleInputChange("contactNumber", e.target.value)}
+                      placeholder="Enter your mobile number"
+                      required
+                      className="pl-16"
+                    />
+                  </div>
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                <Label htmlFor="email" className="text-sm font-bold text-gray-700">
                   Email *
                 </Label>
                 <Input
@@ -138,9 +146,9 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <Label htmlFor="state" className="text-sm font-medium text-gray-700">
+                  <Label htmlFor="state" className="text-sm font-bold text-gray-700">
                     State *
                   </Label>
                   <Select onValueChange={(value) => handleInputChange("state", value)}>
@@ -157,7 +165,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                   </Select>
                 </div>
                 <div>
-                  <Label htmlFor="city" className="text-sm font-medium text-gray-700">
+                  <Label htmlFor="city" className="text-sm font-bold text-gray-700">
                     City *
                   </Label>
                   <Input
@@ -173,7 +181,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
               </div>
 
               <div>
-                <Label htmlFor="course" className="text-sm font-medium text-gray-700">
+                <Label htmlFor="course" className="text-sm font-bold text-gray-700">
                   Course Interested In *
                 </Label>
                 <Select onValueChange={(value) => handleInputChange("course", value)}>
@@ -217,12 +225,12 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                 </Label>
               </div>
 
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 sm:py-3">
                 Find Best University in 2 Mins
               </Button>
             </form>
 
-            <div className="mt-4 text-center">
+            <div className="mt-3 sm:mt-4 text-center">
               <p className="text-xs text-gray-500">
                 🔒 Your personal information is secure with us
               </p>
@@ -230,59 +238,59 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
           </div>
 
           {/* Right Side - Image */}
-          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-4 lg:p-6 relative overflow-hidden">
+          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-3 lg:p-4 relative overflow-hidden">
             <div className="relative flex-1 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/4e819542-d4de-47e5-a745-52662caced1a.png"
                 alt="Graduate student"
-                className="w-64 h-64 object-cover rounded-lg shadow-lg"
+                className="w-48 h-48 xl:w-56 xl:h-56 object-cover rounded-lg shadow-lg"
               />
               
-              {/* Animated pointing finger */}
-              <div className="absolute -left-12 top-1/2 transform -translate-y-1/2 animate-bounce">
-                <div className="bg-white rounded-full p-2 shadow-lg border-2 border-blue-200">
-                  <span className="text-xl">👈</span>
+              {/* Static pointing finger */}
+              <div className="absolute -left-8 xl:-left-10 top-1/2 transform -translate-y-1/2">
+                <div className="bg-white rounded-full p-1.5 xl:p-2 shadow-lg border-2 border-blue-200">
+                  <span className="text-lg xl:text-xl">👈</span>
                 </div>
-                <div className="bg-blue-600 text-white px-2 py-1 rounded-lg text-xs mt-1 whitespace-nowrap">
+                <div className="bg-blue-600 text-white px-1.5 xl:px-2 py-1 rounded-lg text-xs mt-1 whitespace-nowrap">
                   Fill the form here!
                 </div>
               </div>
             </div>
 
             {/* Content below image */}
-            <div className="mt-4 text-center">
-              <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">
+            <div className="mt-3 xl:mt-4 text-center">
+              <div className="bg-blue-100 text-blue-800 px-2 xl:px-3 py-1 rounded-full text-xs xl:text-sm font-medium mb-2 xl:mb-3 inline-block">
                 🎯 Compare & Apply from 100+ Online Universities
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <h3 className="text-sm xl:text-lg font-bold text-gray-900 mb-2 xl:mb-3">
                 Get Free Counseling & Find Your Perfect Course
               </h3>
               
               {/* Key Benefits */}
-              <div className="space-y-2 text-left">
+              <div className="space-y-1.5 xl:space-y-2 text-left">
                 <div className="flex items-center gap-2 text-gray-700">
-                  <Star className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm">100+ Universities</span>
+                  <Star className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
+                  <span className="text-xs xl:text-sm">100+ Universities</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <Users className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm">30X comparison factors</span>
+                  <Users className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
+                  <span className="text-xs xl:text-sm">30X comparison factors</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <GraduationCap className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm">Free expert consultation</span>
+                  <GraduationCap className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
+                  <span className="text-xs xl:text-sm">Free expert consultation</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <Award className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm">Quick Loan facility</span>
+                  <Award className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
+                  <span className="text-xs xl:text-sm">Quick Loan facility</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <Clock className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm">Celebrating 1 lac admissions</span>
+                  <Clock className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
+                  <span className="text-xs xl:text-sm">Celebrating 1 lac admissions</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <Phone className="h-4 w-4 text-blue-600" />
-                  <span className="text-sm">Post Admission Support</span>
+                  <Phone className="h-3 w-3 xl:h-4 xl:w-4 text-blue-600" />
+                  <span className="text-xs xl:text-sm">Post Admission Support</span>
                 </div>
               </div>
             </div>

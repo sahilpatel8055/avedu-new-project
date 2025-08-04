@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Search, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import aveduLogo from "@/assets/avedu-logo.png";
+import CounselingForm from "@/components/ui/counseling-form";
 
 const NavigationHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCounselingFormOpen, setIsCounselingFormOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
@@ -52,7 +54,10 @@ const NavigationHeader = () => {
               <Search className="h-4 w-4" />
               Search Courses
             </Button>
-            <Button className="gap-2 bg-gradient-primary hover:opacity-90">
+            <Button 
+              className="gap-2 bg-gradient-primary hover:opacity-90"
+              onClick={() => setIsCounselingFormOpen(true)}
+            >
               <Phone className="h-4 w-4" />
               Get Counselling
             </Button>
@@ -92,7 +97,10 @@ const NavigationHeader = () => {
                 <Search className="h-4 w-4" />
                 Search Courses
               </Button>
-              <Button className="gap-2 bg-gradient-primary hover:opacity-90 justify-start">
+              <Button 
+                className="gap-2 bg-gradient-primary hover:opacity-90 justify-start"
+                onClick={() => setIsCounselingFormOpen(true)}
+              >
                 <Phone className="h-4 w-4" />
                 Get Counselling
               </Button>
@@ -100,6 +108,11 @@ const NavigationHeader = () => {
           </nav>
         </div>
       </div>
+      
+      <CounselingForm 
+        open={isCounselingFormOpen} 
+        onOpenChange={setIsCounselingFormOpen} 
+      />
     </header>
   );
 };

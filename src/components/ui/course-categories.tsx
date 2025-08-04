@@ -98,22 +98,22 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
         </Badge>
       )}
 
-      <CardContent className="p-4 sm:p-6 text-center space-y-3 sm:space-y-4">
-        <div className="w-16 h-16 rounded-full bg-primary-light mx-auto flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300">
+      <CardContent className="p-3 sm:p-4 lg:p-6 text-center space-y-2 sm:space-y-3">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary-light mx-auto flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300">
           {typeof category.icon === "string" ? (
             <img src={category.icon} alt={category.title} className="w-full h-full object-cover" />
           ) : (
-            <div className="text-blue-600 w-8 h-8">{category.icon}</div>
+            <div className="text-blue-600 w-6 h-6 sm:w-8 sm:h-8">{category.icon}</div>
           )}
         </div>
 
-        <div className="space-y-2">
-          <h3 className="font-bold text-lg">{category.title}</h3>
-          <p className="text-[#0052CC] font-bold">{category.programs}+ Programs</p>
+        <div className="space-y-1 sm:space-y-2">
+          <h3 className="font-bold text-sm sm:text-base lg:text-lg">{category.title}</h3>
+          <p className="text-[#0052CC] font-bold text-xs sm:text-sm">{category.programs}+ Programs</p>
         </div>
 
-        <div className="space-y-2">
-          <p className="text-sm font-medium text-muted-foreground">Popular Courses:</p>
+        <div className="space-y-1 sm:space-y-2">
+          <p className="text-xs sm:text-sm font-medium text-muted-foreground">Popular Courses:</p>
           <div className="flex flex-wrap gap-1 justify-center">
             {category.popularCourses.map((course) => (
               <Badge key={course} variant="outline" className="text-xs">
@@ -125,7 +125,8 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
 
         <Button 
           variant="ghost" 
-          className="w-full group-hover:bg-[#0052CC] group-hover:text-white transition-colors"
+          size="sm"
+          className="w-full group-hover:bg-[#0052CC] group-hover:text-white transition-colors text-xs sm:text-sm py-1.5 sm:py-2"
           onClick={() => {
             const routeMap: { [key: string]: string } = {
               'mba': '/courses/mba',

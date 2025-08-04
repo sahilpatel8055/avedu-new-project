@@ -99,48 +99,48 @@ const universities: University[] = [
 const UniversityCard = ({ university, onOpenCounseling }: { university: University; onOpenCounseling?: () => void }) => {
   return (
     <Card className="h-full rounded-xl bg-[#f5f3ff] border border-gray-200 shadow-[inset_0_1px_3px_rgba(255,255,255,0.6),_0_2px_6px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 group">
-      <CardHeader className="pb-2 sm:pb-3">
-        <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-2 sm:mb-3">
+      <CardHeader className="pb-1 sm:pb-2">
+        <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-1 sm:mb-2">
           <img 
             src={university.image || universityPlaceholder}
             alt={university.name}
-            className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain p-1 sm:p-2 group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="space-y-1 sm:space-y-2">
-          <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900">{university.name}</h3>
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
-            <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
+        <div className="space-y-1">
+          <h3 className="font-bold text-sm sm:text-base lg:text-lg leading-tight text-gray-900">{university.name}</h3>
+          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+            <MapPin className="h-3 w-3" />
             {university.location}
           </div>
         </div>
       </CardHeader>
 
-      <CardContent className="pb-2 sm:pb-3 space-y-3 sm:space-y-4">
+      <CardContent className="pb-1 sm:pb-2 space-y-2 sm:space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 fill-primary text-primary" />
-            <span className="font-medium">{university.rating}</span>
+            <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-primary text-primary" />
+            <span className="font-medium text-xs sm:text-sm">{university.rating}</span>
           </div>
-          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <Users className="h-4 w-4" />
-            {university.students}
+          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+            <Users className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="text-xs">{university.students}</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <div className="text-center p-2 bg-indigo-100 rounded-lg">
-            <div className="font-semibold text-indigo-700">{university.ugPrograms}</div>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="text-center p-1.5 sm:p-2 bg-indigo-100 rounded-lg">
+            <div className="font-semibold text-indigo-700 text-xs sm:text-sm">{university.ugPrograms}</div>
             <div className="text-xs text-muted-foreground">UG Courses</div>
           </div>
-          <div className="text-center p-2 bg-indigo-100 rounded-lg">
-            <div className="font-semibold text-indigo-700">{university.pgPrograms}</div>
+          <div className="text-center p-1.5 sm:p-2 bg-indigo-100 rounded-lg">
+            <div className="font-semibold text-indigo-700 text-xs sm:text-sm">{university.pgPrograms}</div>
             <div className="text-xs text-muted-foreground">PG Courses</div>
           </div>
         </div>
 
-        <div className="text-center p-3 bg-green-100 rounded-lg">
-          <div className="font-semibold text-green-700">{university.fees}</div>
+        <div className="text-center p-2 sm:p-3 bg-green-100 rounded-lg">
+          <div className="font-semibold text-green-700 text-xs sm:text-sm">{university.fees}</div>
           <div className="text-xs text-muted-foreground">Starting Fees</div>
         </div>
 
@@ -153,16 +153,16 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
         </div>
       </CardContent>
 
-      <CardFooter className="pt-0 space-y-3">
-        <div className="grid grid-cols-2 gap-2 w-full">
+      <CardFooter className="pt-0">
+        <div className="grid grid-cols-2 gap-1.5 sm:gap-2 w-full">
           <Link to={`/university/${university.id}`}>
-            <Button variant="outline" size="sm" className="gap-1 w-full">
-              <GraduationCap className="h-4 w-4" />
+            <Button variant="outline" size="sm" className="gap-1 w-full text-xs py-1.5 sm:py-2">
+              <GraduationCap className="h-3 w-3 sm:h-4 sm:w-4" />
               View Courses
             </Button>
           </Link>
-          <Button size="sm" className="gap-1 w-full" onClick={onOpenCounseling}>
-            <ExternalLink className="h-4 w-4" />
+          <Button size="sm" className="gap-1 w-full text-xs py-1.5 sm:py-2" onClick={onOpenCounseling}>
+            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
             Apply Now
           </Button>
         </div>
