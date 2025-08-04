@@ -164,7 +164,7 @@ const OnlineMBA = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <div className="mb-6">
-              <img src={mbaIcon} alt="MBA" className="h-16 w-16 mx-auto mb-4" />
+              <img src={mbaIcon} alt="MBA" className="h-24 w-24 mx-auto mb-4" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Online MBA Programs
