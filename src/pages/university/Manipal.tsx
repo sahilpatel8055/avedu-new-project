@@ -1,10 +1,23 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock } from "lucide-react";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import manipalLogo from "@/assets/manipal-logo.png";
+
+// Import the new icons for approvals
+import ugcIcon from "@/assets/icons/ugc-icon.png";
+import aicteIcon from "@/assets/icons/aicte-icon.png";
+import nirfIcon from "@/assets/icons/nirf-icon.png";
+import naacIcon from "@/assets/icons/naac-icon.png";
+import qsIcon from "@/assets/icons/qs-icon.png";
+import nbaIcon from "@/assets/icons/nba-icon.png";
+
+// Import the degree images
+import degreeFront from "@/assets/manipal-1stdegree.jpg";
+import degreeBack from "@/assets/manipal-2nddegree.jpg";
 
 const Manipal = () => {
   const courses = [
@@ -29,14 +42,25 @@ const Manipal = () => {
     "Connections with 100+ Fortune 500 recruiters"
   ];
 
+  // Updated approvals array with icon paths
   const approvals = [
-    { name: "UGC", description: "University Grants Commission Approved" },
-    { name: "AICTE", description: "All India Council for Technical Education" },
-    { name: "NIRF", description: "Rank 64 in University Category" },
-    { name: "NAAC A+", description: "National Assessment and Accreditation Council" },
-    { name: "QS Ranking", description: "QS World University Rankings" },
-    { name: "NBA", description: "National Board of Accreditation" }
+    { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
+    { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
+    { name: "NIRF", description: "Rank 64 in University Category", icon: nirfIcon },
+    { name: "NAAC A+", description: "National Assessment and Accreditation Council", icon: naacIcon },
+    { name: "QS Ranking", description: "QS World University Rankings", icon: qsIcon },
+    { name: "NBA", description: "National Board of Accreditation", icon: nbaIcon }
   ];
+
+  const [degreePage, setDegreePage] = useState('front');
+
+  const handleNextPage = () => {
+    setDegreePage(degreePage === 'front' ? 'back' : 'front');
+  };
+
+  const handlePrevPage = () => {
+    setDegreePage(degreePage === 'front' ? 'back' : 'front');
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -149,7 +173,11 @@ const Manipal = () => {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    <Award className="w-12 h-12 text-primary" />
+                    {approval.icon ? (
+                      <img src={approval.icon} alt={approval.name} className="w-12 h-12 object-contain" />
+                    ) : (
+                      <Award className="w-12 h-12 text-primary" />
+                    )}
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
                 </CardHeader>
@@ -161,9 +189,49 @@ const Manipal = () => {
           </div>
         </div>
       </section>
+      
+      {/* Sample Degree Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Sample Degree</h2>
+          <div className="relative max-w-2xl mx-auto">
+            <div className="relative">
+              <img 
+                src={degreePage === 'front' ? degreeFront : degreeBack} 
+                alt="Manipal University Sample Degree" 
+                className="w-full h-auto rounded-lg shadow-lg" 
+              />
+              <div className="absolute top-1/2 left-4 -translate-y-1/2">
+                <Button onClick={handlePrevPage} variant="ghost" className="bg-white/50 hover:bg-white/70 backdrop-blur-sm p-2 rounded-full">
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+              </div>
+              <div className="absolute top-1/2 right-4 -translate-y-1/2">
+                <Button onClick={handleNextPage} variant="ghost" className="bg-white/50 hover:bg-white/70 backdrop-blur-sm p-2 rounded-full">
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center gap-4 mt-4">
+              <Button 
+                onClick={() => setDegreePage('front')} 
+                variant={degreePage === 'front' ? 'default' : 'outline'}
+              >
+                Front Side
+              </Button>
+              <Button 
+                onClick={() => setDegreePage('back')} 
+                variant={degreePage === 'back' ? 'default' : 'outline'}
+              >
+                Back Side
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Courses Section */}
-      <section className="py-16">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -199,7 +267,7 @@ const Manipal = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal University Online?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
