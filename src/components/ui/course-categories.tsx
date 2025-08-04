@@ -90,6 +90,12 @@ const categories: CourseCategory[] = [
 ];
 
 const CategoryCard = ({ category }: { category: CourseCategory }) => {
+  // Conditional classes for larger icons
+  const isLargeIcon = ["mba", "btech", "bba"].includes(category.id);
+  const iconSizeClasses = isLargeIcon 
+    ? "w-16 h-16 sm:w-24 sm:h-24" // ~1.5x larger
+    : "w-12 h-12 sm:w-16 sm:h-16";
+
   return (
     <Card className="h-full hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group cursor-pointer relative">
       {category.trending && (
@@ -99,11 +105,11 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
       )}
 
       <CardContent className="p-3 sm:p-4 lg:p-6 text-center space-y-2 sm:space-y-3">
-        <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-full bg-primary-light mx-auto flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300">
+        <div className={`rounded-full bg-primary-light mx-auto flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300 ${iconSizeClasses}`}>
           {typeof category.icon === "string" ? (
             <img src={category.icon} alt={category.title} className="w-full h-full object-cover" />
           ) : (
-            <div className="text-blue-600 w-12 h-12 sm:w-12 sm:h-12">{category.icon}</div>
+            <div className="text-blue-600 w-10 h-10 sm:w-10 sm:h-10">{category.icon}</div>
           )}
         </div>
 
@@ -124,7 +130,6 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
         </div>
 
         <Button 
-          // Default variant for a solid blue button
           size="sm"
           className="w-full text-xs sm:text-sm py-1.5 sm:py-2"
           onClick={() => {
