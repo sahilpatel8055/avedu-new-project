@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import HeroSection from "@/components/ui/hero-section";
 import CourseCategories from "@/components/ui/course-categories";
@@ -5,13 +6,16 @@ import UniversityGrid from "@/components/ui/university-grid";
 import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
 import CounsellingSection from "@/components/ui/counselling-section";
 import Footer from "@/components/ui/footer";
+import CounselingForm from "@/components/ui/counseling-form";
 import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
+  const [isCounselingFormOpen, setIsCounselingFormOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
-      <HeroSection />
+      <HeroSection onOpenCounseling={() => setIsCounselingFormOpen(true)} />
 
       {/* University Logos Marquee Section (Moved to Top Below Hero) */}
       <section className="py-8 bg-white border-b">
@@ -41,9 +45,14 @@ const Index = () => {
         </div>
       </section>
 
-      <UniversityGrid />
-      <CounsellingSection />
+      <UniversityGrid onOpenCounseling={() => setIsCounselingFormOpen(true)} />
+      <CounsellingSection onOpenCounseling={() => setIsCounselingFormOpen(true)} />
       <Footer />
+      
+      <CounselingForm 
+        open={isCounselingFormOpen} 
+        onOpenChange={setIsCounselingFormOpen} 
+      />
     </div>
   );
 };

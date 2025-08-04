@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -95,7 +96,7 @@ const universities: University[] = [
   },
 ];
 
-const UniversityCard = ({ university }: { university: University }) => {
+const UniversityCard = ({ university, onOpenCounseling }: { university: University; onOpenCounseling?: () => void }) => {
   return (
     <Card className="h-full rounded-xl bg-[#f5f3ff] border border-gray-200 shadow-[inset_0_1px_3px_rgba(255,255,255,0.6),_0_2px_6px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 group">
       <CardHeader className="pb-2 sm:pb-3">
@@ -160,7 +161,7 @@ const UniversityCard = ({ university }: { university: University }) => {
               View Courses
             </Button>
           </Link>
-          <Button size="sm" className="gap-1 w-full">
+          <Button size="sm" className="gap-1 w-full" onClick={onOpenCounseling}>
             <ExternalLink className="h-4 w-4" />
             Apply Now
           </Button>
@@ -170,7 +171,11 @@ const UniversityCard = ({ university }: { university: University }) => {
   );
 };
 
-const UniversityGrid = () => {
+interface UniversityGridProps {
+  onOpenCounseling?: () => void;
+}
+
+const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => {
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-white border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
       <div className="container mx-auto px-4">
@@ -187,9 +192,9 @@ const UniversityGrid = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12">
           {universities.map((university) => (
-            <UniversityCard key={university.id} university={university} />
+            <UniversityCard key={university.id} university={university} onOpenCounseling={onOpenCounseling} />
           ))}
         </div>
 

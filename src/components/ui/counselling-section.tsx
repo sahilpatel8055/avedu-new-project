@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -58,7 +59,11 @@ const process = [
   }
 ];
 
-const CounsellingSection = () => {
+interface CounsellingSectionProps {
+  onOpenCounseling?: () => void;
+}
+
+const CounsellingSection: React.FC<CounsellingSectionProps> = ({ onOpenCounseling }) => {
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-background" id="counselling">
       <div className="container mx-auto px-4">
@@ -152,17 +157,17 @@ const CounsellingSection = () => {
                   Book your free counselling session today and take the first step towards your dream career.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <Button variant="secondary" size="sm" className="gap-2">
+                  <Button variant="secondary" size="sm" className="gap-2" onClick={onOpenCounseling}>
                     <Phone className="h-4 w-4" />
                     Call Now
                   </Button>
-                  <Button variant="secondary" size="sm" className="gap-2">
+                  <Button variant="secondary" size="sm" className="gap-2" onClick={onOpenCounseling}>
                     <Calendar className="h-4 w-4" />
                     Schedule Call
                   </Button>
-                  <Button variant="secondary" size="sm" className="gap-2">
+                  <Button variant="secondary" size="sm" className="gap-2" onClick={onOpenCounseling}>
                     <MessageCircle className="h-4 w-4" />
-                    WhatsApp
+                    Get Counselling
                   </Button>
                 </div>
               </CardContent>

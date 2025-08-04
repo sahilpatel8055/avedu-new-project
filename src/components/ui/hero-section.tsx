@@ -1,10 +1,15 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, GraduationCap, Award, ArrowRight } from "lucide-react";
 import Slideshow from "@/components/ui/slideshow";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onOpenCounseling?: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCounseling }) => {
   return (
     <section className="relative bg-gradient-subtle py-8 sm:py-12 lg:py-16 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -57,7 +62,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-primary hover:opacity-90 gap-2 shadow-primary text-sm sm:text-base"
-                onClick={() => document.getElementById('counselling')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={onOpenCounseling || (() => document.getElementById('counselling')?.scrollIntoView({ behavior: 'smooth' }))}
               >
                 Get Free Counselling
                 <ArrowRight className="h-4 w-4 sm:h-5 w-5" />
