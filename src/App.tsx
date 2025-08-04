@@ -23,45 +23,45 @@ import ManipalCoursePage from "./pages/course/ManipalCoursePage";
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
-  const location = useLocation();
+  const location = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
-  return null;
+  return null;
 };
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/university/ignou" element={<IGNOU />} />
-          <Route path="/university/manipal" element={<Manipal />} />
-          <Route path="/university/uttaranchal" element={<Uttaranchal />} />
-          <Route path="/university/vgu" element={<VGU />} />
-          {/* Your original course routes - these remain unchanged */}
-          <Route path="/courses/mba" element={<OnlineMBA />} />
-          <Route path="/courses/engineering" element={<OnlineTech />} />
-          <Route path="/courses/bba" element={<OnlineBBA />} />
-          <Route path="/courses/commerce" element={<OnlineCommerce />} />
-          <Route path="/courses/arts" element={<OnlineArts />} />
-          {/* The new dynamic route, now correctly pointing to /courses/:courseId */}
-          <Route path="/courses/:courseId" element={<CoursePage />} />
-          {/* The new route for Manipal's specific course pages */}
-          <Route path="/manipal-courses/:courseId" element={<ManipalCoursePage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/university/ignou" element={<IGNOU />} />
+          <Route path="/university/manipal" element={<Manipal />} />
+          <Route path="/university/uttaranchal" element={<Uttaranchal />} />
+          <Route path="/university/vgu" element={<VGU />} />
+          {/* Your original course routes - these remain unchanged */}
+          <Route path="/courses/mba" element={<OnlineMBA />} />
+          <Route path="/courses/engineering" element={<OnlineTech />} />
+          <Route path="/courses/bba" element={<OnlineBBA />} />
+          <Route path="/courses/commerce" element={<OnlineCommerce />} />
+          <Route path="/courses/arts" element={<OnlineArts />} />
+          {/* The new dynamic route, now correctly pointing to /courses/:courseId */}
+          <Route path="/courses/:courseId" element={<CoursePage />} />
+          {/* The new route for Manipal's specific course pages */}
+          <Route path="/university/manipal/courses/:courseId" element={<ManipalCoursePage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
 );
 
 export default App;
