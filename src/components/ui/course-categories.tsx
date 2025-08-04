@@ -113,4 +113,49 @@ const CategoryCard = ({ category }: { category: CourseCategory }) => {
         </div>
 
         <div className="space-y-1 sm:space-y-2">
-          <p className="text-xs sm
+          <p className="text-xs sm:text-sm font-medium text-muted-foreground">Popular Courses:</p>
+          <div className="flex flex-wrap gap-1 justify-center">
+            {category.popularCourses.map((course) => (
+              <Badge key={course} variant="outline" className="text-xs">
+                {course}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <Button 
+          // Removed variant="ghost" to make it blue by default
+          size="sm"
+          className="w-full text-xs sm:text-sm py-1.5 sm:py-2"
+          onClick={() => {
+            const routeMap: { [key: string]: string } = {
+              'mba': '/courses/mba',
+              'btech': '/courses/engineering', 
+              'bba': '/courses/bba',
+              'bcom': '/courses/commerce',
+              'ba': '/courses/arts'
+            };
+            const route = routeMap[category.id];
+            if (route) {
+              window.location.href = route;
+            }
+          }}
+        >
+          Explore Programs
+        </Button>
+      </CardContent>
+    </Card>
+  );
+};
+
+const CourseCategories = () => {
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12">
+      {categories.map((category) => (
+        <CategoryCard key={category.id} category={category} />
+      ))}
+    </div>
+  );
+};
+
+export default CourseCategories;
