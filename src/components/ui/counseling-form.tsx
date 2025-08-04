@@ -74,10 +74,10 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] p-0 bg-white mx-2 sm:mx-4 my-4 sm:my-8 overflow-hidden">
-        <div className="grid lg:grid-cols-2 h-full max-h-[90vh]">
+      <DialogContent className="max-w-3xl max-h-[75vh] p-0 bg-white mx-2 sm:mx-4 my-4 overflow-hidden">
+        <div className="grid lg:grid-cols-2 h-full max-h-[75vh]">
           {/* Left Side - Form */}
-          <div className="p-3 sm:p-4 lg:p-6 overflow-y-auto">
+          <div className="p-3 sm:p-4 lg:p-4 overflow-y-auto">
             <DialogHeader className="mb-3 sm:mb-4">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-lg sm:text-xl font-bold text-blue-600">
@@ -243,16 +243,16 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
               <img 
                 src="/lovable-uploads/4e819542-d4de-47e5-a745-52662caced1a.png"
                 alt="Graduate student"
-                className="w-56 h-56 xl:w-64 xl:h-64 object-cover rounded-lg shadow-lg"
+                className="w-48 h-48 xl:w-56 xl:h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
 
             {/* Content below image */}
-            <div className="mt-3 xl:mt-4 text-center">
-              <div className="bg-blue-100 text-blue-800 px-2 xl:px-3 py-1 rounded-full text-xs xl:text-sm font-medium mb-2 xl:mb-3 inline-block">
+            <div className="mt-2 xl:mt-3 text-center">
+              <div className="bg-blue-100 text-blue-800 px-2 xl:px-3 py-1 rounded-full text-xs xl:text-sm font-medium mb-1 xl:mb-2 inline-block">
                 🎯 Compare & Apply from 100+ Online Universities
               </div>
-              <h3 className="text-sm xl:text-lg font-bold text-gray-900 mb-2 xl:mb-3">
+              <h3 className="text-sm xl:text-lg font-bold text-gray-900 mb-1 xl:mb-2">
                 Get Free Counseling & Find Your Perfect Course
               </h3>
               
