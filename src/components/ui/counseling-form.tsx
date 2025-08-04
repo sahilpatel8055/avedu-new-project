@@ -74,58 +74,24 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto p-0 bg-white">
-        <div className="grid lg:grid-cols-2 min-h-[600px]">
+      <DialogContent className="max-w-4xl max-h-[85vh] p-0 bg-white mx-4 my-8">
+        <div className="grid lg:grid-cols-2 h-full">
           {/* Left Side - Form */}
-          <div className="p-6 lg:p-8">
-            <DialogHeader className="mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                  🎯 Compare & Apply from 100+ Online Universities
-                </div>
+          <div className="p-4 lg:p-6 overflow-y-auto">
+            <DialogHeader className="mb-4">
+              <div className="flex items-center justify-between mb-2">
                 <Button 
                   variant="ghost" 
                   size="icon" 
                   onClick={() => onOpenChange(false)}
-                  className="h-8 w-8"
+                  className="h-8 w-8 ml-auto"
                 >
                   <X className="h-4 w-4" />
                 </Button>
               </div>
-              <DialogTitle className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Get Free Counseling & Find Your Perfect Course
-              </DialogTitle>
             </DialogHeader>
 
-            {/* Key Benefits */}
-            <div className="mb-6 space-y-3">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Star className="h-5 w-5 text-blue-600" />
-                <span className="text-sm">100+ Universities</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <Users className="h-5 w-5 text-blue-600" />
-                <span className="text-sm">30X comparison factors</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <GraduationCap className="h-5 w-5 text-blue-600" />
-                <span className="text-sm">Free expert consultation</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <Award className="h-5 w-5 text-blue-600" />
-                <span className="text-sm">Quick Loan facility</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <Clock className="h-5 w-5 text-blue-600" />
-                <span className="text-sm">Celebrating 1 lac admissions</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <Phone className="h-5 w-5 text-blue-600" />
-                <span className="text-sm">Post Admission Support</span>
-              </div>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="fullName" className="text-sm font-medium text-gray-700">
@@ -264,30 +230,59 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
           </div>
 
           {/* Right Side - Image */}
-          <div className="hidden lg:flex lg:flex-col lg:justify-center lg:items-center bg-gradient-to-br from-blue-50 to-indigo-100 p-8 relative overflow-hidden">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Start Your Journey Today!
-              </h3>
-              <p className="text-gray-600">
-                Our expert counselors are here to guide you
-              </p>
-            </div>
-            
-            <div className="relative">
+          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-4 lg:p-6 relative overflow-hidden">
+            <div className="relative flex-1 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/4e819542-d4de-47e5-a745-52662caced1a.png"
                 alt="Graduate student"
-                className="w-80 h-80 object-cover rounded-lg shadow-lg"
+                className="w-64 h-64 object-cover rounded-lg shadow-lg"
               />
               
               {/* Animated pointing finger */}
-              <div className="absolute -left-16 top-1/2 transform -translate-y-1/2 animate-bounce">
-                <div className="bg-white rounded-full p-3 shadow-lg border-2 border-blue-200">
-                  <span className="text-2xl">👈</span>
+              <div className="absolute -left-12 top-1/2 transform -translate-y-1/2 animate-bounce">
+                <div className="bg-white rounded-full p-2 shadow-lg border-2 border-blue-200">
+                  <span className="text-xl">👈</span>
                 </div>
-                <div className="bg-blue-600 text-white px-3 py-1 rounded-lg text-sm mt-2 whitespace-nowrap">
+                <div className="bg-blue-600 text-white px-2 py-1 rounded-lg text-xs mt-1 whitespace-nowrap">
                   Fill the form here!
+                </div>
+              </div>
+            </div>
+
+            {/* Content below image */}
+            <div className="mt-4 text-center">
+              <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">
+                🎯 Compare & Apply from 100+ Online Universities
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                Get Free Counseling & Find Your Perfect Course
+              </h3>
+              
+              {/* Key Benefits */}
+              <div className="space-y-2 text-left">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Star className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm">100+ Universities</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Users className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm">30X comparison factors</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <GraduationCap className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm">Free expert consultation</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Award className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm">Quick Loan facility</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Clock className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm">Celebrating 1 lac admissions</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Phone className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm">Post Admission Support</span>
                 </div>
               </div>
             </div>
