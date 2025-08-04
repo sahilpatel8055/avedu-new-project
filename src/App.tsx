@@ -21,7 +21,9 @@ import CoursePage from "./pages/course/CoursePage";
 // NEW Manipal dynamic course page
 import ManipalCoursePage from "./pages/course/ManipalCoursePage";
 // NEW Uttaranchal dynamic course page
-import UttaranchalCoursePage from "./pages/course/UttaranchalCoursePage"; // Added import
+import UttaranchalCoursePage from "./pages/course/UttaranchalCoursePage";
+// NEW VGU dynamic course page
+import VguCoursePage from "./pages/course/VguCoursePage"; // Added import
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
@@ -60,7 +62,9 @@ const App = () => (
           {/* The new route for Manipal's specific course pages */}
           <Route path="/university/manipal/courses/:courseId" element={<ManipalCoursePage />} />
           {/* The new route for Uttaranchal's specific course pages */}
-          <Route path="/university/uttaranchal/:courseId" element={<UttaranchalCoursePage />} /> {/* Added route */}
+          <Route path="/university/uttaranchal/:courseId" element={<UttaranchalCoursePage />} />
+          {/* Add the new dynamic route for VGU courses */}
+          <Route path="/university/vgu/:courseId" element={<VguCoursePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
