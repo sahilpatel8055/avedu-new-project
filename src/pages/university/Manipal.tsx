@@ -6,6 +6,8 @@ import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock,
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import manipalLogo from "@/assets/manipal-logo.png";
+import manipalCourseData from '../data/manipalCourseData.json';
+import { Link } from "react-router-dom";
 
 // Import the new icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
@@ -21,14 +23,14 @@ import degreeBack from "@/assets/manipal-2nddegree.jpg";
 
 const Manipal = () => {
   const courses = [
-    { name: "Online MBA", fees: "₹1,75,000", duration: "2 Years", specializations: 16 },
-    { name: "Online BCA", fees: "₹1,35,000", duration: "3 Years", specializations: 5 },
-    { name: "Online MCA", fees: "₹1,58,000", duration: "2 Years", specializations: 6 },
-    { name: "Online BBA", fees: "₹1,35,000", duration: "3 Years", specializations: 8 },
-    { name: "Online B.Com", fees: "₹99,000", duration: "3 Years", specializations: 1 },
-    { name: "Online M.Com", fees: "₹1,08,000", duration: "2 Years", specializations: 1 },
-    { name: "Online MA", fees: "₹1,40,000", duration: "2 Years", specializations: 2 },
-    { name: "Online BA", fees: "₹75,000", duration: "3 Years", specializations: 1 },
+    { id: "manipal-online-mba", name: "Online MBA", fees: "₹1,75,000", duration: "2 Years", specializations: "16" },
+    { id: "manipal-online-bca", name: "Online BCA", fees: "₹1,35,000", duration: "3 Years", specializations: "5" },
+    { id: "manipal-online-mca", name: "Online MCA", fees: "₹1,58,000", duration: "2 Years", specializations: "6" },
+    { id: "manipal-online-bba", name: "Online BBA", fees: "₹1,35,000", duration: "3 Years", specializations: "8" },
+    { id: "manipal-online-bcom", name: "Online B.Com", fees: "₹99,000", duration: "3 Years", specializations: "1" },
+    { id: "manipal-online-mcom", name: "Online M.Com", fees: "₹1,08,000", duration: "2 Years", specializations: "1" },
+    { id: "manipal-online-ma", name: "Online MA", fees: "₹1,40,000", duration: "2 Years", specializations: "2" },
+    { id: "manipal-online-ba", name: "Online BA", fees: "₹75,000", duration: "3 Years", specializations: "1" },
   ];
 
   const features = [
@@ -42,7 +44,6 @@ const Manipal = () => {
     "Connections with 100+ Fortune 500 recruiters"
   ];
 
-  // Updated approvals array with icon paths
   const approvals = [
     { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
@@ -58,7 +59,6 @@ const Manipal = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
       
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -136,7 +136,6 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -156,7 +155,6 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* Approvals Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Approvals & Accreditations</h2>
@@ -182,11 +180,9 @@ const Manipal = () => {
         </div>
       </section>
       
-      {/* Sample Degree Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            {/* Left side: Description */}
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
               <p className="text-lg text-muted-foreground mb-6 max-w-prose">
@@ -216,7 +212,6 @@ const Manipal = () => {
                 </li>
               </ul>
             </div>
-            {/* Right side: Image Slider */}
             <div className="flex-1 max-w-lg mx-auto md:max-w-none">
               <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
                 <img
@@ -240,7 +235,6 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* Courses Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
@@ -266,9 +260,11 @@ const Manipal = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  <Button className="w-full mt-4" variant="outline">
-                    View Details
-                  </Button>
+                  <Link to={`/manipal-courses/${course.id}`}>
+                    <Button className="w-full mt-4" variant="outline">
+                      View Details
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -276,7 +272,6 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal University Online?</h2>
@@ -291,7 +286,6 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 bg-primary/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Educational Journey?</h2>
