@@ -2,18 +2,21 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react"; // Added Check icon
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import vguLogo from "@/assets/vgu-logo.png";
 
-// Import the new icons for approvals (assuming these paths exist as they did for Manipal)
+// Import the specific icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
 import aicteIcon from "@/assets/icons/aicte-icon.png";
-import naacIcon from "@/assets/icons/naac-icon.png"; // Assuming NAAC icon is available
+import naacIcon from "@/assets/icons/naac-icon.png";
+import aiuIcon from "@/assets/icons/aiu-icon.png";
+import bciIcon from "@/assets/icons/bci-icon.png";
+import pciIcon from "@/assets/icons/pci-icon.jpg";
 
 // Import the degree image
-import vguDegree from "@/assets/vgu-degree.jpg"; // Correct path for VGU degree
+import vguDegree from "@/assets/vgu-degree.jpg";
 
 const VGU = () => {
   const courses = [
@@ -38,14 +41,14 @@ const VGU = () => {
     "Alumni network and industry connections"
   ];
 
-  // Updated approvals array with icon paths (using generic Award from lucide-react for those without specific image imports)
+  // Updated approvals array with all specific icon paths
   const approvals = [
     { name: "UGC", description: "University Grants Commission Entitled", icon: ugcIcon },
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
-    { name: "AIU", description: "Association of Indian Universities", icon: null }, // Using null to indicate generic icon
-    { name: "NAAC", description: "National Assessment and Accreditation Council", icon: naacIcon }, // Assuming NAAC icon is available
-    { name: "BCI", description: "Bar Council of India", icon: null }, // Using null to indicate generic icon
-    { name: "PCI", description: "Pharmacy Council of India", icon: null } // Using null to indicate generic icon
+    { name: "AIU", description: "Association of Indian Universities", icon: aiuIcon },
+    { name: "NAAC", description: "National Assessment and Accreditation Council", icon: naacIcon },
+    { name: "BCI", description: "Bar Council of India", icon: bciIcon },
+    { name: "PCI", description: "Pharmacy Council of India", icon: pciIcon }
   ];
 
   return (
@@ -159,11 +162,7 @@ const VGU = () => {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    {approval.icon ? (
-                      <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
-                    ) : (
-                      <Award className="w-24 h-24 text-primary" /> // Generic icon if no specific image path
-                    )}
+                    <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
                 </CardHeader>
