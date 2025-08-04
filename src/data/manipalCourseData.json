@@ -1,40 +1,19 @@
 {
   "courses": [
     {
-      "id": "manipal-online-mba",
+      "id": "online-mba",
       "name": "Online MBA",
       "level": "pg",
       "university": "Manipal University",
-      "universityId": "manipal",
+      "fees": "₹1,75,000",
+      "duration": "2 Years",
+      "specializationsCount": 8,
       "rating": 4.5,
       "reviews": 12345,
-      "fees": "INR 1,75,000",
-      "duration": "2 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB and AICTE approved",
-        "Multiple specializations to choose from",
-        "Flexible online learning environment",
-        "Strong industry-relevant curriculum"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "Bachelor's Degree",
-        "marks": "50% marks in graduation",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
+      "feesBreakdown": {
+        "fullFees": "INR 1,75,000",
+        "perSemester": "INR 43,750",
+        "emi": "INR 7,292/Month"
       },
       "curriculum": [
         {
@@ -78,56 +57,83 @@
         "Human Resource Management",
         "BFSI",
         "Operations Management"
-      ],
-      "faculty": [
-        {
-          "name": "Dr. Ramesh Sharma",
-          "designation": "Professor of Finance",
-          "experience": "15+ years of experience"
-        },
-        {
-          "name": "Dr. Priya Singh",
-          "designation": "Associate Professor of Marketing",
-          "experience": "10+ years of experience"
-        }
-      ],
-      "campusPhotos": []
+      ]
     },
     {
-      "id": "manipal-online-mca",
+      "id": "online-bca",
+      "name": "Online BCA",
+      "level": "ug",
+      "university": "Manipal University",
+      "fees": "₹1,35,000",
+      "duration": "3 Years",
+      "specializationsCount": 5,
+      "rating": 4.6,
+      "reviews": 11223,
+      "feesBreakdown": {
+        "fullFees": "INR 1,35,000",
+        "perSemester": "INR 22,500",
+        "emi": "INR 1,875/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Fundamentals of IT",
+            "Programming in C",
+            "Digital Logic",
+            "Mathematics for BCA",
+            "Data Structures",
+            "Object Oriented Programming using C++",
+            "Operating Systems",
+            "Discrete Mathematics"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Database Management Systems",
+            "Web Programming",
+            "Computer Networks",
+            "Java Programming",
+            "Software Engineering",
+            "Python Programming",
+            "Elective 1",
+            "Mobile Application Development"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Elective 2",
+            "Elective 3",
+            "Project Work",
+            "Computer Graphics",
+            "Final Project & Internship"
+          ]
+        }
+      ],
+      "specializations": [
+        "Data Science",
+        "Cloud Computing",
+        "Cyber Security",
+        "Artificial Intelligence",
+        "Full Stack Development"
+      ]
+    },
+    {
+      "id": "online-mca",
       "name": "Online MCA",
       "level": "pg",
       "university": "Manipal University",
-      "universityId": "manipal",
+      "fees": "₹1,58,000",
+      "duration": "2 Years",
+      "specializationsCount": 6,
       "rating": 4.4,
       "reviews": 9876,
-      "fees": "INR 1,58,000",
-      "duration": "2 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB and AICTE approved",
-        "Specializations in trending tech fields",
-        "Practical, industry-focused curriculum",
-        "Strong foundation in software development"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "Bachelor's Degree",
-        "marks": "50% marks in graduation",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
+      "feesBreakdown": {
+        "fullFees": "INR 1,58,000",
+        "perSemester": "INR 39,500",
+        "emi": "INR 6,583/Month"
       },
       "curriculum": [
         {
@@ -162,213 +168,24 @@
         "Cloud Computing",
         "Cyber Security",
         "Artificial Intelligence",
-        "Full Stack Development"
-      ],
-      "faculty": [
-        {
-          "name": "Dr. Ankit Gupta",
-          "designation": "Professor of Computer Science",
-          "experience": "18+ years of experience"
-        },
-        {
-          "name": "Prof. Seema Nair",
-          "designation": "Head of Department, IT",
-          "experience": "12+ years of experience"
-        }
-      ],
-      "campusPhotos": []
+        "Full Stack Development",
+        "UI/UX Design"
+      ]
     },
     {
-      "id": "manipal-online-mcom",
-      "name": "Online M.Com",
-      "level": "pg",
-      "university": "Manipal University",
-      "universityId": "manipal",
-      "rating": 4.3,
-      "reviews": 5678,
-      "fees": "INR 1,08,000",
-      "duration": "2 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB and AICTE approved",
-        "In-depth knowledge of commerce and finance",
-        "Prepares for leadership roles",
-        "Industry-relevant curriculum"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "Bachelor's Degree",
-        "marks": "50% marks in graduation",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
-      },
-      "curriculum": [
-        {
-          "year": "Year 1",
-          "subjects": [
-            "Advanced Financial Management",
-            "Corporate Law",
-            "Managerial Economics",
-            "Strategic Management",
-            "Advanced Cost Accounting",
-            "International Business",
-            "E-Commerce",
-            "Research Methodology"
-          ]
-        },
-        {
-          "year": "Year 2",
-          "subjects": [
-            "Direct Taxes",
-            "Goods & Service Tax",
-            "Auditing & Corporate Governance",
-            "Elective 1",
-            "Project Work",
-            "Elective 2",
-            "Viva Voce"
-          ]
-        }
-      ],
-      "specializations": ["Financial Accounting", "Business Finance"],
-      "faculty": [
-        {
-          "name": "Dr. S. K. Mitra",
-          "designation": "Professor of Commerce",
-          "experience": "20+ years of experience"
-        },
-        {
-          "name": "Prof. Neha Jaiswal",
-          "designation": "Associate Professor of Finance",
-          "experience": "14+ years of experience"
-        }
-      ],
-      "campusPhotos": []
-    },
-    {
-      "id": "manipal-online-ma",
-      "name": "Online MA",
-      "level": "pg",
-      "university": "Manipal University",
-      "universityId": "manipal",
-      "rating": 4.6,
-      "reviews": 3210,
-      "fees": "INR 1,40,000",
-      "duration": "2 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB approved",
-        "Practical and theoretical media knowledge",
-        "Prepares for careers in journalism and PR",
-        "Flexible online curriculum"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "Bachelor's Degree",
-        "marks": "50% marks in graduation",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
-      },
-      "curriculum": [
-        {
-          "year": "Year 1",
-          "subjects": [
-            "Communication Theories",
-            "Journalism Fundamentals",
-            "Media Ethics",
-            "Digital Media",
-            "Public Relations",
-            "Advertising",
-            "Media Laws",
-            "Communication Research"
-          ]
-        },
-        {
-          "year": "Year 2",
-          "subjects": [
-            "Global Media",
-            "Film Studies",
-            "Elective 1",
-            "Elective 2",
-            "Dissertation",
-            "Internship",
-            "Viva Voce"
-          ]
-        }
-      ],
-      "specializations": ["Journalism", "Public Relations"],
-      "faculty": [
-        {
-          "name": "Dr. Shweta Rao",
-          "designation": "Professor of Media Studies",
-          "experience": "16+ years of experience"
-        },
-        {
-          "name": "Prof. Amit Verma",
-          "designation": "Associate Professor of Journalism",
-          "experience": "11+ years of experience"
-        }
-      ],
-      "campusPhotos": []
-    },
-    {
-      "id": "manipal-online-bba",
+      "id": "online-bba",
       "name": "Online BBA",
       "level": "ug",
       "university": "Manipal University",
-      "universityId": "manipal",
+      "fees": "₹1,35,000",
+      "duration": "3 Years",
+      "specializationsCount": 8,
       "rating": 4.7,
       "reviews": 15432,
-      "fees": "INR 1,35,000",
-      "duration": "3 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB and AICTE approved",
-        "Builds foundational business skills",
-        "Prepares for entry-level roles",
-        "Flexible learning environment"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "10+2",
-        "marks": "45% marks in 12th grade",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
+      "feesBreakdown": {
+        "fullFees": "INR 1,35,000",
+        "perSemester": "INR 22,500",
+        "emi": "INR 1,875/Month"
       },
       "curriculum": [
         {
@@ -418,238 +235,22 @@
         "Operations",
         "Business Analytics",
         "IT & Systems"
-      ],
-      "faculty": [
-        {
-          "name": "Dr. Mohan Sunder",
-          "designation": "Professor of Business",
-          "experience": "19+ years of experience"
-        },
-        {
-          "name": "Prof. Kavita Reddy",
-          "designation": "Associate Professor of Marketing",
-          "experience": "10+ years of experience"
-        }
-      ],
-      "campusPhotos": []
+      ]
     },
     {
-      "id": "manipal-online-bca",
-      "name": "Online BCA",
-      "level": "ug",
-      "university": "Manipal University",
-      "universityId": "manipal",
-      "rating": 4.6,
-      "reviews": 11223,
-      "fees": "INR 1,35,000",
-      "duration": "3 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB and AICTE approved",
-        "Industry-relevant curriculum",
-        "Foundational knowledge in IT and programming",
-        "Prepares for IT careers"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "10+2",
-        "marks": "45% marks in 12th grade",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
-      },
-      "curriculum": [
-        {
-          "year": "Year 1",
-          "subjects": [
-            "Fundamentals of IT",
-            "Programming in C",
-            "Digital Logic",
-            "Mathematics for BCA",
-            "Data Structures",
-            "Object Oriented Programming using C++",
-            "Operating Systems",
-            "Discrete Mathematics"
-          ]
-        },
-        {
-          "year": "Year 2",
-          "subjects": [
-            "Database Management Systems",
-            "Web Programming",
-            "Computer Networks",
-            "Java Programming",
-            "Software Engineering",
-            "Python Programming",
-            "Elective 1",
-            "Mobile Application Development"
-          ]
-        },
-        {
-          "year": "Year 3",
-          "subjects": [
-            "Elective 2",
-            "Elective 3",
-            "Project Work",
-            "Computer Graphics",
-            "Final Project & Internship"
-          ]
-        }
-      ],
-      "specializations": [
-        "Data Science",
-        "Cloud Computing",
-        "Cyber Security",
-        "Artificial Intelligence",
-        "Full Stack Development"
-      ],
-      "faculty": [
-        {
-          "name": "Prof. S. Karthik",
-          "designation": "Professor of Computer Applications",
-          "experience": "17+ years of experience"
-        },
-        {
-          "name": "Dr. Meena Das",
-          "designation": "Associate Professor of IT",
-          "experience": "10+ years of experience"
-        }
-      ],
-      "campusPhotos": []
-    },
-    {
-      "id": "manipal-online-ba",
-      "name": "Online BA",
-      "level": "ug",
-      "university": "Manipal University",
-      "universityId": "manipal",
-      "rating": 4.2,
-      "reviews": 7654,
-      "fees": "INR 75,000",
-      "duration": "3 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB approved",
-        "Foundational knowledge in media and journalism",
-        "Prepares for careers in media and PR",
-        "Flexible learning environment"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "10+2",
-        "marks": "45% marks in 12th grade",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
-      },
-      "curriculum": [
-        {
-          "year": "Year 1",
-          "subjects": [
-            "Introduction to Communication",
-            "Fundamentals of Journalism",
-            "Media Ethics",
-            "English Language",
-            "Introduction to Public Relations",
-            "Advertising Principles",
-            "Media and Society",
-            "Digital Media Basics"
-          ]
-        },
-        {
-          "year": "Year 2",
-          "subjects": [
-            "Reporting and Editing",
-            "Creative Writing",
-            "Corporate Communication",
-            "Elective 1",
-            "Photo Journalism",
-            "Broadcast Media",
-            "Web Media",
-            "Elective 2"
-          ]
-        },
-        {
-          "year": "Year 3",
-          "subjects": [
-            "Research Methods",
-            "Media Law",
-            "Development Communication",
-            "Elective 3",
-            "Project Work",
-            "Internship",
-            "Viva Voce"
-          ]
-        }
-      ],
-      "specializations": ["Journalism", "Public Relations"],
-      "faculty": [
-        {
-          "name": "Dr. Preeti Sharma",
-          "designation": "Professor of Media Studies",
-          "experience": "18+ years of experience"
-        },
-        {
-          "name": "Prof. Rahul Das",
-          "designation": "Associate Professor of Journalism",
-          "experience": "11+ years of experience"
-        }
-      ],
-      "campusPhotos": []
-    },
-    {
-      "id": "manipal-online-bcom",
+      "id": "online-bcom",
       "name": "Online B.Com",
       "level": "ug",
       "university": "Manipal University",
-      "universityId": "manipal",
+      "fees": "₹99,000",
+      "duration": "3 Years",
+      "specializationsCount": 1,
       "rating": 4.3,
       "reviews": 8901,
-      "fees": "INR 99,000",
-      "duration": "3 Years",
-      "placementAssistance": true,
-      "learningMode": "Online",
-      "features": [
-        "UGC-DEB and AICTE approved",
-        "Solid foundation in accounting and finance",
-        "Prepares for professional careers",
-        "Industry-relevant curriculum"
-      ],
-      "approvals": [
-        {
-          "name": "UGC-DEB",
-          "description": "University Grants Commission - Distance Education Bureau"
-        },
-        {
-          "name": "AICTE",
-          "description": "All India Council for Technical Education"
-        },
-        { "name": "NAAC A+", "description": "National Assessment and Accreditation Council" },
-        { "name": "NIRF", "description": "National Institutional Ranking Framework" }
-      ],
-      "eligibility": {
-        "qualification": "10+2",
-        "marks": "45% marks in 12th grade",
-        "entranceExam": "Not required",
-        "workExperience": "Not mandatory"
+      "feesBreakdown": {
+        "fullFees": "INR 99,000",
+        "perSemester": "INR 16,500",
+        "emi": "INR 1,375/Month"
       },
       "curriculum": [
         {
@@ -692,20 +293,152 @@
           ]
         }
       ],
-      "specializations": ["Accounts & Finance"],
-      "faculty": [
+      "specializations": ["Accounts & Finance"]
+    },
+    {
+      "id": "online-mcom",
+      "name": "Online M.Com",
+      "level": "pg",
+      "university": "Manipal University",
+      "fees": "₹1,08,000",
+      "duration": "2 Years",
+      "specializationsCount": 1,
+      "rating": 4.3,
+      "reviews": 5678,
+      "feesBreakdown": {
+        "fullFees": "INR 1,08,000",
+        "perSemester": "INR 27,000",
+        "emi": "INR 4,500/Month"
+      },
+      "curriculum": [
         {
-          "name": "Prof. Sameer Kumar",
-          "designation": "Professor of Finance",
-          "experience": "22+ years of experience"
+          "year": "Year 1",
+          "subjects": [
+            "Advanced Financial Management",
+            "Corporate Law",
+            "Managerial Economics",
+            "Strategic Management",
+            "Advanced Cost Accounting",
+            "International Business",
+            "E-Commerce",
+            "Research Methodology"
+          ]
         },
         {
-          "name": "Dr. Aarti Sharma",
-          "designation": "Associate Professor of Accounting",
-          "experience": "15+ years of experience"
+          "year": "Year 2",
+          "subjects": [
+            "Direct Taxes",
+            "Goods & Service Tax",
+            "Auditing & Corporate Governance",
+            "Elective 1",
+            "Project Work",
+            "Elective 2",
+            "Viva Voce"
+          ]
         }
       ],
-      "campusPhotos": []
+      "specializations": ["Financial Accounting", "Business Finance"]
+    },
+    {
+      "id": "online-ma",
+      "name": "Online MA",
+      "level": "pg",
+      "university": "Manipal University",
+      "fees": "₹1,40,000",
+      "duration": "2 Years",
+      "specializationsCount": 2,
+      "rating": 4.6,
+      "reviews": 3210,
+      "feesBreakdown": {
+        "fullFees": "INR 1,40,000",
+        "perSemester": "INR 35,000",
+        "emi": "INR 5,833/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Communication Theories",
+            "Journalism Fundamentals",
+            "Media Ethics",
+            "Digital Media",
+            "Public Relations",
+            "Advertising",
+            "Media Laws",
+            "Communication Research"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Global Media",
+            "Film Studies",
+            "Elective 1",
+            "Elective 2",
+            "Dissertation",
+            "Internship",
+            "Viva Voce"
+          ]
+        }
+      ],
+      "specializations": ["Journalism", "Public Relations"]
+    },
+    {
+      "id": "online-ba",
+      "name": "Online BA",
+      "level": "ug",
+      "university": "Manipal University",
+      "fees": "₹75,000",
+      "duration": "3 Years",
+      "specializationsCount": 1,
+      "rating": 4.2,
+      "reviews": 7654,
+      "feesBreakdown": {
+        "fullFees": "INR 75,000",
+        "perSemester": "INR 12,500",
+        "emi": "INR 1,042/Month"
+      },
+      "curriculum": [
+        {
+          "year": "Year 1",
+          "subjects": [
+            "Introduction to Communication",
+            "Fundamentals of Journalism",
+            "Media Ethics",
+            "English Language",
+            "Introduction to Public Relations",
+            "Advertising Principles",
+            "Media and Society",
+            "Digital Media Basics"
+          ]
+        },
+        {
+          "year": "Year 2",
+          "subjects": [
+            "Reporting and Editing",
+            "Creative Writing",
+            "Corporate Communication",
+            "Elective 1",
+            "Photo Journalism",
+            "Broadcast Media",
+            "Web Media",
+            "Elective 2"
+          ]
+        },
+        {
+          "year": "Year 3",
+          "subjects": [
+            "Research Methods",
+            "Media Law",
+            "Development Communication",
+            "Elective 3",
+            "Project Work",
+            "Internship",
+            "Viva Voce"
+          ]
+        }
+      ],
+      "specializations": ["Journalism", "Public Relations"]
     }
   ]
 }
