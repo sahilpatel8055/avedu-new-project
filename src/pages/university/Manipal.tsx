@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import manipalLogo from "@/assets/manipal-logo.png";
@@ -53,14 +53,6 @@ const Manipal = () => {
   ];
 
   const [degreePage, setDegreePage] = useState('front');
-
-  const handleNextPage = () => {
-    setDegreePage(degreePage === 'front' ? 'back' : 'front');
-  };
-
-  const handlePrevPage = () => {
-    setDegreePage(degreePage === 'front' ? 'back' : 'front');
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -174,9 +166,9 @@ const Manipal = () => {
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
                     {approval.icon ? (
-                      <img src={approval.icon} alt={approval.name} className="w-12 h-12 object-contain" />
+                      <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
                     ) : (
-                      <Award className="w-12 h-12 text-primary" />
+                      <Award className="w-24 h-24 text-primary" />
                     )}
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
@@ -189,9 +181,67 @@ const Manipal = () => {
           </div>
         </div>
       </section>
+      
+      {/* Sample Degree Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left side: Description */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
+              <p className="text-lg text-muted-foreground mb-6 max-w-prose">
+                The degrees offered by Manipal University Online are valid and recognized by various government bodies, making them suitable for all career opportunities.
+              </p>
+              <ul className="space-y-4 text-left mx-auto md:mx-0 max-w-sm">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">UGC-DEB & AICTE Approved</p>
+                    <p className="text-sm text-muted-foreground">The degrees are fully valid for government, private, and overseas jobs or higher studies.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">Digital Verification</p>
+                    <p className="text-sm text-muted-foreground">Supports online QR-code-based verification for authenticity.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold">Officially Stamped</p>
+                    <p className="text-sm text-muted-foreground">Authenticated with the official university seal.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            {/* Right side: Image Slider */}
+            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
+              <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
+                <img
+                  src={degreePage === 'front' ? degreeFront : degreeBack}
+                  alt="Manipal University Sample Degree"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+                <div className="flex justify-center gap-2 mt-4">
+                  <button
+                    onClick={() => setDegreePage('front')}
+                    className={`h-3 w-3 rounded-full transition-colors ${degreePage === 'front' ? 'bg-primary' : 'bg-gray-300'}`}
+                  ></button>
+                  <button
+                    onClick={() => setDegreePage('back')}
+                    className={`h-3 w-3 rounded-full transition-colors ${degreePage === 'back' ? 'bg-primary' : 'bg-gray-300'}`}
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Courses Section */}
-      <section className="py-16">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -222,46 +272,6 @@ const Manipal = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Sample Degree Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Sample Degree</h2>
-          <div className="relative max-w-2xl mx-auto">
-            <div className="relative">
-              <img 
-                src={degreePage === 'front' ? degreeFront : degreeBack} 
-                alt="Manipal University Sample Degree" 
-                className="w-full h-auto rounded-lg shadow-lg" 
-              />
-              <div className="absolute top-1/2 left-4 -translate-y-1/2">
-                <Button onClick={handlePrevPage} variant="ghost" className="bg-white/50 hover:bg-white/70 backdrop-blur-sm p-2 rounded-full">
-                  <ChevronLeft className="h-6 w-6" />
-                </Button>
-              </div>
-              <div className="absolute top-1/2 right-4 -translate-y-1/2">
-                <Button onClick={handleNextPage} variant="ghost" className="bg-white/50 hover:bg-white/70 backdrop-blur-sm p-2 rounded-full">
-                  <ChevronRight className="h-6 w-6" />
-                </Button>
-              </div>
-            </div>
-            <div className="flex justify-center gap-4 mt-4">
-              <Button 
-                onClick={() => setDegreePage('front')} 
-                variant={degreePage === 'front' ? 'default' : 'outline'}
-              >
-                Front Side
-              </Button>
-              <Button 
-                onClick={() => setDegreePage('back')} 
-                variant={degreePage === 'back' ? 'default' : 'outline'}
-              >
-                Back Side
-              </Button>
-            </div>
           </div>
         </div>
       </section>
