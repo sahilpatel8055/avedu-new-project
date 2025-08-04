@@ -99,54 +99,54 @@ const universities: University[] = [
 const UniversityCard = ({ university, onOpenCounseling }: { university: University; onOpenCounseling?: () => void }) => {
   return (
     <Card className="h-full rounded-xl bg-[#f5f3ff] border border-gray-200 shadow-[inset_0_1px_3px_rgba(255,255,255,0.6),_0_2px_6px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 group">
-      <CardHeader className="pb-1 sm:pb-2">
+      <CardHeader className="pb-0.5 sm:pb-1">
         <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden mb-1 sm:mb-2">
           <img 
             src={university.image || universityPlaceholder}
             alt={university.name}
-            className="w-full h-full object-contain p-1 sm:p-2 group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain p-0.5 sm:p-1 group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="space-y-1">
-          <h3 className="font-bold text-sm sm:text-base lg:text-lg leading-tight text-gray-900">{university.name}</h3>
-          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-            <MapPin className="h-3 w-3" />
+        <div className="space-y-0.5 sm:space-y-1">
+          <h3 className="font-bold text-xs sm:text-sm lg:text-base leading-tight text-gray-900">{university.name}</h3>
+          <div className="flex items-center gap-0.5 text-[0.65rem] text-muted-foreground">
+            <MapPin className="h-2.5 w-2.5 sm:h-3 w-3" />
             {university.location}
           </div>
         </div>
       </CardHeader>
 
-      <CardContent className="pb-1 sm:pb-2 space-y-2 sm:space-y-3">
+      <CardContent className="pb-0.5 sm:pb-1 space-y-1 sm:space-y-2">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-primary text-primary" />
-            <span className="font-medium text-xs sm:text-sm">{university.rating}</span>
+          <div className="flex items-center gap-0.5">
+            <Star className="h-2.5 w-2.5 sm:h-3 w-3 fill-primary text-primary" />
+            <span className="font-medium text-[0.65rem] sm:text-xs">{university.rating}</span>
           </div>
-          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-            <Users className="h-3 w-3 sm:h-4 sm:w-4" />
-            <span className="text-xs">{university.students}</span>
+          <div className="flex items-center gap-0.5 text-[0.65rem] text-muted-foreground">
+            <Users className="h-2.5 w-2.5 sm:h-3 w-3" />
+            <span className="text-[0.65rem]">{university.students}</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
-          <div className="text-center p-1.5 sm:p-2 bg-indigo-100 rounded-lg">
+        <div className="grid grid-cols-2 gap-1">
+          <div className="text-center p-1 sm:p-1.5 bg-indigo-100 rounded-lg">
             <div className="font-semibold text-indigo-700 text-xs sm:text-sm">{university.ugPrograms}</div>
-            <div className="text-xs text-muted-foreground">UG Courses</div>
+            <div className="text-[0.65rem] text-muted-foreground">UG Courses</div>
           </div>
-          <div className="text-center p-1.5 sm:p-2 bg-indigo-100 rounded-lg">
+          <div className="text-center p-1 sm:p-1.5 bg-indigo-100 rounded-lg">
             <div className="font-semibold text-indigo-700 text-xs sm:text-sm">{university.pgPrograms}</div>
-            <div className="text-xs text-muted-foreground">PG Courses</div>
+            <div className="text-[0.65rem] text-muted-foreground">PG Courses</div>
           </div>
         </div>
 
-        <div className="text-center p-2 sm:p-3 bg-green-100 rounded-lg">
+        <div className="text-center p-1.5 sm:p-2 bg-green-100 rounded-lg">
           <div className="font-semibold text-green-700 text-xs sm:text-sm">{university.fees}</div>
-          <div className="text-xs text-muted-foreground">Starting Fees</div>
+          <div className="text-[0.65rem] text-muted-foreground">Starting Fees</div>
         </div>
 
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-0.5">
           {university.approvals.map((approval) => (
-            <Badge key={approval} variant="secondary" className="text-xs">
+            <Badge key={approval} variant="secondary" className="text-[0.6rem] px-1 py-0.5">
               {approval}
             </Badge>
           ))}
@@ -154,15 +154,15 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
       </CardContent>
 
       <CardFooter className="pt-0">
-        <div className="grid grid-cols-2 gap-1.5 sm:gap-2 w-full">
+        <div className="grid grid-cols-2 gap-1 sm:gap-1.5 w-full">
           <Link to={`/university/${university.id}`}>
-            <Button variant="outline" size="sm" className="gap-1 w-full text-xs py-1.5 sm:py-2">
-              <GraduationCap className="h-3 w-3 sm:h-4 sm:w-4" />
+            <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto">
+              <GraduationCap className="h-2.5 w-2.5 sm:h-3 w-3" />
               View Courses
             </Button>
           </Link>
-          <Button size="sm" className="gap-1 w-full text-xs py-1.5 sm:py-2" onClick={onOpenCounseling}>
-            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
+          <Button size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto" onClick={onOpenCounseling}>
+            <ExternalLink className="h-2.5 w-2.5 sm:h-3 w-3" />
             Apply Now
           </Button>
         </div>
@@ -192,7 +192,8 @@ const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => 
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12">
+        {/* The grid layout for the cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
           {universities.map((university) => (
             <UniversityCard key={university.id} university={university} onOpenCounseling={onOpenCounseling} />
           ))}
