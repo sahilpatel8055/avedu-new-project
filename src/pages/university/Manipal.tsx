@@ -21,6 +21,7 @@ import nirfIcon from "@/assets/icons/nirf-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
 import qsIcon from "@/assets/icons/qs-icon.png";
 import nbaIcon from "@/assets/icons/nba-icon.png";
+import manipalLogo from "@/assets/manipal-logo.png";
 
 const approvalIcons = {
   UGC: ugcIcon,
@@ -46,7 +47,7 @@ const Manipal = () => {
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-8">
             <div className="flex flex-col items-center">
               <img
-                src="/path/to/manipal-logo.png"
+                src={manipalLogo}
                 alt="Manipal University Logo"
                 className="w-24 h-24 mb-4 rounded-full"
               />
