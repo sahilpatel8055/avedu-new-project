@@ -1,49 +1,55 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check, ChevronRight } from "lucide-react";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
-import manipalLogo from "@/assets/manipal-logo.png";
-import manipalDegree from "@/assets/manipal-degree.jpg";
 
-// Campus images for the new section
+// Import all assets and data
+import manipalLogo from "@/assets/manipal-logo.png";
+import ugcIcon from "@/assets/icons/ugc-icon.png";
+import aicteIcon from "@/assets/icons/aicte-icon.png";
+import nirfIcon from "@/assets/icons/nirf-icon.png";
+import naacIcon from "@/assets/icons/naac-icon.png";
+import qsIcon from "@/assets/icons/qs-icon.png";
+import nbaIcon from "@/assets/icons/nba-icon.png";
+import degreeFront from "@/assets/manipal-1stdegree.jpg";
+import degreeBack from "@/assets/manipal-2nddegree.jpg";
+import manipalCourseData from "@/data/manipalCourseData.json"; // Import the course data
+
+// New campus images for the new section
 import mujCampus from "@/assets/muj-campus.jpg";
 import smuCampus from "@/assets/smu-campus.jpg";
 import maheCampus from "@/assets/mahe-campus.jpg";
 
-// Import the specific icons for approvals
-import ugcIcon from "@/assets/icons/ugc-icon.png";
-import aicteIcon from "@/assets/icons/aicte-icon.png";
-import naacIcon from "@/assets/icons/naac-icon.png";
-import aiuIcon from "@/assets/icons/aiu-icon.png";
-
 const Manipal = () => {
-  const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹1,50,000", duration: "2 Years", specializations: 9 },
-    { name: "Online MCA", id: "online-mca", fees: "₹1,30,000", duration: "2 Years", specializations: 6 },
-    { name: "Online BBA", id: "online-bba", fees: "₹1,15,000", duration: "3 Years", specializations: 8 },
-    { name: "Online BCA", id: "online-bca", fees: "₹1,20,000", duration: "3 Years", specializations: 4 }
-  ];
+  const popularCourses = manipalCourseData.courses.filter(
+    (course) => course.level === "ug" || course.name.includes("MBA")
+  );
 
   const features = [
-    "UGC & AICTE Approved",
-    "NAAC A+ accredited university",
-    "Advanced Learning Management System",
-    "Industry-aligned curriculum",
-    "Live interactive sessions with faculty",
-    "Placement assistance and career guidance",
-    "Flexible payment options available",
-    "Alumni network across industries"
+    "Enhanced digital learning platform with LMS",
+    "Same faculty as Manipal University Jaipur",
+    "Industry practitioners as mentors",
+    "Remotely proctored online examinations",
+    "Self-learning activities & practice tests",
+    "No-cost EMI financing options",
+    "Scholarship opportunities available",
+    "Connections with 100+ Fortune 500 recruiters"
   ];
 
   const approvals = [
-    { name: "UGC-DEB", description: "University Grants Commission - Distance Education Bureau", icon: ugcIcon },
+    { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
+    { name: "NIRF", description: "Rank 64 in University Category", icon: nirfIcon },
     { name: "NAAC A+", description: "National Assessment and Accreditation Council", icon: naacIcon },
-    { name: "AIU", description: "Association of Indian Universities", icon: aiuIcon }
+    { name: "QS Ranking", description: "QS World University Rankings", icon: qsIcon },
+    { name: "NBA", description: "National Board of Accreditation", icon: nbaIcon }
   ];
+
+  const [degreePage, setDegreePage] = useState('front');
 
   return (
     <div className="min-h-screen bg-background">
@@ -57,34 +63,34 @@ const Manipal = () => {
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                 <img src={manipalLogo} alt="Manipal Logo" className="w-20 h-20 rounded-lg object-contain" />
                 <div>
-                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Manipal University Jaipur Online</h1>
-                  <p className="text-lg text-muted-foreground">Online Education from a World-Class University</p>
+                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Manipal University Online</h1>
+                  <p className="text-lg text-muted-foreground">Accredited with grade A+ by NAAC</p>
                 </div>
               </div>
               
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                 <div className="flex items-center gap-1 bg-primary/10 px-3 py-2 rounded-full">
                   <Star className="w-5 h-5 fill-primary text-primary" />
-                  <span className="font-semibold text-primary">4.2</span>
-                  <span className="text-muted-foreground">(750+ Reviews)</span>
+                  <span className="font-semibold text-primary">4.6</span>
+                  <span className="text-muted-foreground">(857 Reviews)</span>
                 </div>
                 <Badge variant="secondary" className="bg-primary/10 text-primary">
-                  NIRF Ranked
+                  NIRF Rank 64
                 </Badge>
               </div>
               
               <div className="flex items-center justify-center lg:justify-start gap-6 mb-8 text-sm">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span>Jaipur, Rajasthan, India</span>
+                  <span>Jaipur, India</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Users className="w-4 h-4 text-primary" />
-                  <span>25K+ Students</span>
+                  <span>50K+ Students</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <GraduationCap className="w-4 h-4 text-primary" />
-                  <span>150+ Programs</span>
+                  <span>20+ Programs</span>
                 </div>
               </div>
               
@@ -105,8 +111,8 @@ const Manipal = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Established:</span>
-                    <span className="font-semibold">2011</span>
+                    <span className="text-muted-foreground">Online Since:</span>
+                    <span className="font-semibold">2021</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">University Type:</span>
@@ -118,7 +124,7 @@ const Manipal = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Fee Range:</span>
-                    <span className="font-semibold">₹1,15,000 - ₹1,50,000</span>
+                    <span className="font-semibold">₹75,000 - ₹5,62,000</span>
                   </div>
                 </CardContent>
               </Card>
@@ -131,16 +137,16 @@ const Manipal = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">About Manipal University Jaipur Online</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">About Manipal University Online</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                <strong className="text-foreground">Manipal University Jaipur (MUJ) Online</strong> offers a dynamic and flexible learning experience with a wide range of programs designed for working professionals and students alike. As part of the prestigious Manipal Education Group, MUJ brings a legacy of academic excellence and innovation to the online education space.
+                The online Manipal university is a part of the prestigious <strong className="text-foreground">Manipal University Jaipur (MUJ)</strong>. The university started offering courses in online mode in the year 2021. The University Grants Commission (UGC) has entitled Online Manipal University to offer UG and PG programs.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                The university is recognized by the UGC and AICTE, and is accredited with an A+ Grade by NAAC. The online programs are developed with an industry-focused curriculum, ensuring that students gain relevant and practical skills. MUJ's advanced Learning Management System provides seamless access to course materials, virtual classes, and faculty support.
+                The university currently offers BCA, BBA, and B.Com in the undergraduate category while MCA, MBA, M.Com, and MA JMC in the postgraduate category. These online courses are taught by the esteemed same faculty of the Manipal University Jaipur and real-world mentors.
               </p>
               <p className="text-lg leading-relaxed">
-                Manipal University Jaipur's online degrees are equivalent to on-campus degrees and are globally recognized, opening up a world of opportunities for career advancement and further studies.
+                The university offers an enhanced digital learning platform where you can find all your course material and cutting-edge tutorials. The university conducts examinations in online mode using this LMS. These online examinations are secure as they are remotely proctored.
               </p>
             </div>
           </div>
@@ -151,12 +157,16 @@ const Manipal = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Approvals & Accreditations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {approvals.map((approval, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
+                    {approval.icon ? (
+                      <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
+                    ) : (
+                      <Award className="w-24 h-24 text-primary" />
+                    )}
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
                 </CardHeader>
@@ -247,15 +257,15 @@ const Manipal = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Sample Degree Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
               <p className="text-lg text-muted-foreground mb-6 max-w-prose">
-                The degrees offered by Manipal University Jaipur Online are valid and recognized by various government bodies, making them suitable for all career opportunities.
+                The degrees offered by Manipal University Online are valid and recognized by various government bodies, making them suitable for all career opportunities.
               </p>
               <ul className="space-y-4 text-left mx-auto md:mx-0 max-w-sm">
                 <li className="flex items-start gap-3">
@@ -281,25 +291,36 @@ const Manipal = () => {
                 </li>
               </ul>
             </div>
+            
             <div className="flex-1 max-w-lg mx-auto md:max-w-none">
               <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
                 <img
-                  src={manipalDegree}
-                  alt="Manipal Sample Degree"
+                  src={degreePage === 'front' ? degreeFront : degreeBack}
+                  alt="Manipal University Sample Degree"
                   className="w-full h-auto object-contain rounded-lg"
                 />
+                <div className="flex justify-center gap-2 mt-4">
+                  <button
+                    onClick={() => setDegreePage('front')}
+                    className={`h-3 w-3 rounded-full transition-colors ${degreePage === 'front' ? 'bg-primary' : 'bg-gray-300'}`}
+                  ></button>
+                  <button
+                    onClick={() => setDegreePage('back')}
+                    className={`h-3 w-3 rounded-full transition-colors ${degreePage === 'back' ? 'bg-primary' : 'bg-gray-300'}`}
+                  ></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Courses Section */}
-      <section className="py-16">
+      {/* Courses Section - Now dynamically generated from JSON */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {courses.map((course, index) => (
+            {popularCourses.map((course, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
@@ -318,7 +339,7 @@ const Manipal = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Award className="w-4 h-4 text-primary" />
-                    <span>{course.specializations} Specializations</span>
+                    <span>{course.specializationsCount} Specializations</span>
                   </div>
                   <Link to={`/university/manipal/courses/${course.id}`}>
                     <Button className="w-full mt-4" variant="outline">
@@ -333,9 +354,9 @@ const Manipal = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal Online?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal University Online?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border/50">
@@ -352,7 +373,7 @@ const Manipal = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Educational Journey?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of students who have chosen Manipal University Jaipur Online for quality education. 
+            Join thousands of students who have chosen Manipal University Online for quality education. 
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
