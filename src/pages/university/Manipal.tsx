@@ -96,7 +96,7 @@ const Manipal = () => {
                     <Card key={course.id} className="flex flex-col">
                       <CardHeader className="flex-row items-center gap-4 space-y-0">
                         <img
-                          src={course.logo}
+                          src={manipalLogo}
                           alt={`${course.name} logo`}
                           className="w-16 h-16 rounded-lg object-contain"
                         />
@@ -158,7 +158,7 @@ const Manipal = () => {
                     <Card key={course.id} className="flex flex-col">
                       <CardHeader className="flex-row items-center gap-4 space-y-0">
                         <img
-                          src={course.logo}
+                          src={manipalLogo}
                           alt={`${course.name} logo`}
                           className="w-16 h-16 rounded-lg object-contain"
                         />
