@@ -21,51 +21,38 @@ import {
   Star,
   Download,
   Users,
+  Banknote,
+  LineChart,
+  Cloud,
+  Shield,
+  Bot,
+  Code,
+  Laptop,
+  MessageSquare,
+  Globe,
+  Headphones
 } from "lucide-react";
 
-// Specialization Icons (these will be used to render the specializations from your JSON)
-import {
-  FaChartLine,
-  FaBullhorn,
-  FaChartPie,
-  FaMicrochip,
-  FaDollarSign,
-  FaUsers,
-  FaBuildingColumns,
-  FaGear,
-  FaDatabase,
-  FaCloud,
-  FaShieldHalved,
-  FaRobot,
-  FaCode,
-  FaFileInvoiceDollar,
-  FaMicrophone,
-} from "react-icons/fa6";
-
+// Updated specializationIcons mapping to use Lucide-React icons
 const specializationIcons = {
-  "Digital Marketing": FaChartLine,
-  Marketing: FaBullhorn,
-  "Analytics and Data Science": FaChartPie,
-  "IT & FinTech": FaMicrochip,
-  Finance: FaDollarSign,
-  "Human Resource Management": FaUsers,
-  BFSI: FaBuildingColumns,
-  "Operations Management": FaGear,
-  "Data Science": FaDatabase,
-  "Cloud Computing": FaCloud,
-  "Cyber Security": FaShieldHalved,
-  "Artificial Intelligence": FaRobot,
-  "Full Stack Development": FaCode,
-  "Financial Accounting": FaFileInvoiceDollar,
-  "Business Finance": FaChartLine,
-  Journalism: FaMicrophone,
-  "Public Relations": FaUsers,
-  Accounts: FaFileInvoiceDollar,
-  HRM: FaUsers,
-  Operations: FaGear,
-  "Business Analytics": FaChartPie,
-  "IT & Systems": FaMicrochip,
-  "Accounts & Finance": FaFileInvoiceDollar,
+  "Digital Marketing": LineChart,
+  "Marketing": LineChart,
+  "Analytics and Data Science": LineChart,
+  "IT & FinTech": Laptop,
+  "Finance": Banknote,
+  "Human Resource Management": Users,
+  "BFSI": Banknote,
+  "Operations Management": BriefcaseBusiness,
+  "Data Science": LineChart,
+  "Cloud Computing": Cloud,
+  "Cyber Security": Shield,
+  "Artificial Intelligence": Bot,
+  "Full Stack Development": Code,
+  "Financial Accounting": Banknote,
+  "Business Finance": Banknote,
+  "Journalism": MessageSquare,
+  "Public Relations": Headphones,
+  "Accounts & Finance": Banknote
 };
 
 const ManipalCoursePage = () => {
@@ -82,7 +69,7 @@ const ManipalCoursePage = () => {
 
   const CourseSpecializationIcon = ({ spec }: { spec: string }) => {
     const IconComponent = specializationIcons[spec as keyof typeof specializationIcons];
-    if (!IconComponent) return null;
+    if (!IconComponent) return <Award className="w-6 h-6 text-primary" />; // Fallback icon
     return <IconComponent className="w-6 h-6 text-primary" />;
   };
 
