@@ -1,217 +1,302 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
-import { Button } from "@/components/ui/button";
-import { Star, Award, Clock } from "lucide-react";
-import manipalCourseData from "@/data/manipalCourseData.json";
+import manipalLogo from "@/assets/manipal-logo.png";
 
-// Import all approval icons
+// Import the new icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
 import aicteIcon from "@/assets/icons/aicte-icon.png";
 import nirfIcon from "@/assets/icons/nirf-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
 import qsIcon from "@/assets/icons/qs-icon.png";
 import nbaIcon from "@/assets/icons/nba-icon.png";
-import manipalLogo from "@/assets/manipal-logo.png";
 
-const approvalIcons = {
-  UGC: ugcIcon,
-  AICTE: aicteIcon,
-  NIRF: nirfIcon,
-  "NAAC A+": naacIcon,
-  "QS Ranking": qsIcon,
-  NBA: nbaIcon,
-};
+// Import the degree images
+import degreeFront from "@/assets/manipal-1stdegree.jpg";
+import degreeBack from "@/assets/manipal-2nddegree.jpg";
 
 const Manipal = () => {
-  const [degreePage, setDegreePage] = useState("front");
+  const courses = [
+    { name: "Online MBA", fees: "₹1,75,000", duration: "2 Years", specializations: 16 },
+    { name: "Online BCA", fees: "₹1,35,000", duration: "3 Years", specializations: 5 },
+    { name: "Online MCA", fees: "₹1,58,000", duration: "2 Years", specializations: 6 },
+    { name: "Online BBA", fees: "₹1,35,000", duration: "3 Years", specializations: 8 },
+    { name: "Online B.Com", fees: "₹99,000", duration: "3 Years", specializations: 1 },
+    { name: "Online M.Com", fees: "₹1,08,000", duration: "2 Years", specializations: 1 },
+    { name: "Online MA", fees: "₹1,40,000", duration: "2 Years", specializations: 2 },
+    { name: "Online BA", fees: "₹75,000", duration: "3 Years", specializations: 1 },
+  ];
+
+  const features = [
+    "Enhanced digital learning platform with LMS",
+    "Same faculty as Manipal University Jaipur",
+    "Industry practitioners as mentors",
+    "Remotely proctored online examinations",
+    "Self-learning activities & practice tests",
+    "No-cost EMI financing options",
+    "Scholarship opportunities available",
+    "Connections with 100+ Fortune 500 recruiters"
+  ];
+
+  // Updated approvals array with icon paths
+  const approvals = [
+    { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
+    { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
+    { name: "NIRF", description: "Rank 64 in University Category", icon: nirfIcon },
+    { name: "NAAC A+", description: "National Assessment and Accreditation Council", icon: naacIcon },
+    { name: "QS Ranking", description: "QS World University Rankings", icon: qsIcon },
+    { name: "NBA", description: "National Board of Accreditation", icon: nbaIcon }
+  ];
+
+  const [degreePage, setDegreePage] = useState('front');
+
+  const handleNextPage = () => {
+    setDegreePage(degreePage === 'front' ? 'back' : 'front');
+  };
+
+  const handlePrevPage = () => {
+    setDegreePage(degreePage === 'front' ? 'back' : 'front');
+  };
 
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
-
-      <section
-        className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16"
-        id="top"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-8">
-            <div className="flex flex-col items-center">
-              <img
-                src={manipalLogo}
-                alt="Manipal University Logo"
-                className="w-24 h-24 mb-4 rounded-full"
-              />
-              <h1 className="text-5xl font-bold text-foreground mb-4">
-                Manipal University
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl">
-                A globally-recognised institution with a strong emphasis on
-                academic excellence and research.
-              </p>
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="flex-1 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
+                <img src={manipalLogo} alt="Manipal Logo" className="w-20 h-20 rounded-lg object-contain" />
+                <div>
+                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Manipal University Online</h1>
+                  <p className="text-lg text-muted-foreground">Accredited with grade A+ by NAAC</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
+                <div className="flex items-center gap-1 bg-primary/10 px-3 py-2 rounded-full">
+                  <Star className="w-5 h-5 fill-primary text-primary" />
+                  <span className="font-semibold text-primary">4.6</span>
+                  <span className="text-muted-foreground">(857 Reviews)</span>
+                </div>
+                <Badge variant="secondary" className="bg-primary/10 text-primary">
+                  NIRF Rank 64
+                </Badge>
+              </div>
+              
+              <div className="flex items-center justify-center lg:justify-start gap-6 mb-8 text-sm">
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <span>Jaipur, India</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Users className="w-4 h-4 text-primary" />
+                  <span>50K+ Students</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <GraduationCap className="w-4 h-4 text-primary" />
+                  <span>20+ Programs</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  Apply Now
+                </Button>
+                <Button variant="outline" size="lg">
+                  Download Brochure
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center justify-center flex-wrap gap-4 mt-6">
-            <div className="flex items-center gap-2 bg-card p-3 rounded-lg border">
-              <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-              <span className="font-semibold text-lg">4.5</span>
-              <span className="text-muted-foreground text-sm">(12,345 reviews)</span>
+            
+            <div className="flex-1 lg:max-w-md">
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-center text-primary">Quick Facts</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Online Since:</span>
+                    <span className="font-semibold">2021</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">University Type:</span>
+                    <span className="font-semibold">Private University</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Mode:</span>
+                    <span className="font-semibold">Online</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Fee Range:</span>
+                    <span className="font-semibold">₹75,000 - ₹5,62,000</span>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-            <div className="flex items-center gap-2 bg-card p-3 rounded-lg border">
-              <Award className="w-5 h-5 text-primary" />
-              <span className="font-semibold text-lg">Ranked 5th</span>
-              <span className="text-muted-foreground text-sm">(NIRF 2023)</span>
-            </div>
-          </div>
-          <div className="mt-8 flex justify-center flex-wrap gap-4">
-            <Button size="lg">Talk to a Counselor</Button>
-            <Button size="lg" variant="outline">
-              Download Brochure
-            </Button>
           </div>
         </div>
       </section>
 
+      {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <Tabs value={degreePage} onValueChange={setDegreePage} className="w-full">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="front">UG Courses</TabsTrigger>
-              <TabsTrigger value="back">PG Courses</TabsTrigger>
-            </TabsList>
-            <TabsContent value="front" className="mt-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {manipalCourseData.courses
-                  .filter((course) => course.level === "ug")
-                  .map((course) => (
-                    <Card key={course.id} className="flex flex-col">
-                      <CardHeader className="flex-row items-center gap-4 space-y-0">
-                        <img
-                          src={manipalLogo}
-                          alt={`${course.name} logo`}
-                          className="w-16 h-16 rounded-lg object-contain"
-                        />
-                        <div className="flex-1">
-                          <CardTitle>{course.name}</CardTitle>
-                          <CardDescription className="flex items-center gap-1">
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <span>{course.rating}</span>
-                            <span className="text-muted-foreground">
-                              ({course.reviews} reviews)
-                            </span>
-                          </CardDescription>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="flex-1 space-y-4">
-                        <div className="flex justify-between text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            <span>{course.duration}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Award className="w-4 h-4" />
-                            <span>{course.fees}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2 mt-4 text-sm text-muted-foreground">
-                          <span className="font-semibold text-foreground">
-                            Approvals:
-                          </span>
-                          {course.approvals.map((approval) => (
-                            <img
-                              key={approval.name}
-                              src={
-                                approvalIcons[
-                                  approval.name as keyof typeof approvalIcons
-                                ]
-                              }
-                              alt={approval.name}
-                              className="w-8 h-8 object-contain"
-                            />
-                          ))}
-                        </div>
-                        <div className="mt-auto">
-                          <Link to={`/manipal/courses/${course.id}`}>
-                            <Button className="w-full">View Details</Button>
-                          </Link>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-              </div>
-            </TabsContent>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">About Manipal University Online</h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="text-lg leading-relaxed mb-6">
+                The online Manipal university is a part of the prestigious <strong className="text-foreground">Manipal University Jaipur (MUJ)</strong>. The university started offering courses in online mode in the year 2021. The University Grants Commission (UGC) has entitled Online Manipal University to offer UG and PG programs.
+              </p>
+              <p className="text-lg leading-relaxed mb-6">
+                The university currently offers BCA, BBA, and B.Com in the undergraduate category while MCA, MBA, M.Com, and MA JMC in the postgraduate category. These online courses are taught by the esteemed same faculty of the Manipal University Jaipur and real-world mentors.
+              </p>
+              <p className="text-lg leading-relaxed">
+                The university offers an enhanced digital learning platform where you can find all your course material and cutting-edge tutorials. The university conducts examinations in online mode using this LMS. These online examinations are secure as they are remotely proctored.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <TabsContent value="back" className="mt-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {manipalCourseData.courses
-                  .filter((course) => course.level === "pg")
-                  .map((course) => (
-                    <Card key={course.id} className="flex flex-col">
-                      <CardHeader className="flex-row items-center gap-4 space-y-0">
-                        <img
-                          src={manipalLogo}
-                          alt={`${course.name} logo`}
-                          className="w-16 h-16 rounded-lg object-contain"
-                        />
-                        <div className="flex-1">
-                          <CardTitle>{course.name}</CardTitle>
-                          <CardDescription className="flex items-center gap-1">
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <span>{course.rating}</span>
-                            <span className="text-muted-foreground">
-                              ({course.reviews} reviews)
-                            </span>
-                          </CardDescription>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="flex-1 space-y-4">
-                        <div className="flex justify-between text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            <span>{course.duration}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Award className="w-4 h-4" />
-                            <span>{course.fees}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2 mt-4 text-sm text-muted-foreground">
-                          <span className="font-semibold text-foreground">
-                            Approvals:
-                          </span>
-                          {course.approvals.map((approval) => (
-                            <img
-                              key={approval.name}
-                              src={
-                                approvalIcons[
-                                  approval.name as keyof typeof approvalIcons
-                                ]
-                              }
-                              alt={approval.name}
-                              className="w-8 h-8 object-contain"
-                            />
-                          ))}
-                        </div>
-                        <div className="mt-auto">
-                          <Link to={`/manipal/courses/${course.id}`}>
-                            <Button className="w-full">View Details</Button>
-                          </Link>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+      {/* Approvals Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Approvals & Accreditations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {approvals.map((approval, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                <CardHeader className="pb-2">
+                  <div className="flex items-center justify-center mb-4">
+                    {approval.icon ? (
+                      <img src={approval.icon} alt={approval.name} className="w-12 h-12 object-contain" />
+                    ) : (
+                      <Award className="w-12 h-12 text-primary" />
+                    )}
+                  </div>
+                  <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">{approval.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {courses.map((course, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-center mb-4">
+                    <BookOpen className="w-12 h-12 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg text-center">{course.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="w-4 h-4 text-primary" />
+                    <span className="font-semibold">{course.fees}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span>{course.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Award className="w-4 h-4 text-primary" />
+                    <span>{course.specializations} Specializations</span>
+                  </div>
+                  <Button className="w-full mt-4" variant="outline">
+                    View Details
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Sample Degree Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Sample Degree</h2>
+          <div className="relative max-w-2xl mx-auto">
+            <div className="relative">
+              <img 
+                src={degreePage === 'front' ? degreeFront : degreeBack} 
+                alt="Manipal University Sample Degree" 
+                className="w-full h-auto rounded-lg shadow-lg" 
+              />
+              <div className="absolute top-1/2 left-4 -translate-y-1/2">
+                <Button onClick={handlePrevPage} variant="ghost" className="bg-white/50 hover:bg-white/70 backdrop-blur-sm p-2 rounded-full">
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
               </div>
-            </TabsContent>
-          </Tabs>
+              <div className="absolute top-1/2 right-4 -translate-y-1/2">
+                <Button onClick={handleNextPage} variant="ghost" className="bg-white/50 hover:bg-white/70 backdrop-blur-sm p-2 rounded-full">
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center gap-4 mt-4">
+              <Button 
+                onClick={() => setDegreePage('front')} 
+                variant={degreePage === 'front' ? 'default' : 'outline'}
+              >
+                Front Side
+              </Button>
+              <Button 
+                onClick={() => setDegreePage('back')} 
+                variant={degreePage === 'back' ? 'default' : 'outline'}
+              >
+                Back Side
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal University Online?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border/50">
+                <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                <p className="text-sm text-muted-foreground">{feature}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary/10">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Educational Journey?</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Join thousands of students who have chosen Manipal University Online for quality education. 
+            Apply now and take the first step towards your future.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Apply for Admission
+            </Button>
+            <Button variant="outline" size="lg">
+              Talk to Counselor
+            </Button>
+          </div>
         </div>
       </section>
 
