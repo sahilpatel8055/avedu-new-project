@@ -1,35 +1,28 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
-import manipalLogo from "@/assets/manipal-logo.png";
 
-// Import the new icons for approvals
+// Import all assets and data
+import manipalLogo from "@/assets/manipal-logo.png";
 import ugcIcon from "@/assets/icons/ugc-icon.png";
 import aicteIcon from "@/assets/icons/aicte-icon.png";
 import nirfIcon from "@/assets/icons/nirf-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
 import qsIcon from "@/assets/icons/qs-icon.png";
 import nbaIcon from "@/assets/icons/nba-icon.png";
-
-// Import the degree images
 import degreeFront from "@/assets/manipal-1stdegree.jpg";
 import degreeBack from "@/assets/manipal-2nddegree.jpg";
+import manipalCourseData from "@/data/manipalCourseData.json"; // Import the course data
 
 const Manipal = () => {
-  const courses = [
-    { name: "Online MBA", fees: "₹1,75,000", duration: "2 Years", specializations: 16 },
-    { name: "Online BCA", fees: "₹1,35,000", duration: "3 Years", specializations: 5 },
-    { name: "Online MCA", fees: "₹1,58,000", duration: "2 Years", specializations: 6 },
-    { name: "Online BBA", fees: "₹1,35,000", duration: "3 Years", specializations: 8 },
-    { name: "Online B.Com", fees: "₹99,000", duration: "3 Years", specializations: 1 },
-    { name: "Online M.Com", fees: "₹1,08,000", duration: "2 Years", specializations: 1 },
-    { name: "Online MA", fees: "₹1,40,000", duration: "2 Years", specializations: 2 },
-    { name: "Online BA", fees: "₹75,000", duration: "3 Years", specializations: 1 },
-  ];
+  const popularCourses = manipalCourseData.courses.filter(
+    (course) => course.level === "ug" || course.name.includes("MBA")
+  );
 
   const features = [
     "Enhanced digital learning platform with LMS",
@@ -42,7 +35,6 @@ const Manipal = () => {
     "Connections with 100+ Fortune 500 recruiters"
   ];
 
-  // Updated approvals array with icon paths
   const approvals = [
     { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
@@ -186,7 +178,6 @@ const Manipal = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            {/* Left side: Description */}
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
               <p className="text-lg text-muted-foreground mb-6 max-w-prose">
@@ -216,7 +207,7 @@ const Manipal = () => {
                 </li>
               </ul>
             </div>
-            {/* Right side: Image Slider */}
+            
             <div className="flex-1 max-w-lg mx-auto md:max-w-none">
               <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
                 <img
@@ -240,12 +231,12 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* Courses Section */}
+      {/* Courses Section - Now dynamically generated from JSON */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {courses.map((course, index) => (
+            {popularCourses.map((course, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
@@ -264,11 +255,13 @@ const Manipal = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Award className="w-4 h-4 text-primary" />
-                    <span>{course.specializations} Specializations</span>
+                    <span>{course.specializationsCount} Specializations</span>
                   </div>
-                  <Button className="w-full mt-4" variant="outline">
-                    View Details
-                  </Button>
+                  <Link to={`/university/manipal/courses/${course.id}`}>
+                    <Button className="w-full mt-4" variant="outline">
+                      View Details
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
