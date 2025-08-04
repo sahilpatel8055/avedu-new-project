@@ -75,13 +75,13 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-white mx-2 sm:mx-4 my-4 sm:my-8 overflow-hidden">
-        <div className="grid lg:grid-cols-2 h-full max-h-[90vh]">
+        <div className="grid lg:grid-cols-[1.5fr_2.5fr] h-full max-h-[90vh]">
           {/* Left Side - Form */}
           <div className="p-3 sm:p-4 lg:p-6 overflow-y-auto">
             <DialogHeader className="mb-3 sm:mb-4">
               <div className="flex items-center justify-between mb-2">
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900">
-                  Get 100% Counseling Session
+                <h2 className="text-lg sm:text-xl font-bold text-blue-600">
+                  Get 100% free counseling session
                 </h2>
                 <Button 
                   variant="ghost" 
@@ -237,24 +237,14 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
             </div>
           </div>
 
-          {/* Right Side - Image */}
+          {/* Right Side - Image & Benefits */}
           <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-3 lg:p-4 relative overflow-hidden">
             <div className="relative flex-1 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/4e819542-d4de-47e5-a745-52662caced1a.png"
                 alt="Graduate student"
-                className="w-48 h-48 xl:w-56 xl:h-56 object-cover rounded-lg shadow-lg"
+                className="w-56 h-56 xl:w-64 xl:h-64 object-cover rounded-lg shadow-lg"
               />
-              
-              {/* Static pointing finger */}
-              <div className="absolute -left-8 xl:-left-10 top-1/2 transform -translate-y-1/2">
-                <div className="bg-white rounded-full p-1.5 xl:p-2 shadow-lg border-2 border-blue-200">
-                  <span className="text-lg xl:text-xl">👈</span>
-                </div>
-                <div className="bg-blue-600 text-white px-1.5 xl:px-2 py-1 rounded-lg text-xs mt-1 whitespace-nowrap">
-                  Fill the form here!
-                </div>
-              </div>
             </div>
 
             {/* Content below image */}
