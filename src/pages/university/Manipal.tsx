@@ -96,10 +96,10 @@ const Manipal = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
                   Apply Now
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={openForm}>
                   Download Brochure
                 </Button>
               </div>
@@ -356,10 +356,10 @@ const Manipal = () => {
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
               Apply for Admission
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={openForm}>
               Talk to Counselor
             </Button>
           </div>
@@ -367,6 +367,7 @@ const Manipal = () => {
       </section>
 
       <Footer />
+      <CounselingFormComponent />
     </div>
   );
 };

@@ -41,7 +41,9 @@ const Index = () => {
               Explore our comprehensive range of online degree programs designed to advance your career
             </p>
           </div>
+        <div id="programs">
           <CourseCategories />
+        </div>
         </div>
       </section>
 

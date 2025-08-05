@@ -30,7 +30,13 @@ const NavigationHeader = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <button 
               className="btn-3d px-6 py-2 rounded-lg text-sm font-semibold transition-all"
-              onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#programs';
+                }
+              }}
             >
               Explore Programs
             </button>
@@ -80,9 +86,18 @@ const NavigationHeader = () => {
           isMenuOpen ? "max-h-96 pb-4" : "max-h-0"
         )}>
           <nav className="flex flex-col space-y-4 pt-4">
-            <a href="#programs" className="text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#programs';
+                }
+              }}
+              className="text-foreground hover:text-primary transition-colors text-left"
+            >
               Explore Programs
-            </a>
+            </button>
             <a href="#universities" className="text-foreground hover:text-primary transition-colors">
               Top Universities
             </a>

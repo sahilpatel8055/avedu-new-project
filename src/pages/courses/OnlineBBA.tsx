@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { useCounselingForm } from "@/hooks/use-counseling-form";
 import {
   GraduationCap,
   Clock,
@@ -33,6 +34,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
 const OnlineBBA = () => {
+  const { openForm, CounselingFormComponent } = useCounselingForm();
   const [activeTab, setActiveTab] = useState("bba");
 
   const topUniversities = [
@@ -274,11 +276,11 @@ const OnlineBBA = () => {
               </Badge>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-[#0052CC] hover:bg-[#003d99]">
+              <Button size="lg" className="bg-[#0052CC] hover:bg-[#003d99]" onClick={openForm}>
                 <Phone className="h-5 w-5 mr-2" />
                 Get Free Counselling
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" onClick={openForm}>
                 <BookOpen className="h-5 w-5 mr-2" />
                 Download Brochure
               </Button>
@@ -592,7 +594,7 @@ const OnlineBBA = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyFeatures.map((feature, index) => (
               <Card
                 key={index}
@@ -650,6 +652,7 @@ const OnlineBBA = () => {
             <Button
               size="lg"
               className="bg-white text-[#0052CC] hover:bg-gray-100"
+              onClick={openForm}
             >
               <Phone className="h-5 w-5 mr-2" />
               Get Free Counselling
@@ -658,6 +661,7 @@ const OnlineBBA = () => {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-[#0052CC]"
+              onClick={openForm}
             >
               <Calendar className="h-5 w-5 mr-2" />
               Book a Demo
@@ -667,6 +671,7 @@ const OnlineBBA = () => {
       </section>
 
       <Footer />
+      <CounselingFormComponent />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
+import { useCounselingForm } from "@/hooks/use-counseling-form";
 import {
   Star,
   MapPin,
@@ -31,6 +32,8 @@ import nirfIcon from "@/assets/icons/nirf-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 
 const IGNOU = () => {
+  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   // We will now use the courseData object directly for rendering
   // const courses = [...] is no longer needed
 
@@ -98,10 +101,10 @@ const IGNOU = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
                   Apply Now
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={openForm}>
                   Download Brochure
                 </Button>
               </div>
@@ -266,10 +269,10 @@ const IGNOU = () => {
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
               Apply for Admission
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={openForm}>
               Talk to Counselor
             </Button>
           </div>
@@ -277,6 +280,7 @@ const IGNOU = () => {
       </section>
 
       <Footer />
+      <CounselingFormComponent />
     </div>
   );
 };
