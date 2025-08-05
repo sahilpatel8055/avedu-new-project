@@ -9,6 +9,10 @@ import ignouLogo from "@/assets/ignou-logo.png";
 import manipalLogo from "@/assets/manipal-logo.png";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
+import smuLogo from "@/assets/smu-logo.jpg";
+import amityLogo from "@/assets/amity-logo.jpg";
+import lpuLogo from "@/assets/lpu-logo.jpg";
+import mangalayatanLogo from "@/assets/mangalyatan-logo.png";
 
 interface University {
   id: string;
@@ -73,7 +77,7 @@ export const universities: University[] = [
     image: vguLogo,
   },
   {
-    id: "5",
+    id: "smu",
     name: "Sikkim Manipal University",
     location: "Gangtok, SK",
     rating: 4.4,
@@ -82,6 +86,43 @@ export const universities: University[] = [
     pgPrograms: 18,
     fees: "₹40,000/year",
     approvals: ["UGC", "AICTE", "NAAC A"],
+    image: smuLogo,
+  },
+  {
+    id: "amity",
+    name: "Amity University Online",
+    location: "Noida, UP",
+    rating: 4.3,
+    students: "30K+",
+    ugPrograms: 25,
+    pgPrograms: 20,
+    fees: "₹60,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+    image: amityLogo,
+  },
+  {
+    id: "lpu",
+    name: "Lovely Professional University",
+    location: "Phagwara, PB",
+    rating: 4.4,
+    students: "28K+",
+    ugPrograms: 30,
+    pgPrograms: 22,
+    fees: "₹55,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A++"],
+    image: lpuLogo,
+  },
+  {
+    id: "mangalyatan",
+    name: "Mangalyatan University Online",
+    location: "Aligarh, UP",
+    rating: 4.1,
+    students: "20K+",
+    ugPrograms: 18,
+    pgPrograms: 15,
+    fees: "₹35,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+    image: mangalayatanLogo,
   },
   {
     id: "6",
@@ -92,28 +133,6 @@ export const universities: University[] = [
     ugPrograms: 22,
     pgPrograms: 24,
     fees: "₹50,000/year",
-    approvals: ["UGC", "AICTE", "NAAC A++"],
-  },
-  {
-    id: "7",
-    name: "Amity University Online",
-    location: "Noida, UP",
-    rating: 4.3,
-    students: "30K+",
-    ugPrograms: 25,
-    pgPrograms: 20,
-    fees: "₹60,000/year",
-    approvals: ["UGC", "AICTE", "NAAC A+"],
-  },
-  {
-    id: "8",
-    name: "Lovely Professional University",
-    location: "Phagwara, PB",
-    rating: 4.4,
-    students: "28K+",
-    ugPrograms: 30,
-    pgPrograms: 22,
-    fees: "₹55,000/year",
     approvals: ["UGC", "AICTE", "NAAC A++"],
   },
   {

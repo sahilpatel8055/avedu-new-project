@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
+import { useCounselingForm } from "@/hooks/use-counseling-form";
 import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
@@ -18,6 +19,8 @@ import aiuIcon from "@/assets/icons/aiu-icon.png";
 import bciIcon from "@/assets/icons/bci-icon.png";
 
 const VGU = () => {
+  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   // Define the courses with IDs that match the JSON data
   const courses = [
     { name: "Online MBA", id: "online-mba", fees: "₹1,50,000", duration: "2 Years", specializations: 8 },
@@ -92,10 +95,10 @@ const VGU = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
                   Apply Now
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={openForm}>
                   Download Brochure
                 </Button>
               </div>
@@ -132,7 +135,7 @@ const VGU = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Approvals & Accreditations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {approvals.map((approval, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
@@ -202,7 +205,7 @@ const VGU = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {courses.map((course, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
@@ -261,10 +264,10 @@ const VGU = () => {
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
               Apply for Admission
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={openForm}>
               Talk to Counselor
             </Button>
           </div>
@@ -272,6 +275,7 @@ const VGU = () => {
       </section>
 
       <Footer />
+      <CounselingFormComponent />
     </div>
   );
 };
