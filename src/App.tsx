@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Universities from "./pages/Universities";
 import IGNOU from "./pages/university/IGNOU";
 import Manipal from "./pages/university/Manipal";
 import Uttaranchal from "./pages/university/Uttaranchal";
@@ -47,6 +48,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/universities" element={<Universities />} />
           <Route path="/university/ignou" element={<IGNOU />} />
           <Route path="/university/manipal" element={<Manipal />} />
           <Route path="/university/uttaranchal" element={<Uttaranchal />} />

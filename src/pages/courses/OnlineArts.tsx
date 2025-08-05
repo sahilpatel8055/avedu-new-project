@@ -3,6 +3,7 @@ import Footer from "@/components/ui/footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import {
   GraduationCap,
   Clock,
@@ -361,7 +362,7 @@ const OnlineArts = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
             {topUniversities.map((university, index) => (
               <Card
                 key={index}
@@ -399,9 +400,11 @@ const OnlineArts = () => {
                       {university.accreditation}
                     </Badge>
                   </div>
-                  <Button className="w-full bg-[#0052CC] hover:bg-[#003d99]">
-                    View Details
-                  </Button>
+                  <Link to={`/university/${university.name.toLowerCase().includes('manipal') ? 'manipal' : university.name.toLowerCase().includes('uttaranchal') ? 'uttaranchal' : university.name.toLowerCase().includes('vivekananda') ? 'vgu' : 'ignou'}`}>
+                    <Button className="w-full bg-[#0052CC] hover:bg-[#003d99]">
+                      View Details
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

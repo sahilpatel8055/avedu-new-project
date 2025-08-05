@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
 import {
   Star,
   MapPin,
@@ -107,29 +108,7 @@ const IGNOU = () => {
             </div>
 
             <div className="flex-1 lg:max-w-md">
-              <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-center text-primary">Quick Facts</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Established:</span>
-                    <span className="font-semibold">1985</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">University Type:</span>
-                    <span className="font-semibold">Central University</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Mode:</span>
-                    <span className="font-semibold">Online & Distance</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Fee Range:</span>
-                    <span className="font-semibold">₹7,200 - ₹2,16,000</span>
-                  </div>
-                </CardContent>
-              </Card>
+              <EmbeddedCounselingForm />
             </div>
           </div>
         </div>

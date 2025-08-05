@@ -23,7 +23,7 @@ interface University {
   image?: string;
 }
 
-const universities: University[] = [
+export const universities: University[] = [
   {
     id: "ignou",
     name: "IGNOU",
@@ -92,6 +92,160 @@ const universities: University[] = [
     ugPrograms: 22,
     pgPrograms: 24,
     fees: "₹50,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A++"],
+  },
+  {
+    id: "7",
+    name: "Amity University Online",
+    location: "Noida, UP",
+    rating: 4.3,
+    students: "30K+",
+    ugPrograms: 25,
+    pgPrograms: 20,
+    fees: "₹60,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "8",
+    name: "Lovely Professional University",
+    location: "Phagwara, PB",
+    rating: 4.4,
+    students: "28K+",
+    ugPrograms: 30,
+    pgPrograms: 22,
+    fees: "₹55,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A++"],
+  },
+  {
+    id: "9",
+    name: "Chandigarh University Online",
+    location: "Chandigarh, CH",
+    rating: 4.2,
+    students: "20K+",
+    ugPrograms: 18,
+    pgPrograms: 16,
+    fees: "₹48,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "10",
+    name: "DY Patil University Online",
+    location: "Mumbai, MH",
+    rating: 4.3,
+    students: "22K+",
+    ugPrograms: 20,
+    pgPrograms: 18,
+    fees: "₹65,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "11",
+    name: "NMIMS Global Access",
+    location: "Mumbai, MH",
+    rating: 4.5,
+    students: "18K+",
+    ugPrograms: 12,
+    pgPrograms: 15,
+    fees: "₹70,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A++"],
+  },
+  {
+    id: "12",
+    name: "Symbiosis Centre for Distance Learning",
+    location: "Pune, MH",
+    rating: 4.4,
+    students: "25K+",
+    ugPrograms: 16,
+    pgPrograms: 20,
+    fees: "₹68,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "13",
+    name: "Bharti Vidyapeeth University",
+    location: "Pune, MH",
+    rating: 4.2,
+    students: "15K+",
+    ugPrograms: 14,
+    pgPrograms: 12,
+    fees: "₹52,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "14",
+    name: "GNA University Online",
+    location: "Phagwara, PB",
+    rating: 4.1,
+    students: "12K+",
+    ugPrograms: 15,
+    pgPrograms: 18,
+    fees: "₹42,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "15",
+    name: "Shoolini University Online",
+    location: "Solan, HP",
+    rating: 4.3,
+    students: "16K+",
+    ugPrograms: 18,
+    pgPrograms: 14,
+    fees: "₹58,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "16",
+    name: "UPES Online",
+    location: "Dehradun, UK",
+    rating: 4.4,
+    students: "24K+",
+    ugPrograms: 22,
+    pgPrograms: 25,
+    fees: "₹72,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "17",
+    name: "Chitkara University Online",
+    location: "Chandigarh, CH",
+    rating: 4.2,
+    students: "14K+",
+    ugPrograms: 16,
+    pgPrograms: 18,
+    fees: "₹50,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "18",
+    name: "Galgotias University Online",
+    location: "Greater Noida, UP",
+    rating: 4.1,
+    students: "13K+",
+    ugPrograms: 20,
+    pgPrograms: 16,
+    fees: "₹46,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+  },
+  {
+    id: "19",
+    name: "SRM University Online",
+    location: "Chennai, TN",
+    rating: 4.3,
+    students: "19K+",
+    ugPrograms: 24,
+    pgPrograms: 20,
+    fees: "₹62,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A+"],
+  },
+  {
+    id: "20",
+    name: "VIT University Online",
+    location: "Vellore, TN",
+    rating: 4.5,
+    students: "21K+",
+    ugPrograms: 18,
+    pgPrograms: 22,
+    fees: "₹75,000/year",
     approvals: ["UGC", "AICTE", "NAAC A++"],
   },
 ];
@@ -193,16 +347,18 @@ const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => 
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
-          {universities.map((university) => (
+          {universities.slice(0, 8).map((university) => (
             <UniversityCard key={university.id} university={university} onOpenCounseling={onOpenCounseling} />
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="gap-2">
-            View All Universities
-            <ExternalLink className="h-5 w-5" />
-          </Button>
+          <Link to="/universities">
+            <Button size="lg" variant="outline" className="gap-2">
+              View All Universities
+              <ExternalLink className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
