@@ -324,7 +324,7 @@ const Manipal = () => {
                     <span>{course.specializationsCount} Specializations</span>
                   </div>
                   <Link to={`/university/manipal/courses/${course.id}`}>
-                    <Button className="w-full mt-4" variant="outline">
+                    <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
                   </Link>

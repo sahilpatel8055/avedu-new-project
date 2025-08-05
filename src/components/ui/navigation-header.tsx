@@ -69,15 +69,40 @@ const NavigationHeader = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+          {/* Mobile Navigation Buttons & Menu */}
+          <div className="md:hidden flex items-center gap-2">
+            <button 
+              className="btn-3d px-3 py-1.5 rounded-lg text-xs font-semibold transition-all"
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#programs';
+                }
+              }}
+            >
+              Explore Programs
+            </button>
+            <button 
+              className="btn-3d px-3 py-1.5 rounded-lg text-xs font-semibold transition-all"
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('universities')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#universities';
+                }
+              }}
+            >
+              Top Universities
+            </button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

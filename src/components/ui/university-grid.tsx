@@ -53,6 +53,18 @@ export const universities: University[] = [
     image: manipalLogo,
   },
   {
+    id: "smu",
+    name: "Sikkim Manipal University",
+    location: "Gangtok, SK",
+    rating: 4.4,
+    students: "45K+",
+    ugPrograms: 20,
+    pgPrograms: 18,
+    fees: "₹40,000/year",
+    approvals: ["UGC", "AICTE", "NAAC A"],
+    image: smuLogo,
+  },
+  {
     id: "uttaranchal",
     name: "Uttaranchal University Online",
     location: "Dehradun, India",
@@ -75,18 +87,6 @@ export const universities: University[] = [
     fees: "₹40,000+/year",
     approvals: ["UGC", "AICTE", "AIU"],
     image: vguLogo,
-  },
-  {
-    id: "smu",
-    name: "Sikkim Manipal University",
-    location: "Gangtok, SK",
-    rating: 4.4,
-    students: "45K+",
-    ugPrograms: 20,
-    pgPrograms: 18,
-    fees: "₹40,000/year",
-    approvals: ["UGC", "AICTE", "NAAC A"],
-    image: smuLogo,
   },
   {
     id: "amity",
@@ -329,7 +329,7 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
       <CardFooter className="pt-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1.5 w-full">
           <Link to={`/university/${university.id}`}>
-            <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto">
+            <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto bg-primary text-primary-foreground hover:bg-primary/90">
               <GraduationCap className="h-2.5 w-2.5 sm:h-3 w-3" />
               View Courses
             </Button>

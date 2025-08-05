@@ -234,7 +234,7 @@ const IGNOU = () => {
                     <span>?? Specializations</span>
                   </div>
                   <Link to={`/courses/${courseId}`}>
-                    <Button className="w-full mt-4" variant="outline">
+                    <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
                   </Link>

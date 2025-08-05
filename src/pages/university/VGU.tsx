@@ -229,7 +229,7 @@ const VGU = () => {
                   </div>
                   {/* The change is here: Use Link to navigate to the new course page */}
                   <Link to={`/university/vgu/${course.id}`}>
-                    <Button className="w-full mt-4" variant="outline">
+                    <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
                   </Link>

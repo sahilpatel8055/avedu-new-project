@@ -177,7 +177,7 @@ const LPU = () => {
                     <span>{course.specializations} Specializations</span>
                   </div>
                   <Link to={`/university/lpu/${course.id}`}>
-                    <Button className="w-full mt-4" variant="outline">
+                    <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
                   </Link>
