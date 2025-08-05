@@ -4,6 +4,7 @@ import { Menu, X, Search, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import aveduLogo from "@/assets/avedu-logo.png";
 import CounselingForm from "@/components/ui/counseling-form";
+import { Link } from "react-router-dom";
 
 const NavigationHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const NavigationHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-14 sm:h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <Link to="/universities" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity">
             <img 
               src={aveduLogo} 
               alt="AVEDU Logo" 
@@ -24,7 +25,7 @@ const NavigationHeader = () => {
               <div className="text-lg sm:text-xl font-bold text-primary">AVEDU</div>
               <div className="text-xs text-muted-foreground">Your Education Partner</div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">

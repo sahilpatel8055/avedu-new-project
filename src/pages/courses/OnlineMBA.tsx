@@ -28,6 +28,11 @@ import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
 import ignouLogo from "@/assets/ignou-logo.png";
 import hiringPartnersImg from "@/assets/hiring-partners.png";
+import smuLogo from "@/assets/smu-logo.jpg";
+import amityLogo from "@/assets/amity-logo.jpg";
+import lpuLogo from "@/assets/lpu-logo.jpg";
+import mangalyatanLogo from "@/assets/mangalyatan-logo.png";
+import HorizontalUniversityScroll from "@/components/ui/horizontal-university-scroll";
 
 // New data for the Career Scope section
 const careerOpportunities = [
@@ -95,6 +100,38 @@ const topUniversities = [
     fees: "₹31,500/year",
     duration: "2 Years",
     accreditation: "UGC, AICTE, NAAC A++",
+  },
+  {
+    name: "Sikkim Manipal University",
+    logo: smuLogo,
+    rating: 4.5,
+    fees: "₹50,000+/year",
+    duration: "2 Years",
+    accreditation: "UGC, AICTE, NAAC A+",
+  },
+  {
+    name: "Amity University Online",
+    logo: amityLogo,
+    rating: 4.3,
+    fees: "₹60,000+/year",
+    duration: "2 Years",
+    accreditation: "UGC, AICTE, NAAC A+",
+  },
+  {
+    name: "Lovely Professional University",
+    logo: lpuLogo,
+    rating: 4.2,
+    fees: "₹55,000+/year",
+    duration: "2 Years",
+    accreditation: "UGC, AICTE, NAAC A+",
+  },
+  {
+    name: "Mangalyatan University",
+    logo: mangalyatanLogo,
+    rating: 4.1,
+    fees: "₹45,000+/year",
+    duration: "2 Years",
+    accreditation: "UGC, AICTE",
   },
 ];
 
@@ -244,49 +281,7 @@ const OnlineMBA = () => {
               Online MBA programs
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {topUniversities.map((university, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-lg transition-shadow bg-white border border-gray-200/60"
-              >
-                <CardHeader className="text-center pb-3">
-                  <img
-                    src={university.logo}
-                    alt={university.name}
-                    className="h-16 w-16 object-contain mx-auto mb-3"
-                  />
-                  <h3 className="font-bold text-lg">{university.name}</h3>
-                  <div className="flex items-center justify-center gap-1 mt-2">
-                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-medium">{university.rating}</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-3 text-center">
-                  <div>
-                    <div className="font-bold text-[#0052CC] text-lg">
-                      {university.fees}
-                    </div>
-                    <div className="text-sm text-gray-600">Annual Fees</div>
-                  </div>
-                  <div>
-                    <div className="font-medium">{university.duration}</div>
-                    <div className="text-sm text-gray-600">
-                      Program Duration
-                    </div>
-                  </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {university.accreditation}
-                  </Badge>
-                  <Link to={`/university/${university.name.toLowerCase().includes('manipal') ? 'manipal' : university.name.toLowerCase().includes('uttaranchal') ? 'uttaranchal' : university.name.toLowerCase().includes('vivekananda') ? 'vgu' : 'ignou'}`}>
-                    <Button className="w-full bg-[#0052CC] hover:bg-[#003d99]">
-                      View Details
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <HorizontalUniversityScroll universities={topUniversities} courseType="MBA" />
         </div>
       </section>
 

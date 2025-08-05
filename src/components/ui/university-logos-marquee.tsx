@@ -3,16 +3,28 @@ import ignouLogo from "@/assets/ignou-logo.png";
 import manipalLogo from "@/assets/manipal-logo.png";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 import vguLogo from "@/assets/vgu-logo.png";
+import smuLogo from "@/assets/smu-logo.jpg";
+import amityLogo from "@/assets/amity-logo.jpg";
+import lpuLogo from "@/assets/lpu-logo.jpg";
+import mangalyatanLogo from "@/assets/mangalyatan-logo.png";
 
 const universities = [
   { name: "IGNOU", logo: ignouLogo },
   { name: "Manipal University Online", logo: manipalLogo },
   { name: "Uttaranchal University", logo: uttaranchalLogo },
   { name: "Vivekananda Global University", logo: vguLogo },
+  { name: "Sikkim Manipal University", logo: smuLogo },
+  { name: "Amity University Online", logo: amityLogo },
+  { name: "Lovely Professional University", logo: lpuLogo },
+  { name: "Mangalyatan University", logo: mangalyatanLogo },
   { name: "IGNOU", logo: ignouLogo },
   { name: "Manipal University Online", logo: manipalLogo },
   { name: "Uttaranchal University", logo: uttaranchalLogo },
   { name: "Vivekananda Global University", logo: vguLogo },
+  { name: "Sikkim Manipal University", logo: smuLogo },
+  { name: "Amity University Online", logo: amityLogo },
+  { name: "Lovely Professional University", logo: lpuLogo },
+  { name: "Mangalyatan University", logo: mangalyatanLogo },
 ];
 
 const UniversityLogosMarquee = () => {

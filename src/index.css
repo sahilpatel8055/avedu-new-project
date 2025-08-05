@@ -196,4 +196,13 @@ All colors MUST be HSL. Professional education-focused design.
   .btn-3d:active {
     transform: perspective(1000px) rotateX(5deg) translateY(-2px);
   }
+
+  /* Hide scrollbars */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
