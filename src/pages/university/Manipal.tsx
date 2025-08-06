@@ -9,7 +9,7 @@ import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock,
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import UniversitySlideshow from "@/components/ui/university-slideshow";
-import manipalLogo from "@/assets/manipal-logo.jpg";
+import manipalLogo from "@/assets/manipal-logo.png";
 
 // Import the specific icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
