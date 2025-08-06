@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NavigationHeader from "@/components/ui/navigation-header";
@@ -125,6 +126,16 @@ const Index = () => {
     }
   ];
 
+  // Transform universities data for HorizontalUniversityScroll component
+  const horizontalScrollUniversities = universities.map(uni => ({
+    name: uni.name,
+    logo: uni.logo,
+    rating: 4.5,
+    fees: "₹50,000+",
+    duration: "1-3 Years",
+    accreditation: "UGC Approved"
+  }));
+
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
@@ -135,7 +146,7 @@ const Index = () => {
       <CourseCategories />
       <UniversityGrid />
       <UniversityLogosMarquee />
-      <HorizontalUniversityScroll />
+      <HorizontalUniversityScroll universities={horizontalScrollUniversities} />
 
       {/* Find Your Perfect Online Course Section */}
       <section className="py-20 bg-muted/30">
@@ -154,12 +165,14 @@ const Index = () => {
               <Link key={course.id} to={course.route} className="group">
                 <Card className="text-center hover:shadow-xl transition-all duration-300 cursor-pointer group-hover:scale-105">
                   <CardContent className="p-6">
-                    <div className="mb-4 flex justify-center">
-                      <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {course.name}
-                    </h3>
+                    <Link to={course.route} className="block mb-4">
+                      <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg mx-auto" />
+                    </Link>
+                    <Link to={course.route}>
+                      <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {course.name}
+                      </h3>
+                    </Link>
                     <p className="text-sm text-muted-foreground mb-2">{course.description}</p>
                     <p className="text-xs text-primary font-medium">{course.duration}</p>
                   </CardContent>
@@ -195,12 +208,14 @@ const Index = () => {
               <Link key={university.id} to={university.route} className="group">
                 <Card className="text-center hover:shadow-xl transition-all duration-300 cursor-pointer group-hover:scale-105">
                   <CardContent className="p-6">
-                    <div className="mb-4 flex justify-center">
-                      <img src={university.logo} alt={university.name} className="w-16 h-16 object-contain rounded-lg" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors text-sm">
-                      {university.name}
-                    </h3>
+                    <Link to={university.route} className="block mb-4">
+                      <img src={university.logo} alt={university.name} className="w-16 h-16 object-contain rounded-lg mx-auto" />
+                    </Link>
+                    <Link to={university.route}>
+                      <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors text-sm">
+                        {university.name}
+                      </h3>
+                    </Link>
                     <p className="text-xs text-muted-foreground">{university.description}</p>
                   </CardContent>
                 </Card>

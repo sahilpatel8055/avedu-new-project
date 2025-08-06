@@ -5,19 +5,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
 import { useCounselingForm } from "@/hooks/use-counseling-form";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check, Globe } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import UniversitySlideshow from "@/components/ui/university-slideshow";
 import vguLogo from "@/assets/vgu-logo.png";
-import vguDegree from "@/assets/vgu-degree.jpg"; // Placeholder image for the degree
 
 // Import the specific icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
 import aicteIcon from "@/assets/icons/aicte-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
+import wesIcon from "@/assets/icons/wes-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
-import bciIcon from "@/assets/icons/bci-icon.png";
 
 // Import course images
 import mbaImg from "@/assets/course/mba.jpg";
@@ -30,26 +29,25 @@ import bcomImg from "@/assets/course/bcom.jpg";
 const VGU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
-  // Define the courses with IDs that match the JSON data
   const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹1,50,000", duration: "2 Years", specializations: 8, image: mbaImg },
-    { name: "Online MCA", id: "online-mca", fees: "₹1,32,000", duration: "2 Years", specializations: 0, image: mcaImg },
-    { name: "Online MA", id: "online-ma", fees: "₹72,000", duration: "2 Years", specializations: 2, image: baImg },
-    { name: "Online MSc", id: "online-msc", fees: "₹72,000", duration: "2 Years", specializations: 1, image: baImg },
-    { name: "Online BBA", id: "online-bba", fees: "₹1,50,000", duration: "3 Years", specializations: 4, image: bbaImg },
-    { name: "Online BCA", id: "online-bca", fees: "₹1,32,000", duration: "3 Years", specializations: 5, image: bcaImg },
-    { name: "Online BA", id: "online-ba", fees: "₹72,000", duration: "3 Years", specializations: 8, image: baImg }
+    { name: "Online MBA", id: "online-mba", fees: "₹1,20,000", duration: "2 Years", specializations: 8, image: mbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹96,000", duration: "2 Years", specializations: 3, image: mcaImg },
+    { name: "Online M.Com", id: "online-mcom", fees: "₹60,000", duration: "2 Years", specializations: 2, image: bcomImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹1,08,000", duration: "3 Years", specializations: 6, image: bbaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹1,20,000", duration: "3 Years", specializations: 4, image: bcaImg },
+    { name: "Online B.Com", id: "online-bcom", fees: "₹54,000", duration: "3 Years", specializations: 3, image: bcomImg },
+    { name: "Online BA", id: "online-ba", fees: "₹45,000", duration: "3 Years", specializations: 5, image: baImg }
   ];
 
   const features = [
-    "UGC & AICTE Approved",
-    "NAAC A+ accredited university",
-    "Advanced Learning Management System",
-    "Industry-aligned curriculum",
-    "Live interactive sessions with faculty",
-    "Placement assistance and career guidance",
-    "Flexible payment options available",
-    "Alumni network across industries"
+    "NAAC A+ Accredited",
+    "UGC-DEB Approved", 
+    "Industry-Aligned Curriculum",
+    "Expert Faculty Network",
+    "Comprehensive Learning Resources",
+    "Career Support Services",
+    "Flexible Learning Options",
+    "Strong Alumni Network"
   ];
 
   const approvals = [
@@ -57,7 +55,7 @@ const VGU = () => {
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
     { name: "AIU", description: "Association of Indian Universities", icon: aiuIcon },
     { name: "NAAC A+", description: "National Assessment and Accreditation Council", icon: naacIcon },
-    { name: "BCI", description: "Bar Council of India", icon: bciIcon }
+    { name: "SWAYAM", description: "Study Webs of Active Learning for Young Aspiring Minds", icon: wesIcon }
   ];
 
   return (
@@ -77,8 +75,8 @@ const VGU = () => {
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                 <img src={vguLogo} alt="VGU Logo" className="w-20 h-20 rounded-lg object-contain" />
                 <div>
-                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Vivekananda Global University Online</h1>
-                  <p className="text-lg text-muted-foreground">Accredited with grade A+ by NAAC</p>
+                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Vivekananda Global University</h1>
+                  <p className="text-lg text-muted-foreground">NAAC A+ Accredited University</p>
                 </div>
               </div>
               
@@ -86,25 +84,25 @@ const VGU = () => {
                 <div className="flex items-center gap-1 bg-primary/10 px-3 py-2 rounded-full">
                   <Star className="w-5 h-5 fill-primary text-primary" />
                   <span className="font-semibold text-primary">4.3</span>
-                  <span className="text-muted-foreground">(500+ Reviews)</span>
+                  <span className="text-muted-foreground">(800+ Reviews)</span>
                 </div>
                 <Badge variant="secondary" className="bg-primary/10 text-primary">
-                  NAAC A+ Accredited
+                  UGC Approved
                 </Badge>
               </div>
               
               <div className="flex items-center justify-center lg:justify-start gap-6 mb-8 text-sm">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span>Jaipur, Rajasthan, India</span>
+                  <span>Jaipur, Rajasthan</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Users className="w-4 h-4 text-primary" />
-                  <span>15K+ Students</span>
+                  <span>25K+ Students</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <GraduationCap className="w-4 h-4 text-primary" />
-                  <span>7 Programs</span>
+                  <span>50+ Programs</span>
                 </div>
               </div>
               
@@ -129,16 +127,16 @@ const VGU = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">About Vivekananda Global University Online</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">About Vivekananda Global University</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                <strong className="text-foreground">Vivekananda Global University (VGU)</strong> is a leading private university in Jaipur, Rajasthan. The university is a premier institution of higher education and has a vision to be a world-class center for learning and research. VGU is recognized by UGC, AICTE, AIU and accredited with NAAC A+ grade.
+                <strong className="text-foreground">Vivekananda Global University (VGU)</strong> is a premier institution established in 2012 in Jaipur, Rajasthan. Named after the great philosopher and spiritual leader Swami Vivekananda, VGU embodies the values of excellence, innovation, and holistic development in education.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                VGU offers a wide array of online undergraduate and postgraduate programs, which are designed to be flexible and industry-relevant. The online platform provides an engaging and interactive learning experience with access to virtual classrooms, e-resources, and dedicated faculty support.
+                VGU offers a wide range of undergraduate and postgraduate programs through its online learning platform, designed to meet the diverse needs of modern students. The university combines traditional academic rigor with contemporary teaching methodologies to provide quality education that is both accessible and relevant.
               </p>
               <p className="text-lg leading-relaxed">
-                The university is committed to providing quality education that is accessible to all. The online degrees are on par with their on-campus counterparts and are widely recognized for career advancement, government jobs, and further studies.
+                With NAAC A+ accreditation and UGC-DEB approval, VGU's online programs maintain the same academic standards as on-campus courses. The university's commitment to quality education and student success makes it a preferred choice for distance learning in India.
               </p>
             </div>
           </div>
@@ -163,54 +161,6 @@ const VGU = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sample Degree Section - NEWLY ADDED */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            {/* Left side: Description */}
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
-              <p className="text-lg text-muted-foreground mb-6 max-w-prose">
-                The degrees offered by Vivekananda Global University Online are valid and recognized by various government bodies, making them suitable for all career opportunities.
-              </p>
-              <ul className="space-y-4 text-left mx-auto md:mx-0 max-w-sm">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">UGC-DEB & AICTE Approved</p>
-                    <p className="text-sm text-muted-foreground">The degrees are fully valid for government, private, and overseas jobs or higher studies.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">Digital Verification</p>
-                    <p className="text-sm text-muted-foreground">Supports online QR-code-based verification for authenticity.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">Officially Stamped</p>
-                    <p className="text-sm text-muted-foreground">Authenticated with the official university seal.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            {/* Right side: Image */}
-            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
-              <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
-                <img
-                  src={vguDegree}
-                  alt="VGU Sample Degree"
-                  className="w-full h-auto object-contain rounded-lg"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -253,95 +203,77 @@ const VGU = () => {
         </div>
       </section>
 
-      {/* NEW: What Makes Online VGU the Right Choice Section */}
-      <section className="py-16 bg-muted/30">
+      {/* What Makes Online VGU Right Choice Section */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Makes Online VGU the <span className="text-red-600">Right Choice?</span></h2>
-            <p className="text-lg text-muted-foreground italic">We provide learning that adapts to <span className="font-semibold">YOU</span></p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">
+              What Makes Online VGU Right Choice?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Discover why thousands of students choose VGU for their online education journey
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-blue-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-red-600 mb-2">UGC-ENTITLED</h3>
-              <p className="text-sm text-muted-foreground">Your Degrees Is Recognized Globally And By All Major Recruiters.</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">Global Recognition</h3>
+              <p className="text-muted-foreground">
+                Degrees recognized worldwide with international accreditation and industry partnerships.
+              </p>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-orange-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="w-8 h-8 text-orange-600" />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-red-600 mb-2">FLEXIBLE LEARNING</h3>
-              <p className="text-sm text-muted-foreground">Study at your own pace, anytime, anywhere.</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">Expert Faculty</h3>
+              <p className="text-muted-foreground">
+                Learn from industry experts and experienced academicians with proven track records.
+              </p>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-green-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-green-600" />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-red-600 mb-2">INDUSTRY-ORIENTED PROGRAMS</h3>
-              <p className="text-sm text-muted-foreground">Vast Elective Pool in each program such as Digital Marketing, FinTech, AI, Data</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">Flexible Learning</h3>
+              <p className="text-muted-foreground">
+                Study at your own pace with 24/7 access to learning materials and resources.
+              </p>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-purple-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-8 h-8 text-purple-600" />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-red-600 mb-2">EXPERT MENTORSHIP</h3>
-              <p className="text-sm text-muted-foreground">Learn from PhDs, domain experts, and industry veterans</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">Industry-Relevant Curriculum</h3>
+              <p className="text-muted-foreground">
+                Updated curriculum designed in consultation with industry leaders and professionals.
+              </p>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-teal-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-teal-600" />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-red-600 mb-2">AFFORDABLE FEE STRUCTURE</h3>
-              <p className="text-sm text-muted-foreground">Flexible, No Cost EMI options and high ROI</p>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-red-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Check className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="font-bold text-red-600 mb-2">EXAMINATION ON DEMAND</h3>
-              <p className="text-sm text-muted-foreground">Take assessments and exams at your ease</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">Career Support</h3>
+              <p className="text-muted-foreground">
+                Comprehensive placement assistance and career guidance throughout your journey.
+              </p>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-yellow-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-yellow-600" />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Check className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-red-600 mb-2">DUAL DEGREE OPPORTUNITY</h3>
-              <p className="text-sm text-muted-foreground">Pursue two degrees simultaneously one on-campus and one online of same level</p>
-            </div>
-            
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-indigo-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-indigo-600" />
-              </div>
-              <h3 className="font-bold text-red-600 mb-2">GLOBAL ACCESSIBILITY & ACCEPTANCE</h3>
-              <p className="text-sm text-muted-foreground">Programs Are Available To Study Globally.</p>
-            </div>
-            
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-pink-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-pink-600" />
-              </div>
-              <h3 className="font-bold text-red-600 mb-2">CAREER ASSISTANCE</h3>
-              <p className="text-sm text-muted-foreground">Career Guidance with Experts, Free Resume Reviews, LinkedIn Profile Makeovers and more.</p>
-            </div>
-            
-            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
-              <div className="bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-cyan-600" />
-              </div>
-              <h3 className="font-bold text-red-600 mb-2">INDUSTRY BASED MICRO CREDENTIALS</h3>
-              <p className="text-sm text-muted-foreground">In collaboration with renowned industry partners</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">Quality Assurance</h3>
+              <p className="text-muted-foreground">
+                NAAC A+ accredited programs ensuring the highest standards of education quality.
+              </p>
             </div>
           </div>
         </div>
@@ -367,7 +299,7 @@ const VGU = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Educational Journey?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of students who have chosen Vivekananda Global University Online for quality education. 
+            Join thousands of students who have chosen VGU Online for quality education. 
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

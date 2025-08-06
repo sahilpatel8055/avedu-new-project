@@ -1,3 +1,4 @@
+
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,7 @@ interface HorizontalUniversityScrollProps {
   courseType?: string;
 }
 
-const HorizontalUniversityScroll = ({ universities, courseType = "" }: HorizontalUniversityScrollProps) => {
+const HorizontalUniversityScroll = ({ universities = [], courseType = "" }: HorizontalUniversityScrollProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -58,6 +59,15 @@ const HorizontalUniversityScroll = ({ universities, courseType = "" }: Horizonta
     if (universityName.toLowerCase().includes('mangalyatan')) return '/university/mangalyatan';
     return '/university/ignou';
   };
+
+  // Handle empty universities array
+  if (!universities || universities.length === 0) {
+    return (
+      <div className="text-center py-8">
+        <p className="text-muted-foreground">No universities available to display.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="relative">
@@ -134,7 +144,6 @@ const HorizontalUniversityScroll = ({ universities, courseType = "" }: Horizonta
           </Card>
         ))}
       </div>
-
     </div>
   );
 };
