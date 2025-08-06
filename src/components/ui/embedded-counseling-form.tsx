@@ -29,7 +29,11 @@ const courses = [
   { value: "online-msc", label: "Online M.Sc" }
 ];
 
-const EmbeddedCounselingForm: React.FC = () => {
+interface EmbeddedCounselingFormProps {
+  variant?: 'default' | 'compact';
+}
+
+const EmbeddedCounselingForm: React.FC<EmbeddedCounselingFormProps> = ({ variant = 'default' }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     contactNumber: "",
@@ -65,13 +69,15 @@ const EmbeddedCounselingForm: React.FC = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const isCompact = variant === 'compact';
+  
   return (
     <Card className="w-full bg-card/50 backdrop-blur-sm border-primary/20">
-      <CardHeader className="pb-4">
+      <CardHeader className={isCompact ? "pb-2" : "pb-4"}>
         <CardTitle className="text-center text-primary">Get Free Counseling</CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className={isCompact ? "space-y-3" : "space-y-4"}>
           <div>
             <Label htmlFor="fullName" className="text-sm font-medium">
               Full Name *
@@ -83,7 +89,7 @@ const EmbeddedCounselingForm: React.FC = () => {
               onChange={(e) => handleInputChange("fullName", e.target.value)}
               placeholder="Enter your full name"
               required
-              className="mt-1"
+              className={isCompact ? "mt-0.5 h-9" : "mt-1"}
             />
           </div>
 
@@ -102,7 +108,7 @@ const EmbeddedCounselingForm: React.FC = () => {
                 onChange={(e) => handleInputChange("contactNumber", e.target.value)}
                 placeholder="Enter mobile number"
                 required
-                className="pl-16"
+                className={isCompact ? "pl-16 h-9" : "pl-16"}
               />
             </div>
           </div>
@@ -118,7 +124,7 @@ const EmbeddedCounselingForm: React.FC = () => {
               onChange={(e) => handleInputChange("email", e.target.value)}
               placeholder="Enter your email"
               required
-              className="mt-1"
+              className={isCompact ? "mt-0.5 h-9" : "mt-1"}
             />
           </div>
 
@@ -127,7 +133,7 @@ const EmbeddedCounselingForm: React.FC = () => {
               State *
             </Label>
             <Select onValueChange={(value) => handleInputChange("state", value)}>
-              <SelectTrigger className="mt-1">
+              <SelectTrigger className={isCompact ? "mt-0.5 h-9" : "mt-1"}>
                 <SelectValue placeholder="Select state" />
               </SelectTrigger>
               <SelectContent>
@@ -151,7 +157,7 @@ const EmbeddedCounselingForm: React.FC = () => {
               onChange={(e) => handleInputChange("city", e.target.value)}
               placeholder="Enter your city"
               required
-              className="mt-1"
+              className={isCompact ? "mt-0.5 h-9" : "mt-1"}
             />
           </div>
 
@@ -160,7 +166,7 @@ const EmbeddedCounselingForm: React.FC = () => {
               Course *
             </Label>
             <Select onValueChange={(value) => handleInputChange("course", value)}>
-              <SelectTrigger className="mt-1">
+              <SelectTrigger className={isCompact ? "mt-0.5 h-9" : "mt-1"}>
                 <SelectValue placeholder="Select course" />
               </SelectTrigger>
               <SelectContent>
@@ -184,7 +190,7 @@ const EmbeddedCounselingForm: React.FC = () => {
             </Label>
           </div>
 
-          <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+          <Button type="submit" className={`w-full bg-primary hover:bg-primary/90 ${isCompact ? 'h-9' : ''}`}>
             <Phone className="h-4 w-4 mr-2" />
             Get Free Counseling
           </Button>

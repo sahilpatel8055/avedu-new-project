@@ -106,7 +106,7 @@ const Mangalyatan = () => {
             </div>
             
             <div className="flex-1 lg:max-w-md">
-              <EmbeddedCounselingForm />
+              <EmbeddedCounselingForm variant="compact" />
             </div>
           </div>
         </div>
