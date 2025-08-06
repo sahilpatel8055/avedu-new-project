@@ -8,6 +8,7 @@ import { useCounselingForm } from "@/hooks/use-counseling-form";
 import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
+import UniversitySlideshow from "@/components/ui/university-slideshow";
 import vguLogo from "@/assets/vgu-logo.png";
 import vguDegree from "@/assets/vgu-degree.jpg"; // Placeholder image for the degree
 
@@ -55,6 +56,13 @@ const VGU = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
       
+      {/* Slideshow Banner */}
+      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 pt-6">
+        <div className="container mx-auto px-4">
+          <UniversitySlideshow />
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">
         <div className="container mx-auto px-4">

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
+import UniversitySlideshow from "@/components/ui/university-slideshow";
 import ignouLogo from "@/assets/ignou-logo.png";
 import ignouDegreeImg from "@/assets/ignou-degree.png";
 
@@ -60,6 +61,13 @@ const IGNOU = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavigationHeader />
+      
+      {/* Slideshow Banner */}
+      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 pt-6">
+        <div className="container mx-auto px-4">
+          <UniversitySlideshow />
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">

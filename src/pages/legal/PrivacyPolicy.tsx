@@ -1,9 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import NavigationHeader from "@/components/ui/navigation-header";
+import Footer from "@/components/ui/footer";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <NavigationHeader />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-4">Privacy Policy</h1>
@@ -55,11 +58,24 @@ const PrivacyPolicy = () => {
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold text-foreground">Cookies:</h3>
+                  <h3 className="font-semibold text-foreground">Cookies and Tracking Technologies:</h3>
                   <p className="text-foreground leading-relaxed">
-                    Our website uses cookies to enhance your experience. These are small files stored on your 
-                    device that help us remember your preferences, recognize you on repeat visits, and track your 
-                    usage patterns. You can manage your cookie preferences through your browser settings.
+                    Our website uses cookies and similar tracking technologies to enhance your experience. These are 
+                    small files stored on your device that help us remember your preferences, recognize you on repeat 
+                    visits, and track your usage patterns. We also use third-party advertising services including 
+                    Google Ads, Meta (Facebook) Ads, and other remarketing platforms that may place cookies on your 
+                    device for personalized advertising purposes. You can manage your cookie preferences through your 
+                    browser settings.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-foreground">Marketing and Advertising Data:</h3>
+                  <p className="text-foreground leading-relaxed">
+                    We may collect information about your interactions with our advertisements and marketing campaigns 
+                    across various platforms including Google, Meta (Facebook), and other advertising networks. This 
+                    helps us understand the effectiveness of our marketing efforts and provide you with relevant 
+                    educational opportunities.
                   </p>
                 </div>
               </div>
@@ -74,9 +90,10 @@ const PrivacyPolicy = () => {
               </p>
               
               <ul className="space-y-2 ml-4 list-disc text-foreground">
-                <li><strong>To Provide Counseling Services:</strong> Your contact details are used to reach out to you via calls, messages, and emails to offer our free, neutral counseling services, tailored to your specific academic and career preferences.</li>
+                <li><strong>To Provide Counseling Services:</strong> Your contact details are used to reach out to you via calls, messages, and emails to offer our free, neutral counseling services, tailored to your specific academic and career preferences. If you do not want to receive calls, emails, or messages from us, you can opt out at any time.</li>
                 <li><strong>To Improve Our Services:</strong> We use collected data to analyze website traffic, identify user trends, and make improvements to our content and services.</li>
                 <li><strong>For Communication and Marketing:</strong> We may use your contact information to send you updates, promotional material, or information about other services we feel may be of interest to you. You can opt out of these communications at any time.</li>
+                <li><strong>For Advertising and Remarketing:</strong> We use Google Ads, Meta (Facebook) Ads, and other advertising platforms to show you relevant educational content. This may include remarketing to users who have visited our website.</li>
                 <li><strong>To Ensure Compliance:</strong> Your information may be used to enforce our Terms & Conditions and to comply with legal obligations.</li>
               </ul>
             </section>
@@ -119,7 +136,55 @@ const PrivacyPolicy = () => {
             <Separator />
 
             <section>
-              <h2 className="text-xl font-semibold text-foreground mb-3">6. Your Rights and Choices</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-3">6. Cookie Consent and Opt-Out Options</h2>
+              <p className="text-foreground leading-relaxed mb-3">
+                You have full control over your privacy preferences:
+              </p>
+              
+              <div className="space-y-3 ml-4">
+                <div>
+                  <h3 className="font-semibold text-foreground">Cookie Management:</h3>
+                  <p className="text-foreground leading-relaxed">
+                    You can disable cookies through your browser settings. Please note that disabling cookies may 
+                    affect the functionality of our website.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-foreground">Advertising Opt-Out:</h3>
+                  <p className="text-foreground leading-relaxed">
+                    You can opt out of personalized advertising by visiting Google Ad Settings, Facebook Ad Preferences, 
+                    or the Digital Advertising Alliance's opt-out page. This will stop personalized ads but you may still 
+                    see non-personalized advertisements.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-foreground">Communication Preferences:</h3>
+                  <p className="text-foreground leading-relaxed">
+                    If you do not want to receive calls, emails, or messages from us, you can opt out by contacting us 
+                    at privacy@avadu.in or through the unsubscribe links in our communications.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <Separator />
+
+            <section>
+              <h2 className="text-xl font-semibold text-foreground mb-3">7. Data Retention</h2>
+              <p className="text-foreground leading-relaxed">
+                We retain your personal information only as long as necessary to provide our services and comply with 
+                legal obligations. Typically, we retain contact information for up to 3 years from your last interaction 
+                with us, unless you request earlier deletion. Marketing data and cookies are retained according to the 
+                respective platform policies (Google, Meta, etc.).
+              </p>
+            </section>
+
+            <Separator />
+
+            <section>
+              <h2 className="text-xl font-semibold text-foreground mb-3">8. Your Rights and Choices</h2>
               <p className="text-foreground leading-relaxed">
                 You have the right to access and control your personal information. If you wish to unsubscribe 
                 from our communications or have your data removed from our systems, you can contact us directly 
@@ -130,7 +195,7 @@ const PrivacyPolicy = () => {
             <Separator />
 
             <section>
-              <h2 className="text-xl font-semibold text-foreground mb-3">7. Grievance Officer</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-3">9. Grievance Officer</h2>
               <p className="text-foreground leading-relaxed">
                 In accordance with Indian law, if you have any questions or concerns regarding this Privacy Policy 
                 or our data handling practices, you may contact our Grievance Officer at grievance@avadu.in.
@@ -140,7 +205,7 @@ const PrivacyPolicy = () => {
             <Separator />
 
             <section>
-              <h2 className="text-xl font-semibold text-foreground mb-3">8. Changes to this Policy</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-3">10. Changes to this Policy</h2>
               <p className="text-foreground leading-relaxed">
                 We reserve the right to update this Privacy Policy at any time. Any changes will be posted on this 
                 page, and the "Last Updated" date will be revised. We encourage you to review this policy periodically 
@@ -159,6 +224,7 @@ const PrivacyPolicy = () => {
           </CardContent>
         </Card>
       </div>
+      <Footer />
     </div>
   );
 };
