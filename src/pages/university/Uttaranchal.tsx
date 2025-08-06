@@ -22,16 +22,25 @@ import pciIcon from "@/assets/icons/pci-icon.jpg";
 // Import the degree image
 import uuDegree from "@/assets/uu-degree.jpg";
 
+// Import the course images
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
+import bcomImg from "@/assets/course/bcom.jpg";
+
 const Uttaranchal = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
-  // Use the course data that matches the JSON file.
   const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹1,80,000", duration: "2 Years", specializations: 12 },
-    { name: "Online BBA", id: "online-bba", fees: "₹1,20,000", duration: "3 Years", specializations: 8 },
-    { name: "Online MCA", id: "online-mca", fees: "₹1,50,000", duration: "2 Years", specializations: 4 },
-    { name: "Online BCA", id: "online-bca", fees: "₹1,08,000", duration: "3 Years", specializations: 6 },
-    { name: "Online BA", id: "online-ba", fees: "₹45,000", duration: "3 Years", specializations: 3 }
+    { name: "Online MBA", id: "online-mba", fees: "₹1,80,000", duration: "2 Years", specializations: 8, image: mbaImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹1,50,000", duration: "3 Years", specializations: 6, image: bbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹1,50,000", duration: "2 Years", specializations: 4, image: mcaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹1,20,000", duration: "3 Years", specializations: 5, image: bcaImg },
+    { name: "Online MA", id: "online-ma", fees: "₹90,000", duration: "2 Years", specializations: 3, image: baImg },
+    { name: "Online BA", id: "online-ba", fees: "₹70,000", duration: "3 Years", specializations: 4, image: baImg },
+    { name: "Online B.Com", id: "online-bcom", fees: "₹70,000", duration: "3 Years", specializations: 2, image: bcomImg }
   ];
 
   const features = [
@@ -218,7 +227,7 @@ const Uttaranchal = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
+                    <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
                   </div>
                   <CardTitle className="text-lg text-center">{course.name}</CardTitle>
                 </CardHeader>
@@ -235,8 +244,7 @@ const Uttaranchal = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  {/* The change is here: Use Link to navigate to the new course page */}
-                  <Link to={`/university/uttaranchal/${course.id}`}>
+                  <Link to={`/courses/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
@@ -244,6 +252,78 @@ const Uttaranchal = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Why Opt for Uttaranchal University Online Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              WHY OPT FOR <br />
+              <span className="text-green-600">UTTARANCHAL UNIVERSITY ONLINE?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Our valued degrees stand out from the crowd and prepare you<br />
+              for a job at industry-leading companies.
+            </p>
+          </div>
+          
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left side: Image */}
+            <div className="flex-1 max-w-lg mx-auto lg:max-w-none">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/c2569d69-4e00-4d39-bec8-f13408f1fc79.png" 
+                  alt="Student studying online" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+            
+            {/* Right side: Content */}
+            <div className="flex-1 space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">01</div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">Prodigious faculty and World-Class Curriculum</h3>
+                  <p className="text-sm text-muted-foreground">Our intensive MBA curriculum hones your skills in business including finance, marketing, and Human resource.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">02</div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">1-on-1 Personalised Mentorship</h3>
+                  <p className="text-sm text-muted-foreground">To provide support at every step, a dedicated mentor is assigned to each student.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">03</div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">Reputed Degree from a Top Ranked University</h3>
+                  <p className="text-sm text-muted-foreground">With NAAC A+ Grade, Uttaranchal University stands tall in the league of top universities in the country, and its degrees are highly valued and recognised by top corporates in India.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">04</div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">Integrated LMS & e-library</h3>
+                  <p className="text-sm text-muted-foreground">With thousands of e-books at your disposal, the Integrated Learning Management System is there to assist students 24x7.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">05</div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-2">Job Assistance</h3>
+                  <p className="text-sm text-muted-foreground">We provide complete placement assistance for your selection in a reputed organization.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

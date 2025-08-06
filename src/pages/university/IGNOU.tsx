@@ -32,6 +32,14 @@ import naacIcon from "@/assets/icons/naac-icon.png";
 import nirfIcon from "@/assets/icons/nirf-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 
+// Import course images
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
+import bcomImg from "@/assets/course/bcom.jpg";
+
 const IGNOU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
@@ -218,35 +226,46 @@ const IGNOU = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {Object.entries(courseData).map(([courseId, course]) => (
-              <Card key={courseId} className="hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg text-center">{course.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <DollarSign className="w-4 h-4 text-primary" />
-                    <span className="font-semibold">{course.fees}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-primary" />
-                    <span>?? Specializations</span>
-                  </div>
-                  <Link to={`/courses/${courseId}`}>
-                    <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
-                      View Details
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
+            {Object.entries(courseData).map(([courseId, course]) => {
+              // Map course IDs to images
+              let courseImage = baImg; // default
+              if (courseId.includes('mba')) courseImage = mbaImg;
+              else if (courseId.includes('bba')) courseImage = bbaImg;
+              else if (courseId.includes('mca')) courseImage = mcaImg;
+              else if (courseId.includes('bca')) courseImage = bcaImg;
+              else if (courseId.includes('bcom')) courseImage = bcomImg;
+              else if (courseId.includes('ba') || courseId.includes('ma')) courseImage = baImg;
+              
+              return (
+                <Card key={courseId} className="hover:shadow-lg transition-shadow">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src={courseImage} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
+                    </div>
+                    <CardTitle className="text-lg text-center">{course.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <DollarSign className="w-4 h-4 text-primary" />
+                      <span className="font-semibold">{course.fees}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-primary" />
+                      <span>{course.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Award className="w-4 h-4 text-primary" />
+                      <span>?? Specializations</span>
+                    </div>
+                    <Link to={`/courses/${courseId}`}>
+                      <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
+                        View Details
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>

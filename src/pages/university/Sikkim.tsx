@@ -18,16 +18,23 @@ import naacIcon from "@/assets/icons/naac-icon.png";
 import wesIcon from "@/assets/icons/wes-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 
+// Import the specific icons for approvals
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
+
 const Sikkim = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
   const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹60,000", duration: "2 Years", specializations: 8 },
-    { name: "Online MCA", id: "online-mca", fees: "₹60,000", duration: "2 Years", specializations: 4 },
-    { name: "Online BCA", id: "online-bca", fees: "₹40,000", duration: "3 Years", specializations: 5 },
-    { name: "Online BBA", id: "online-bba", fees: "₹40,000", duration: "3 Years", specializations: 6 },
-    { name: "Online MA", id: "online-ma", fees: "₹25,000", duration: "2 Years", specializations: 3 },
-    { name: "Online BA", id: "online-ba", fees: "₹25,000", duration: "3 Years", specializations: 4 }
+    { name: "Online MBA", id: "online-mba", fees: "₹60,000", duration: "2 Years", specializations: 8, image: mbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹60,000", duration: "2 Years", specializations: 4, image: mcaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹40,000", duration: "3 Years", specializations: 5, image: bcaImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹40,000", duration: "3 Years", specializations: 6, image: bbaImg },
+    { name: "Online MA", id: "online-ma", fees: "₹25,000", duration: "2 Years", specializations: 3, image: baImg },
+    { name: "Online BA", id: "online-ba", fees: "₹25,000", duration: "3 Years", specializations: 4, image: baImg }
   ];
 
   const features = [
@@ -165,7 +172,7 @@ const Sikkim = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
+                    <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
                   </div>
                   <CardTitle className="text-lg text-center">{course.name}</CardTitle>
                 </CardHeader>
@@ -190,6 +197,65 @@ const Sikkim = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience 100% Placement Support Section - Same as Manipal */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left side: Image */}
+            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
+              <div className="relative p-4 rounded-xl shadow-2xl bg-white">
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-full inline-block mb-4">
+                  <span className="font-bold">LEADING RECRUITERS</span>
+                </div>
+                <div className="bg-gray-100 p-6 rounded-lg">
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="bg-white p-2 rounded text-center">SPINNY</div>
+                    <div className="bg-white p-2 rounded text-center">DELHIVERY</div>
+                    <div className="bg-white p-2 rounded text-center">InsuranceDeKho</div>
+                    <div className="bg-white p-2 rounded text-center">Mahindra Finance</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side: Content */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Experience <span className="bg-yellow-400 px-2 py-1 rounded">100%</span> Placement
+              </h2>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Support For Your Career Success
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Unlock your career potential with job-ready skills and expert placement support.
+              </p>
+              <Button className="bg-primary hover:bg-primary/90 mb-6">
+                Learn More →
+              </Button>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">10,000<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Learners offered placement assistance</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">20,000<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Opportunities created</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">500<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Hiring partners</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">1,000<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Industry-readiness programs</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

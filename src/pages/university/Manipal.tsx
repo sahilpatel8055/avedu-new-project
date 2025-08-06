@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,52 +9,52 @@ import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock,
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import UniversitySlideshow from "@/components/ui/university-slideshow";
+import manipalLogo from "@/assets/manipal-logo.jpg";
 
-// Import all assets and data
-import manipalLogo from "@/assets/manipal-logo.png";
+// Import the specific icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
 import aicteIcon from "@/assets/icons/aicte-icon.png";
-import nirfIcon from "@/assets/icons/nirf-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
-import qsIcon from "@/assets/icons/qs-icon.png";
-import nbaIcon from "@/assets/icons/nba-icon.png";
-import degreeFront from "@/assets/manipal-1stdegree.jpg";
-import degreeBack from "@/assets/manipal-2nddegree.jpg";
-import manipalCourseData from "@/data/manipalCourseData.json"; // Import the course data
+import wesIcon from "@/assets/icons/wes-icon.png";
+import aiuIcon from "@/assets/icons/aiu-icon.png";
 
-// New campus images for the new section
-import mujCampus from "@/assets/muj-campus.jpg";
-import smuCampus from "@/assets/smu-campus.jpg";
-import maheCampus from "@/assets/mahe-campus.jpg";
+// Import course images
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
 
 const Manipal = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
-  const popularCourses = manipalCourseData.courses.filter(
-    (course) => course.level === "ug" || course.name.includes("MBA")
-  );
+  const courses = [
+    { name: "Online MBA", id: "online-mba", fees: "₹3,00,000", duration: "2 Years", specializations: 11, image: mbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹2,40,000", duration: "2 Years", specializations: 4, image: mcaImg },
+    { name: "Online MA", id: "online-ma", fees: "₹1,80,000", duration: "2 Years", specializations: 4, image: baImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹3,60,000", duration: "3 Years", specializations: 8, image: bbaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹3,00,000", duration: "3 Years", specializations: 5, image: bcaImg },
+    { name: "Online BA", id: "online-ba", fees: "₹2,40,000", duration: "3 Years", specializations: 6, image: baImg }
+  ];
 
   const features = [
-    "Enhanced digital learning platform with LMS",
-    "Same faculty as Manipal University Jaipur",
-    "Industry practitioners as mentors",
-    "Remotely proctored online examinations",
-    "Self-learning activities & practice tests",
-    "No-cost EMI financing options",
-    "Scholarship opportunities available",
-    "Connections with 100+ Fortune 500 recruiters"
+    "NAAC A++ Accredited",
+    "WES Recognized Degrees",
+    "Industry-Aligned Curriculum",
+    "Expert Faculty Network",
+    "Comprehensive Learning Resources",
+    "Career Support Services",
+    "Flexible Learning Options",
+    "Global Alumni Network"
   ];
 
   const approvals = [
-    { name: "UGC", description: "University Grants Commission Approved", icon: ugcIcon },
+    { name: "UGC-DEB", description: "University Grants Commission - Distance Education Bureau", icon: ugcIcon },
     { name: "AICTE", description: "All India Council for Technical Education", icon: aicteIcon },
-    { name: "NIRF", description: "Rank 64 in University Category", icon: nirfIcon },
-    { name: "NAAC A+", description: "National Assessment and Accreditation Council", icon: naacIcon },
-    { name: "QS Ranking", description: "QS World University Rankings", icon: qsIcon },
-    { name: "NBA", description: "National Board of Accreditation", icon: nbaIcon }
+    { name: "AIU", description: "Association of Indian Universities", icon: aiuIcon },
+    { name: "NAAC A++", description: "National Assessment and Accreditation Council", icon: naacIcon },
+    { name: "WES", description: "World Education Services Recognition", icon: wesIcon }
   ];
-
-  const [degreePage, setDegreePage] = useState('front');
 
   return (
     <div className="min-h-screen bg-background">
@@ -74,25 +74,25 @@ const Manipal = () => {
                 <img src={manipalLogo} alt="Manipal Logo" className="w-20 h-20 rounded-lg object-contain" />
                 <div>
                   <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-2">Manipal University Online</h1>
-                  <p className="text-lg text-muted-foreground">Accredited with grade A+ by NAAC</p>
+                  <p className="text-lg text-muted-foreground">NAAC A++ Accredited University</p>
                 </div>
               </div>
               
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                 <div className="flex items-center gap-1 bg-primary/10 px-3 py-2 rounded-full">
                   <Star className="w-5 h-5 fill-primary text-primary" />
-                  <span className="font-semibold text-primary">4.6</span>
-                  <span className="text-muted-foreground">(857 Reviews)</span>
+                  <span className="font-semibold text-primary">4.5</span>
+                  <span className="text-muted-foreground">(1500+ Reviews)</span>
                 </div>
                 <Badge variant="secondary" className="bg-primary/10 text-primary">
-                  NIRF Rank 64
+                  WES Recognized
                 </Badge>
               </div>
               
               <div className="flex items-center justify-center lg:justify-start gap-6 mb-8 text-sm">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span>Jaipur, India</span>
+                  <span>Manipal, Karnataka</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Users className="w-4 h-4 text-primary" />
@@ -100,7 +100,7 @@ const Manipal = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <GraduationCap className="w-4 h-4 text-primary" />
-                  <span>20+ Programs</span>
+                  <span>35+ Programs</span>
                 </div>
               </div>
               
@@ -128,13 +128,13 @@ const Manipal = () => {
             <h2 className="text-3xl font-bold text-center mb-8">About Manipal University Online</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                The online Manipal university is a part of the prestigious <strong className="text-foreground">Manipal University Jaipur (MUJ)</strong>. The university started offering courses in online mode in the year 2021. The University Grants Commission (UGC) has entitled Online Manipal University to offer UG and PG programs.
+                <strong className="text-foreground">Manipal University</strong> is one of India's most prestigious private universities, established in 1953. With over 70 years of excellence in education, Manipal has built a global reputation for academic rigor, innovation, and industry relevance. The university's online division brings the same quality education to students worldwide.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                The university currently offers BCA, BBA, and B.Com in the undergraduate category while MCA, MBA, M.Com, and MA JMC in the postgraduate category. These online courses are taught by the esteemed same faculty of the Manipal University Jaipur and real-world mentors.
+                Manipal University Online offers a comprehensive range of undergraduate and postgraduate programs designed to meet the evolving needs of the modern workforce. The programs combine theoretical knowledge with practical applications, ensuring students are well-prepared for their careers.
               </p>
               <p className="text-lg leading-relaxed">
-                The university offers an enhanced digital learning platform where you can find all your course material and cutting-edge tutorials. The university conducts examinations in online mode using this LMS. These online examinations are secure as they are remotely proctored.
+                With NAAC A++ accreditation and WES recognition, Manipal University Online degrees are globally accepted and highly valued by employers. The university's strong industry partnerships and extensive alumni network provide excellent opportunities for career advancement.
               </p>
             </div>
           </div>
@@ -150,11 +150,7 @@ const Manipal = () => {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-center mb-4">
-                    {approval.icon ? (
-                      <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
-                    ) : (
-                      <Award className="w-24 h-24 text-primary" />
-                    )}
+                    <img src={approval.icon} alt={`${approval.name} Icon`} className="w-24 h-24 object-contain" />
                   </div>
                   <CardTitle className="text-lg text-primary">{approval.name}</CardTitle>
                 </CardHeader>
@@ -167,152 +163,16 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* NEW: Manipal Campuses Section */}
+      {/* Courses Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Shape Your Future With Our Top-Ranked Universities
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Manipal University Jaipur Card */}
-            <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-lg font-semibold text-center text-primary">
-                  Manipal University Jaipur
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 p-4">
-                <img
-                  src={mujCampus}
-                  alt="Manipal University Jaipur Campus"
-                  className="rounded-md w-full h-48 object-cover"
-                />
-                <div className="text-center">
-                  <Link to="/university/manipal">
-                    <Button variant="outline" size="sm" className="w-full">
-                      View all Courses
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Manipal Academy of Higher Education Card */}
-            <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-lg font-semibold text-center text-primary">
-                  Manipal Academy of Higher Education
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 p-4">
-                <img
-                  src={maheCampus}
-                  alt="Manipal Academy of Higher Education Campus"
-                  className="rounded-md w-full h-48 object-cover"
-                />
-                <div className="text-center">
-                  <Link to="/university/manipal">
-                    <Button variant="outline" size="sm" className="w-full">
-                      View all Courses
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Sikkim Manipal University Card */}
-            <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-lg font-semibold text-center text-primary">
-                  Sikkim Manipal University
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 p-4">
-                <img
-                  src={smuCampus}
-                  alt="Sikkim Manipal University Campus"
-                  className="rounded-md w-full h-48 object-cover"
-                />
-                <div className="text-center">
-                  <Link to="/university/manipal">
-                    <Button variant="outline" size="sm" className="w-full">
-                      View all Courses
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-      
-      {/* Sample Degree Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Sample Degree</h2>
-              <p className="text-lg text-muted-foreground mb-6 max-w-prose">
-                The degrees offered by Manipal University Online are valid and recognized by various government bodies, making them suitable for all career opportunities.
-              </p>
-              <ul className="space-y-4 text-left mx-auto md:mx-0 max-w-sm">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">UGC-DEB & AICTE Approved</p>
-                    <p className="text-sm text-muted-foreground">The degrees are fully valid for government, private, and overseas jobs or higher studies.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">Digital Verification</p>
-                    <p className="text-sm text-muted-foreground">Supports online QR-code-based verification for authenticity.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold">Officially Stamped</p>
-                    <p className="text-sm text-muted-foreground">Authenticated with the official university seal.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
-              <div className="relative p-4 rounded-xl shadow-2xl bg-white transition-transform duration-300 hover:scale-105">
-                <img
-                  src={degreePage === 'front' ? degreeFront : degreeBack}
-                  alt="Manipal University Sample Degree"
-                  className="w-full h-auto object-contain rounded-lg"
-                />
-                <div className="flex justify-center gap-2 mt-4">
-                  <button
-                    onClick={() => setDegreePage('front')}
-                    className={`h-3 w-3 rounded-full transition-colors ${degreePage === 'front' ? 'bg-primary' : 'bg-gray-300'}`}
-                  ></button>
-                  <button
-                    onClick={() => setDegreePage('back')}
-                    className={`h-3 w-3 rounded-full transition-colors ${degreePage === 'back' ? 'bg-primary' : 'bg-gray-300'}`}
-                  ></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Courses Section - Now dynamically generated from JSON */}
-      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Courses</h2>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {popularCourses.map((course, index) => (
+            {courses.map((course, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
+                    <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
                   </div>
                   <CardTitle className="text-lg text-center">{course.name}</CardTitle>
                 </CardHeader>
@@ -327,9 +187,9 @@ const Manipal = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Award className="w-4 h-4 text-primary" />
-                    <span>{course.specializationsCount} Specializations</span>
+                    <span>{course.specializations} Specializations</span>
                   </div>
-                  <Link to={`/university/manipal/courses/${course.id}`}>
+                  <Link to={`/courses/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
                     </Button>
@@ -341,8 +201,67 @@ const Manipal = () => {
         </div>
       </section>
 
+      {/* NEW: Experience 100% Placement Support Section */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left side: Image */}
+            <div className="flex-1 max-w-lg mx-auto md:max-w-none">
+              <div className="relative p-4 rounded-xl shadow-2xl bg-white">
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-full inline-block mb-4">
+                  <span className="font-bold">LEADING RECRUITERS</span>
+                </div>
+                <div className="bg-gray-100 p-6 rounded-lg">
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="bg-white p-2 rounded text-center">SPINNY</div>
+                    <div className="bg-white p-2 rounded text-center">DELHIVERY</div>
+                    <div className="bg-white p-2 rounded text-center">InsuranceDeKho</div>
+                    <div className="bg-white p-2 rounded text-center">Mahindra Finance</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side: Content */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Experience <span className="bg-yellow-400 px-2 py-1 rounded">100%</span> Placement
+              </h2>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Support For Your Career Success
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Unlock your career potential with job-ready skills and expert placement support.
+              </p>
+              <Button className="bg-primary hover:bg-primary/90 mb-6">
+                Learn More →
+              </Button>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">10,000<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Learners offered placement assistance</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">20,000<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Opportunities created</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">500<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Hiring partners</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-2xl font-bold text-foreground">1,000<sup>+</sup></h4>
+                  <p className="text-sm text-muted-foreground">Industry-readiness programs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-16">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal University Online?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -361,7 +280,7 @@ const Manipal = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Educational Journey?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of students who have chosen Manipal University Online for quality education. 
+            Join thousands of students who have chosen Manipal University Online for premium quality education. 
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

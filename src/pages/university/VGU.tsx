@@ -19,18 +19,26 @@ import naacIcon from "@/assets/icons/naac-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 import bciIcon from "@/assets/icons/bci-icon.png";
 
+// Import course images
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
+import bcomImg from "@/assets/course/bcom.jpg";
+
 const VGU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
   // Define the courses with IDs that match the JSON data
   const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹1,50,000", duration: "2 Years", specializations: 8 },
-    { name: "Online MCA", id: "online-mca", fees: "₹1,32,000", duration: "2 Years", specializations: 0 },
-    { name: "Online MA", id: "online-ma", fees: "₹72,000", duration: "2 Years", specializations: 2 },
-    { name: "Online MSc", id: "online-msc", fees: "₹72,000", duration: "2 Years", specializations: 1 },
-    { name: "Online BBA", id: "online-bba", fees: "₹1,50,000", duration: "3 Years", specializations: 4 },
-    { name: "Online BCA", id: "online-bca", fees: "₹1,32,000", duration: "3 Years", specializations: 5 },
-    { name: "Online BA", id: "online-ba", fees: "₹72,000", duration: "3 Years", specializations: 8 }
+    { name: "Online MBA", id: "online-mba", fees: "₹1,50,000", duration: "2 Years", specializations: 8, image: mbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹1,32,000", duration: "2 Years", specializations: 0, image: mcaImg },
+    { name: "Online MA", id: "online-ma", fees: "₹72,000", duration: "2 Years", specializations: 2, image: baImg },
+    { name: "Online MSc", id: "online-msc", fees: "₹72,000", duration: "2 Years", specializations: 1, image: baImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹1,50,000", duration: "3 Years", specializations: 4, image: bbaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹1,32,000", duration: "3 Years", specializations: 5, image: bcaImg },
+    { name: "Online BA", id: "online-ba", fees: "₹72,000", duration: "3 Years", specializations: 8, image: baImg }
   ];
 
   const features = [
@@ -216,7 +224,7 @@ const VGU = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
+                    <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
                   </div>
                   <CardTitle className="text-lg text-center">{course.name}</CardTitle>
                 </CardHeader>
@@ -233,7 +241,6 @@ const VGU = () => {
                     <Award className="w-4 h-4 text-primary" />
                     <span>{course.specializations} Specializations</span>
                   </div>
-                  {/* The change is here: Use Link to navigate to the new course page */}
                   <Link to={`/university/vgu/${course.id}`}>
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90" variant="outline">
                       View Details
@@ -242,6 +249,100 @@ const VGU = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: What Makes Online VGU the Right Choice Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">What Makes Online VGU the <span className="text-red-600">Right Choice?</span></h2>
+            <p className="text-lg text-muted-foreground italic">We provide learning that adapts to <span className="font-semibold">YOU</span></p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">UGC-ENTITLED</h3>
+              <p className="text-sm text-muted-foreground">Your Degrees Is Recognized Globally And By All Major Recruiters.</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-orange-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">FLEXIBLE LEARNING</h3>
+              <p className="text-sm text-muted-foreground">Study at your own pace, anytime, anywhere.</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-green-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">INDUSTRY-ORIENTED PROGRAMS</h3>
+              <p className="text-sm text-muted-foreground">Vast Elective Pool in each program such as Digital Marketing, FinTech, AI, Data</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-purple-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">EXPERT MENTORSHIP</h3>
+              <p className="text-sm text-muted-foreground">Learn from PhDs, domain experts, and industry veterans</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-teal-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-teal-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">AFFORDABLE FEE STRUCTURE</h3>
+              <p className="text-sm text-muted-foreground">Flexible, No Cost EMI options and high ROI</p>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-red-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Check className="w-8 h-8 text-red-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">EXAMINATION ON DEMAND</h3>
+              <p className="text-sm text-muted-foreground">Take assessments and exams at your ease</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-yellow-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-yellow-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">DUAL DEGREE OPPORTUNITY</h3>
+              <p className="text-sm text-muted-foreground">Pursue two degrees simultaneously one on-campus and one online of same level</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-indigo-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">GLOBAL ACCESSIBILITY & ACCEPTANCE</h3>
+              <p className="text-sm text-muted-foreground">Programs Are Available To Study Globally.</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-pink-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-pink-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">CAREER ASSISTANCE</h3>
+              <p className="text-sm text-muted-foreground">Career Guidance with Experts, Free Resume Reviews, LinkedIn Profile Makeovers and more.</p>
+            </div>
+            
+            <div className="text-center p-6 bg-card rounded-lg border border-border/50">
+              <div className="bg-cyan-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-cyan-600" />
+              </div>
+              <h3 className="font-bold text-red-600 mb-2">INDUSTRY BASED MICRO CREDENTIALS</h3>
+              <p className="text-sm text-muted-foreground">In collaboration with renowned industry partners</p>
+            </div>
           </div>
         </div>
       </section>

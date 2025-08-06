@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
 import { useCounselingForm } from "@/hooks/use-counseling-form";
-import { Star, MapPin, Users, GraduationCap, Award, DollarSign, BookOpen, Clock, Check } from "lucide-react";
+import { Star, MapPin, Users, GraduationCap, Award, DollarSign, Clock, Check, Globe, BookOpen } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import UniversitySlideshow from "@/components/ui/university-slideshow";
@@ -18,16 +18,23 @@ import naacIcon from "@/assets/icons/naac-icon.png";
 import nirfIcon from "@/assets/icons/nirf-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 
+// Import course images
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
+
 const LPU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
   const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹1,80,000", duration: "2 Years", specializations: 10 },
-    { name: "Online BBA", id: "online-bba", fees: "₹1,20,000", duration: "3 Years", specializations: 8 },
-    { name: "Online MCA", id: "online-mca", fees: "₹1,50,000", duration: "2 Years", specializations: 5 },
-    { name: "Online BCA", id: "online-bca", fees: "₹90,000", duration: "3 Years", specializations: 6 },
-    { name: "Online MA", id: "online-ma", fees: "₹60,000", duration: "2 Years", specializations: 4 },
-    { name: "Online BA", id: "online-ba", fees: "₹45,000", duration: "3 Years", specializations: 6 }
+    { name: "Online MBA", id: "online-mba", fees: "₹1,80,000", duration: "2 Years", specializations: 10, image: mbaImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹1,20,000", duration: "3 Years", specializations: 8, image: bbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹1,50,000", duration: "2 Years", specializations: 5, image: mcaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹90,000", duration: "3 Years", specializations: 6, image: bcaImg },
+    { name: "Online MA", id: "online-ma", fees: "₹60,000", duration: "2 Years", specializations: 4, image: baImg },
+    { name: "Online BA", id: "online-ba", fees: "₹45,000", duration: "3 Years", specializations: 6, image: baImg }
   ];
 
   const features = [
@@ -165,7 +172,7 @@ const LPU = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
+                    <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
                   </div>
                   <CardTitle className="text-lg text-center">{course.name}</CardTitle>
                 </CardHeader>
@@ -190,6 +197,66 @@ const LPU = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Get More than Just a Degree Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Get More than Just a <span className="text-primary">Degree</span></h2>
+            <p className="text-lg text-muted-foreground">Comprehensive learning experience designed for your success</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-card p-6 rounded-lg border border-border/50 text-center">
+              <div className="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-bold mb-2">Global Recognition</h3>
+              <p className="text-sm text-muted-foreground">Degrees recognized worldwide for career advancement and higher studies opportunities.</p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-lg border border-border/50 text-center">
+              <div className="bg-green-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="font-bold mb-2">Industry Mentorship</h3>
+              <p className="text-sm text-muted-foreground">Learn from industry experts and professionals with real-world experience and insights.</p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-lg border border-border/50 text-center">
+              <div className="bg-orange-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="font-bold mb-2">Skill Certification</h3>
+              <p className="text-sm text-muted-foreground">Earn industry-relevant certifications alongside your degree for enhanced employability.</p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-lg border border-border/50 text-center">
+              <div className="bg-purple-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="font-bold mb-2">Flexible Learning</h3>
+              <p className="text-sm text-muted-foreground">Study at your own pace with flexible schedules that fit your lifestyle and commitments.</p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-lg border border-border/50 text-center">
+              <div className="bg-red-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-red-600" />
+              </div>
+              <h3 className="font-bold mb-2">Career Support</h3>
+              <p className="text-sm text-muted-foreground">Comprehensive placement assistance and career guidance throughout your academic journey.</p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-lg border border-border/50 text-center">
+              <div className="bg-teal-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-teal-600" />
+              </div>
+              <h3 className="font-bold mb-2">Alumni Network</h3>
+              <p className="text-sm text-muted-foreground">Join a strong network of successful alumni across various industries and sectors globally.</p>
+            </div>
           </div>
         </div>
       </section>

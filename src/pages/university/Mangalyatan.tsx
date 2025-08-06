@@ -17,16 +17,23 @@ import aicteIcon from "@/assets/icons/aicte-icon.png";
 import naacIcon from "@/assets/icons/naac-icon.png";
 import aiuIcon from "@/assets/icons/aiu-icon.png";
 
+// Import course images
+import mbaImg from "@/assets/course/mba.jpg";
+import bbaImg from "@/assets/course/bba.jpg";
+import mcaImg from "@/assets/course/mca.jpg";
+import bcaImg from "@/assets/course/bca.jpg";
+import baImg from "@/assets/course/ba.jpg";
+
 const Mangalyatan = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
   const courses = [
-    { name: "Online MBA", id: "online-mba", fees: "₹1,20,000", duration: "2 Years", specializations: 8 },
-    { name: "Online BBA", id: "online-bba", fees: "₹80,000", duration: "3 Years", specializations: 6 },
-    { name: "Online MCA", id: "online-mca", fees: "₹1,00,000", duration: "2 Years", specializations: 4 },
-    { name: "Online BCA", id: "online-bca", fees: "₹70,000", duration: "3 Years", specializations: 5 },
-    { name: "Online MA", id: "online-ma", fees: "₹40,000", duration: "2 Years", specializations: 4 },
-    { name: "Online BA", id: "online-ba", fees: "₹35,000", duration: "3 Years", specializations: 5 }
+    { name: "Online MBA", id: "online-mba", fees: "₹1,20,000", duration: "2 Years", specializations: 8, image: mbaImg },
+    { name: "Online BBA", id: "online-bba", fees: "₹80,000", duration: "3 Years", specializations: 6, image: bbaImg },
+    { name: "Online MCA", id: "online-mca", fees: "₹1,00,000", duration: "2 Years", specializations: 4, image: mcaImg },
+    { name: "Online BCA", id: "online-bca", fees: "₹70,000", duration: "3 Years", specializations: 5, image: bcaImg },
+    { name: "Online MA", id: "online-ma", fees: "₹40,000", duration: "2 Years", specializations: 4, image: baImg },
+    { name: "Online BA", id: "online-ba", fees: "₹35,000", duration: "3 Years", specializations: 5, image: baImg }
   ];
 
   const features = [
@@ -163,7 +170,7 @@ const Mangalyatan = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-center mb-4">
-                    <BookOpen className="w-12 h-12 text-primary" />
+                    <img src={course.image} alt={course.name} className="w-16 h-16 object-cover rounded-lg" />
                   </div>
                   <CardTitle className="text-lg text-center">{course.name}</CardTitle>
                 </CardHeader>
