@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, Phone } from "lucide-react";
@@ -9,6 +10,17 @@ import { Link } from "react-router-dom";
 const NavigationHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCounselingFormOpen, setIsCounselingFormOpen] = useState(false);
+
+  const scrollToPrograms = () => {
+    if (window.location.pathname === '/') {
+      const element = document.getElementById('programs');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = '/#programs';
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
@@ -31,13 +43,7 @@ const NavigationHeader = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <button 
               className="btn-3d px-6 py-2 rounded-lg text-sm font-semibold transition-all"
-              onClick={() => {
-                if (window.location.pathname === '/') {
-                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#programs';
-                }
-              }}
+              onClick={scrollToPrograms}
             >
               Explore Programs
             </button>
@@ -74,13 +80,7 @@ const NavigationHeader = () => {
           <div className="md:hidden flex items-center gap-2">
             <button 
               className="btn-3d px-3 py-1.5 rounded-lg text-xs font-semibold transition-all"
-              onClick={() => {
-                if (window.location.pathname === '/') {
-                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#programs';
-                }
-              }}
+              onClick={scrollToPrograms}
             >
               Explore Programs
             </button>
@@ -113,13 +113,7 @@ const NavigationHeader = () => {
         )}>
           <nav className="flex flex-col space-y-4 pt-4">
             <button 
-              onClick={() => {
-                if (window.location.pathname === '/') {
-                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#programs';
-                }
-              }}
+              onClick={scrollToPrograms}
               className="text-foreground hover:text-primary transition-colors text-left"
             >
               Explore Programs

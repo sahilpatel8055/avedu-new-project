@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NavigationHeader from "@/components/ui/navigation-header";
@@ -93,9 +94,9 @@ const Index = () => {
       <UniversityLogosMarquee />
 
       {/* 3rd Section - Find Your Perfect Online Course with Course Categories */}
-      <section className="py-20 bg-muted/30">
+      <section id="programs" className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Find Your Perfect <span className="text-primary">Online Course</span>
             </h2>
