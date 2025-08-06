@@ -58,17 +58,15 @@ const Uttaranchal = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
       
-      {/* Slideshow Banner */}
-      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 pt-6">
+      {/* Hero Section with Integrated Slideshow */}
+      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
         <div className="container mx-auto px-4">
-          <UniversitySlideshow />
-        </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16" id="top">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* Slideshow at top of section */}
+          <div className="mb-8">
+            <UniversitySlideshow />
+          </div>
+          
+          <div className="flex flex-col lg:flex-row items-start gap-8">
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                 <img src={uttaranchalLogo} alt="Uttaranchal Logo" className="w-20 h-20 rounded-lg object-contain" />
