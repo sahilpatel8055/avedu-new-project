@@ -29,6 +29,10 @@ import ManipalCoursePage from "./pages/course/ManipalCoursePage";
 import UttaranchalCoursePage from "./pages/course/UttaranchalCoursePage";
 // NEW VGU dynamic course page
 import VguCoursePage from "./pages/course/VguCoursePage"; // Added import
+// Legal pages
+import Disclaimer from "./pages/legal/Disclaimer";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsConditions from "./pages/legal/TermsConditions";
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
@@ -75,6 +79,10 @@ const App = () => (
           <Route path="/university/uttaranchal/:courseId" element={<UttaranchalCoursePage />} />
           {/* Add the new dynamic route for VGU courses */}
           <Route path="/university/vgu/:courseId" element={<VguCoursePage />} />
+          {/* Legal pages */}
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

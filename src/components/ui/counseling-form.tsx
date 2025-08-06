@@ -42,7 +42,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
     state: "",
     city: "",
     course: "",
-    consent: false,
+    consent: true,
   });
   
   const { toast } = useToast();

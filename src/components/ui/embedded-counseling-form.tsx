@@ -37,7 +37,7 @@ const EmbeddedCounselingForm: React.FC = () => {
     state: "",
     city: "",
     course: "",
-    consent: false,
+    consent: true,
   });
   
   const { toast } = useToast();

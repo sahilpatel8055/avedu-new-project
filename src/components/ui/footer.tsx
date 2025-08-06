@@ -112,6 +112,27 @@ const Footer = () => {
 
         <Separator className="mb-8" />
 
+        {/* Legal Section */}
+        <div className="mb-8">
+          <h3 className="font-semibold text-lg mb-4">Legal Information</h3>
+          <div className="bg-card-hover p-4 rounded-lg">
+            <p className="text-foreground text-sm leading-relaxed mb-3">
+              Avadu.in is an independent online counseling and information platform. We are not officially 
+              affiliated with, endorsed by, or partnered with any of the universities, educational institutions, 
+              or their brands mentioned on this website. Our sole purpose is to serve as an informational guide 
+              to help users explore online courses and universities in one centralized location.
+            </p>
+            <a 
+              href="/disclaimer" 
+              className="text-primary hover:text-primary-dark font-medium text-sm transition-colors"
+            >
+              See more →
+            </a>
+          </div>
+        </div>
+
+        <Separator className="mb-8" />
+
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
             © 2024 AVEDU Education Services. All rights reserved.
@@ -137,11 +158,14 @@ const Footer = () => {
             <Separator orientation="vertical" className="h-6" />
             
             <div className="flex gap-4 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
+              <a href="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors">
+                Terms & Conditions
+              </a>
+              <a href="/disclaimer" className="text-muted-foreground hover:text-primary transition-colors">
+                Disclaimer
               </a>
             </div>
           </div>
