@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import NavigationHeader from "@/components/ui/navigation-header";
@@ -8,7 +7,6 @@ import CounsellingSection from "@/components/ui/counselling-section";
 import CourseCategories from "@/components/ui/course-categories";
 import UniversityGrid from "@/components/ui/university-grid";
 import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
-import HorizontalUniversityScroll from "@/components/ui/horizontal-university-scroll";
 import { Link } from "react-router-dom";
 import { BookOpen, Users, Award, GraduationCap, Star } from "lucide-react";
 
@@ -113,17 +111,7 @@ const Index = () => {
       {/* 4th Section - Universities Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Explore Over <span className="text-primary">100+ Universities</span> in India
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose from top-ranked universities offering quality online education programs
-            </p>
-          </div>
-          
           <UniversityGrid />
-          <HorizontalUniversityScroll universities={horizontalScrollUniversities} />
         </div>
       </section>
 
