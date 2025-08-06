@@ -10,7 +10,7 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import UniversitySlideshow from "@/components/ui/university-slideshow";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
-import MovingBorderButton from "@/components/ui/moving-border";
+import { MovingBorderButton } from "@/components/ui/moving-border";
 
 // Import the specific icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
