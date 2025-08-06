@@ -10,6 +10,7 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import UniversitySlideshow from "@/components/ui/university-slideshow";
 import lpuLogo from "@/assets/lpu-logo.jpg";
+import { MovingBorderButton } from "@/components/ui/moving-border";
 
 // Import the specific icons for approvals
 import ugcIcon from "@/assets/icons/ugc-icon.png";
@@ -60,7 +61,7 @@ const LPU = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
       
-      {/* Hero Section with Integrated Slideshow */}
+      {/* Hero Section with Moving Border Buttons */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
         <div className="container mx-auto px-4">
           {/* Slideshow at top of section */}
@@ -105,12 +106,20 @@ const LPU = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
+                <MovingBorderButton 
+                  borderRadius="0.5rem"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-lg"
+                  onClick={openForm}
+                >
                   Apply Now
-                </Button>
-                <Button variant="outline" size="lg" onClick={openForm}>
+                </MovingBorderButton>
+                <MovingBorderButton 
+                  borderRadius="0.5rem"
+                  className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-8 py-3 text-lg"
+                  onClick={openForm}
+                >
                   Download Brochure
-                </Button>
+                </MovingBorderButton>
               </div>
             </div>
             
@@ -202,7 +211,7 @@ const LPU = () => {
       </section>
 
       {/* NEW: Get More than Just a Degree Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-yellow-400">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get More than Just a <span className="text-primary">Degree</span></h2>
@@ -262,9 +271,9 @@ const LPU = () => {
       </section>
 
       {/* Features Section - Changed background to sunny yellow */}
-      <section className="py-16 bg-yellow-400">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Lovely Professional University?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Lovely Professional University?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start gap-3 p-4 bg-white/90 rounded-lg border border-yellow-300">

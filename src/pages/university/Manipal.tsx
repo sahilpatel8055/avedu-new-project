@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { MovingBorderButton } from "@/components/ui/moving-border";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
@@ -105,12 +106,20 @@ const Manipal = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
+                <MovingBorderButton 
+                  borderRadius="0.5rem"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-lg"
+                  onClick={openForm}
+                >
                   Apply Now
-                </Button>
-                <Button variant="outline" size="lg" onClick={openForm}>
+                </MovingBorderButton>
+                <MovingBorderButton 
+                  borderRadius="0.5rem"
+                  className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-8 py-3 text-lg"
+                  onClick={openForm}
+                >
                   Download Brochure
-                </Button>
+                </MovingBorderButton>
               </div>
             </div>
             
@@ -201,8 +210,8 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* NEW: Experience 100% Placement Support Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
+      {/* Experience 100% Placement Support Section */}
+      <section className="py-16 bg-yellow-400">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             {/* Left side: Image */}
@@ -260,15 +269,15 @@ const Manipal = () => {
         </div>
       </section>
 
-      {/* Features Section - Changed background to sunny yellow */}
-      <section className="py-16 bg-yellow-400">
+      {/* Features Section */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Manipal University Online?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Manipal University Online?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3 p-4 bg-white/90 rounded-lg border border-yellow-300">
-                <div className="flex-shrink-0 w-2 h-2 bg-gray-900 rounded-full mt-2"></div>
-                <p className="text-sm text-gray-800">{feature}</p>
+              <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                <p className="text-sm text-foreground">{feature}</p>
               </div>
             ))}
           </div>

@@ -40,6 +40,8 @@ import bcaImg from "@/assets/course/bca.jpg";
 import baImg from "@/assets/course/ba.jpg";
 import bcomImg from "@/assets/course/bcom.jpg";
 
+import { MovingBorderButton } from "@/components/ui/moving-border";
+
 const IGNOU = () => {
   const { openForm, CounselingFormComponent } = useCounselingForm();
   
@@ -70,7 +72,7 @@ const IGNOU = () => {
     <div className="min-h-screen bg-background">
       <NavigationHeader />
       
-      {/* Hero Section with Integrated Slideshow */}
+      {/* Hero Section with Moving Border Buttons */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-primary/5 py-6" id="top">
         <div className="container mx-auto px-4">
           {/* Slideshow at top of section */}
@@ -115,12 +117,20 @@ const IGNOU = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
+                <MovingBorderButton 
+                  borderRadius="0.5rem"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-lg"
+                  onClick={openForm}
+                >
                   Apply Now
-                </Button>
-                <Button variant="outline" size="lg" onClick={openForm}>
+                </MovingBorderButton>
+                <MovingBorderButton 
+                  borderRadius="0.5rem"
+                  className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-8 py-3 text-lg"
+                  onClick={openForm}
+                >
                   Download Brochure
-                </Button>
+                </MovingBorderButton>
               </div>
             </div>
 

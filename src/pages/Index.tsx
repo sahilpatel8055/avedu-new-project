@@ -85,7 +85,7 @@ const Index = () => {
     accreditation: "UGC Approved"
   }));
 
-  // Words for FlipWords animation
+  // Words for FlipWords animation with blue color
   const flipWords = ["Online Course", "Learning Path", "Career Path", "Flexible Course"];
 
   return (
@@ -105,7 +105,7 @@ const Index = () => {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight animate-slide-in-left">
                   <strong>Find Your Perfect</strong>
                   <span className="bg-gradient-hero bg-clip-text text-transparent block">
-                    <FlipWords words={flipWords} className="font-bold" />
+                    <FlipWords words={flipWords} className="font-bold text-blue-600" />
                   </span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg animate-fade-in-up" style={{animationDelay: '0.3s'}}>
@@ -194,7 +194,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Find Your Perfect <span className="text-primary"><FlipWords words={flipWords} className="font-bold" /></span>
+              Find Your Perfect <span className="text-blue-600"><FlipWords words={flipWords} className="font-bold text-blue-600" /></span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Choose from our comprehensive range of online degree programs designed to advance your career
