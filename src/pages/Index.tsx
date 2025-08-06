@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import HeroSection from "@/components/ui/hero-section";
@@ -8,9 +8,10 @@ import CounsellingSection from "@/components/ui/counselling-section";
 import CourseCategories from "@/components/ui/course-categories";
 import UniversityGrid from "@/components/ui/university-grid";
 import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
+import Slideshow from "@/components/ui/slideshow";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Link } from "react-router-dom";
-import { BookOpen, Users, Award, GraduationCap, Star } from "lucide-react";
+import { BookOpen, Users, Award, GraduationCap, Star, ArrowRight } from "lucide-react";
 
 // Course Images
 import mbaImage from "@/assets/course/mba.jpg";
@@ -92,12 +93,12 @@ const Index = () => {
       <NavigationHeader />
       
       {/* 1st Section - Hero with FlipWords */}
-      <section className="relative bg-gradient-subtle py-6 sm:py-8 lg:py-10 overflow-hidden">
+      <section className="relative bg-gradient-subtle py-4 sm:py-6 lg:py-8 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
             {/* Content */}
-            <div className="space-y-6 sm:space-y-8">
-              <div className="space-y-4">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="space-y-3">
                 <Badge className="bg-primary-light text-primary font-semibold animate-fade-in-up">
                   <strong>#1 Educational Counselling Platform</strong>
                 </Badge>
@@ -165,7 +166,7 @@ const Index = () => {
             </div>
 
             {/* Hero Slideshow */}
-            <div className="relative mt-8 lg:mt-0">
+            <div className="relative mt-6 lg:mt-0">
               <Slideshow />
               
               {/* Floating Stats Card */}
@@ -189,10 +190,10 @@ const Index = () => {
       <UniversityLogosMarquee />
 
       {/* 3rd Section - Find Your Perfect Online Course with Course Categories and FlipWords */}
-      <section id="programs" className="py-8 bg-muted/30">
+      <section id="programs" className="py-6 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Find Your Perfect <span className="text-primary"><FlipWords words={flipWords} className="font-bold" /></span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
