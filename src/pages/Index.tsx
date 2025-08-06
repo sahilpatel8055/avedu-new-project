@@ -109,11 +109,7 @@ const Index = () => {
       </section>
 
       {/* 4th Section - Universities Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <UniversityGrid />
-        </div>
-      </section>
+      <UniversityGrid />
 
       {/* 5th Section - Counselling */}
       <CounsellingSection />
