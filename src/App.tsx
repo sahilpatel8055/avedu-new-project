@@ -79,6 +79,11 @@ const App = () => (
           <Route path="/university/uttaranchal/:courseId" element={<UttaranchalCoursePage />} />
           {/* Add the new dynamic route for VGU courses */}
           <Route path="/university/vgu/:courseId" element={<VguCoursePage />} />
+          {/* Add routes for Sikkim, Amity, LPU, and Mangalyatan course pages */}
+          <Route path="/university/sikkim/:courseId" element={<CoursePage />} />
+          <Route path="/university/amity/:courseId" element={<CoursePage />} />
+          <Route path="/university/lpu/:courseId" element={<CoursePage />} />
+          <Route path="/university/mangalyatan/:courseId" element={<CoursePage />} />
           {/* Legal pages */}
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
