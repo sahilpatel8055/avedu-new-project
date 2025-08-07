@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import manipalCourseData from "@/data/manipalCourseData.json";
-import manipalLogo from "@/assets/manipal-logo.png";
+import smuLogo from "@/assets/smu-logo.jpg";
 import {
   BookOpen,
   DollarSign,
@@ -57,8 +57,9 @@ const specializationIcons = {
   "Accounts & Finance": Banknote
 };
 
-const ManipalCoursePage = () => {
+const SikkimCoursePage = () => {
   const { courseId } = useParams<{ courseId: string }>();
+  // Using manipal course data for now - ideally would have separate sikkim data
   const course = manipalCourseData.courses.find((c) => c.id === courseId);
 
   if (!course) {
@@ -86,8 +87,8 @@ const ManipalCoursePage = () => {
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
                 <img
-                  src={manipalLogo}
-                  alt={`${course.university} Logo`}
+                  src={smuLogo}
+                  alt="Sikkim Manipal University Logo"
                   className="w-16 h-16 rounded-lg object-contain"
                 />
                 <div>
@@ -95,7 +96,7 @@ const ManipalCoursePage = () => {
                     {course.name}
                   </h1>
                   <p className="text-xl text-muted-foreground mt-2">
-                    {course.university}
+                    Sikkim Manipal University Online
                   </p>
                 </div>
               </div>
@@ -253,17 +254,17 @@ const ManipalCoursePage = () => {
               </div>
               
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-4xl font-bold text-green-600 mb-2">500+</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">400+</div>
                 <div className="text-sm text-gray-700">Hiring Partners</div>
               </div>
               
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-4xl font-bold text-green-600 mb-2">₹12L</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">₹10L</div>
                 <div className="text-sm text-gray-700">Highest Package</div>
               </div>
               
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-4xl font-bold text-green-600 mb-2">₹5.5L</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">₹5L</div>
                 <div className="text-sm text-gray-700">Average Package</div>
               </div>
             </div>
@@ -280,12 +281,12 @@ const ManipalCoursePage = () => {
                 <h3 className="text-2xl font-semibold mb-6 text-primary">Career Opportunities</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    { role: "Business Analyst", salary: "₹6 - 12 LPA" },
-                    { role: "Product Manager", salary: "₹8 - 18 LPA" },
-                    { role: "Marketing Manager", salary: "₹7 - 15 LPA" },
-                    { role: "Operations Manager", salary: "₹6 - 14 LPA" },
-                    { role: "Financial Analyst", salary: "₹5 - 10 LPA" },
-                    { role: "HR Manager", salary: "₹6 - 12 LPA" }
+                    { role: "Business Analyst", salary: "₹5 - 11 LPA" },
+                    { role: "Product Manager", salary: "₹7 - 16 LPA" },
+                    { role: "Marketing Manager", salary: "₹6 - 14 LPA" },
+                    { role: "Operations Manager", salary: "₹5 - 13 LPA" },
+                    { role: "Financial Analyst", salary: "₹4 - 9 LPA" },
+                    { role: "HR Manager", salary: "₹5 - 11 LPA" }
                   ].map((career, index) => (
                     <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                       <span className="font-medium">{career.role}</span>
@@ -330,4 +331,4 @@ const ManipalCoursePage = () => {
   );
 };
 
-export default ManipalCoursePage;
+export default SikkimCoursePage;

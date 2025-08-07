@@ -7,6 +7,8 @@ import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
 import vguLogo from "@/assets/vgu-logo.png";
 import vguCourseData from "@/data/vguCourseData.json";
+import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
+import hiringPartnersImg from "@/assets/hiring-partners.png";
 
 const VguCoursePage = () => {
   const { courseId } = useParams();
@@ -63,41 +65,7 @@ const VguCoursePage = () => {
             </div>
             
             <div className="flex-1 lg:max-w-md">
-              <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-center text-primary">Key Highlights</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-primary" />
-                      <span className="text-muted-foreground">Total Fees:</span>
-                    </div>
-                    <span className="font-bold text-foreground">{course.fees}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-primary" />
-                      <span className="text-muted-foreground">Duration:</span>
-                    </div>
-                    <span className="font-bold text-foreground">{course.duration}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <BookOpen className="w-5 h-5 text-primary" />
-                      <span className="text-muted-foreground">Format:</span>
-                    </div>
-                    <span className="font-bold text-foreground">Online</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      <Award className="w-5 h-5 text-primary" />
-                      <span className="text-muted-foreground">Specializations:</span>
-                    </div>
-                    <span className="font-bold text-foreground">{course.specializationsCount}</span>
-                  </div>
-                </CardContent>
-              </Card>
+              <EmbeddedCounselingForm variant="compact" />
             </div>
           </div>
         </div>
@@ -189,6 +157,98 @@ const VguCoursePage = () => {
                 </Card>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Online VGU Right Choice Section */}
+      <section className="py-16 bg-yellow-400">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              What Makes Online VGU <br />
+              <span className="text-green-600">Right Choice?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Discover why VGU stands out as the preferred choice for online education<br />
+              with cutting-edge curriculum and industry partnerships.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl font-bold text-green-600 mb-2">UGC</div>
+              <div className="text-sm text-gray-700">Approved University</div>
+            </div>
+            
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl font-bold text-green-600 mb-2">100+</div>
+              <div className="text-sm text-gray-700">Industry Partners</div>
+            </div>
+            
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl font-bold text-green-600 mb-2">₹6L</div>
+              <div className="text-sm text-gray-700">Average Package</div>
+            </div>
+            
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-4xl font-bold text-green-600 mb-2">24/7</div>
+              <div className="text-sm text-gray-700">Learning Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Career Scope & Top Recruiters Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Career Scope & Top Recruiters</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-primary">Career Opportunities</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { role: "Business Manager", salary: "₹5 - 10 LPA" },
+                  { role: "Marketing Executive", salary: "₹4 - 8 LPA" },
+                  { role: "Operations Executive", salary: "₹4 - 7 LPA" },
+                  { role: "HR Specialist", salary: "₹5 - 9 LPA" },
+                  { role: "Financial Consultant", salary: "₹4 - 8 LPA" },
+                  { role: "Data Analyst", salary: "₹5 - 10 LPA" }
+                ].map((career, index) => (
+                  <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span className="font-medium">{career.role}</span>
+                    <span className="text-primary font-semibold">{career.salary}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-6 text-primary">Top Recruiters</h3>
+              <img 
+                src={hiringPartnersImg} 
+                alt="Top Hiring Partners" 
+                className="w-full max-w-md mx-auto rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Students Are Working At Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Our Students Are Working At</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Many companies actively recruit graduates from diverse industries including consulting, finance, FMCG, technology, and logistics.
+          </p>
+          <div className="flex justify-center">
+            <img 
+              src={hiringPartnersImg} 
+              alt="Companies where our students work" 
+              className="max-w-full h-auto rounded-lg shadow-md"
+            />
           </div>
         </div>
       </section>

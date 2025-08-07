@@ -28,7 +28,9 @@ import ManipalCoursePage from "./pages/course/ManipalCoursePage";
 // NEW Uttaranchal dynamic course page
 import UttaranchalCoursePage from "./pages/course/UttaranchalCoursePage";
 // NEW VGU dynamic course page
-import VguCoursePage from "./pages/course/VguCoursePage"; // Added import
+import VguCoursePage from "./pages/course/VguCoursePage";
+// NEW Sikkim dynamic course page
+import SikkimCoursePage from "./pages/course/SikkimCoursePage";
 // Legal pages
 import Disclaimer from "./pages/legal/Disclaimer";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
@@ -80,7 +82,7 @@ const App = () => (
           {/* Add the new dynamic route for VGU courses */}
           <Route path="/university/vgu/:courseId" element={<VguCoursePage />} />
           {/* Add routes for Sikkim, Amity, LPU, and Mangalyatan course pages */}
-          <Route path="/university/sikkim/:courseId" element={<CoursePage />} />
+          <Route path="/university/sikkim/:courseId" element={<SikkimCoursePage />} />
           <Route path="/university/amity/:courseId" element={<CoursePage />} />
           <Route path="/university/lpu/:courseId" element={<CoursePage />} />
           <Route path="/university/mangalyatan/:courseId" element={<CoursePage />} />
