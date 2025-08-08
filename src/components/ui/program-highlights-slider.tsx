@@ -1,45 +1,55 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BookOpen, GraduationCap, DollarSign, Sprout, Building, Briefcase, Users, Award, BarChart2 } from "lucide-react";
+// Remove icon imports from lucide-react
 import { Card } from "@/components/ui/card";
+
+// Import your custom icon images
+import degreeIcon from '@/assets/icon/1.jpg';
+import courseraIcon from '@/assets/icon/c.jpg';
+import scholarshipIcon from '@/assets/icon/s.jpg';
+import financeIcon from '@/assets/icon/s1.jpg';
+import alumniIcon from '@/assets/icon/3.jpg';
+import webinarIcon from '@/assets/icon/2.jpg';
+import placementIcon from '@/assets/icon/s.jpg'; // Using the same path as scholarship
+import campusIcon from '@/assets/icon/3.jpg'; // Using the same path as alumni
 
 const cards = [
   {
-    icon: <Award className="w-8 h-8 text-primary" />,
+    icon: <img src={degreeIcon} alt="Degree from top university" className="w-8 h-8" />,
     heading: "Degree from top university",
     description: "Graduate with UGC-entitled &\nAICTE approved online degrees which\nare at part with on-campus degree\nprograms.",
   },
   {
-    icon: <BookOpen className="w-8 h-8 text-primary" />,
+    icon: <img src={courseraIcon} alt="Exclusive Coursera access" className="w-8 h-8" />,
     heading: "Exclusive Coursera access",
     description: "Free access to 10K+ courses &\nprofessional certifications from top\nglobal universities.",
   },
   {
-    icon: <DollarSign className="w-8 h-8 text-primary" />,
+    icon: <img src={scholarshipIcon} alt="Scholarships up to 30%" className="w-8 h-8" />,
     heading: "Scholarships up to 30%",
     description: "Avail scholarship benefits under\nmerit,defense, Divyaang, alumni,\nand other categories.",
   },
   {
-    icon: <Sprout className="w-8 h-8 text-primary" />,
+    icon: <img src={financeIcon} alt="Easy financing options" className="w-8 h-8" />,
     heading: "Easy financing options",
     description: "Improved affordability with\nflexible financing and\nno-cost EMI options.",
   },
   {
-    icon: <Users className="w-8 h-8 text-primary" />,
+    icon: <img src={alumniIcon} alt="Manipal alumni status" className="w-8 h-8" />,
     heading: "Manipal alumni status",
     description: "Become a part of a 2,00,000+ global\nManipal alumni network.",
   },
   {
-    icon: <BarChart2 className="w-8 h-8 text-primary" />,
+    icon: <img src={webinarIcon} alt="Weekly webinars with industry leaders" className="w-8 h-8" />,
     heading: "Weekly webinars with\nindustry leaders",
     description: "Stay updated on key industry\ntrends through our weekly webinars\nby industry experts.",
   },
   {
-    icon: <Briefcase className="w-8 h-8 text-primary" />,
+    icon: <img src={placementIcon} alt="100% placement assistance" className="w-8 h-8" />,
     heading: "100% placement assistance",
     description: "Boost your employability quotient\nby acquiring job-ready skills & preparing\nfor interviews to perform\nwell in placement drives.",
   },
   {
-    icon: <Building className="w-8 h-8 text-primary" />,
+    icon: <img src={campusIcon} alt="Campus immersion" className="w-8 h-8" />,
     heading: "Campus immersion",
     description: "Participate in exclusive in-person\nmeetups at campus with your\nbatchmates and faculty.",
   },
@@ -117,7 +127,6 @@ const ProgramHighlightsSlider = () => {
               MsOverflowStyle: 'none',
               scrollbarWidth: 'none',
               overscrollBehaviorX: 'contain',
-              // The following properties enable click and drag for scrolling on desktop browsers.
               userSelect: 'none',
               touchAction: 'pan-x'
             }}
