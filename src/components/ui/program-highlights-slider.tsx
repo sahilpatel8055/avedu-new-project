@@ -58,12 +58,12 @@ const ProgramHighlightsSlider = () => {
       scrollInterval = setInterval(() => {
         if (scrollContainer) {
           const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
-          const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1; // Subtract 1 for floating point precision
+          const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1;
           
           if (isAtEnd) {
             scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
           } else {
-            scrollContainer.scrollBy({ left: cardWidth + 15, behavior: 'smooth' });
+            scrollContainer.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
           }
         }
       }, 1000);
@@ -80,7 +80,7 @@ const ProgramHighlightsSlider = () => {
 
         const scrollLeft = scrollContainer.scrollLeft;
         const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
-        const newIndex = Math.round(scrollLeft / (cardWidth + 15));
+        const newIndex = Math.round(scrollLeft / (cardWidth + 24));
         setActiveIndex(newIndex);
       }
     };
@@ -101,8 +101,8 @@ const ProgramHighlightsSlider = () => {
 
   return (
     <section className="bg-[#fff7f7] py-12 md:py-16">
-      <div className="container mx-auto px-8">
-        <div className="text-center mb-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
             Why Students Choose <span className="text-orange-500">Our Program</span>
           </h2>
@@ -130,9 +130,9 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[95%] sm:min-w-[30%] md:min-w-[28%] lg:min-w-[19%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[100%] sm:min-w-[70%] md:min-w-[45%] lg:min-w-[28%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '16rem',
+                  height: '18rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
