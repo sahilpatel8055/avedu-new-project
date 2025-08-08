@@ -9,6 +9,7 @@ import CourseCategories from "@/components/ui/course-categories";
 import UniversityGrid from "@/components/ui/university-grid";
 import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
 import Slideshow from "@/components/ui/slideshow";
+import CareerAssistance from "@/components/ui/career-assistance";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Link } from "react-router-dom";
 import { BookOpen, Users, Award, GraduationCap, Star, ArrowRight } from "lucide-react";
@@ -47,7 +48,7 @@ const Index = () => {
     },
     {
       id: "amity",
-      name: "Amity University Online", 
+      name: "Amity University Online",
       logo: amityLogo,
       description: "Leading Private University",
       route: "/university/amity"
@@ -55,7 +56,7 @@ const Index = () => {
     {
       id: "lpu",
       name: "Lovely Professional University",
-      logo: lpuLogo, 
+      logo: lpuLogo,
       description: "Top Ranked University",
       route: "/university/lpu"
     },
@@ -207,8 +208,11 @@ const Index = () => {
 
       {/* 4th Section - Universities Grid */}
       <UniversityGrid />
+      
+      {/* 5th Section - Career Assistance */}
+      <CareerAssistance />
 
-      {/* 5th Section - Counselling */}
+      {/* 6th Section - Counselling */}
       <CounsellingSection />
       
       <Footer />
