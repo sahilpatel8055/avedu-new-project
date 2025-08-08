@@ -50,23 +50,59 @@ const ProgramHighlightsSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Auto-scroll and manual-scroll tracking logic
   useEffect(() => {
+    let scrollInterval: NodeJS.Timeout | null = null;
+    let scrollTimeout: NodeJS.Timeout | null = null;
+    const scrollContainer = scrollContainerRef.current;
+
+    const startAutoScroll = () => {
+      scrollInterval = setInterval(() => {
+        if (scrollContainer) {
+          const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
+          const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth;
+          
+          if (isAtEnd) {
+            scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            scrollContainer.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+          }
+        }
+      }, 3000); // Scrolls every 3 seconds
+    };
+
     const handleScroll = () => {
-      if (scrollContainerRef.current) {
-        const scrollLeft = scrollContainerRef.current.scrollLeft;
-        const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
-        const newIndex = Math.round(scrollLeft / (cardWidth + 16)); // 16px is the gap
+      if (scrollContainer) {
+        // Pause auto-scroll when user manually scrolls
+        if (scrollInterval) clearInterval(scrollInterval);
+        
+        // Reset the timeout to restart auto-scroll after a delay
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          startAutoScroll();
+        }, 5000); // Wait 5 seconds after manual scroll ends to resume auto-scroll
+
+        // Update active dot based on scroll position
+        const scrollLeft = scrollContainer.scrollLeft;
+        const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
+        const newIndex = Math.round(scrollLeft / (cardWidth + 24));
         setActiveIndex(newIndex);
       }
     };
-
-    const element = scrollContainerRef.current;
-    if (element) {
-      element.addEventListener('scroll', handleScroll);
-      return () => {
-        element.removeEventListener('scroll', handleScroll);
-      };
+    
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+      startAutoScroll();
     }
+
+    return () => {
+      // Cleanup on unmount
+      if (scrollInterval) clearInterval(scrollInterval);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, []);
 
   return (
@@ -83,11 +119,12 @@ const ProgramHighlightsSlider = () => {
           {/* Cards wrapper - Manual scrollable */}
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4 cursor-grab"
+            className="flex overflow-x-scroll snap-x snap-mandatory gap-6 pb-4 cursor-grab"
             style={{
               WebkitOverflowScrolling: 'touch',
               MsOverflowStyle: 'none',
               scrollbarWidth: 'none',
+              overscrollBehaviorX: 'contain', // Prevents page scroll when slider reaches end
             }}
           >
             {/* Custom CSS to hide scrollbar for Webkit browsers */}
@@ -102,16 +139,15 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[95%] sm:min-w-[48%] md:min-w-[30%] lg:min-w-[23%] flex-shrink-0 bg-background shadow-lg p-6 border border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[95%] sm:min-w-[45%] md:min-w-[28%] lg:min-w-[19%] flex-shrink-0 bg-background shadow-lg p-6 border border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '18rem',
+                  height: '16rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
                   {card.icon}
                 </div>
                 <h3 className="text-xl font-bold">{card.heading}</h3>
-                {/* Using <pre> with whitespace-pre-wrap to honor \n for line breaks */}
                 <pre className="text-muted-foreground whitespace-pre-wrap text-sm">{card.description}</pre>
               </Card>
             ))}
@@ -122,14 +158,14 @@ const ProgramHighlightsSlider = () => {
             {cards.map((_, index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
-                  index === activeIndex ? 'bg-orange-500 w-6' : 'bg-gray-300'
+                className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                  index === activeIndex ? 'bg-orange-500 w-6' : 'bg-gray-300 w-2'
                 }`}
                 onClick={() => {
                   if (scrollContainerRef.current) {
                     const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
                     scrollContainerRef.current.scrollTo({
-                      left: index * (cardWidth + 16),
+                      left: index * (cardWidth + 24),
                       behavior: 'smooth',
                     });
                   }
