@@ -16,7 +16,7 @@ const CareerAssistance = () => {
           {/* Left side with image */}
           <div className="relative overflow-hidden rounded-lg shadow-lg">
             <img 
-              src="/src/assets/placement.jpg" 
+              src="src/assets/placement.jpg" 
               alt="A working professional" 
               className="w-full h-full object-cover" 
             />
