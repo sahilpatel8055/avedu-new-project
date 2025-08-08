@@ -7,17 +7,17 @@ const cards = [
   {
     icon: <Award className="w-8 h-8 text-primary" />,
     heading: "Degree from top ranked university",
-    description: "Graduate with UGC-entitled & AICTE approved online\ndegrees which are at par with on-campus degree programs.",
+    description: "Graduate with UGC-entitled & AICTE\napproved online degrees which are\nat part with on-campus degree\nprograms.",
   },
   {
     icon: <BookOpen className="w-8 h-8 text-primary" />,
     heading: "Exclusive Coursera access",
-    description: "Free access to 10K+ courses & professional\ncertifications from top global universities.",
+    description: "Free access to 10K+ courses & professional\ncertifications from top\nglobal universities.",
   },
   {
     icon: <DollarSign className="w-8 h-8 text-primary" />,
     heading: "Scholarships up to 30%",
-    description: "Avail scholarship benefits under merit,\ndefense, Divyaang, alumni, and other categories.",
+    description: "Avail scholarship benefits under merit,\ndefense, Divyaang, alumni,\nand other categories.",
   },
   {
     icon: <Sprout className="w-8 h-8 text-primary" />,
@@ -32,7 +32,7 @@ const cards = [
   {
     icon: <BarChart2 className="w-8 h-8 text-primary" />,
     heading: "Weekly webinars with industry leaders",
-    description: "Stay updated on key industry trends\nthrough our weekly webinars by industry experts.",
+    description: ""Stay updated on key industry trends\nthrough our weekly webinars\nby industry experts.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-primary" />,
