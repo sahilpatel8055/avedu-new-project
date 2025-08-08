@@ -32,7 +32,7 @@ const cards = [
   {
     icon: <BarChart2 className="w-8 h-8 text-primary" />,
     heading: "Weekly webinars with industry leaders",
-    description: ""Stay updated on key industry trends\nthrough our weekly webinars\nby industry experts.",
+    description: "Stay updated on key industry trends\nthrough our weekly webinars\nby industry experts.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-primary" />,
