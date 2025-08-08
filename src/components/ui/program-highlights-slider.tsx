@@ -58,7 +58,7 @@ const ProgramHighlightsSlider = () => {
       scrollInterval = setInterval(() => {
         if (scrollContainer) {
           const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
-          const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1;
+          const isAtEnd = Math.ceil(scrollContainer.scrollLeft) + scrollContainer.clientWidth >= scrollContainer.scrollWidth;
           
           if (isAtEnd) {
             scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
@@ -117,6 +117,9 @@ const ProgramHighlightsSlider = () => {
               MsOverflowStyle: 'none',
               scrollbarWidth: 'none',
               overscrollBehaviorX: 'contain',
+              // The following properties enable click and drag for scrolling on desktop browsers.
+              userSelect: 'none',
+              touchAction: 'pan-x'
             }}
           >
             <style>
@@ -130,9 +133,9 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[100%] sm:min-w-[70%] md:min-w-[45%] lg:min-w-[28%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[90%] sm:min-w-[40%] md:min-w-[25%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '18rem',
+                  height: '16rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
