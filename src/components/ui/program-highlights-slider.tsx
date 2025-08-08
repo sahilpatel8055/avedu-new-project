@@ -101,7 +101,7 @@ const ProgramHighlightsSlider = () => {
 
   return (
     <section className="bg-[#fff7f7] py-12 md:py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
             Why Students Choose <span className="text-orange-500">Our Program</span>
