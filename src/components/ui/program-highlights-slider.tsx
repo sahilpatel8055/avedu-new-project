@@ -14,27 +14,27 @@ import campusIcon from '@/assets/icon/3.jpg'; // Using the same path as alumni
 
 const cards = [
   {
-    icon: <img src={degreeIcon} alt="Degree from top university" className="w-12 h-12 object-cover" />,
+    icon: <img src={degreeIcon} alt="Degree from top university" className="w-12 h-12" />,
     heading: "Degree from top university",
     description: "Graduate with UGC-entitled &\nAICTE approved online degrees which\nare at part with on-campus degree\nprograms.",
   },
   {
-    icon: <img src={courseraIcon} alt="Exclusive Coursera access" className="w-full h-full object-cover" />,
+    icon: <img src={courseraIcon} alt="Exclusive Coursera access" className="w-12 h-12" />,
     heading: "Exclusive Coursera access",
     description: "Free access to 10K+ courses &\nprofessional certifications from top\nglobal universities.",
   },
   {
-    icon: <img src={scholarshipIcon} alt="Scholarships up to 30%" className="w-full h-full object-cover" />,
+    icon: <img src={scholarshipIcon} alt="Scholarships up to 30%" className="w-12 h-12" />,
     heading: "Scholarships up to 30%",
     description: "Avail scholarship benefits under\nmerit,defense, Divyaang, alumni,\nand other categories.",
   },
   {
-    icon: <img src={financeIcon} alt="Easy financing options" className="w-full h-full object-cover" />,
+    icon: <img src={financeIcon} alt="Easy financing options" className="w-12 h-12" />,
     heading: "Easy financing options",
     description: "Improved affordability with\nflexible financing and\nno-cost EMI options.",
   },
   {
-    icon: <img src={alumniIcon} alt="Manipal alumni status" className="w-full h-full object-cover" />,
+    icon: <img src={alumniIcon} alt="Manipal alumni status" className="w-12 h-12" />,
     heading: "Manipal alumni status",
     description: "Become a part of a 2,00,000+ global\nManipal alumni network.",
   },
@@ -44,12 +44,12 @@ const cards = [
     description: "Stay updated on key industry\ntrends through our weekly webinars\nby industry experts.",
   },
   {
-    icon: <img src={placementIcon} alt="100% placement assistance" className="w-full h-full object-cover" />,
+    icon: <img src={placementIcon} alt="100% placement assistance" className="w-12 h-12" />,
     heading: "100% placement assistance",
     description: "Boost your employability quotient\nby acquiring job-ready skills & preparing\nfor interviews to perform\nwell in placement drives.",
   },
   {
-    icon: <img src={campusIcon} alt="Campus immersion" className="w-full h-full object-cover" />,
+    icon: <img src={campusIcon} alt="Campus immersion" className="w-12 h-12" />,
     heading: "Campus immersion",
     description: "Participate in exclusive in-person\nmeetups at campus with your\nbatchmates and faculty.",
   },
