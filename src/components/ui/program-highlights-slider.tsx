@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import { BookOpen, GraduationCap, DollarSign, Sprout, Building, Briefcase, Users, Award, BarChart2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-// Array of card data with explicit manual line breaks (using \n)
 const cards = [
   {
     icon: <Award className="w-8 h-8 text-primary" />,
@@ -50,7 +49,6 @@ const ProgramHighlightsSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto-scroll and manual-scroll tracking logic
   useEffect(() => {
     let scrollInterval: NodeJS.Timeout | null = null;
     let scrollTimeout: NodeJS.Timeout | null = null;
@@ -68,21 +66,18 @@ const ProgramHighlightsSlider = () => {
             scrollContainer.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
           }
         }
-      }, 3000); // Scrolls every 3 seconds
+      }, 1000); // Scrolls every 1 second
     };
 
     const handleScroll = () => {
       if (scrollContainer) {
-        // Pause auto-scroll when user manually scrolls
         if (scrollInterval) clearInterval(scrollInterval);
         
-        // Reset the timeout to restart auto-scroll after a delay
         if (scrollTimeout) clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
           startAutoScroll();
         }, 5000); // Wait 5 seconds after manual scroll ends to resume auto-scroll
 
-        // Update active dot based on scroll position
         const scrollLeft = scrollContainer.scrollLeft;
         const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
         const newIndex = Math.round(scrollLeft / (cardWidth + 24));
@@ -96,7 +91,6 @@ const ProgramHighlightsSlider = () => {
     }
 
     return () => {
-      // Cleanup on unmount
       if (scrollInterval) clearInterval(scrollInterval);
       if (scrollTimeout) clearTimeout(scrollTimeout);
       if (scrollContainer) {
@@ -114,9 +108,7 @@ const ProgramHighlightsSlider = () => {
           </h2>
         </div>
 
-        {/* Slider Container */}
         <div className="relative">
-          {/* Cards wrapper - Manual scrollable */}
           <div
             ref={scrollContainerRef}
             className="flex overflow-x-scroll snap-x snap-mandatory gap-6 pb-4 cursor-grab"
@@ -124,10 +116,9 @@ const ProgramHighlightsSlider = () => {
               WebkitOverflowScrolling: 'touch',
               MsOverflowStyle: 'none',
               scrollbarWidth: 'none',
-              overscrollBehaviorX: 'contain', // Prevents page scroll when slider reaches end
+              overscrollBehaviorX: 'contain',
             }}
           >
-            {/* Custom CSS to hide scrollbar for Webkit browsers */}
             <style>
               {`
               .flex::-webkit-scrollbar {
@@ -139,7 +130,7 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[95%] sm:min-w-[45%] md:min-w-[28%] lg:min-w-[19%] flex-shrink-0 bg-background shadow-lg p-6 border border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[95%] sm:min-w-[45%] md:min-w-[28%] lg:min-w-[19%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
                   height: '16rem',
                 }}
@@ -153,7 +144,6 @@ const ProgramHighlightsSlider = () => {
             ))}
           </div>
 
-          {/* Slider Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {cards.map((_, index) => (
               <div
