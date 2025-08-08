@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import React from 'react';
 
+// Import the image directly
+import placementImage from "@/assets/placement.jpg";
+
 const CareerAssistance = () => {
   return (
     <section className="bg-white py-12 md:py-16">
@@ -16,7 +19,7 @@ const CareerAssistance = () => {
           {/* Left side with image */}
           <div className="relative overflow-hidden rounded-lg shadow-lg">
             <img 
-              src="/src/assets/placement.jpg" 
+              src={placementImage} 
               alt="A working professional" 
               className="w-full h-full object-cover" 
             />
