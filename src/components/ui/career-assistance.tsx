@@ -17,11 +17,11 @@ const CareerAssistance = () => {
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side with image */}
-          <div className="relative overflow-hidden rounded-lg shadow-lg h-[50.5rem]">
+          <div className="flex justify-center items-center">
             <img 
               src={placementImage} 
               alt="A working professional" 
-              className="w-full h-full object-cover" 
+              className="w-full max-w-sm rounded-lg shadow-lg h-auto" 
             />
           </div>
 
