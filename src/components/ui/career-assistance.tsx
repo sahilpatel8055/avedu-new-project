@@ -17,7 +17,7 @@ const CareerAssistance = () => {
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side with image */}
-          <div className="relative overflow-hidden rounded-lg shadow-lg">
+          <div className="relative overflow-hidden rounded-lg shadow-lg h-[30rem]">
             <img 
               src={placementImage} 
               alt="A working professional" 
@@ -27,7 +27,7 @@ const CareerAssistance = () => {
 
           {/* Right side with cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white">
+            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white group">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div className="flex items-center gap-4">
                     <Star className="text-primary h-6 w-6 group-hover:text-white" />
@@ -38,7 +38,7 @@ const CareerAssistance = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white">
+            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white group">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div className="flex items-center gap-4">
                     <Star className="text-primary h-6 w-6 group-hover:text-white" />
@@ -49,7 +49,7 @@ const CareerAssistance = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white">
+            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white group">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div className="flex items-center gap-4">
                     <Star className="text-primary h-6 w-6 group-hover:text-white" />
@@ -60,7 +60,7 @@ const CareerAssistance = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white">
+            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white group">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div className="flex items-center gap-4">
                     <Star className="text-primary h-6 w-6 group-hover:text-white" />
@@ -71,7 +71,7 @@ const CareerAssistance = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white">
+            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white group">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div className="flex items-center gap-4">
                     <Star className="text-primary h-6 w-6 group-hover:text-white" />
@@ -82,7 +82,7 @@ const CareerAssistance = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white">
+            <Card className="p-6 transition-colors duration-300 hover:bg-red-600 hover:text-white group">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div className="flex items-center gap-4">
                     <Star className="text-primary h-6 w-6 group-hover:text-white" />
