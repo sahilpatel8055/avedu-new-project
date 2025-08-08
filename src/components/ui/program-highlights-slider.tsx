@@ -135,7 +135,7 @@ const ProgramHighlightsSlider = () => {
                 key={index}
                 className="min-w-[90%] sm:min-w-[40%] md:min-w-[25%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '16rem',
+                  height: '15rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
