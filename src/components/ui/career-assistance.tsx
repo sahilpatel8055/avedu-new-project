@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Star } from "lucide-react";
 import React from 'react';
 
