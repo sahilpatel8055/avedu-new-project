@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Award, BarChart2 } from "lucide-react";
+import React, { useRef, useState, useEffect } from 'react';
+import { BookOpen, GraduationCap, DollarSign, Sprout, Building, Briefcase, Users, Award, BarChart2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 // Array of card data with explicit manual line breaks (using \n)
@@ -48,8 +48,26 @@ const cards = [
 
 const ProgramHighlightsSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // No longer need scrollBy function since buttons are removed
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const scrollLeft = scrollContainerRef.current.scrollLeft;
+        const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
+        const newIndex = Math.round(scrollLeft / (cardWidth + 16)); // 16px is the gap
+        setActiveIndex(newIndex);
+      }
+    };
+
+    const element = scrollContainerRef.current;
+    if (element) {
+      element.addEventListener('scroll', handleScroll);
+      return () => {
+        element.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
 
   return (
     <section className="bg-[#fff7f7] py-12 md:py-16">
@@ -67,9 +85,9 @@ const ProgramHighlightsSlider = () => {
             ref={scrollContainerRef}
             className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4 cursor-grab"
             style={{
-              WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on iOS
-              MsOverflowStyle: 'none', // Hide scrollbar for IE/Edge
-              scrollbarWidth: 'none', // Hide scrollbar for Firefox
+              WebkitOverflowScrolling: 'touch',
+              MsOverflowStyle: 'none',
+              scrollbarWidth: 'none',
             }}
           >
             {/* Custom CSS to hide scrollbar for Webkit browsers */}
@@ -84,9 +102,9 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[95%] sm:min-w-[48%] md:min-w-[30%] lg:min-w-[23%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[95%] sm:min-w-[48%] md:min-w-[30%] lg:min-w-[23%] flex-shrink-0 bg-background shadow-lg p-6 border border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '18rem', // Adjusted height for square-like cards
+                  height: '18rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
@@ -96,6 +114,27 @@ const ProgramHighlightsSlider = () => {
                 {/* Using <pre> with whitespace-pre-wrap to honor \n for line breaks */}
                 <pre className="text-muted-foreground whitespace-pre-wrap text-sm">{card.description}</pre>
               </Card>
+            ))}
+          </div>
+
+          {/* Slider Dots */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {cards.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                  index === activeIndex ? 'bg-orange-500 w-6' : 'bg-gray-300'
+                }`}
+                onClick={() => {
+                  if (scrollContainerRef.current) {
+                    const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
+                    scrollContainerRef.current.scrollTo({
+                      left: index * (cardWidth + 16),
+                      behavior: 'smooth',
+                    });
+                  }
+                }}
+              />
             ))}
           </div>
         </div>
