@@ -59,41 +59,49 @@ const ProgramHighlightsSlider = () => {
   };
 
   return (
-    <section className="bg-muted/30 py-12 md:py-16">
+    <section className="bg-[#fff7f7] py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Why Students Choose Our Program
+            Why Students Choose <span className="text-orange-500">Our Program</span>
           </h2>
         </div>
 
         {/* Slider Container */}
         <div className="relative">
-          <div className="flex overflow-hidden relative">
-            {/* Cards wrapper */}
-            <div
-              className="flex transition-transform duration-500 ease-in-out gap-4"
-              style={{
-                transform: `translateX(calc(-${current * 100}% / 3 - ${current * 1}rem))`,
-              }}
-            >
-              {cards.map((card, index) => (
-                <Card
-                  key={index}
-                  className="min-w-[calc(100%/3-1rem)] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4"
-                  style={{
-                    transform: `translateX(-${current * (100 / 3 + 1)}%)`,
-                    transition: 'transform 0.5s ease-in-out'
-                  }}
-                >
-                  <div className="p-4 bg-primary-light rounded-full text-primary">
-                    {card.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold">{card.heading}</h3>
-                  <p className="text-muted-foreground">{card.description}</p>
-                </Card>
-              ))}
-            </div>
+          {/* Cards wrapper - Added `overflow-x-scroll snap-x snap-mandatory` for manual scrolling */}
+          <div
+            className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4"
+            style={{
+              scrollBehavior: 'smooth',
+              MsOverflowStyle: 'none', /* IE and Edge */
+              scrollbarWidth: 'none', /* Firefox */
+            }}
+          >
+            {/* Hiding scrollbar for Webkit browsers */}
+            <style>
+              {`
+              .flex::-webkit-scrollbar {
+                display: none;
+              }
+              `}
+            </style>
+            
+            {cards.map((card, index) => (
+              <Card
+                key={index}
+                className="min-w-[70%] md:min-w-[40%] lg:min-w-[30%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                style={{
+                  height: '25rem', // Increased height
+                }}
+              >
+                <div className="p-4 bg-primary-light rounded-full text-primary">
+                  {card.icon}
+                </div>
+                <h3 className="text-xl font-semibold">{card.heading}</h3>
+                <p className="text-muted-foreground">{card.description}</p>
+              </Card>
+            ))}
           </div>
           
           {/* Navigation Arrows */}
