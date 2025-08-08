@@ -21,7 +21,7 @@ const CareerAssistance = () => {
             <img 
               src={placementImage} 
               alt="A working professional" 
-              className="w-full h-full object-cover" 
+              className="w-full h-full object-contain" 
             />
           </div>
 
