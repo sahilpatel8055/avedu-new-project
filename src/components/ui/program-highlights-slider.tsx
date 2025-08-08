@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Star, Award, BarChart2 } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/components/ui/card";
+import React, { useRef } from 'react';
+import { ChevronLeft, ChevronRight, BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Award, BarChart2 } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 // Array of card data
 const cards = [
@@ -52,9 +51,9 @@ const ProgramHighlightsSlider = () => {
 
   const scrollBy = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.offsetWidth / 3;
+      const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
       scrollContainerRef.current.scrollBy({
-        left: direction === 'right' ? scrollAmount : -scrollAmount,
+        left: direction === 'right' ? cardWidth + 16 : -(cardWidth + 16), // 16px is the gap
         behavior: 'smooth',
       });
     }
@@ -74,13 +73,15 @@ const ProgramHighlightsSlider = () => {
           {/* Cards wrapper - Manual scrollable */}
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4"
+            className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4 cursor-grab"
             style={{
               scrollBehavior: 'smooth',
+              WebkitOverflowScrolling: 'touch',
               MsOverflowStyle: 'none',
               scrollbarWidth: 'none',
             }}
           >
+            {/* Hiding scrollbar for Webkit browsers */}
             <style>
               {`
               .flex::-webkit-scrollbar {
@@ -94,7 +95,7 @@ const ProgramHighlightsSlider = () => {
                 key={index}
                 className="min-w-[70%] md:min-w-[30%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '25rem',
+                  height: '20rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
