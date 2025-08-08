@@ -53,7 +53,7 @@ const ProgramHighlightsSlider = () => {
     if (scrollContainerRef.current) {
       const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
       scrollContainerRef.current.scrollBy({
-        left: direction === 'right' ? cardWidth + 16 : -(cardWidth + 16), // 16px is the gap
+        left: direction === 'right' ? cardWidth + 16 : -(cardWidth + 16),
         behavior: 'smooth',
       });
     }
@@ -64,7 +64,7 @@ const ProgramHighlightsSlider = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            **Why Students Choose <span className="text-orange-500">Our Program</span>**
+            Why Students Choose <span className="text-orange-500">Our Program</span>
           </h2>
         </div>
 
@@ -93,7 +93,7 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[70%] md:min-w-[25%] lg:min-w-[15%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[70%] md:min-w-[30%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
                   height: '20rem',
                 }}
