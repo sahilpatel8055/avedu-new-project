@@ -130,7 +130,7 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[80%] sm:min-w-[45%] md:min-w-[28%] lg:min-w-[19%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[110%] sm:min-w-[45%] md:min-w-[28%] lg:min-w-[19%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
                   height: '16rem',
                 }}
