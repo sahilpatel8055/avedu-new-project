@@ -14,7 +14,7 @@ import campusIcon from '@/assets/icon/3.jpg'; // Using the same path as alumni
 
 const cards = [
   {
-    icon: <img src={degreeIcon} alt="Degree from top university" className="w-full h-full object-cover" />,
+    icon: <img src={degreeIcon} alt="Degree from top university" className="w-12 h-12 object-cover" />,
     heading: "Degree from top university",
     description: "Graduate with UGC-entitled &\nAICTE approved online degrees which\nare at part with on-campus degree\nprograms.",
   },
