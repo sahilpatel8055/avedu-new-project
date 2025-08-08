@@ -2,17 +2,17 @@ import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Award, BarChart2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-// Array of card data
+// Array of card data with manual line breaks
 const cards = [
   {
     icon: <Award className="w-8 h-8 text-primary" />,
     heading: "Degree from top ranked university",
-    description: "Graduate with UGC-entitled & AICTE approved online degrees which are at par with on-campus degree programs.",
+    description: "Graduate with UGC-entitled & AICTE approved online\ndegrees which are at par with\non-campus degree programs.",
   },
   {
     icon: <BookOpen className="w-8 h-8 text-primary" />,
     heading: "Exclusive Coursera access",
-    description: "Free access to 10K+ courses & professional certifications from top global universities.",
+    description: "Free access to 10K+ courses & professional\ncertifications from top global universities.",
   },
   {
     icon: <DollarSign className="w-8 h-8 text-primary" />,
@@ -102,7 +102,7 @@ const ProgramHighlightsSlider = () => {
                   {card.icon}
                 </div>
                 <h3 className="text-xl font-bold">{card.heading}</h3>
-                <p className="text-muted-foreground line-clamp-2">{card.description}</p>
+                <pre className="text-muted-foreground whitespace-pre-wrap">{card.description}</pre>
               </Card>
             ))}
           </div>
