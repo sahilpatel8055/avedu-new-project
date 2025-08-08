@@ -63,7 +63,7 @@ const ProgramHighlightsSlider = () => {
           if (isAtEnd) {
             scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
           } else {
-            scrollContainer.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+            scrollContainer.scrollBy({ left: cardWidth + 15, behavior: 'smooth' });
           }
         }
       }, 1000);
@@ -80,7 +80,7 @@ const ProgramHighlightsSlider = () => {
 
         const scrollLeft = scrollContainer.scrollLeft;
         const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
-        const newIndex = Math.round(scrollLeft / (cardWidth + 24));
+        const newIndex = Math.round(scrollLeft / (cardWidth + 15));
         setActiveIndex(newIndex);
       }
     };
@@ -102,7 +102,7 @@ const ProgramHighlightsSlider = () => {
   return (
     <section className="bg-[#fff7f7] py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
+        <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
             Why Students Choose <span className="text-orange-500">Our Program</span>
           </h2>
