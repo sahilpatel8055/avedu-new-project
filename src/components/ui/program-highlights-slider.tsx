@@ -7,7 +7,7 @@ const cards = [
   {
     icon: <Award className="w-8 h-8 text-primary" />,
     heading: "Degree from top ranked university",
-    description: "Graduate with UGC-entitled & AICTE approved online\ndegrees which are at par with\non-campus degree programs.",
+    description: "Graduate with UGC-entitled & AICTE approved\nonline degrees which are at part with\non-campus degree programs.",
   },
   {
     icon: <BookOpen className="w-8 h-8 text-primary" />,
@@ -17,32 +17,32 @@ const cards = [
   {
     icon: <DollarSign className="w-8 h-8 text-primary" />,
     heading: "Scholarships up to 30%",
-    description: "Avail scholarship benefits under merit, defense, Divyaang, alumni, and other categories.",
+    description: "Avail scholarship benefits under merit,\ndefense, Divyaang, alumni, and other categories.",
   },
   {
     icon: <Sprout className="w-8 h-8 text-primary" />,
     heading: "Easy financing options",
-    description: "Improved affordability with flexible financing and no-cost EMI options.",
+    description: "Improved affordability with flexible\nfinancing and no-cost EMI options.",
   },
   {
     icon: <Users className="w-8 h-8 text-primary" />,
     heading: "Manipal alumni status",
-    description: "Become a part of a 2,00,000+ global Manipal alumni network.",
+    description: "Become a part of a 2,00,000+ global\nManipal alumni network.",
   },
   {
     icon: <BarChart2 className="w-8 h-8 text-primary" />,
     heading: "Weekly webinars with industry leaders",
-    description: "Stay updated on key industry trends through our weekly webinars by industry experts.",
+    description: "Stay updated on key industry trends\nthrough our weekly webinars\nby industry experts.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-primary" />,
     heading: "100% placement assistance",
-    description: "Boost your employability quotient by acquiring job-ready skills & preparing for interviews to perform well in placement drives.",
+    description: "Boost your employability quotient by acquiring\njob-ready skills & preparing for interviews\nto perform well in placement drives.",
   },
   {
     icon: <Building className="w-8 h-8 text-primary" />,
     heading: "Campus immersion",
-    description: "Participate in exclusive in-person meetups at campus with your batchmates and faculty.",
+    description: "Participate in exclusive in-person\nmeetups at campus with your\nbatchmates and faculty.",
   },
 ];
 
