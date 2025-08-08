@@ -58,7 +58,7 @@ const ProgramHighlightsSlider = () => {
       scrollInterval = setInterval(() => {
         if (scrollContainer) {
           const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
-          const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth;
+          const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1; // Subtract 1 for floating point precision
           
           if (isAtEnd) {
             scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
@@ -66,7 +66,7 @@ const ProgramHighlightsSlider = () => {
             scrollContainer.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
           }
         }
-      }, 1000); // Scrolls every 1 second
+      }, 1000);
     };
 
     const handleScroll = () => {
@@ -76,7 +76,7 @@ const ProgramHighlightsSlider = () => {
         if (scrollTimeout) clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
           startAutoScroll();
-        }, 5000); // Wait 5 seconds after manual scroll ends to resume auto-scroll
+        }, 5000);
 
         const scrollLeft = scrollContainer.scrollLeft;
         const cardWidth = scrollContainer.querySelector('.snap-center')?.clientWidth || 0;
