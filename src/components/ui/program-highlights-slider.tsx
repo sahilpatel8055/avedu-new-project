@@ -93,9 +93,9 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[70%] md:min-w-[30%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[80%] md:min-w-[45%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '20rem',
+                  height: '18rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
