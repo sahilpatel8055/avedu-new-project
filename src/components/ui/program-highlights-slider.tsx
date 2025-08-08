@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Star, Award, BarChart2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,14 +48,16 @@ const cards = [
 ];
 
 const ProgramHighlightsSlider = () => {
-  const [current, setCurrent] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const nextCard = () => {
-    setCurrent((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevCard = () => {
-    setCurrent((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+  const scrollBy = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.offsetWidth / 3;
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'right' ? scrollAmount : -scrollAmount,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -69,16 +71,16 @@ const ProgramHighlightsSlider = () => {
 
         {/* Slider Container */}
         <div className="relative">
-          {/* Cards wrapper - Added `overflow-x-scroll snap-x snap-mandatory` for manual scrolling */}
+          {/* Cards wrapper - Manual scrollable */}
           <div
+            ref={scrollContainerRef}
             className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4"
             style={{
               scrollBehavior: 'smooth',
-              MsOverflowStyle: 'none', /* IE and Edge */
-              scrollbarWidth: 'none', /* Firefox */
+              MsOverflowStyle: 'none',
+              scrollbarWidth: 'none',
             }}
           >
-            {/* Hiding scrollbar for Webkit browsers */}
             <style>
               {`
               .flex::-webkit-scrollbar {
@@ -90,16 +92,16 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[70%] md:min-w-[40%] lg:min-w-[30%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[70%] md:min-w-[30%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '25rem', // Increased height
+                  height: '25rem',
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
                   {card.icon}
                 </div>
                 <h3 className="text-xl font-semibold">{card.heading}</h3>
-                <p className="text-muted-foreground">{card.description}</p>
+                <p className="text-muted-foreground line-clamp-2">{card.description}</p>
               </Card>
             ))}
           </div>
@@ -107,13 +109,13 @@ const ProgramHighlightsSlider = () => {
           {/* Navigation Arrows */}
           <div className="absolute inset-y-0 flex justify-between w-full px-4 items-center">
             <button
-              onClick={prevCard}
+              onClick={() => scrollBy('left')}
               className="bg-background/50 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
             >
               <ChevronLeft size={24} />
             </button>
             <button
-              onClick={nextCard}
+              onClick={() => scrollBy('right')}
               className="bg-background/50 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
             >
               <ChevronRight size={24} />
