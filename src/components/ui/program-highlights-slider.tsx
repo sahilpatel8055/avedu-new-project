@@ -5,23 +5,23 @@ import { Card } from "@/components/ui/card";
 const cards = [
   {
     icon: <Award className="w-8 h-8 text-primary" />,
-    heading: "Degree from top ranked university",
-    description: "Graduate with UGC-entitled & AICTE\napproved online degrees which are\nat part with on-campus degree\nprograms.",
+    heading: "Degree from top university",
+    description: "Graduate with UGC-entitled &\nAICTE approved online degrees which\nare at part with on-campus degree\nprograms.",
   },
   {
     icon: <BookOpen className="w-8 h-8 text-primary" />,
     heading: "Exclusive Coursera access",
-    description: "Free access to 10K+ courses & professional\ncertifications from top\nglobal universities.",
+    description: "Free access to 10K+ courses &\nprofessional certifications from top\nglobal universities.",
   },
   {
     icon: <DollarSign className="w-8 h-8 text-primary" />,
     heading: "Scholarships up to 30%",
-    description: "Avail scholarship benefits under merit,\ndefense, Divyaang, alumni,\nand other categories.",
+    description: "Avail scholarship benefits under\nmerit,defense, Divyaang, alumni,\nand other categories.",
   },
   {
     icon: <Sprout className="w-8 h-8 text-primary" />,
     heading: "Easy financing options",
-    description: "Improved affordability with flexible\nfinancing and no-cost EMI options.",
+    description: "Improved affordability with\nflexible financing and\nno-cost EMI options.",
   },
   {
     icon: <Users className="w-8 h-8 text-primary" />,
@@ -30,13 +30,13 @@ const cards = [
   },
   {
     icon: <BarChart2 className="w-8 h-8 text-primary" />,
-    heading: "Weekly webinars with industry leaders",
-    description: "Stay updated on key industry trends\nthrough our weekly webinars\nby industry experts.",
+    heading: "Weekly webinars with\nindustry leaders",
+    description: "Stay updated on key industry\ntrends through our weekly webinars\nby industry experts.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-primary" />,
     heading: "100% placement assistance",
-    description: "Boost your employability quotient by acquiring\njob-ready skills & preparing for interviews\nto perform well in placement drives.",
+    description: "Boost your employability quotient\nby acquiring job-ready skills & preparing\nfor interviews to perform\nwell in placement drives.",
   },
   {
     icon: <Building className="w-8 h-8 text-primary" />,
@@ -133,7 +133,7 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[90%] sm:min-w-[40%] md:min-w-[25%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[90%] sm:min-w-[40%] md:min-w-[25%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-2 border-2 border-gray-200 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
                   height: '15rem',
                 }}
