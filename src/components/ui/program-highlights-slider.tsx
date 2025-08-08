@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
-import { ChevronLeft, ChevronRight, BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Award, BarChart2 } from "lucide-react";
+import { BookOpen, GraduationCap, DollarSign, Sprout, Building, Trophy, Briefcase, Users, Award, BarChart2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-// Array of card data with manual line breaks
+// Array of card data with explicit manual line breaks (using \n)
 const cards = [
   {
     icon: <Award className="w-8 h-8 text-primary" />,
     heading: "Degree from top ranked university",
-    description: "Graduate with UGC-entitled & AICTE approved\nonline degrees which are at part with\non-campus degree programs.",
+    description: "Graduate with UGC-entitled & AICTE approved online\ndegrees which are at par with on-campus degree programs.",
   },
   {
     icon: <BookOpen className="w-8 h-8 text-primary" />,
@@ -32,7 +32,7 @@ const cards = [
   {
     icon: <BarChart2 className="w-8 h-8 text-primary" />,
     heading: "Weekly webinars with industry leaders",
-    description: "Stay updated on key industry trends\nthrough our weekly webinars\nby industry experts.",
+    description: "Stay updated on key industry trends\nthrough our weekly webinars by industry experts.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-primary" />,
@@ -49,15 +49,7 @@ const cards = [
 const ProgramHighlightsSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollBy = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const cardWidth = scrollContainerRef.current.querySelector('.snap-center')?.clientWidth || 0;
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'right' ? cardWidth + 16 : -(cardWidth + 16),
-        behavior: 'smooth',
-      });
-    }
-  };
+  // No longer need scrollBy function since buttons are removed
 
   return (
     <section className="bg-[#fff7f7] py-12 md:py-16">
@@ -75,13 +67,12 @@ const ProgramHighlightsSlider = () => {
             ref={scrollContainerRef}
             className="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4 cursor-grab"
             style={{
-              scrollBehavior: 'smooth',
-              WebkitOverflowScrolling: 'touch',
-              MsOverflowStyle: 'none',
-              scrollbarWidth: 'none',
+              WebkitOverflowScrolling: 'touch', // Enable smooth scrolling on iOS
+              MsOverflowStyle: 'none', // Hide scrollbar for IE/Edge
+              scrollbarWidth: 'none', // Hide scrollbar for Firefox
             }}
           >
-            {/* Hiding scrollbar for Webkit browsers */}
+            {/* Custom CSS to hide scrollbar for Webkit browsers */}
             <style>
               {`
               .flex::-webkit-scrollbar {
@@ -93,34 +84,19 @@ const ProgramHighlightsSlider = () => {
             {cards.map((card, index) => (
               <Card
                 key={index}
-                className="min-w-[80%] md:min-w-[45%] lg:min-w-[20%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
+                className="min-w-[95%] sm:min-w-[48%] md:min-w-[30%] lg:min-w-[23%] flex-shrink-0 bg-background shadow-lg p-6 flex flex-col items-start space-y-4 snap-center rounded-xl"
                 style={{
-                  height: '18rem',
+                  height: '18rem', // Adjusted height for square-like cards
                 }}
               >
                 <div className="p-4 bg-primary-light rounded-full text-primary">
                   {card.icon}
                 </div>
                 <h3 className="text-xl font-bold">{card.heading}</h3>
-                <pre className="text-muted-foreground whitespace-pre-wrap">{card.description}</pre>
+                {/* Using <pre> with whitespace-pre-wrap to honor \n for line breaks */}
+                <pre className="text-muted-foreground whitespace-pre-wrap text-sm">{card.description}</pre>
               </Card>
             ))}
-          </div>
-          
-          {/* Navigation Arrows */}
-          <div className="absolute inset-y-0 flex justify-between w-full px-4 items-center">
-            <button
-              onClick={() => scrollBy('left')}
-              className="bg-background/50 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              onClick={() => scrollBy('right')}
-              className="bg-background/50 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
-            >
-              <ChevronRight size={24} />
-            </button>
           </div>
         </div>
       </div>
