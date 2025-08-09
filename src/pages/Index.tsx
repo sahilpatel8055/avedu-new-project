@@ -11,6 +11,7 @@ import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
 import Slideshow from "@/components/ui/slideshow";
 import CareerAssistance from "@/components/ui/career-assistance";
 import { FlipWords } from "@/components/ui/flip-words";
+import { useCounselingForm } from "@/hooks/use-counseling-form";
 import { Link } from "react-router-dom";
 import { BookOpen, Users, Award, GraduationCap, Star, ArrowRight } from "lucide-react";
 
@@ -31,6 +32,8 @@ import smuLogo from "@/assets/smu-logo.jpg";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 
 const Index = () => {
+  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   const universities = [
     {
       id: "ignou",
@@ -91,7 +94,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <NavigationHeader />
+      <NavigationHeader onOpenCounseling={openForm} />
       
       {/* 1st Section - Hero with FlipWords */}
       <section className="relative bg-gradient-subtle py-4 sm:py-6 lg:py-8 overflow-hidden">
@@ -145,7 +148,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-primary hover:opacity-90 gap-2 shadow-primary text-sm sm:text-base"
-                  onClick={() => document.getElementById('counselling')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={openForm}
                 >
                   Get Free Counselling
                   <ArrowRight className="h-4 w-4 sm:h-5 w-5" />
@@ -207,15 +210,17 @@ const Index = () => {
       </section>
 
       {/* 4th Section - Universities Grid */}
-      <UniversityGrid />
+      <UniversityGrid onOpenCounseling={openForm} />
       
       {/* 5th Section - Career Assistance */}
       <CareerAssistance />
 
       {/* 6th Section - Counselling */}
-      <CounsellingSection />
+      <CounsellingSection onOpenCounseling={openForm} />
       
       <Footer />
+      
+      <CounselingFormComponent />
     </div>
   );
 };

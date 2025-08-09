@@ -7,7 +7,11 @@ import aveduLogo from "@/assets/avedu-logo.png";
 import CounselingForm from "@/components/ui/counseling-form";
 import { Link } from "react-router-dom";
 
-const NavigationHeader = () => {
+interface NavigationHeaderProps {
+  onOpenCounseling?: () => void;
+}
+
+const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCounselingFormOpen, setIsCounselingFormOpen] = useState(false);
 
@@ -69,7 +73,7 @@ const NavigationHeader = () => {
             </Button>
             <Button 
               className="gap-2 bg-gradient-primary hover:opacity-90"
-              onClick={() => setIsCounselingFormOpen(true)}
+              onClick={onOpenCounseling || (() => setIsCounselingFormOpen(true))}
             >
               <Phone className="h-4 w-4" />
               Get Counselling
@@ -134,7 +138,7 @@ const NavigationHeader = () => {
               </Button>
               <Button 
                 className="gap-2 bg-gradient-primary hover:opacity-90 justify-start"
-                onClick={() => setIsCounselingFormOpen(true)}
+                onClick={onOpenCounseling || (() => setIsCounselingFormOpen(true))}
               >
                 <Phone className="h-4 w-4" />
                 Get Counselling
