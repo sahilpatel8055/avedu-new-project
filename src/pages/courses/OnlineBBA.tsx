@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { useCounselingForm } from "@/hooks/use-counseling-form";
+
 import {
   GraduationCap,
   Clock,
@@ -39,7 +39,7 @@ import mangalyatanLogo from "@/assets/mangalyatan-logo.png";
 import HorizontalUniversityScroll from "@/components/ui/horizontal-university-scroll";
 
 const OnlineBBA = () => {
-  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   const [activeTab, setActiveTab] = useState("bba");
 
   const topUniversities = [
@@ -662,7 +662,7 @@ const OnlineBBA = () => {
       </section>
 
       <Footer />
-      <CounselingFormComponent />
+      
     </div>
   );
 };

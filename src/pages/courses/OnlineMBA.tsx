@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { useCounselingForm } from "@/hooks/use-counseling-form";
+
 import {
   GraduationCap,
   Clock,
@@ -194,7 +194,7 @@ const faqs = [
 ];
 
 const OnlineMBA = () => {
-  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   
   return (
     <div className="min-h-screen bg-background">
@@ -534,7 +534,7 @@ const OnlineMBA = () => {
       </section>
 
       <Footer />
-      <CounselingFormComponent />
+      
     </div>
   );
 };

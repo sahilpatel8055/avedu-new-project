@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
-import { useCounselingForm } from "@/hooks/use-counseling-form";
+
 import { Star, MapPin, Users, GraduationCap, Award, DollarSign, Clock, Check, Globe, BookOpen } from "lucide-react";
 import NavigationHeader from "@/components/ui/navigation-header";
 import Footer from "@/components/ui/footer";
@@ -27,7 +27,7 @@ import bcaImg from "@/assets/course/bca.jpg";
 import baImg from "@/assets/course/ba.jpg";
 
 const LPU = () => {
-  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   
   const courses = [
     { name: "Online MBA", id: "online-mba", fees: "₹1,80,000", duration: "2 Years", specializations: 10, image: mbaImg },
@@ -305,7 +305,7 @@ const LPU = () => {
       </section>
 
       <Footer />
-      <CounselingFormComponent />
+      
     </div>
   );
 };

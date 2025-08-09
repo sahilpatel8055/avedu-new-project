@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import EmbeddedCounselingForm from "@/components/ui/embedded-counseling-form";
-import { useCounselingForm } from "@/hooks/use-counseling-form";
+
 import {
   Star,
   MapPin,
@@ -43,7 +43,7 @@ import bcomImg from "@/assets/course/bcom.jpg";
 import { MovingBorderButton } from "@/components/ui/moving-border";
 
 const IGNOU = () => {
-  const { openForm, CounselingFormComponent } = useCounselingForm();
+  
   
   // We will now use the courseData object directly for rendering
   // const courses = [...] is no longer needed
@@ -315,7 +315,7 @@ const IGNOU = () => {
       </section>
 
       <Footer />
-      <CounselingFormComponent />
+      
     </div>
   );
 };

@@ -157,15 +157,15 @@ const CounsellingSection: React.FC<CounsellingSectionProps> = ({ onOpenCounselin
                   Book your free counselling session today and take the first step towards your dream career.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <Button variant="secondary" size="sm" className="gap-2" onClick={onOpenCounseling}>
+                  <Button variant="secondary" size="sm" className="gap-2">
                     <Phone className="h-4 w-4" />
                     Call Now
                   </Button>
-                  <Button variant="secondary" size="sm" className="gap-2" onClick={onOpenCounseling}>
+                  <Button variant="secondary" size="sm" className="gap-2">
                     <Calendar className="h-4 w-4" />
                     Schedule Call
                   </Button>
-                  <Button variant="secondary" size="sm" className="gap-2" onClick={onOpenCounseling}>
+                  <Button variant="secondary" size="sm" className="gap-2">
                     <MessageCircle className="h-4 w-4" />
                     Get Counselling
                   </Button>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Search, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import aveduLogo from "@/assets/avedu-logo.png";
-import CounselingForm from "@/components/ui/counseling-form";
+
 import { Link } from "react-router-dom";
 
 interface NavigationHeaderProps {
@@ -13,7 +13,6 @@ interface NavigationHeaderProps {
 
 const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCounselingFormOpen, setIsCounselingFormOpen] = useState(false);
 
   const scrollToPrograms = () => {
     if (window.location.pathname === '/') {
@@ -73,7 +72,6 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling })
             </Button>
             <Button 
               className="gap-2 bg-gradient-primary hover:opacity-90"
-              onClick={onOpenCounseling || (() => setIsCounselingFormOpen(true))}
             >
               <Phone className="h-4 w-4" />
               Get Counselling
@@ -138,7 +136,6 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling })
               </Button>
               <Button 
                 className="gap-2 bg-gradient-primary hover:opacity-90 justify-start"
-                onClick={onOpenCounseling || (() => setIsCounselingFormOpen(true))}
               >
                 <Phone className="h-4 w-4" />
                 Get Counselling
@@ -147,11 +144,6 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling })
           </nav>
         </div>
       </div>
-      
-      <CounselingForm 
-        open={isCounselingFormOpen} 
-        onOpenChange={setIsCounselingFormOpen} 
-      />
     </header>
   );
 };

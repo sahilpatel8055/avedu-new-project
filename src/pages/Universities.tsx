@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Users, GraduationCap, ExternalLink } from "lucide-react";
 import universityPlaceholder from "@/assets/university-placeholder.jpg";
 import { Link } from "react-router-dom";
-import CounselingForm from "@/components/ui/counseling-form";
+
 
 const UniversityCard = ({ university }: { university: any }) => {
   return (
@@ -86,7 +86,6 @@ const UniversityCard = ({ university }: { university: any }) => {
 };
 
 const Universities = () => {
-  const [isCounselingFormOpen, setIsCounselingFormOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -130,11 +129,6 @@ const Universities = () => {
       </section>
 
       <Footer />
-      
-      <CounselingForm 
-        open={isCounselingFormOpen} 
-        onOpenChange={setIsCounselingFormOpen} 
-      />
     </div>
   );
 };

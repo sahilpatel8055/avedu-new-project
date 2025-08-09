@@ -1,20 +1,20 @@
 import { useState } from "react";
-import CounselingForm from "@/components/ui/counseling-form";
+import SimpleCounselingForm from "@/components/ui/simple-counseling-form";
 
-export const useCounselingForm = () => {
+export const useSimpleForm = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openForm = () => setIsOpen(true);
   const closeForm = () => setIsOpen(false);
 
-  const CounselingFormComponent = () => (
-    <CounselingForm open={isOpen} onOpenChange={setIsOpen} />
+  const FormComponent = () => (
+    <SimpleCounselingForm open={isOpen} onOpenChange={setIsOpen} />
   );
 
   return {
     openForm,
     closeForm,
     isOpen,
-    CounselingFormComponent
+    FormComponent
   };
 };
