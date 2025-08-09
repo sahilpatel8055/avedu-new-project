@@ -74,11 +74,11 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-[90vw] max-w-md max-h-[80vh] p-0 overflow-hidden sm:max-w-2xl sm:max-h-[85vh]">
-        <div className="grid lg:grid-cols-2 h-full max-h-[80vh] sm:max-h-[85vh]">
+      <DialogContent className="w-[95vw] max-w-md p-0 overflow-visible sm:max-w-2xl">
+        <div className="grid lg:grid-cols-2 h-auto">
           {/* Left Side - Form */}
-          <div className="p-3 sm:p-4 lg:p-6 overflow-y-auto">
-            <DialogHeader className="mb-3 sm:mb-4">
+          <div className="p-4 sm:p-6 lg:p-6">
+            <DialogHeader className="mb-4 sm:mb-6">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-lg sm:text-xl font-bold text-blue-600">
                   Get 100% free counseling session
@@ -94,8 +94,8 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
               </div>
             </DialogHeader>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                 <div>
                   <Label htmlFor="fullName" className="text-sm font-bold text-gray-700">
                     Full Name *
@@ -146,7 +146,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                 <div>
                   <Label htmlFor="state" className="text-sm font-bold text-gray-700">
                     State *
@@ -225,12 +225,12 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
                 </Label>
               </div>
 
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 sm:py-3">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 sm:py-4">
                 Find Best University in 2 Mins
               </Button>
             </form>
 
-            <div className="mt-3 sm:mt-4 text-center">
+            <div className="mt-4 sm:mt-6 text-center">
               <p className="text-xs text-gray-500">
                 🔒 Your personal information is secure with us
               </p>
@@ -238,7 +238,7 @@ const CounselingForm: React.FC<CounselingFormProps> = ({ open, onOpenChange }) =
           </div>
 
           {/* Right Side - Image & Benefits */}
-          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-3 lg:p-4 relative overflow-hidden">
+          <div className="hidden lg:flex lg:flex-col bg-gradient-to-br from-blue-50 to-indigo-100 p-4 lg:p-6 relative overflow-hidden">
             <div className="relative flex-1 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/4e819542-d4de-47e5-a745-52662caced1a.png"
