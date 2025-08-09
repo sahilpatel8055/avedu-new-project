@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Search, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import aveduLogo from "@/assets/avedu-logo.png";
+import { useSimpleForm } from "@/hooks/use-simple-form";
 
 import { Link } from "react-router-dom";
 
@@ -13,6 +14,7 @@ interface NavigationHeaderProps {
 
 const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openForm, FormComponent } = useSimpleForm();
 
   const scrollToPrograms = () => {
     if (window.location.pathname === '/') {
@@ -72,6 +74,7 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling })
             </Button>
             <Button 
               className="gap-2 bg-gradient-primary hover:opacity-90"
+              onClick={openForm}
             >
               <Phone className="h-4 w-4" />
               Get Counselling
@@ -136,6 +139,7 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling })
               </Button>
               <Button 
                 className="gap-2 bg-gradient-primary hover:opacity-90 justify-start"
+                onClick={openForm}
               >
                 <Phone className="h-4 w-4" />
                 Get Counselling
@@ -144,6 +148,7 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenCounseling })
           </nav>
         </div>
       </div>
+      <FormComponent />
     </header>
   );
 };

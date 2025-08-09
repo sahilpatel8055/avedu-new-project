@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Users, GraduationCap, ExternalLink } from "lucide-react";
+import { useSimpleForm } from "@/hooks/use-simple-form";
 import universityPlaceholder from "@/assets/university-placeholder.jpg";
 import { Link } from "react-router-dom";
 import ignouLogo from "@/assets/ignou-logo.png";
@@ -334,7 +335,7 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
               View Courses
             </Button>
           </Link>
-          <Button size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto">
+          <Button size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto" onClick={onOpenCounseling}>
             <ExternalLink className="h-2.5 w-2.5 sm:h-3 w-3" />
             Apply Now
           </Button>
@@ -349,6 +350,8 @@ interface UniversityGridProps {
 }
 
 const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => {
+  const { openForm, FormComponent } = useSimpleForm();
+  
   return (
     <section className="py-8 sm:py-12 lg:py-16 bg-white border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
       <div className="container mx-auto px-4">
@@ -367,7 +370,7 @@ const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => 
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
           {universities.slice(0, 8).map((university) => (
-            <UniversityCard key={university.id} university={university} onOpenCounseling={onOpenCounseling} />
+            <UniversityCard key={university.id} university={university} onOpenCounseling={openForm} />
           ))}
         </div>
 
@@ -380,6 +383,7 @@ const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => 
           </Link>
         </div>
       </div>
+      <FormComponent />
     </section>
   );
 };
