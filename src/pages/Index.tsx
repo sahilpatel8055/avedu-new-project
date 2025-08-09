@@ -11,7 +11,7 @@ import UniversityLogosMarquee from "@/components/ui/university-logos-marquee";
 import Slideshow from "@/components/ui/slideshow";
 import CareerAssistance from "@/components/ui/career-assistance";
 import { FlipWords } from "@/components/ui/flip-words";
-import { useCounselingForm } from "@/hooks/use-counseling-form";
+
 import { Link } from "react-router-dom";
 import { BookOpen, Users, Award, GraduationCap, Star, ArrowRight } from "lucide-react";
 
@@ -32,7 +32,6 @@ import smuLogo from "@/assets/smu-logo.jpg";
 import uttaranchalLogo from "@/assets/uttaranchal-logo.png";
 
 const Index = () => {
-  const { openForm, CounselingFormComponent } = useCounselingForm();
   
   const universities = [
     {
@@ -94,7 +93,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <NavigationHeader onOpenCounseling={openForm} />
+      <NavigationHeader />
       
       {/* 1st Section - Hero with FlipWords */}
       <section className="relative bg-gradient-subtle py-4 sm:py-6 lg:py-8 overflow-hidden">
@@ -145,14 +144,15 @@ const Index = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:opacity-90 gap-2 shadow-primary text-sm sm:text-base"
-                  onClick={openForm}
-                >
-                  Get Free Counselling
-                  <ArrowRight className="h-4 w-4 sm:h-5 w-5" />
-                </Button>
+                <Link to="/universities">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-primary hover:opacity-90 gap-2 shadow-primary text-sm sm:text-base"
+                  >
+                    Explore Programs
+                    <ArrowRight className="h-4 w-4 sm:h-5 w-5" />
+                  </Button>
+                </Link>
                 <Button 
                   size="lg" 
                   variant="outline" 
@@ -210,17 +210,15 @@ const Index = () => {
       </section>
 
       {/* 4th Section - Universities Grid */}
-      <UniversityGrid onOpenCounseling={openForm} />
+      <UniversityGrid />
       
       {/* 5th Section - Career Assistance */}
       <CareerAssistance />
 
       {/* 6th Section - Counselling */}
-      <CounsellingSection onOpenCounseling={openForm} />
+      <CounsellingSection />
       
       <Footer />
-      
-      <CounselingFormComponent />
     </div>
   );
 };
