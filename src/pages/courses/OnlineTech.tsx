@@ -434,11 +434,11 @@ const OnlineTech = () => {
               </Badge>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-[#0052CC] hover:bg-[#003d99]" onClick={openForm}>
+              <Button size="lg" className="bg-[#0052CC] hover:bg-[#003d99]">
                 <Phone className="h-5 w-5 mr-2" />
                 Get Free Counselling
               </Button>
-              <Button size="lg" variant="outline" onClick={openForm}>
+              <Button size="lg" variant="outline">
                 <BookOpen className="h-5 w-5 mr-2" />
                 Download Brochure
               </Button>
@@ -838,7 +838,6 @@ const OnlineTech = () => {
             <Button
               size="lg"
               className="bg-white text-[#0052CC] hover:bg-gray-100"
-              onClick={openForm}
             >
               <Phone className="h-5 w-5 mr-2" />
               Get Free Counselling
@@ -847,7 +846,7 @@ const OnlineTech = () => {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-[#0052CC]"
-              onClick={openForm}
+              
             >
               <Calendar className="h-5 w-5 mr-2" />
               Book a Demo

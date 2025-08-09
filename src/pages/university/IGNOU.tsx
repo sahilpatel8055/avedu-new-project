@@ -120,14 +120,12 @@ const IGNOU = () => {
                 <MovingBorderButton 
                   borderRadius="0.5rem"
                   className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-lg"
-                  onClick={openForm}
                 >
                   Apply Now
                 </MovingBorderButton>
                 <MovingBorderButton 
                   borderRadius="0.5rem"
                   className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-8 py-3 text-lg"
-                  onClick={openForm}
                 >
                   Download Brochure
                 </MovingBorderButton>
@@ -304,10 +302,10 @@ const IGNOU = () => {
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
               Apply for Admission
             </Button>
-            <Button variant="outline" size="lg" onClick={openForm}>
+            <Button variant="outline" size="lg">
               Talk to Counselor
             </Button>
           </div>

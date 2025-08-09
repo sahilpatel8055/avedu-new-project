@@ -103,10 +103,10 @@ const Mangalyatan = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Apply Now
                 </Button>
-                <Button variant="outline" size="lg" onClick={openForm}>
+                <Button variant="outline" size="lg">
                   Download Brochure
                 </Button>
               </div>
@@ -223,10 +223,10 @@ const Mangalyatan = () => {
             Apply now and take the first step towards your future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={openForm}>
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
               Apply for Admission
             </Button>
-            <Button variant="outline" size="lg" onClick={openForm}>
+            <Button variant="outline" size="lg">
               Talk to Counselor
             </Button>
           </div>
