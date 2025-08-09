@@ -124,7 +124,7 @@ const ProgramHighlightsSlider = () => {
             className="flex overflow-x-scroll snap-x snap-mandatory gap-6 pb-4 cursor-grab"
             style={{
               WebkitOverflowScrolling: 'touch',
-              MsOverflowStyle: 'none',
+              msOverflowStyle: 'none',
               scrollbarWidth: 'none',
               overscrollBehaviorX: 'contain',
               userSelect: 'none',
