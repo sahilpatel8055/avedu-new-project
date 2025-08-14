@@ -12,11 +12,11 @@ All colors MUST be HSL. Professional education-focused design.
     --background: 0 0% 100%;
     --foreground: 215 25% 27%;
     
-    /* Educational Blue Theme */
-    --primary: 210 100% 50%;        /* Vibrant blue for CTAs */
+    /* Educational Red Theme */
+    --primary: 358 82% 51%;        /* Red for CTAs - #E31E24 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 100% 95%;   /* Light blue backgrounds */
-    --primary-dark: 210 100% 35%;    /* Dark blue for depth */
+    --primary-light: 358 82% 95%;   /* Light red backgrounds */
+    --primary-dark: 0 84% 44%;    /* Dark red for headings - #CF1212 */
     
     /* Dark Purple Accent */
     --accent: 260 100% 35%;          /* Dark purple for highlights */
@@ -46,7 +46,7 @@ All colors MUST be HSL. Professional education-focused design.
     /* Interactive Elements */
     --border: 214 31% 91%;
     --input: 214 31% 91%;
-    --ring: 210 100% 50%;
+    --ring: 358 82% 51%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
@@ -64,16 +64,16 @@ All colors MUST be HSL. Professional education-focused design.
     --destructive-foreground: 0 0% 100%;
     
     /* Gradients for hero sections */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(260 100% 35%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(358 82% 51%), hsl(0 84% 44%));
+    --gradient-hero: linear-gradient(135deg, hsl(358 82% 51%) 0%, hsl(260 100% 35%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
-    --gradient-3d: linear-gradient(145deg, hsl(280 100% 60%), hsl(320 100% 65%));
+    --gradient-3d: linear-gradient(145deg, hsl(358 82% 51%), hsl(0 84% 44%));
     
     /* Shadows */
-    --shadow-card: 0 4px 12px hsl(210 100% 50% / 0.1);
-    --shadow-hover: 0 8px 24px hsl(210 100% 50% / 0.15);
-    --shadow-primary: 0 4px 12px hsl(210 100% 50% / 0.3);
-    --shadow-3d: 0 8px 32px hsl(280 100% 60% / 0.3), 0 0 20px hsl(320 100% 65% / 0.2);
+    --shadow-card: 0 4px 12px hsl(358 82% 51% / 0.1);
+    --shadow-hover: 0 8px 24px hsl(358 82% 51% / 0.15);
+    --shadow-primary: 0 4px 12px hsl(358 82% 51% / 0.3);
+    --shadow-3d: 0 8px 32px hsl(358 82% 51% / 0.3), 0 0 20px hsl(0 84% 44% / 0.2);
 
     --radius: 0.5rem;
 
@@ -99,10 +99,10 @@ All colors MUST be HSL. Professional education-focused design.
     --background: 215 25% 6%;
     --foreground: 0 0% 95%;
     
-    --primary: 210 100% 60%;
+    --primary: 358 82% 60%;
     --primary-foreground: 215 25% 6%;
-    --primary-light: 210 100% 15%;
-    --primary-dark: 210 100% 45%;
+    --primary-light: 358 82% 15%;
+    --primary-dark: 0 84% 50%;
     
     --accent: 25 100% 60%;
     --accent-foreground: 215 25% 6%;
@@ -127,18 +127,18 @@ All colors MUST be HSL. Professional education-focused design.
 
     --border: 215 25% 15%;
     --input: 215 25% 15%;
-    --ring: 210 100% 60%;
+    --ring: 358 82% 60%;
     
     --destructive: 0 84% 65%;
     --destructive-foreground: 215 25% 6%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 60%), hsl(210 100% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 60%) 0%, hsl(25 100% 60%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(358 82% 60%), hsl(0 84% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(358 82% 60%) 0%, hsl(25 100% 60%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(215 25% 8%), hsl(215 25% 6%));
     
     --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.3);
     --shadow-hover: 0 8px 24px hsl(0 0% 0% / 0.4);
-    --shadow-primary: 0 4px 12px hsl(210 100% 60% / 0.3);
+    --shadow-primary: 0 4px 12px hsl(358 82% 60% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -201,7 +201,7 @@ All colors MUST be HSL. Professional education-focused design.
 
   .btn-3d:hover {
     transform: perspective(1000px) rotateX(0deg) translateY(-5px);
-    box-shadow: 0 12px 40px hsl(280 100% 60% / 0.4), 0 0 30px hsl(320 100% 65% / 0.3);
+    box-shadow: 0 12px 40px hsl(358 82% 51% / 0.4), 0 0 30px hsl(0 84% 44% / 0.3);
   }
 
   .btn-3d:active {
