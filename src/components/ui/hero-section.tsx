@@ -11,7 +11,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCounseling }) => {
   return (
-    <section className="relative bg-section-red-bg py-8 sm:py-12 lg:py-16 overflow-hidden">
+    <section className="relative bg-gradient-subtle py-8 sm:py-12 lg:py-16 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Content */}
