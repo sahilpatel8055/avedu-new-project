@@ -32,6 +32,9 @@ All colors MUST be HSL. Professional education-focused design.
     --card: 0 0% 100%;
     --card-foreground: 215 25% 27%;
     --card-hover: 210 40% 98%;
+    
+    /* Section with red buttons background */
+    --section-red-bg: 0 82% 96%;      /* Light red background - #fff1f1 */
 
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;

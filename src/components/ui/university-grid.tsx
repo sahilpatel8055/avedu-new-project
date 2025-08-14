@@ -330,7 +330,7 @@ const UniversityCard = ({ university, onOpenCounseling }: { university: Universi
       <CardFooter className="pt-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1.5 w-full">
           <Link to={`/university/${university.id}`}>
-            <Button variant="outline" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button variant="white" size="sm" className="gap-0.5 w-full text-[0.65rem] py-1 sm:py-1.5 h-auto">
               <GraduationCap className="h-2.5 w-2.5 sm:h-3 w-3" />
               View Courses
             </Button>
@@ -353,7 +353,7 @@ const UniversityGrid: React.FC<UniversityGridProps> = ({ onOpenCounseling }) => 
   const { openForm, FormComponent } = useSimpleForm();
   
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-white border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
+    <section className="py-8 sm:py-12 lg:py-16 bg-section-red-bg border border-gray-200/50 rounded-lg mx-4 my-8" id="universities">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <Badge className="bg-primary-light text-primary mb-4">

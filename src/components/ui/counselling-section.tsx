@@ -65,7 +65,7 @@ interface CounsellingSectionProps {
 
 const CounsellingSection: React.FC<CounsellingSectionProps> = ({ onOpenCounseling }) => {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-background" id="counselling">
+    <section className="py-8 sm:py-12 lg:py-16 bg-section-red-bg" id="counselling">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
